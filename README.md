@@ -7,3 +7,4 @@ Welcome to the Earth Analytics Program! You will use this repository to ask ques
 | Name | Occupation | Location | CU Email |
 | ---- | ---------- | -------- | -------- |
 | Elsa Culler | Earth Data Science Instructor | Denver, CO | elsa.culler@colorado.edu |
+| Test Student | Tester | Boulder, CO | N/A |
