@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter Twelve - Work with Files and Directories in Python &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python/work-with-paths-in-python-01-intro-paths-in-python';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Learning Objectives" href="work-with-paths-in-python-02-paths-with-os.html" />
+    <link rel="prev" title="Learning Objectives" href="../02-python-packages-for-eds/python-packages-for-eds-03-install-packages.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/intro-eds-textbook/00-course-overview.md</span>, line 36)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/textbook-header.md</span>, line 2)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-python-fundamentals-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python/work-with-paths-in-python-01-intro-paths-in-python.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python/work-with-paths-in-python-01-intro-paths-in-python.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-ship" aria-hidden="true"></i> Chapter Twelve - Work with Files and Directories in Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-ship"></i> Chapter Twelve - Work with Files and Directories in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-computer-directories">About Computer Directories</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-parent-directory">What Is a Parent Directory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-home-directory">What Is the Home Directory?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#home-directories-in-bash">Home Directories In Bash</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-working-directory">What Is A Working Directory?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directories-and-relative-vs-absolute-paths-in-python">Working Directories and Relative vs Absolute Paths in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-paths">Relative Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-paths">Absolute Paths</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Chapter” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-ship-aria-hidden-true-i-chapter-twelve-work-with-files-and-directories-in-python">
+<h1><i class="fa fa-ship" aria-hidden="true"></i> Chapter Twelve - Work with Files and Directories in Python<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-chapter-twelve-work-with-files-and-directories-in-python" title="Permalink to this headline">#</a></h1>
+<p>In this chapter, you will learn how to work with paths in <strong>Python</strong>. You will also learn how to set a working directory and use absolute and relative paths to access files and directories.</p>
+</section>
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this chapter, you will be able to:</p>
+<ul class="simple">
+<li><p>Define a computer directory and list the primary types of directories.</p></li>
+<li><p>Explain the difference between relative and absolute paths.</p></li>
+<li><p>Check and set your working directory in <strong>Python</strong> using the <strong>os</strong> package.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>Be sure that you have followed the instructions on <a href="{{ site.url }}/workshops/setup-earth-analytics-python/">Setting up Git, Bash, and Conda on your computer</a> to install the tools for your operating system (Windows, Mac, Linux).</p>
+<p>Be sure that you have completed the chapter on <a href="{{ site.url }}/courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/">Jupyter Notebook</a>.</p>
+</div>
+</section>
+<section id="about-computer-directories">
+<h1>About Computer Directories<a class="headerlink" href="#about-computer-directories" title="Permalink to this headline">#</a></h1>
+<p>You have probably used files and directories on your computer before. However,
+there are a set of terms that you will hear often, particularly as you work on open
+science projects or use the command line to manipulate files and directories.
+Below you will learn about some important terms associated with working with
+files including working and parent directories.</p>
+<p>A directory refers to a folder on a computer that has relationships to other
+folders. The term “directory” considers the relationship between that folder and
+the folders within and around it. Directories are hierarchical which means that
+they can exist within other folders as well as have folders exist within them.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> Directory vs Folder: You can think
+of a directory as a folder. However, the term directory considers the relationship
+between that folder and the folders within it and around it (it’s full path).
+{: .notice–success}</p>
+</section>
+<section id="what-is-a-parent-directory">
+<h1>What Is a Parent Directory<a class="headerlink" href="#what-is-a-parent-directory" title="Permalink to this headline">#</a></h1>
+<p>The term “parent” directory is used to describe the preceding directory in which
+a subdirectory is created. A parent directory can have many subdirectories; thus,
+many subdirectories can share the same parent directory. This also means that
+parent directories can also be subdirectories of a parent directory above them in the hierarchy.</p>
+<p>An example of a directory is your downloads directory. It is the parent directory
+of any directories or files that get downloaded to your computer or placed
+within this directory.</p>
+<p>In the example below, <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> is the parent directory of both the <code class="docutils literal notranslate"><span class="pre">data</span></code>
+and <code class="docutils literal notranslate"><span class="pre">output-plots</span></code> subdirectories. <code class="docutils literal notranslate"><span class="pre">field-sites</span></code> is the parent directory for the
+<code class="docutils literal notranslate"><span class="pre">california</span></code> directory, etc.</p>
+<p>The image files (study-site.jpg and tree-species-distribution-map.jpg) exist within their parent directory: <code class="docutils literal notranslate"><span class="pre">output-plots/spatial-vector</span> <span class="pre">directory</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">earth</span><span class="o">-</span><span class="n">analytics</span>\
+    <span class="o">*</span> <span class="n">data</span>\
+        <span class="o">*</span> <span class="n">field</span><span class="o">-</span><span class="n">sites</span>\
+            <span class="o">*</span> <span class="n">california</span>\
+<span class="n">_</span>           <span class="o">*</span> <span class="n">colorado</span>\
+              <span class="o">*</span>  <span class="n">streams</span><span class="o">.</span><span class="n">csv</span>
+    <span class="o">*</span> <span class="n">output</span><span class="o">-</span><span class="n">plots</span>\
+        <span class="o">*</span> <span class="n">spatial</span><span class="o">-</span><span class="n">vector</span>\
+            <span class="o">*</span> <span class="n">study</span><span class="o">-</span><span class="n">site</span><span class="o">.</span><span class="n">jpg</span>
+            <span class="o">*</span> <span class="n">tree</span><span class="o">-</span><span class="n">species</span><span class="o">-</span><span class="n">distribution</span><span class="o">-</span><span class="nb">map</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+</section>
+<section id="what-is-the-home-directory">
+<h1>What Is the Home Directory?<a class="headerlink" href="#what-is-the-home-directory" title="Permalink to this headline">#</a></h1>
+<p>The home directory on a computer is a directory defined by your operating system. The home directory is the primary directory for your user account on your computer. Your files are by default stored in your home directory.</p>
+<p>On Windows, the home directory is typically <code class="docutils literal notranslate"><span class="pre">C:\Users\your-username</span></code>.</p>
+<p>On Mac and Linux, the home directory is typically <code class="docutils literal notranslate"><span class="pre">/home/your-username</span></code>.</p>
+<p>Throughout this textbook, <code class="docutils literal notranslate"><span class="pre">/home/your-username</span></code> is used as the example home directory and can be considered equivalent to <code class="docutils literal notranslate"><span class="pre">C:\Users\your-username</span></code> on Windows.</p>
+<div class="notice--success" markdown="1">
+<section id="home-directories-in-bash">
+<h2>Home Directories In Bash<a class="headerlink" href="#home-directories-in-bash" title="Permalink to this headline">#</a></h2>
+<p>When you first open the terminal, if no settings are customized, it opens
+within the default directory of your computer which is called the <strong>home</strong>
+directory.</p>
+</div>
+</section>
+</section>
+<section id="what-is-a-working-directory">
+<h1>What Is A Working Directory?<a class="headerlink" href="#what-is-a-working-directory" title="Permalink to this headline">#</a></h1>
+<p>While the terminal will open in your home directory by default, you can change the working directory of the terminal to a different location within your computer’s file structure.</p>
+<p>The working directory refers to the directory (or location) on your computer that a the tool assumes is the starting place for all paths that you construct or try to access.</p>
+<p>For example, when you cd into the <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory, it becomes your working directory.</p>
+<p>If you run the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command within the <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory (with the contents in the example above):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls
+</pre></div>
+</div>
+<p>You would see something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>data/
+output-plots/
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">output-plots</span></code> directories are the immediately visible subdirectories within <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code>.</p>
+<p>By setting your working directory to <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code>, you can easily access anything in both of those subdirectories.</p>
+</section>
+<section id="working-directories-and-relative-vs-absolute-paths-in-python">
+<h1>Working Directories and Relative vs Absolute Paths in Python<a class="headerlink" href="#working-directories-and-relative-vs-absolute-paths-in-python" title="Permalink to this headline">#</a></h1>
+<p>You may be wondering why working directories are important to understand when working with <strong>Python</strong> (or <strong>R</strong> or most scientific programming languages).</p>
+<p>When set correctly, working directories help the programming language to find files when you create paths.</p>
+<p>Within <strong>Python</strong>, you can define (or set) the working directory of your choice. Then, you can create paths that are relative to that working directory, or create absolute paths, which means they begin at the home directory of your computer and provide the full path to the file that you wish to open.</p>
+<section id="relative-paths">
+<h2>Relative Paths<a class="headerlink" href="#relative-paths" title="Permalink to this headline">#</a></h2>
+<p>A relative path is the path that (as the name sounds) is relative to the working
+directory location on your computer.</p>
+<p>If the working directory is <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code>, then <strong>Python</strong> knows to start looking for your files in the
+<code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory.</p>
+<p>Following the example above, if you set the working directory to the <strong>earth-analytics</strong> directory,
+then the <em>relative path</em> to access <code class="docutils literal notranslate"><span class="pre">streams.csv</span></code> would be:</p>
+<p><code class="docutils literal notranslate"><span class="pre">data/field-sites/california/colorado/streams.csv</span></code></p>
+<p><i class="fa fa-star"></i><strong>Data Tip</strong> The default working directory
+in any <strong>Jupyter Notebook</strong> file is the directory in which it is saved. However, you can change the working directory in your code!
+{: .notice–success}</p>
+<p>However, imagine that you set your working directory to <code class="docutils literal notranslate"><span class="pre">earth-analytics/data</span></code> which is a subdirectory of <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code>.</p>
+<p>The correct <em>relative</em> path to the <code class="docutils literal notranslate"><span class="pre">streams.csv</span></code> file would now look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">field-sites/california/colorado/streams.csv</span></code></p>
+<p>Relative paths are useful if you can count on whoever is running your code to
+have a working directory setup similar to yours. When the details of your directory setup are shared with others who can replicate it, then you can use relative paths to support reproducibility and collaboration.</p>
+</section>
+<section id="absolute-paths">
+<h2>Absolute Paths<a class="headerlink" href="#absolute-paths" title="Permalink to this headline">#</a></h2>
+<p>An absolute path is a path that contains the entire path to the file or
+directory that you need to access. This path will begin at the home directory
+of your computer and will end with the file or directory that you wish to access.</p>
+<p><code class="docutils literal notranslate"><span class="pre">/home/your-username/earth-analytics/data/field-sites/california/colorado/streams.csv</span></code></p>
+<p>Absolute paths ensure that <strong>Python</strong> can find the exact file on your computer.</p>
+<p>However, as you have seen, computers can have a different path constructions, depending on the operating system, and contain usernames that unique to that specific machine.</p>
+<p>There are ways to overcome this issue and others associated with finding files
+on different machines using tools such as the <strong>os</strong> package in <strong>Python</strong>. You will
+learn more about these approaches later in this chapter.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../02-python-packages-for-eds/python-packages-for-eds-03-install-packages.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="work-with-paths-in-python-02-paths-with-os.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-ship"></i> Chapter Twelve - Work with Files and Directories in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-computer-directories">About Computer Directories</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-parent-directory">What Is a Parent Directory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-home-directory">What Is the Home Directory?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#home-directories-in-bash">Home Directories In Bash</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-working-directory">What Is A Working Directory?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directories-and-relative-vs-absolute-paths-in-python">Working Directories and Relative vs Absolute Paths in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-paths">Relative Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-paths">Absolute Paths</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

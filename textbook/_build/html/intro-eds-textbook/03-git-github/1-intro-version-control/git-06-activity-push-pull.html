@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6.7.27. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/03-git-github/1-intro-version-control/git-06-activity-push-pull';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="6.8. Chapter Eight - GitHub for Collaboration" href="../2-github-collaboration/github-collab-01-intro-collaboration.html" />
+    <link rel="prev" title="6.7.23. Learning Objectives" href="git-05-undo-changes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">1. Welcome to the Introduction to Earth Data Science Textbook!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">2. An Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">2.1. Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">2.1.8. Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/03-git-github/1-intro-version-control/git-06-activity-push-pull.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/03-git-github/1-intro-version-control/git-06-activity-push-pull.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.7.27. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">6.7.28. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-github-workflow-for-version-control">6.7.29. Git and GitHub Workflow For Version Control</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-check-git-configuration-settings">6.7.30. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1: Check <code class="docutils literal notranslate"><span class="pre">Git</span></code> Configuration Settings</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-make-changes-to-files">6.7.31. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Make Changes to Files</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-make-changes-to-a-file">6.7.31.1. STEP 1: Make Changes to a File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-check-the-status-of-your-changed-file">6.7.31.2. STEP 2: Check the Status of Your Changed File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-and-commit-changed-files">6.7.31.3. STEP 3: Add and Commit Changed Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-push-your-changes-to-github-com">6.7.31.4. STEP 4: Push Your Changes to GitHub.com</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-2-add-new-files-to-a-github-repo">6.7.32. Challenge 2: Add New Files To A GitHub Repo</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-files">6.7.32.1. Commit Files</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#push-changed-files-to-github">6.7.33. Push Changed Files to GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3">6.7.34. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Lesson” icon=”file-text” %}</p>
+<p>In this lesson, you will learn how to implement version control using <code class="docutils literal notranslate"><span class="pre">Git</span></code> and <code class="docutils literal notranslate"><span class="pre">GitHub</span></code>.</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">6.7.27. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this lesson, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain how <code class="docutils literal notranslate"><span class="pre">Git</span></code> and <code class="docutils literal notranslate"><span class="pre">GitHub.com</span></code> are used to implement version control.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Git</span></code> to <code class="docutils literal notranslate"><span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">commit</span></code> changed files.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Git</span></code> to <code class="docutils literal notranslate"><span class="pre">push</span></code> changed files from your local computer to the repository on <code class="docutils literal notranslate"><span class="pre">GitHub.com</span></code>.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><span class="section-number">6.7.28. </span><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>You will need:</p>
+<ul class="simple">
+<li><p>an active GitHub account with your username and password</p></li>
+<li><p>to fork and clone the <a href="https://github.com/earthlab-education/practice-git-skillz">practice github repository </a> to complete this lesson.</p></li>
+<li><p>a web browser with internet access</p></li>
+</ul>
+</div>
+</section>
+<section id="git-and-github-workflow-for-version-control">
+<h1><span class="section-number">6.7.29. </span>Git and GitHub Workflow For Version Control<a class="headerlink" href="#git-and-github-workflow-for-version-control" title="Permalink to this headline">#</a></h1>
+<p>In the previous lessons, you learned how to <code class="docutils literal notranslate"><span class="pre">fork</span></code> and <code class="docutils literal notranslate"><span class="pre">clone</span></code> existing <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> repositories to make copies of other users’ repositories and download them to your computer.</p>
+<p>In this lesson, you expand on those skills to:</p>
+<ul class="simple">
+<li><p>check the <code class="docutils literal notranslate"><span class="pre">status</span></code> of changed files in a repository</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> changed files to version control tracking</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commit</span></code> the changed files to your local repository</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">push</span></code> those changed files from the local copy of a repository to the cloud (<code class="docutils literal notranslate"><span class="pre">GitHub.com</span></code>)</p></li>
+</ul>
+<p>In later lessons, you will expand on this version control workflow to notify others (your collaborators) about changes you have made and that you would like to add to the original (<code class="docutils literal notranslate"><span class="pre">main</span></code>) copy of a repository.</p>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-check-git-configuration-settings">
+<h1><span class="section-number">6.7.30. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1: Check <code class="docutils literal notranslate"><span class="pre">Git</span></code> Configuration Settings<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-check-git-configuration-settings" title="Permalink to this headline">#</a></h1>
+<p>To begin, check your github configuration. Type the following in bash:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">config</span> <span class="pre">user.name</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">config</span> <span class="pre">user.email</span></code></p>
+<p>The output of the above commands should return your username and email for git. If it does not
+or it returns nothing, you will need <a href="{{ site.url }}/courses/intro-to-earth-data-science/git-github/version-control/git-commands/">to review the instructions for configuring <strong>git</strong> locally on your computer</a>.</p>
+</div><p><i class="fa fa-star"></i> <strong>Data tip:</strong> You can also use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">config</span> <span class="pre">--list</span></code> to view all configuration settings for <strong>git</strong> on your machine.</a>
+{: .notice–success }</p>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-make-changes-to-files">
+<h1><span class="section-number">6.7.31. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2: Make Changes to Files<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-make-changes-to-files" title="Permalink to this headline">#</a></h1>
+<section id="step-1-make-changes-to-a-file">
+<h2><span class="section-number">6.7.31.1. </span>STEP 1: Make Changes to a File<a class="headerlink" href="#step-1-make-changes-to-a-file" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Use <strong>Shell</strong> to navigate to your forked repository (the <code class="docutils literal notranslate"><span class="pre">practice-git-skillz</span></code> directory).</p></li>
+</ul>
+<p>If you don’t have this repo locally - you can clone it using the following url: <code class="docutils literal notranslate"><span class="pre">https://github.com/your-user-name-here/practice-git-skillz</span></code></p>
+<ul class="simple">
+<li><p>Launch Jupyter Notebook inside that directory. (If you are working on a JupyterHub you can skip this step!)</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file in that directory(<code class="docutils literal notranslate"><span class="pre">homework-example.ipynb</span></code>) and make some changes to the file as follows:</p>
+<ul>
+<li><p>Add a markdown cell to the notebook</p></li>
+<li><p>In the cell add a <strong>heading</strong> and then some text below.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-2-check-the-status-of-your-changed-file">
+<h2><span class="section-number">6.7.31.2. </span>STEP 2: Check the Status of Your Changed File<a class="headerlink" href="#step-2-check-the-status-of-your-changed-file" title="Permalink to this headline">#</a></h2>
+<p>Return to your <strong>shell</strong> tool. Run the command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
+<p>to check the status of current changes. It should show that there is a change to the file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up-to-date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git checkout -- &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>discard<span class="w"> </span>changes<span class="w"> </span><span class="k">in</span><span class="w"> </span>working<span class="w"> </span>directory<span class="o">)</span>
+
+<span class="w">	</span>modified:<span class="w">   </span>homework-example.ipynb
+<span class="w">    </span>
+no<span class="w"> </span>changes<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>and/or<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>The output from <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> indicates that you have modified the file <code class="docutils literal notranslate"><span class="pre">homework-example.ipynb</span></code>.
+To add these changes to your git history you need to:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> the changes, and then</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commit</span></code> the changes using a useful message that describes what you changed.</p></li>
+</ol>
+</section>
+<section id="step-3-add-and-commit-changed-files">
+<h2><span class="section-number">6.7.31.3. </span>STEP 3: Add and Commit Changed Files<a class="headerlink" href="#step-3-add-and-commit-changed-files" title="Permalink to this headline">#</a></h2>
+<p>You will use the add and commit functions to <code class="docutils literal notranslate"><span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">commit</span></code> your changed files.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>: takes a modified file in your working directory and places the modified version in a staging area.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>: takes everything from the staging area and makes a permanent snapshot of the current state of your repository that is associated with a unique identifier.</p></li>
+</ul>
+<p>These two commands make up the bulk of many workflows that use git for version control.</p>
+</section>
+<section id="step-4-push-your-changes-to-github-com">
+<h2><span class="section-number">6.7.31.4. </span>STEP 4: Push Your Changes to <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#step-4-push-your-changes-to-github-com" title="Permalink to this headline">#</a></h2>
+<p>Once you have added and commited your changes, you are ready to push them to <a class="reference external" href="http://GitHub.com">GitHub.com</a>. Use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span></code></p>
+<p>to push the changes to your fork.</p>
+</div><p>Congratulations! You’ve now successfully modified files in a <strong>GitHub</strong> repo and pushed them back up to <a class="reference external" href="http://github.com">github.com</a>. We suggest that you run through this process several times to get the hang of it. Working in a small group may be useful as you do this.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-add-commit.png">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-add-commit.png" alt="Modified files are staged using git add, and following a commit, all files in the staging area are snapshotted and become part of the repository's history, receiving a unique SHA-1 hash identifier. Source: Max Joseph, adapted from Pro Git by Chacon and Straub (2014)."></a>
+   <figcaption> Modified files are staged using git add, and following a commit, all files in the staging area are snapshotted and become part of the repository's history, receiving a unique SHA-1 hash identifier. Source: Max Joseph, adapted from Pro Git by Chacon and Straub (2014).
+   </figcaption>
+</figure></section>
+</section>
+<section id="challenge-2-add-new-files-to-a-github-repo">
+<h1><span class="section-number">6.7.32. </span>Challenge 2: Add New Files To A GitHub Repo<a class="headerlink" href="#challenge-2-add-new-files-to-a-github-repo" title="Permalink to this headline">#</a></h1>
+<p>This is all redundant as they’d already learned it earlier.</p>
+<p>You can add an individual file or groups of files to git tracking as well. To add a single file, use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">add</span> <span class="pre">file-name.extension</span></code>.</p>
+<p>For example, to add the <code class="docutils literal notranslate"><span class="pre">ea-bootcamp-hw-1.ipynb</span></code> file that you just modified, you’d use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>ea-bootcamp-hw-1.ipynb
+</pre></div>
+</div>
+<p>You can also add all of the files that you have edited at the same time using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+</pre></div>
+</div>
+<p>However, <strong>use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> with caution</strong>. Be sure to review the results from <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> carefully before using <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code>. You do not want to accidentally add files that you do not want to change in the <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> repository.</p>
+<section id="commit-files">
+<h2><span class="section-number">6.7.32.1. </span>Commit Files<a class="headerlink" href="#commit-files" title="Permalink to this headline">#</a></h2>
+<p>Once you are ready to make a snapshot of the current state of your repository, you can use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">commit</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">commit</span></code> command requires a commit message that describes the snapshot (i.e. changes) that you made in that commit. A commit message should outline what changed and why. These messages:</p>
+<ol class="arabic simple">
+<li><p>help collaborators and your future self understand what was changed and why</p></li>
+<li><p>allow you and your collaborators to find (and undo if necessary) changes that were previously made.</p></li>
+</ol>
+<p>Since you are not committing a lot of changes, you can create a short one line commit message using the -m flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update title and author name in homework 1&quot;</span>
+</pre></div>
+</div>
+<p>You will learn about including longer commit messages later in this course.</p>
+</section>
+</section>
+<section id="push-changed-files-to-github">
+<h1><span class="section-number">6.7.33. </span>Push Changed Files to GitHub<a class="headerlink" href="#push-changed-files-to-github" title="Permalink to this headline">#</a></h1>
+<p>So far we have only modified our local copy of the repository. To update the files in your <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> repository, you need to <code class="docutils literal notranslate"><span class="pre">push</span></code> the changed files to <code class="docutils literal notranslate"><span class="pre">GitHub</span></code>.</p>
+<p>You can push your changes to <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code></p>
+<p>You will then be prompted for your <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> username and password.</p>
+<p>After you have pushed your commits, visit your repository on <code class="docutils literal notranslate"><span class="pre">https://github.com/yourusername/ea-bootcamp-hw-1-yourusername</span></code> and notice that your changes are reflected there. Also notice that you have access to the full commit history for your repository!</p>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3">
+<h1><span class="section-number">6.7.34. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 3<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Rename the Jupyter Notebook in your repository. Then add and commit the file.
+Push the renamed file up to Github. Then check that it’s there by going to <a class="reference external" href="http://github.com">github.com</a>!</p></li>
+<li><p>Add a new file to the repo, commit the change and push it to <a class="reference external" href="http://github.com">github.com</a>. Check to see that it’s there.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to view the history of changes that you’ve made.</p></li>
+</ul>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/03-git-github/1-intro-version-control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="git-05-undo-changes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6.7.23. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../2-github-collaboration/github-collab-01-intro-collaboration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.8. </span><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eight - <strong>GitHub</strong> for Collaboration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.7.27. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">6.7.28. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-github-workflow-for-version-control">6.7.29. Git and GitHub Workflow For Version Control</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-check-git-configuration-settings">6.7.30. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1: Check <code class="docutils literal notranslate"><span class="pre">Git</span></code> Configuration Settings</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-make-changes-to-files">6.7.31. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Make Changes to Files</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-make-changes-to-a-file">6.7.31.1. STEP 1: Make Changes to a File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-check-the-status-of-your-changed-file">6.7.31.2. STEP 2: Check the Status of Your Changed File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-and-commit-changed-files">6.7.31.3. STEP 3: Add and Commit Changed Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-push-your-changes-to-github-com">6.7.31.4. STEP 4: Push Your Changes to GitHub.com</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-2-add-new-files-to-a-github-repo">6.7.32. Challenge 2: Add New Files To A GitHub Repo</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-files">6.7.32.1. Commit Files</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#push-changed-files-to-github">6.7.33. Push Changed Files to GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3">6.7.34. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</divxs>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

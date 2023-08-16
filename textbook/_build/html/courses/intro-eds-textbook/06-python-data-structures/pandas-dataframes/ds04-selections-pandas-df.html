@@ -1,0 +1,1599 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>10.11.15. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/06-python-data-structures/pandas-dataframes/2019-09-23-ds04-selections-pandas-df';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="11. Section Seven - Write Efficient and Clean Code Using Open Source Python" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html" />
+    <link rel="prev" title="10.11.6. Learning Objectives" href="2019-09-23-ds03-summarize-pandas-df.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/06-python-data-structures/pandas-dataframes/2019-09-23-ds04-selections-pandas-df.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10.11.15. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-selections-from-pandas-dataframes">10.11.16. Indexing and Selections From Pandas Dataframes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#location-based-indexing">10.11.16.1. Location-based Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#label-based-indexing">10.11.16.2. Label-based Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-data-values">10.11.16.3. Filtering Data Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-python-packages-and-get-data">10.11.16.4. Import Python Packages and Get Data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#select-data-using-location-index-iloc">10.11.17. Select Data Using Location Index (.iloc)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#select-data-using-label-index-loc">10.11.18. Select Data Using Label Index (.loc)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#select-data-using-columns">10.11.19. Select Data Using Columns</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-data-using-specific-values">10.11.20. Filter Data Using Specific Values</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-pandas-dataframes-skills">10.11.21. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Practice Your Pandas Dataframes Skills</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">10.11.15. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this page, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain indexing for <strong>pandas</strong> dataframes.</p></li>
+<li><p>Use indexing and filtering to select data from <strong>pandas</strong> dataframes.</p></li>
+</ul>
+</div>
+</section>
+<section id="indexing-and-selections-from-pandas-dataframes">
+<h1><span class="section-number">10.11.16. </span>Indexing and Selections From Pandas Dataframes<a class="headerlink" href="#indexing-and-selections-from-pandas-dataframes" title="Permalink to this headline">#</a></h1>
+<p>There are two kinds of indexing in <strong>pandas</strong> dataframes:</p>
+<ul class="simple">
+<li><p>location-based and</p></li>
+<li><p>label-based.</p></li>
+</ul>
+<p>In the lesson introducing <strong>pandas</strong> dataframes, you learned that these data structures have an inherent tabular structure (i.e. rows and columns with header names) that support selecting data with indexing, such as selecting individual cells identified by their location at the intersection of rows and columns. You can also select data from <strong>pandas</strong> dataframes without knowing the location of that data within the <strong>pandas</strong> dataframe, using specific labels such as a column name.</p>
+<section id="location-based-indexing">
+<h2><span class="section-number">10.11.16.1. </span>Location-based Indexing<a class="headerlink" href="#location-based-indexing" title="Permalink to this headline">#</a></h2>
+<p>After working with indexing for <strong>Python</strong> lists and <strong>numpy</strong> arrays, you are familiar with location-based indexing. You already know that <strong>Python</strong> location-based indexing begins with <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, and you have learned how to use location-based indexing to query data within <strong>Python</strong> lists or <strong>numpy</strong> arrays.</p>
+<p>You can use location-based indexing to query <strong>pandas</strong> dataframes using the attribute <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> and providing the row and column selection as ranges (i.e. start and stop locations along the rows and columns). Just like with <strong>numpy</strong> arrays, the range provided is inclusive of the first value, but not the second value.</p>
+<p>This means that you need to use the range <code class="docutils literal notranslate"><span class="pre">[0:1]</span></code> to select the first index, so your selection begins at <code class="docutils literal notranslate"><span class="pre">[0]</span></code> but does not include <code class="docutils literal notranslate"><span class="pre">[1]</span></code> (the second index). For example, you can select the first row and the first column of a <strong>pandas</strong> dataframes providing the range <code class="docutils literal notranslate"><span class="pre">[0:1]</span></code> for the row selection and then providing the range <code class="docutils literal notranslate"><span class="pre">[0:1]</span></code> for the column selection.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="label-based-indexing">
+<h2><span class="section-number">10.11.16.2. </span>Label-based Indexing<a class="headerlink" href="#label-based-indexing" title="Permalink to this headline">#</a></h2>
+<p><strong>Pandas</strong> dataframes can also be queried using label-based indexing.</p>
+<p>This feature of <strong>pandas</strong> dataframes is very useful because you can create an index for <strong>pandas</strong> dataframes using a specific column (i.e. label) that you want to use for organizing and querying your data.</p>
+<p>For example, you can create an index from a specific column of values, and then use the attribute <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to select data from the <strong>pandas</strong> dataframes using a value that is found in that index.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">dataframe</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">)</span>
+<span class="n">dataframe</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="n">value</span><span class="p">]]</span>
+</pre></div>
+</div>
+</section>
+<section id="filtering-data-values">
+<h2><span class="section-number">10.11.16.3. </span>Filtering Data Values<a class="headerlink" href="#filtering-data-values" title="Permalink to this headline">#</a></h2>
+<p>In addition to using indexing, you can also select or filter data from <strong>pandas</strong> dataframes by querying for values that met a certain criteria.</p>
+<p>For example, you can select data in a <strong>pandas</strong> dataframe based on specific values within a column using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;column&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This will return all rows containing that value within the specified column.</p>
+<p>On this page, you will review how indexing works for <strong>pandas</strong> dataframes and you will learn how to select data from <strong>pandas</strong> dataframes using both indexing and filtering of data values.</p>
+</section>
+<section id="import-python-packages-and-get-data">
+<h2><span class="section-number">10.11.16.4. </span>Import Python Packages and Get Data<a class="headerlink" href="#import-python-packages-and-get-data" title="Permalink to this headline">#</a></h2>
+<p>Begin by importing the necessary <strong>Python</strong> packages and then downloading and importing data into <strong>pandas</strong> dataframes.</p>
+<p>You can use the <strong>earthpy</strong> package to download the data files, <strong>os</strong> to set the working directory, and <strong>pandas</strong> to import data files into <strong>pandas</strong> dataframes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">earthpy</span> <span class="k">as</span> <span class="nn">et</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># URL for .csv with avg monthly precip data</span>
+<span class="n">avg_monthly_precip_url</span> <span class="o">=</span> <span class="s2">&quot;https://ndownloader.figshare.com/files/12710618&quot;</span>
+
+<span class="c1"># Download file</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">avg_monthly_precip_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/elsa/earth-analytics/data/earthpy-downloads/avg-precip-months-seasons.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set working directory to earth-analytics</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span> <span class="s2">&quot;earth-analytics&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import data from .csv file</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span> 
+                     <span class="s2">&quot;avg-precip-months-seasons.csv&quot;</span><span class="p">)</span>
+
+<span class="n">avg_monthly_precip</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
+<span class="n">avg_monthly_precip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>0.70</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+      <td>0.75</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+      <td>1.85</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>2.93</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>3.05</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>2.02</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>1.93</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>1.62</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+      <td>1.84</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+      <td>1.31</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+      <td>1.39</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+      <td>0.84</td>
+      <td>Winter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="select-data-using-location-index-iloc">
+<h1><span class="section-number">10.11.17. </span>Select Data Using Location Index (.iloc)<a class="headerlink" href="#select-data-using-location-index-iloc" title="Permalink to this headline">#</a></h1>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> to select individual rows and columns or a series of rows and columns by providing the range (i.e. start and stop locations along the rows and columns) that you want to select.</p>
+<p>Recall that in <code class="docutils literal notranslate"><span class="pre">Python</span></code> indexing begins with <code class="docutils literal notranslate"><span class="pre">[0]</span></code> and that the range you provide is inclusive of the first value, but not the second value.</p>
+<p>This means that you can use <code class="docutils literal notranslate"><span class="pre">dataframe.iloc[0:1,</span> <span class="pre">0:1]</span></code> to select the cell value at the intersection of the first row and first column of the dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select first row and first column</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can expand the range for either the row index or column index to select more data.</p>
+<p>For example, you can select the first two rows of the first column using <code class="docutils literal notranslate"><span class="pre">dataframe.iloc[0:2,</span> <span class="pre">0:1]</span></code> or the first columns of the first row using <code class="docutils literal notranslate"><span class="pre">dataframe.iloc[0:1,</span> <span class="pre">0:2]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select first two rows and first column</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select first row and first two columns</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>0.7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> to select an entire row or an entire column by leaving the other range without values.</p>
+<p>For example, you can use <code class="docutils literal notranslate"><span class="pre">dataframe.iloc[0:1,</span> <span class="pre">:]</span></code> to select the first row of a dataframe and all of the columns, or <code class="docutils literal notranslate"><span class="pre">dataframe.iloc[</span> <span class="pre">:,</span> <span class="pre">0:1]</span></code> to select the first column of a dataframe and all of the rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select first row with all columns</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>0.7</td>
+      <td>Winter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select first column with all rows</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="select-data-using-label-index-loc">
+<h1><span class="section-number">10.11.18. </span>Select Data Using Label Index (.loc)<a class="headerlink" href="#select-data-using-label-index-loc" title="Permalink to this headline">#</a></h1>
+<p>In addition to selecting data based on location, you can also select data based on labels.</p>
+<p>To do this, you first create a new index using a column of values that you want to use for organizing and querying your data.</p>
+<p>For example, you can create an index from a specific column of values using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dataframe.set_index(&quot;column&quot;)</span></code></p>
+<p><i class="fa fa-star" aria-hidden="true"></i> <strong>Data Tip:</strong> Creating a new index will restructure the data by replacing the default location indexing (i.e. <code class="docutils literal notranslate"><span class="pre">[0]</span></code>) with the new index.  This also means the column used to create the index is no longer a functional column, but rather an index of the dataframe.<br />
+{: .notice–success}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create new dataframe with `months` as index</span>
+<span class="n">avg_monthly_precip_index</span> <span class="o">=</span> <span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;months&quot;</span><span class="p">)</span>
+
+<span class="n">avg_monthly_precip_index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+    <tr>
+      <th>months</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jan</th>
+      <td>0.70</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>Feb</th>
+      <td>0.75</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>Mar</th>
+      <td>1.85</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>Apr</th>
+      <td>2.93</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>May</th>
+      <td>3.05</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>June</th>
+      <td>2.02</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>July</th>
+      <td>1.93</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>Aug</th>
+      <td>1.62</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>Sept</th>
+      <td>1.84</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>Oct</th>
+      <td>1.31</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>Nov</th>
+      <td>1.39</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>Dec</th>
+      <td>0.84</td>
+      <td>Winter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Test that <code class="docutils literal notranslate"><span class="pre">months</span></code> no longer functions as a column by attempting to select that column name:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">avg_monthly_precip_index</span><span class="p">[[</span><span class="s2">&quot;months&quot;</span><span class="p">]]</span>
+
+</pre></div>
+</div>
+<p>The following error is returned:</p>
+<p><code class="docutils literal notranslate"><span class="pre">KeyError:</span> <span class="pre">&quot;None</span> <span class="pre">of</span> <span class="pre">[Index(['months'],</span> <span class="pre">dtype='object')]</span> <span class="pre">are</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">[columns]&quot;</span></code></p>
+<p>Notice that the error message indicates that the value <code class="docutils literal notranslate"><span class="pre">months</span></code> is not in the index. This is because <code class="docutils literal notranslate"><span class="pre">months</span></code> is actually now the index!</p>
+<p>After setting an index, you can use <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to select data from the <strong>pandas</strong> dataframe using a value that is found in that index.</p>
+<p>When selecting text string values, you need to specify the text string with quotations <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, as shown below for the text string <code class="docutils literal notranslate"><span class="pre">&quot;Aug&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select Aug using months index </span>
+<span class="n">avg_monthly_precip_index</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;Aug&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+    <tr>
+      <th>months</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Aug</th>
+      <td>1.62</td>
+      <td>Summer</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="select-data-using-columns">
+<h1><span class="section-number">10.11.19. </span>Select Data Using Columns<a class="headerlink" href="#select-data-using-columns" title="Permalink to this headline">#</a></h1>
+<p>In addition to location-based and label-based indexing, you can also select data from <strong>pandas</strong> dataframes by selecting entire columns using the column names.</p>
+<p>For example, you can select all data from a specific column in a <strong>pandas</strong> dataframe using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dataframe[&quot;column&quot;]</span></code></p>
+<p>which provides the data from the column as a <strong>pandas</strong> series, which is a one-dimensional array. A <strong>pandas</strong> series is useful for selecting columns for plotting using <strong>matplotlib</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the `months` column as series</span>
+<span class="n">avg_monthly_precip</span><span class="p">[</span><span class="s2">&quot;months&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      Jan
+1      Feb
+2      Mar
+3      Apr
+4      May
+5     June
+6     July
+7      Aug
+8     Sept
+9      Oct
+10     Nov
+11     Dec
+Name: months, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also specify that you want an output that is also a <strong>pandas</strong> dataframe using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dataframe[[&quot;column&quot;]]</span></code></p>
+<p>which includes a second set of brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> to indicate that the output should be a <strong>pandas</strong> dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the `months` column as dataframe</span>
+<span class="n">avg_monthly_precip</span><span class="p">[[</span><span class="s2">&quot;months&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Notice that your results are now a <strong>pandas</strong> dataframe.</p>
+<p>You can also select all data from multiple columns in a <strong>pandas</strong> dataframe using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dataframe[[&quot;column&quot;,</span> <span class="pre">&quot;column&quot;]]</span></code></p>
+<p>Since the results of your selection are also a <strong>pandas</strong> dataframe, you can assign the results to a new <strong>pandas</strong> dataframe.</p>
+<p>For example, you can create a new <strong>pandas</strong> dataframe that only contains the <code class="docutils literal notranslate"><span class="pre">months</span></code> and <code class="docutils literal notranslate"><span class="pre">seasons</span></code> columns, effectively dropping the <code class="docutils literal notranslate"><span class="pre">precip</span></code> values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save months and seasons to new dataframe</span>
+<span class="n">avg_monthly_precip_text</span> <span class="o">=</span> <span class="n">avg_monthly_precip</span><span class="p">[[</span><span class="s1">&#39;months&#39;</span><span class="p">,</span> <span class="s1">&#39;seasons&#39;</span><span class="p">]]</span>
+
+<span class="n">avg_monthly_precip_text</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+      <td>Winter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="filter-data-using-specific-values">
+<h1><span class="section-number">10.11.20. </span>Filter Data Using Specific Values<a class="headerlink" href="#filter-data-using-specific-values" title="Permalink to this headline">#</a></h1>
+<p>In addition to location-based and label-based indexing, you can select or filter data based on specific values within a column using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dataframe[dataframe[&quot;column&quot;]</span> <span class="pre">==</span> <span class="pre">value]</span></code></p>
+<p>This will return all rows containing that value within the specified column.</p>
+<p>If you are selecting data using a text string column, you need to provide the value within quotations (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;text&quot;</span></code>).</p>
+<p>For example, you can select all rows that have a <code class="docutils literal notranslate"><span class="pre">seasons</span></code> value of <code class="docutils literal notranslate"><span class="pre">Summer</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select rows with Summer in seasons</span>
+<span class="n">avg_monthly_precip</span><span class="p">[</span><span class="n">avg_monthly_precip</span><span class="p">[</span><span class="s2">&quot;seasons&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Summer&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>2.02</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>1.93</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>1.62</td>
+      <td>Summer</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Again, you can also save the output to a new dataframe by setting it equal to the output of the filter.</p>
+<p>For example, you can filter for the values in the <code class="docutils literal notranslate"><span class="pre">months</span></code> column that are equal to <code class="docutils literal notranslate"><span class="pre">Jan</span></code> and save the output to a new dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select rows with Jan in months</span>
+<span class="n">jan_avg_precip</span> <span class="o">=</span> <span class="n">avg_monthly_precip</span><span class="p">[</span><span class="n">avg_monthly_precip</span><span class="p">[</span><span class="s2">&quot;months&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Jan&quot;</span><span class="p">]</span>
+
+<span class="n">jan_avg_precip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>0.7</td>
+      <td>Winter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can also select data based on numeric values. Note that these selections on numeric values do not require the use of quotations <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> because they are not text strings.</p>
+<p>For example, you can select all rows that have a specific value in <code class="docutils literal notranslate"><span class="pre">precip</span></code> such as <code class="docutils literal notranslate"><span class="pre">1.62</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select rows equal to 1.62 in precip</span>
+<span class="n">avg_monthly_precip</span><span class="p">[</span><span class="n">avg_monthly_precip</span><span class="p">[</span><span class="s2">&quot;precip&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.62</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>1.62</td>
+      <td>Summer</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can also filter using a comparison operator on numeric values.</p>
+<p>For example, you can select all rows from the dataframe that have precipitation value greater than 2.0 inches by filtering on the <code class="docutils literal notranslate"><span class="pre">precip</span></code> column using the greater than <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> operator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save rows with values greater than 2.0 to new dataframe</span>
+<span class="n">gt2_avg_monthly_precip</span> <span class="o">=</span> <span class="n">avg_monthly_precip</span><span class="p">[</span><span class="n">avg_monthly_precip</span><span class="p">[</span><span class="s2">&quot;precip&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">2.0</span><span class="p">]</span>
+
+<span class="n">gt2_avg_monthly_precip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>2.93</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>3.05</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>2.02</td>
+      <td>Summer</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-pandas-dataframes-skills">
+<h1><span class="section-number">10.11.21. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Practice Your Pandas Dataframes Skills<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-pandas-dataframes-skills" title="Permalink to this headline">#</a></h1>
+<p>Test your <strong>Python</strong> skills to:</p>
+<ol class="arabic simple">
+<li><p>Review how to download and import data files into <strong>pandas</strong> dataframe, using <code class="docutils literal notranslate"><span class="pre">precip-2002-2013-months-seasons.csv</span></code> which is available for download at “<a class="reference external" href="https://ndownloader.figshare.com/files/12710621">https://ndownloader.figshare.com/files/12710621</a>”.</p>
+<ul class="simple">
+<li><p>This file contains two columns of average monthly precipitation values: one for 2002 and one for 2013.</p></li>
+</ul>
+</li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.describe()</span></code> method to summarize the precipitation values in the dataframe (e.g. <code class="docutils literal notranslate"><span class="pre">precip_2002_2013</span></code>). Note the maximum values in 2002 and 2013.</p></li>
+<li><p>Use indexing to create two new dataframes:</p>
+<ul class="simple">
+<li><p>one containing the month with the maximum value in 2002</p></li>
+<li><p>one containing the month with the maximum value in 2013</p></li>
+</ul>
+</li>
+<li><p>Compare these new dataframes.</p>
+<ul class="simple">
+<li><p>Do they occur in the same season?</p></li>
+<li><p>What do you notice about the precipitation value for the maximum month in 2013, as compared to that same month in 2002?</p></li>
+</ul>
+</li>
+<li><p>Using the columns for months and the precipitation for 2013, create plot of Average Monthly Precipitation in 2013 for Boulder, CO.</p>
+<ul class="simple">
+<li><p>Recall that you can select a column as a <strong>pandas</strong> series using <code class="docutils literal notranslate"><span class="pre">dataframe[&quot;column&quot;]</span></code>.</p></li>
+<li><p>If needed, review how to <a href="{{ site.url }}/courses/scientists-guide-to-plotting-data-in-python/plot-with-matplotlib/customize-plot-colors-labels-matplotlib/">create <strong>matplotlib</strong> plots with lists</a>, and then substitute the list names with series selected from the <strong>pandas</strong> dataframe.</p></li>
+</ul>
+</li>
+</ol>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># precip_2002_2013.describe()</span>
+<span class="c1"># precip_2002_2013[precip_2002_2013.precip_2002 == 3.2]</span>
+<span class="c1"># precip_2002_2013[precip_2002_2013.precip_2013 == 18.16]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import matplotlib.pyplot as plt </span>
+
+<span class="c1"># # Download data from URL</span>
+<span class="c1"># precip_url = &#39;https://ndownloader.figshare.com/files/12710621&#39;</span>
+<span class="c1"># et.data.get_data(url=precip_url)</span>
+
+<span class="c1"># fname = os.path.join(&quot;data&quot;, &quot;earthpy-downloads&quot;, &quot;precip-2002-2013-months-seasons.csv&quot;)</span>
+
+<span class="c1"># # Set working directory to earth-analytics</span>
+<span class="c1"># os.chdir(os.path.join(et.io.HOME, &quot;earth-analytics&quot;))</span>
+
+<span class="c1"># precip_2002_2013 = pd.read_csv(fname)</span>
+
+<span class="c1"># fig, ax = plt.subplots(figsize=(10,10))</span>
+
+<span class="c1"># ax.plot(precip_2002_2013[&quot;months&quot;], </span>
+<span class="c1">#         precip_2002_2013[&quot;precip_2013&quot;], </span>
+<span class="c1">#         color=&quot;blue&quot;)</span>
+
+<span class="c1"># ax.set(title=&quot;Average Monthly Precipitation in 2013 for Boulder, CO&quot;,</span>
+<span class="c1">#        xlabel=&quot;Month&quot;, </span>
+<span class="c1">#         ylabel=&quot;Precipitation (mm)&quot;)</span>
+
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/06-python-data-structures/pandas-dataframes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2019-09-23-ds03-summarize-pandas-df.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">10.11.6. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span><i class="fa fa-ship" aria-hidden="true"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10.11.15. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-selections-from-pandas-dataframes">10.11.16. Indexing and Selections From Pandas Dataframes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#location-based-indexing">10.11.16.1. Location-based Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#label-based-indexing">10.11.16.2. Label-based Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-data-values">10.11.16.3. Filtering Data Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-python-packages-and-get-data">10.11.16.4. Import Python Packages and Get Data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#select-data-using-location-index-iloc">10.11.17. Select Data Using Location Index (.iloc)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#select-data-using-label-index-loc">10.11.18. Select Data Using Label Index (.loc)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#select-data-using-columns">10.11.19. Select Data Using Columns</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-data-using-specific-values">10.11.20. Filter Data Using Specific Values</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-pandas-dataframes-skills">10.11.21. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Practice Your Pandas Dataframes Skills</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

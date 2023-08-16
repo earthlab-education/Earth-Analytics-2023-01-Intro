@@ -1,0 +1,819 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-05-exercise';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Chapter Eleven - Import and Install Python Packages for Earth Data Science" href="../02-python-packages-for-eds/python-packages-for-eds-01-intro-eds-packages-python.html" />
+    <link rel="prev" title="Learning Objectives" href="python-fundamentals-04-operators.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/intro-eds-textbook/00-course-overview.md</span>, line 36)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/textbook-header.md</span>, line 2)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-python-fundamentals-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-05-exercise.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-05-exercise.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-create-lists-from-data"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1: Create Lists from Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-modify-values-in-existing-list"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Modify Values in Existing List</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-list-of-lists"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3: Create a List of Lists</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-the-data-in-the-list-of-lists"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 4: Plot the Data in the List of Lists</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-list-comprehensions-in-python"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> BONUS Challenge: List Comprehensions in Python</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>This page of exercises will test the skills that you learned in the previous lessons in this chapter.</p>
+</div><div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-create-lists-from-data">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1: Create Lists from Data<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-create-lists-from-data" title="Permalink to this headline">#</a></h1>
+<p>The data below represent average monthly precipitation for <a href="https://www.esrl.noaa.gov/psd/boulder/Boulder.mm.precip.html" target="_blank">Boulder, Colorado provided by the U.S. National Oceanic and Atmospheric Administration (NOAA).</a></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Month</p></th>
+<th class="head"><p>Precipitation (inches)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>jan</p></td>
+<td><p>0.70</p></td>
+</tr>
+<tr class="row-odd"><td><p>feb</p></td>
+<td><p>0.75</p></td>
+</tr>
+<tr class="row-even"><td><p>mar</p></td>
+<td><p>1.85</p></td>
+</tr>
+<tr class="row-odd"><td><p>apr</p></td>
+<td><p>2.93</p></td>
+</tr>
+<tr class="row-even"><td><p>may</p></td>
+<td><p>3.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>june</p></td>
+<td><p>2.02</p></td>
+</tr>
+<tr class="row-even"><td><p>july</p></td>
+<td><p>1.93</p></td>
+</tr>
+<tr class="row-odd"><td><p>aug</p></td>
+<td><p>1.62</p></td>
+</tr>
+<tr class="row-even"><td><p>sept</p></td>
+<td><p>1.84</p></td>
+</tr>
+<tr class="row-odd"><td><p>oct</p></td>
+<td><p>1.31</p></td>
+</tr>
+<tr class="row-even"><td><p>nov</p></td>
+<td><p>1.39</p></td>
+</tr>
+<tr class="row-odd"><td><p>dec</p></td>
+<td><p>0.84</p></td>
+</tr>
+</tbody>
+</table>
+<p>Create two <strong>Python</strong> lists as follows:</p>
+<ol class="arabic simple">
+<li><p>the first list should contain the month abbreviations and should be called <code class="docutils literal notranslate"><span class="pre">boulder_precip_months</span></code>.</p></li>
+<li><p>the second list should be a list of precipitation values and should be called <code class="docutils literal notranslate"><span class="pre">boulder_precip_inches</span></code>.</p></li>
+</ol>
+<p>Both lists should contain the data in the table above, in the order they appear in the
+table above! Here are all of the data formatted to make it easier for you to create your
+list!</p>
+<p><code class="docutils literal notranslate"><span class="pre">0.70,</span> <span class="pre">0.75,</span>&#160; <span class="pre">1.85</span> <span class="pre">,</span> <span class="pre">2.93,</span> <span class="pre">3.05</span> <span class="pre">,</span> <span class="pre">2.02,</span> <span class="pre">1.93,</span> <span class="pre">1.62,</span> <span class="pre">1.84,</span> <span class="pre">1.31,</span> <span class="pre">1.39,</span> <span class="pre">0.84</span></code></p>
+<p>And here are the months:</p>
+<p><code class="docutils literal notranslate"><span class="pre">jan,</span> <span class="pre">feb,</span> <span class="pre">mar,</span> <span class="pre">apr,</span> <span class="pre">may,</span> <span class="pre">june,</span> <span class="pre">july,</span> <span class="pre">aug,</span> <span class="pre">sept,</span> <span class="pre">oct,</span> <span class="pre">nov,</span> <span class="pre">dec</span></code></p>
+<p><strong>HINT: the month values should be strings and the precipitation values should be floating point numbers!</strong></p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating lists needed for activity</span>
+
+<span class="n">boulder_precip_months</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;jan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;feb&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apr&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;may&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;june&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;july&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;aug&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sept&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;oct&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nov&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dec&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">boulder_precip_inches</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mf">0.70</span><span class="p">,</span>
+    <span class="mf">0.75</span><span class="p">,</span>
+    <span class="mf">1.85</span><span class="p">,</span>
+    <span class="mf">2.93</span><span class="p">,</span>
+    <span class="mf">3.05</span><span class="p">,</span>
+    <span class="mf">2.02</span><span class="p">,</span>
+    <span class="mf">1.93</span><span class="p">,</span>
+    <span class="mf">1.62</span><span class="p">,</span>
+    <span class="mf">1.84</span><span class="p">,</span>
+    <span class="mf">1.31</span><span class="p">,</span>
+    <span class="mf">1.39</span><span class="p">,</span>
+    <span class="mf">0.84</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-modify-values-in-existing-list">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2: Modify Values in Existing List<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-modify-values-in-existing-list" title="Permalink to this headline">#</a></h1>
+<p>Next, convert each floating point value in the <code class="docutils literal notranslate"><span class="pre">boulder_precip_inches</span></code> to
+millimeters by creating a new list variable called <code class="docutils literal notranslate"><span class="pre">boulder_precip_mm</span></code>.
+One way to do this is to create a copy of the old list and assign it to a
+new variable name - like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">new_list</span> <span class="pre">=</span> <span class="pre">old_list.copy()</span></code></p>
+<p>HINT: There are several efficient ways of converting your data to mm including list comprehensions.</p>
+<p>For this exercise, you can begin by making a copy of the <code class="docutils literal notranslate"><span class="pre">boulder_precip_inches</span></code> object using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">boulder_precip_inches.copy()</span></code></p>
+<p>Reassign that copy to the new variable called <code class="docutils literal notranslate"><span class="pre">boulder_precip_mm</span></code>. Then,
+you can replace each value in your new list using indexing. Refer back
+to the lesson on lists if you do not remember how to replace a value in
+a list. To convert inches to millimeters, you need to multiply the inches
+by <code class="docutils literal notranslate"><span class="pre">25.4</span></code> (1 inch = 25.4 mm). To make your code more legible, you can create
+a variable at the top of your notebook that stores the conversion value of
+<code class="docutils literal notranslate"><span class="pre">25.4</span></code>. A well named conversion variable will make your code easier to manage
+and easier to read.</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modifying the list as needed</span>
+
+<span class="n">boulder_precip_mm</span> <span class="o">=</span> <span class="n">boulder_precip_inches</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+<span class="n">boulder_precip_mm</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-list-of-lists">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 3: Create a List of Lists<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-list-of-lists" title="Permalink to this headline">#</a></h1>
+<p>You can make a list of lists (a list which contains multiple sublists) using the following syntax:</p>
+<p><code class="docutils literal notranslate"><span class="pre">list_of_lists</span> <span class="pre">=</span> <span class="pre">[list_one,</span> <span class="pre">list_two]</span></code></p>
+<p>In the cell below, create a list called <code class="docutils literal notranslate"><span class="pre">all_boulder_data</span></code> that contains the
+<code class="docutils literal notranslate"><span class="pre">boulder_precip_months</span></code> and <code class="docutils literal notranslate"><span class="pre">boulder_precip_mm</span></code> objects as sublists.</p>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating the list of lists</span>
+
+<span class="n">all_boulder_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">boulder_precip_months</span><span class="p">,</span> <span class="n">boulder_precip_mm</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-the-data-in-the-list-of-lists">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 4: Plot the Data in the List of Lists<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-the-data-in-the-list-of-lists" title="Permalink to this headline">#</a></h1>
+<p>Modify the following code to create a plot of your data. Be sure to use the
+<code class="docutils literal notranslate"><span class="pre">all_boulder_data</span></code> object for your plot:</p>
+<p>HINT: you will need to properly index the all_boulder_data object to access each
+sublist within it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary plot package</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Plot monthly precipitation values</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">listname_x_axis</span><span class="p">,</span> 
+       <span class="n">listname_y_axis</span><span class="p">,</span> 
+       <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Add plot title here&quot;</span><span class="p">,</span>
+       <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Add x axis label here&quot;</span><span class="p">,</span> 
+       <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Add y axis label here&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Customize this plot by completing the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">listname_x_axis</span></code> and <code class="docutils literal notranslate"><span class="pre">listname_y_axis</span></code> with the appropriate sublist within the <code class="docutils literal notranslate"><span class="pre">all_boulder_data</span></code> list.</p></li>
+<li><p>Change the <a href="https://matplotlib.org/mpl_examples/color/named_colors.hires.png" target="_blank">color of the plot</a> to a blue color such as aqua.</p></li>
+<li><p>Update the text for the titles and axes labels.</p></li>
+<li><p>Modify the values in <code class="docutils literal notranslate"><span class="pre">figsize=(6,</span> <span class="pre">6)</span></code> to change the size of your plot.</p></li>
+</ol>
+<p>For your titles and labels, be sure to think about the following pieces of information that could help someone easily interpret the plot:</p>
+<ul class="simple">
+<li><p>geographic coverage or extent of data.</p></li>
+<li><p>duration or temporal extent of the data.</p></li>
+<li><p>what was actually measured and/or represented by the data.</p></li>
+<li><p>units of measurement.</p></li>
+</ul>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary plot package</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Plot monthly precipitation values</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">all_boulder_data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+       <span class="n">all_boulder_data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+       <span class="n">color</span><span class="o">=</span><span class="s2">&quot;aqua&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Average Monthly Precipitation for Boulder, Colorado&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Precipitation (mm)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/1f24a8b0ba28063fdfc61d35f8a8f828dab01a2296fb907b74fc5fe044d85058.png" src="../../../_images/1f24a8b0ba28063fdfc61d35f8a8f828dab01a2296fb907b74fc5fe044d85058.png" />
+</div>
+</div>
+<div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-list-comprehensions-in-python">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BONUS Challenge: List Comprehensions in Python<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-list-comprehensions-in-python" title="Permalink to this headline">#</a></h1>
+<p>Above you performed many tasks manually. Included in those manual steps was one
+where you converted each individual value in your list from inches to mm.
+In <strong>Python</strong>, list comprehensions are a great way to perform operations on a sequence
+of values stored within a list.</p>
+<p>The syntax for a list comprehension is below. Essentially what is happening is that
+Python is iterating through each value in the old list (<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">my_old_list</span></code>) and
+multiplying it by 2 (<code class="docutils literal notranslate"><span class="pre">i*2</span></code>). In each iteration of the loop, the value <code class="docutils literal notranslate"><span class="pre">i</span></code> represents
+the next value in the list. In the example below, <code class="docutils literal notranslate"><span class="pre">i</span></code> will first be the value 1,
+and then 2, and finally 3.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_old_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">my_new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">my_old_list</span><span class="p">]</span> 
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">my_new_list</span></code> will equal each value in <code class="docutils literal notranslate"><span class="pre">my_old_list</span></code> multiplied by 2, so <code class="docutils literal notranslate"><span class="pre">my_new_list</span></code>
+will be equivalent to <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">4,</span> <span class="pre">6]</span></code>. You can run this code and see the output for yourself!
+Try to experiment with writing more efficient code. Convert your <code class="docutils literal notranslate"><span class="pre">boulder_precip_inches</span></code>
+list of values to a new list called <code class="docutils literal notranslate"><span class="pre">boulder_precip_mm</span></code> using a list comprehension. Use
+the syntax above to help you create this list comprehension.</p>
+<p>For more information on loops and changing values within a list, you can check out <a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/loops/" target="_blank">Earth Lab’s lesson introducing loops in Python,</a> and you can go to <a href="https://www.pythonforbeginners.com/basics/list-comprehensions-in-python" target="_blank">this more in depth explanation on list comprehensions in Python.</a></p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boulder_precip_mm</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mf">25.4</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">boulder_precip_inches</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/04-python-fundamentals/01-get-started-python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="python-fundamentals-04-operators.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../02-python-packages-for-eds/python-packages-for-eds-01-intro-eds-packages-python.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eleven - Import and Install Python Packages for Earth Data Science</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-create-lists-from-data"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1: Create Lists from Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-modify-values-in-existing-list"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Modify Values in Existing List</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-list-of-lists"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3: Create a List of Lists</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-the-data-in-the-list-of-lists"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 4: Plot the Data in the List of Lists</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-list-comprehensions-in-python"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> BONUS Challenge: List Comprehensions in Python</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6.13.25. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/03-git-github/2-github-collaboration/2019-10-02-github-collab-06-pr-activity';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="7. Section Four - Python Code Fundamentals" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html" />
+    <link rel="prev" title="6.13.23. Learning Objectives" href="2019-10-02-github-collab-05-workflows.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/03-git-github/2-github-collaboration/2019-10-02-github-collab-06-pr-activity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.13.25. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">6.13.26. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-fork-and-clone-the-github-repo-to-make-a-copy-that-you-own">6.13.27. Step 1: Fork and Clone The GitHub Repo To Make a Copy That You Own</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-jupyter-notebook-for-the-town-that-you-live-in">6.13.28. Step 2:  Create a Jupyter Notebook For The Town that You Live In</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-a-csv-file-for-your-town">6.13.29. Step 3:  Create a .csv File For Your Town</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-submit-a-pull-request-to-the-earthlab-education-ea-bootcamp-hometowns-repo">6.13.30. Step 4:  Submit a Pull Request To the earthlab-education/ea-bootcamp-hometowns repo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-notes">6.13.31. Activity Notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cu-students-notes">6.13.32. CU Students Notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-pull-requests">6.13.33. Submit Pull Requests</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-start-pull-request">6.13.33.1. Step 1 - Start Pull Request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-select-repository-to-update">6.13.33.2. Step 2 - Select Repository to Update</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#head-vs-base">6.13.33.2.1. Head vs Base</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-verify-changes">6.13.33.3. Step 3 - Verify Changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-new-pull-request">6.13.33.4. Step 4 - Create New Pull Request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-describe-your-pull-request">6.13.33.5. Step 5 - Describe Your Pull Request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#close-pull-requests">6.13.33.6. Close Pull Requests</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">6.13.34. Wrapping Up</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Lesson” icon=”file-text” %}</p>
+<p>In this lesson, you will learn how to submit a pull request to suggest that your edits be included in another repository (e.g. the original repository from which you forked and cloned a repository).</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">6.13.25. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this lesson, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain the relationship between a forked repository (head) and the original repository (base).</p></li>
+<li><p>Submit a pull request of changes to a repository on <code class="docutils literal notranslate"><span class="pre">GitHub.com</span></code>.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><span class="section-number">6.13.26. </span><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>Be sure that you have also completed the <a href="{{ site.url }}/courses/intro-to-earth-data-science/git-github/version-control/guided-activity-version-control/">Activity on Version Control with Git/GitHub</a>.</p>
+<p>You will also need a web browser and your <code class="docutils literal notranslate"><span class="pre">GitHub.com</span></code> login (username and password).</p>
+</div>
+<p>For this assignment, you will add a new <strong>Jupyter Notebook file</strong> that contains information about your hometown.</p>
+</section>
+<section id="step-1-fork-and-clone-the-github-repo-to-make-a-copy-that-you-own">
+<h1><span class="section-number">6.13.27. </span>Step 1: Fork and Clone The GitHub Repo To Make a Copy That You Own<a class="headerlink" href="#step-1-fork-and-clone-the-github-repo-to-make-a-copy-that-you-own" title="Permalink to this headline">#</a></h1>
+<p>To begin, fork the <a href="https://github.com/earthlab-education/ea-bootcamp-hometowns" target="_blank">Earth Lab Education Hometowns GitHub repository</a>.
+Remember that this step only needs to be done once. When you create this fork, you then have full ownership of the fork in your user account. Full ownership means that you can make direct changes to the fork without submitting a Pull Request.</p>
+<p>After you have forked the repo, clone it so that you have a copy locally to work with on your computer.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> Remember that you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> to view the url path of your clone. This will allow you to ensure that your cloned your FORK rather than the repo owned by <strong>earthlab-education</strong>.
+{: .notice–success}</p>
+</section>
+<section id="step-2-create-a-jupyter-notebook-for-the-town-that-you-live-in">
+<h1><span class="section-number">6.13.28. </span>Step 2:  Create a Jupyter Notebook For The Town that You Live In<a class="headerlink" href="#step-2-create-a-jupyter-notebook-for-the-town-that-you-live-in" title="Permalink to this headline">#</a></h1>
+<p>In the local clone, create and save a Jupyter Notebook called <code class="docutils literal notranslate"><span class="pre">city-state-or-country.ipynb</span></code>  (change the name to include the city, state and country - e.g. houston-tx.ipynb) to a directory with the path structure as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">country</span><span class="o">/</span>
+   <span class="n">state</span><span class="o">/</span>
+      <span class="n">city</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">state</span></code> doesn’t make sense for you - you can simply use the  <code class="docutils literal notranslate"><span class="pre">country/city</span></code> directory structure.</p>
+<p>Your final file path will look like this: <code class="docutils literal notranslate"><span class="pre">ea-bootcamp-hometowns/country/state/city/houston-tx.ipynb</span></code></p>
+<p>In your jupyter notebook add the following three interesting facts about the town that you live in using <a class="reference external" href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/file-formats/use-text-files/format-text-with-markdown-jupyter-notebook/">Markdown</a>:</p>
+<ul class="simple">
+<li><p>add a Location subtitle (header) with the latitude and longitude of the town center below it</p></li>
+<li><p>add a Population subtitle (header) and the information for the most recent population figure you can find, plus a hyperlink to the source for this information</p></li>
+<li><p>add a Landmark subtitle (header) for a local landmark,</p>
+<ul>
+<li><p>Add an image and short text description of this landmark.</p></li>
+</ul>
+</li>
+</ul>
+<p>If a file for your town already exists in this repo as a markdown file, you can add any other facts about your town to that file that you wish following the structure listed above!</p>
+</section>
+<section id="step-3-create-a-csv-file-for-your-town">
+<h1><span class="section-number">6.13.29. </span>Step 3:  Create a .csv File For Your Town<a class="headerlink" href="#step-3-create-a-csv-file-for-your-town" title="Permalink to this headline">#</a></h1>
+<p>Create a new csv file in the <code class="docutils literal notranslate"><span class="pre">0-csv-files/</span></code> directory using the <code class="docutils literal notranslate"><span class="pre">csv-file-template.csv</span></code>
+template file. Name the new csv: <code class="docutils literal notranslate"><span class="pre">country-city.csv</span></code>. Fill out the information for each row in the <strong>.csv</strong> file using the example table below as a template. You will add the following information to the file:</p>
+<ul class="simple">
+<li><p>Who - this represents who you are. the options include:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>cu-student</p></li>
+<li><p>certificate-student and</p></li>
+<li><p><a class="reference external" href="http://earthdatascience.org">earthdatascience.org</a> student</p></li>
+</ol>
+<ul class="simple">
+<li><p>type: the type of entry this is. The options include:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>place i’ve lived</p></li>
+<li><p>where I live now</p></li>
+<li><p>place I love</p></li>
+</ol>
+<ul class="simple">
+<li><p>country: the country that you live in</p></li>
+<li><p>State: the state that you live in (or province, district, etc)</p></li>
+<li><p>city: the name of the city that you live in</p></li>
+<li><p>latitude: the latitude of the city center where you live</p></li>
+<li><p>longitude: the longitude of the city center where you live</p></li>
+</ul>
+<p>Your file will look something like this:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>who (OPTIONS: cu-student; certificate-student; <a class="reference external" href="http://earthdatascience.org">earthdatascience.org</a> student)</p></th>
+<th class="text-left head"><p>type</p></th>
+<th class="text-left head"><p>country</p></th>
+<th class="head"><p>state</p></th>
+<th class="head"><p>city</p></th>
+<th class="head"><p>latitude</p></th>
+<th class="head"><p>longitude</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><a class="reference external" href="http://earthdatascience.org">earthdatascience.org</a> student</p></td>
+<td class="text-left"><p>place i’ve lived</p></td>
+<td class="text-left"><p>USA</p></td>
+<td><p>State</p></td>
+<td><p>City</p></td>
+<td><p>latitude-here</p></td>
+<td><p>longitude-here</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-4-submit-a-pull-request-to-the-earthlab-education-ea-bootcamp-hometowns-repo">
+<h1><span class="section-number">6.13.30. </span>Step 4:  Submit a Pull Request To the earthlab-education/ea-bootcamp-hometowns repo<a class="headerlink" href="#step-4-submit-a-pull-request-to-the-earthlab-education-ea-bootcamp-hometowns-repo" title="Permalink to this headline">#</a></h1>
+<p>Once you have made the changes, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> to commit the changes locally. Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to push those changes up to your fork. And finally, submit a <code class="docutils literal notranslate"><span class="pre">pull</span> <span class="pre">request</span></code> from your fork to this repository, with the following included in the message of your pull request:</p>
+<ul class="simple">
+<li><p>notify the owner of the repository (your instructor) that you have addressed the issue using <code class="docutils literal notranslate"><span class="pre">&#64;github-username</span></code></p></li>
+<li><p>reference the issue number using <code class="docutils literal notranslate"><span class="pre">Fixes</span> <span class="pre">#issue-number</span></code> (e.g. the issue number is above in the title of this issue) - If you are working online, you may not have an issue with your name on it! just submit the PR without mentioning an issue or a github user.</p></li>
+</ul>
+</section>
+<section id="activity-notes">
+<h1><span class="section-number">6.13.31. </span>Activity Notes<a class="headerlink" href="#activity-notes" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>As you are working, be sure to keep track of where you are working and what
+repository your are pushing too. Remember that you can always use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> to
+determine the path to the repo that you are pushing to when you run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> locally.</p></li>
+<li><p>Once you have made your changes, you can submit a Pull Request to the earthlab-education
+repo. Be sure to check that the changes you are submitted look correct in the Pull Request before you consider your work, done!</p></li>
+</ul>
+</section>
+<section id="cu-students-notes">
+<h1><span class="section-number">6.13.32. </span>CU Students Notes<a class="headerlink" href="#cu-students-notes" title="Permalink to this headline">#</a></h1>
+<p>If you are a student at CU, you will be adding files for two different cities! Be sure to follow
+the instructions carefully!</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-push-pr.png">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-push-pr.png" alt="LEFT: To sync changes made and committed locally on your computer to your Github account, you push the changes from your computer to your fork on GitHub. RIGHT: To suggest changes to another repository, you submit a Pull Request to update the central repository. Source: Colin Williams, NEON."></a>
+   <figcaption> LEFT: To sync changes made and committed locally on your computer to your Github account, you push the changes from your computer to your fork on GitHub. RIGHT: To suggest changes to another repository, you submit a Pull Request to update the central repository. Source: Colin Williams, NEON.
+   </figcaption>
+</figure><p>Pull requests inform the owner of the original repository (e.g. <code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab-education/ea-bootcamp-hw-1-yourusername</span></code>) that you have changed files you would like to add from a forked repository (e.g. <code class="docutils literal notranslate"><span class="pre">https://github.com/yourusername/ea-bootcamp-hw-1-yourusername</span></code>).</p>
+<p>A pull request to another repository is similar to a “push”. However, it allows for a few things:</p>
+<ol class="arabic simple">
+<li><p>It allows you to contribute to another repo without needing administrative privileges to make changes to the repository.</p></li>
+<li><p>It allows others to review your changes and suggest corrections, additions, edits, etc.</p></li>
+<li><p>It allows repository administrators control over what gets added to their project repo.</p></li>
+</ol>
+<p>The ability to suggest changes to ANY repository, without needing administrative privileges is a powerful feature of <code class="docutils literal notranslate"><span class="pre">GitHub</span></code>. You can make as many changes as you want in your fork, and then suggest that the owner of the original repository incorporate those changes using a pull request.</p>
+</section>
+<section id="submit-pull-requests">
+<h1><span class="section-number">6.13.33. </span>Submit Pull Requests<a class="headerlink" href="#submit-pull-requests" title="Permalink to this headline">#</a></h1>
+<p>This section was adapted from the <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> <a href="https://guides.github.com/activities/hello-world/" target = "_blank">Hello World guide</a>. They provide an animated version of these directions.</p>
+<p>Pull requests are the heart of collaboration on <code class="docutils literal notranslate"><span class="pre">Github.com</span></code>. When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into their project.</p>
+<p>Pull requests show diffs, (differences), of the content between your repo and the repo that you are submitting changes to. The changes, additions, and subtractions are shown in green and red.</p>
+<section id="step-1-start-pull-request">
+<h2><span class="section-number">6.13.33.1. </span>Step 1 - Start Pull Request<a class="headerlink" href="#step-1-start-pull-request" title="Permalink to this headline">#</a></h2>
+<p>To begin a pull request (PR), click the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">pull</span> <span class="pre">request</span></code> button on the main page of your forked repository (e.g. <code class="docutils literal notranslate"><span class="pre">https://github.com/yourusername/ea-bootcamp-hw-1-yourusername</span></code>).</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/new-pull-request.png">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/new-pull-request.png" alt="Location of the New pull request button on the main page of an example repository for jenp0277. This repository has been forked from the repository owned by earthlab-education. Changes have been made by jenp0277 in her fork, and jenp0277 is ready to create a new pull request to send changes from her fork to the repository owned by earthlab-education."></a>
+ <figcaption> Location of the New pull request button on the main page of an example repository for jenp0277. This repository has been forked from the repository owned by earthlab-education. Changes have been made by jenp0277 in her fork, and jenp0277 is ready to create a new pull request to send changes from her fork to the repository owned by earthlab-education.
+ </figcaption>
+</figure><p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can also click the “Pull Requests” tab at the top of the main page of a repository to submit a pull request (PR). When the pull request page opens, click the “New pull request” button to initiate a PR.
+{: .notice–success}</p>
+</section>
+<section id="step-2-select-repository-to-update">
+<h2><span class="section-number">6.13.33.2. </span>Step 2 - Select Repository to Update<a class="headerlink" href="#step-2-select-repository-to-update" title="Permalink to this headline">#</a></h2>
+<p>Next, you need to select which repository you wish to update (the base repo) and which repository contains the content that you wish to use to update the base (the head repo).</p>
+<p>In this example, you want to update <code class="docutils literal notranslate"><span class="pre">earthlab-education/ea-bootcamp-hw-1-yourusername</span></code> with commits in your fork <code class="docutils literal notranslate"><span class="pre">/yourusername/ea-bootcamp-hw-1-yourusername</span></code>.</p>
+<section id="head-vs-base">
+<h3><span class="section-number">6.13.33.2.1. </span>Head vs Base<a class="headerlink" href="#head-vs-base" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Base: the repository that will be updated; changes will be added to this repository.</p></li>
+<li><p>Head: the repository containing the changes that will be added to the base.</p></li>
+</ul>
+<p>One way to remember this is that the “head” is ahead of the “base”. So you must add from the head to the base.</p>
+<p>When you begin a pull request, the head and base will auto-populate as follows:</p>
+<ul class="simple">
+<li><p>base fork: <code class="docutils literal notranslate"><span class="pre">earthlab-education/ea-bootcamp-hw-1-yourusername</span></code></p></li>
+<li><p>head fork: <code class="docutils literal notranslate"><span class="pre">/yourusername/ea-bootcamp-hw-1-yourusername</span></code></p></li>
+</ul>
+<p>The above pull request configuration tells <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> to update the base repository with contents from your forked repository, or the head repository.</p>
+</section>
+</section>
+<section id="step-3-verify-changes">
+<h2><span class="section-number">6.13.33.3. </span>Step 3 - Verify Changes<a class="headerlink" href="#step-3-verify-changes" title="Permalink to this headline">#</a></h2>
+<p>When you compare two repos in a pull request page, <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> provides an overview of the differences (diffs) between the files. Look over the changes and make sure nothing looks surprising.</p>
+<p>You can also click on the commit titles to see the specific changes in each commit.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/github-pull-request-diff.png">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/github-pull-request-diff.png" alt="This screenshot shows the differences between the files in Earth Lab's version of the 14ers-git repo and a fork of that repository created by lwasser. When showing line by line changes, the deletions will be highlighted in red and additions will be highlighted in green. Pull request diffs view can be changed between unified and split (arrow)."></a>
+ <figcaption> This screenshot shows the differences between the files in Earth Lab's version of the 14ers-git repo and a fork of that repository created by lwasser. When showing line by line changes, the deletions will be highlighted in red and additions will be highlighted in green. Pull request diffs view can be changed between unified and split (arrow).
+ </figcaption>
+</figure></section>
+<section id="step-4-create-new-pull-request">
+<h2><span class="section-number">6.13.33.4. </span>Step 4 - Create New Pull Request<a class="headerlink" href="#step-4-create-new-pull-request" title="Permalink to this headline">#</a></h2>
+<p>If you are adding new commits to base repository (e.g. <code class="docutils literal notranslate"><span class="pre">earthlab-education/ea-bootcamp-hw-1-yourusername</span></code>), then the “Create Pull Request” button will be available. Click the green “Create Pull Request” button to start your pull request.</p>
+</section>
+<section id="step-5-describe-your-pull-request">
+<h2><span class="section-number">6.13.33.5. </span>Step 5 - Describe Your Pull Request<a class="headerlink" href="#step-5-describe-your-pull-request" title="Permalink to this headline">#</a></h2>
+<p>Add a title and write a brief description of your changes. When you’re done with your message, click “Create Pull Request”.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/github-create-pull-request.png">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/github-create-pull-request.png" alt="Pull request titles should be concise and descriptive of the content in the pull request. More detailed notes can be left in the comments box."></a>
+ <figcaption> Pull request titles should be concise and descriptive of the content in the pull request. More detailed notes can be left in the comments box.
+ </figcaption>
+</figure><p>Notice that when creating a new pull request, you will be automatically transferred to the <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> site for the base repository.</p>
+<p>At this point, you are done with the pull request! In this case, you have submitted a pull request for Homework 1!</p>
+<p>Though you may see an active button for Merge Pull Request, this button is intended for the owner of the repository. They can review your pull request and then decide if/when to merge it into their original repository.</p>
+<p>Note that until the owner merges your pull request, all future commits that you make to your fork will continue to be added to the open pull request.</p>
+</section>
+<section id="close-pull-requests">
+<h2><span class="section-number">6.13.33.6. </span>Close Pull Requests<a class="headerlink" href="#close-pull-requests" title="Permalink to this headline">#</a></h2>
+<p>You can also close a pull request on <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> if you decide you are not ready to submit your files from your forked repository to the original repository.</p>
+<p>For example, the pull request you just created in this lesson can be closed if you have not yet completed Homework 1. When you are ready to submit Homework 1, you can simply create a new pull request on <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> following these same steps.</p>
+<p>To close a pull request, simply click on <code class="docutils literal notranslate"><span class="pre">Close</span> <span class="pre">pull</span> <span class="pre">request</span></code> button toward the bottom of the pull request page.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/github-close-pull-request.png">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/github-close-pull-request.png" alt="Location of the Close pull request button on an example pull request from jenp0277 to earthlab-education."></a>
+ <figcaption> Location of the Close pull request button on an example pull request from jenp0277 to earthlab-education.
+ </figcaption>
+</figure></section>
+</section>
+<section id="wrapping-up">
+<h1><span class="section-number">6.13.34. </span>Wrapping Up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h1>
+<p><strong>Congratulations!</strong> You know now know how to complete a workflow on <a class="reference external" href="http://GitHub.com">GitHub.com</a> that involves:</p>
+<ol class="arabic simple">
+<li><p>forking a repo that you don’t own,</p></li>
+<li><p>cloning and making changes to the repo,</p></li>
+<li><p>pushing the changes back to your fork, and</p></li>
+<li><p>submitting a pull request</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/03-git-github/2-github-collaboration"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2019-10-02-github-collab-05-workflows.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6.13.23. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span><i class="fa fa-ship" aria-hidden="true"></i> Section Four - Python Code Fundamentals</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.13.25. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">6.13.26. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-fork-and-clone-the-github-repo-to-make-a-copy-that-you-own">6.13.27. Step 1: Fork and Clone The GitHub Repo To Make a Copy That You Own</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-jupyter-notebook-for-the-town-that-you-live-in">6.13.28. Step 2:  Create a Jupyter Notebook For The Town that You Live In</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-a-csv-file-for-your-town">6.13.29. Step 3:  Create a .csv File For Your Town</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-submit-a-pull-request-to-the-earthlab-education-ea-bootcamp-hometowns-repo">6.13.30. Step 4:  Submit a Pull Request To the earthlab-education/ea-bootcamp-hometowns repo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-notes">6.13.31. Activity Notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cu-students-notes">6.13.32. CU Students Notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-pull-requests">6.13.33. Submit Pull Requests</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-start-pull-request">6.13.33.1. Step 1 - Start Pull Request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-select-repository-to-update">6.13.33.2. Step 2 - Select Repository to Update</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#head-vs-base">6.13.33.2.1. Head vs Base</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-verify-changes">6.13.33.3. Step 3 - Verify Changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-new-pull-request">6.13.33.4. Step 4 - Create New Pull Request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-describe-your-pull-request">6.13.33.5. Step 5 - Describe Your Pull Request</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#close-pull-requests">6.13.33.6. Close Pull Requests</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">6.13.34. Wrapping Up</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

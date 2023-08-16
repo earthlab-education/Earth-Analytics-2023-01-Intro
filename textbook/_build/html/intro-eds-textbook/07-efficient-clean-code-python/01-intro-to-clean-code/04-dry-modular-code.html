@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/04-dry-modular-code';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Chapter Eighteen - Loops" href="../03-loops/loops-01-intro.html" />
+    <link rel="prev" title="Learning Objectives" href="03-expressive-names.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/intro-eds-textbook/00-course-overview.md</span>, line 36)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/textbook-header.md</span>, line 2)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-efficient-clean-code-python-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/04-dry-modular-code.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/04-dry-modular-code.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-repeat-yourself-dry">Don’t Repeat Yourself  (DRY)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-repeat-yourself-remove-repetition-in-your-code">Don’t Repeat Yourself: Remove Repetition in Your Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-write-efficient-code">Why Write Efficient Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dont-repeat-yourself-dry">Don’t Repeat Yourself - DRY</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#strategies-for-writing-dry-code">Strategies For Writing DRY Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-functions-to-document-and-simplify-repeated-tasks">Write Functions To Document and Simplify Repeated Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-loops-in-python-to-simplify-iterative-repetitive-tasks">Write Loops in Python To Simplify Iterative Repetitive Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional Statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-applying-pep-8-to-your-code"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Practice Applying PEP 8 To Your Code</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-additional-resources"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Additional Resources</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this lesson, you will be able to:</p>
+<ul class="simple">
+<li><p>Be able to define the DRY principle.</p></li>
+<li><p>List key strategies for writing DRY code in Python.</p></li>
+<li><p>Explain how these strategies help you write DRY code.</p></li>
+</ul>
+</div>
+<section id="don-t-repeat-yourself-dry">
+<h2>Don’t Repeat Yourself  (DRY)<a class="headerlink" href="#don-t-repeat-yourself-dry" title="Permalink to this headline">#</a></h2>
+<p>The DRY approach to programming refers to writing functions and automating sections of code that are repeated. If you perform the same task multiple times in your code, consider a function or a loop to make your workflow more
+efficient.</p>
+</section>
+</section>
+<section id="don-t-repeat-yourself-remove-repetition-in-your-code">
+<h1>Don’t Repeat Yourself: Remove Repetition in Your Code<a class="headerlink" href="#don-t-repeat-yourself-remove-repetition-in-your-code" title="Permalink to this headline">#</a></h1>
+<section id="why-write-efficient-code">
+<h2>Why Write Efficient Code<a class="headerlink" href="#why-write-efficient-code" title="Permalink to this headline">#</a></h2>
+<p>DRY code relates to reproducible science because one component of reproducibility is writing code that is easy to read. If your code is easy to read, it will in turn be easier for your future self to understand that code. It will also be easier for your colleagues to work with and contribute to your code. This is important, but there is an even more selfish reason to consider writing efficient code.</p>
+<p>Efficient coding will make your life easier, too.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/clean-code/reproducible-science-is-about-being-lazy-hadley-wickham.png
+">
+ <img src="{{ site.url }}/images/earth-analytics/clean-code/reproducible-science-is-about-being-lazy-hadley-wickham.png" alt = "Reproducibility is actually all about being as lazy as possible. Quote from Hadley Wickham on twitter"></a>
+ <figcaption>At the end of the day, reproducibility can sometimes be thought as being as lazy as possible. That is to say, when you can avoid repeating steps and code, you should do just that. Source: <a href="https://twitter.com/hadleywickham/status/598532170160873472" target="_blank">Twitter.</a>
+ </figcaption>
+</figure>
+</section>
+<section id="dont-repeat-yourself-dry">
+<h2>Don’t Repeat Yourself - DRY<a class="headerlink" href="#dont-repeat-yourself-dry" title="Permalink to this headline">#</a></h2>
+<p>DRY (Don’t Repeat Yourself) is a principle of software development. The focus of DRY is to avoid repetition of information.</p>
+<p>Why?</p>
+<p>One main reason is that when you write code that performs the same tasks over and over again, any modification of one task requires the same change to be made to every single instance of that task! Editing every instance of a task is a lot of work.</p>
+<p>By implementing DRY code approaches, you can make your code:</p>
+<ol class="arabic simple">
+<li><p>easier to follow and read (for yourself as well as others), thereby supporting reproducibility</p></li>
+<li><p>easier to update because you only have to update your code once, rather than everywhere that code block is used</p></li>
+</ol>
+</section>
+</section>
+<section id="strategies-for-writing-dry-code">
+<h1>Strategies For Writing DRY Code<a class="headerlink" href="#strategies-for-writing-dry-code" title="Permalink to this headline">#</a></h1>
+<p>Below you will learn about three commonly used strategies associated with writing clean code:</p>
+<ol class="arabic simple">
+<li><p>Write functions for a task that is performed over and over.</p></li>
+<li><p>Create loops that iterate over repetitive tasks.</p></li>
+<li><p>Use conditional statements to control if and when code is executed.</p></li>
+</ol>
+<p>The above three approaches are often used together when writing
+code. You will learn more about each one in the upcoming chapters.</p>
+<section id="write-functions-to-document-and-simplify-repeated-tasks">
+<h2>Write Functions To Document and Simplify Repeated Tasks<a class="headerlink" href="#write-functions-to-document-and-simplify-repeated-tasks" title="Permalink to this headline">#</a></h2>
+<p>A function is a reusable block of code that performs a specific task. Functions have inputs and outputs. Functions can help you to both eliminate repetition and improve efficiency in your code through modularity. If you have been using Python for any period of time, you have already used built in Python functions. For example,<code class="docutils literal notranslate"><span class="pre">print()</span></code> is a function used to write output to the Python console (or a Jupyter Notebook). If you have used pandas, <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> is a function used to read a text file into Python in a dataframe format. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> functions are useful to you as a Python programmer because you do not need to know the specific lines of code that are required to <code class="docutils literal notranslate"><span class="pre">print()</span></code>. All that you need to know is how to call the print command: <code class="docutils literal notranslate"><span class="pre">print(&quot;My</span> <span class="pre">texther&quot;)</span></code>.</p>
+<p>Below, you will see the function that you looked at in the previous lesson. This is a custom function with a custom name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahr_to_kelvin</span><span class="p">(</span><span class="n">fahr</span><span class="p">)</span> 
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert temperature in Fahrenheit to kelvin.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    fahr: int or float</span>
+<span class="sd">        The temperature in Fahrenheit.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    kelvin : int or float</span>
+<span class="sd">        The temperature in kelvin.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kelvin</span> <span class="o">=</span> <span class="p">((</span><span class="n">fahr</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="p">))</span> <span class="o">+</span> <span class="mf">273.15</span>
+    <span class="k">return</span> <span class="n">kelvin</span>
+</pre></div>
+</div>
+<p>This function converts temperature in Fahrenheit to kelvin. You can
+learn more about it by reading its documentation (docstring).</p>
+<p>Now imagine that you need to perform this calculation over and over.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">55</span>
+<span class="n">new_temp</span> <span class="o">=</span> <span class="p">((</span><span class="n">temp</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="p">))</span> <span class="o">+</span> <span class="mf">273.15</span>
+
+<span class="n">temp2</span> <span class="o">=</span> <span class="mi">46</span> 
+<span class="n">new_temp_k</span> <span class="o">=</span> <span class="p">((</span><span class="n">temp2</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="p">))</span> <span class="o">+</span> <span class="mf">273.15</span>
+</pre></div>
+</div>
+<p>In the example above, you are repeating the same calculation twice.</p>
+<p>In this example:</p>
+<ol class="arabic simple">
+<li><p>if the calculation needs to change, you need to change it twice</p></li>
+<li><p>it’s not neccesarily clear what the calculation is doing unless you know the calculation itself.</p></li>
+</ol>
+<p>The example below is cleaner because now you are replacing a repeated calculation with a function. If this function is well defined with a docstring that describes what it does, it is easier
+to both understand and use. If you need to change the calculation itself, you can do so once in the function. Then you rerun your code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">55</span>
+<span class="n">new_temp</span> <span class="o">=</span> <span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="n">fahr</span> <span class="o">=</span> <span class="n">temp</span><span class="p">)</span>
+
+<span class="n">temp2</span> <span class="o">=</span> <span class="mi">46</span> 
+<span class="n">new_temp_k</span> <span class="o">=</span> <span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="n">fahr</span> <span class="o">=</span> <span class="n">temp2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The task above could be further simplied using loops which will be discussed below. Writing modular code allows you to subdivide tasks of a workflows into organized units of code that can be reused by yourself and others, often without them needing to know the specific details of the code.</p>
+</section>
+<section id="write-loops-in-python-to-simplify-iterative-repetitive-tasks">
+<h2>Write Loops in Python To Simplify Iterative Repetitive Tasks<a class="headerlink" href="#write-loops-in-python-to-simplify-iterative-repetitive-tasks" title="Permalink to this headline">#</a></h2>
+<p>A loop executes a sequence of operations that are performed over and over in a specified order.</p>
+<p>Loops can help you to eliminate repetition in code by replacing
+duplicate lines of code with an iteration. This means that you can
+iteratively execute the same code line or block until it reaches an
+end point that you specify.</p>
+<p>For example, consider the following lines of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">avg_monthly_precip</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">months</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">precip_2002_2013</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code could be replaced by a loop that iterates over a list of variable names and executes the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function until it reaches the end of the list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">all_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">avg_monthly_precip</span><span class="p">,</span> <span class="n">months</span><span class="p">,</span> <span class="n">precip_2002_2013</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">avar</span> <span class="ow">in</span> <span class="nb">vars</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">all_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can create lists of variables, filenames, or other objects like data structures upon which you want to execute the same code. These lists can then be used as variables in loops.</p>
+</section>
+<section id="conditional-statements">
+<h2>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">#</a></h2>
+<p>A conditional statement is used to determine whether a certain condition exists before code is executed. Conditional Statements can improve the efficiency of your code by providing you with the ability to control the flow of your code, such as when or how code is executed.</p>
+<p>For example, conditional statements can be used to check that a certain variable or file exists before code is executed, or to continue code if some criteria is met such as a calculation resulting in a specific value.</p>
+<p>In the example below, you can combine a loop and a conditional statement to only print the variable value if the value is greater than 20.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">avg_monthly_precip</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">months</span><span class="o">=</span><span class="mi">20</span>
+<span class="n">precip_2002_2013</span><span class="o">=</span><span class="mi">30</span>
+
+<span class="n">all_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">avg_monthly_precip</span><span class="p">,</span> <span class="n">months</span><span class="p">,</span> <span class="n">precip_2002_2013</span><span class="p">]</span>
+
+<span class="c1"># Only print variable if it is greater than 20</span>
+<span class="k">for</span> <span class="n">avar</span> <span class="ow">in</span> <span class="n">all_vars</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">avar</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">avar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the upcoming chapters of this textbook, you will learn more about creating functions, loops and conditional statements as a way
+to both write clean DRY code and also to automated your workflows.</p>
+<div class="notice--success" markdown="1">
+</section>
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-applying-pep-8-to-your-code">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Practice Applying PEP 8 To Your Code<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-applying-pep-8-to-your-code" title="Permalink to this headline">#</a></h1>
+<p>Take a look at the code below.</p>
+<ul class="simple">
+<li><p>Create a list of all of the things that could be improved to make the code easier to read / work with.</p></li>
+<li><p>Identify changes to specific items that would help the code adhere to the PEP 8 style guide.</p></li>
+</ul>
+<!--
+
+Format Issues:
+* missing spaces in between comments
+* comments aren't useful to help me understand what is happening
+* white space
+
+Object Naming Issues
+* didn't use useful object names that describe the object
+* one very long object name
+* used a mixture of underscore and case that will be easy to confused 
+
+-->
+</div><div class="notice--info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-additional-resources">
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Additional Resources<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-additional-resources" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">The PEP 8 Style Guide</a>.</p></li>
+<li><p><a href="https://realpython.com/python-pep8/" target="_blank">How To Write Beautiful Python Code with PEP 8</a>.</p></li>
+<li><p><a href="https://www.safaribooksonline.com/library/view/the-hitchhikers-guide/9781491933213/ch04.html" target="_blank">The Hitchhiker’s Guide to Python by Tanya Schlusser and Kenneth Reitz</a>.</p></li>
+</ul>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create variable</span>
+<span class="n">variable</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">6</span>
+<span class="n">meanvariable</span> <span class="o">=</span> <span class="n">variable</span>
+
+<span class="c1">#calculate something important</span>
+<span class="n">mean_variable</span> <span class="o">=</span> <span class="n">meanvariable</span> <span class="o">*</span> <span class="mi">5</span>
+
+<span class="c1"># last step of the workflow</span>
+<span class="n">finalthingthatineedtocalculate</span> <span class="o">=</span> <span class="n">mean_variable</span> <span class="o">+</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-expressive-names.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../03-loops/loops-01-intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eighteen - Loops</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-repeat-yourself-dry">Don’t Repeat Yourself  (DRY)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-repeat-yourself-remove-repetition-in-your-code">Don’t Repeat Yourself: Remove Repetition in Your Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-write-efficient-code">Why Write Efficient Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dont-repeat-yourself-dry">Don’t Repeat Yourself - DRY</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#strategies-for-writing-dry-code">Strategies For Writing DRY Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-functions-to-document-and-simplify-repeated-tasks">Write Functions To Document and Simplify Repeated Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-loops-in-python-to-simplify-iterative-repetitive-tasks">Write Loops in Python To Simplify Iterative Repetitive Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional Statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-applying-pep-8-to-your-code"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Practice Applying PEP 8 To Your Code</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-additional-resources"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Additional Resources</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1204 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.4.31. Challenge 1: Open a Text File &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-04-exercise';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="5. Section Three - Git and GitHub" href="../../03-git-github/00-git-github-landing-page.html" />
+    <link rel="prev" title="4.4.14. Fundamentals of Vector Data in Python" href="spatial-data-formats-03-vector-data.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">1. Welcome to the Introduction to Earth Data Science Textbook!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">2. An Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">2.1. Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">2.1.8. Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../00-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-04-exercise.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-04-exercise.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1: Open a Text File</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4.31. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1: Open a Text File</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-convert-x-y-coordinate-data-to-a-geodataframe-or-shapefile-spatial-data-in-tabular-formats">4.4.32. How to Convert x,y Coordinate Data To A GeoDataFrame (or shapefile) - Spatial Data in Tabular Formats</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-spatial-geodataframe-from-a-dataframe">4.4.33. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Create a Spatial GeoDataframe From a DataFrame</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-base-map">4.4.34. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3: Create a Base Map</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-two-geodataframes-together-in-the-same-figure">4.4.35. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 4: Plot Two GeoDataFrames Together in the Same Figure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-customize-your-map">4.4.36. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 5: Customize Your Map</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-interactive-spatial-maps-using-folium">4.4.37. OPTIONAL: Interactive Spatial Maps Using Folium</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-climbing-formations-to-the-city-of-boulder">4.4.38. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> BONUS Challenge: Clip Climbing Formations to the City of Boulder</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Chapter” icon=”file-text” %}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing packages needed to complete this lesson</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">earthpy</span> <span class="k">as</span> <span class="nn">et</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a home directory</span>
+<span class="n">home_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span> <span class="s1">&#39;earth-analytics&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;earthpy-downloads&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">home_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">home_dir</span><span class="p">)</span>
+
+<span class="c1"># Set your working directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span>
+                      <span class="s1">&#39;earth-analytics&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;data&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;earthpy-downloads&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-open-a-text-file">
+<h1><span class="section-number">4.4.31. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1: Open a Text File<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-open-a-text-file" title="Permalink to this headline">#</a></h1>
+<p>Use the code below to download a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file containing data for the
+climbing formations in the Boulder, Colorado:</p>
+<p><code class="docutils literal notranslate"><span class="pre">et.data.get_data(url=&quot;https://opendata.arcgis.com/datasets/175425c25d8849b58feb89483ef02961_1.csv&quot;)</span></code></p>
+<p>Once you have downloaded the data:</p>
+<ol class="arabic simple">
+<li><p>Read the data into <strong>Python</strong> as a <strong>pandas</strong> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. IMPORTANT: Name your dataframe object <strong>boulder_climbing</strong>.</p></li>
+<li><p>View the pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Look at the columns in the data. Find the <code class="docutils literal notranslate"><span class="pre">FormationType</span></code> column. Notice how it’s categorically split between two different types of formations.</p></li>
+</ol>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the data that you will use in this lesson</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://opendata.arcgis.com/datasets/175425c25d8849b58feb89483ef02961_1.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/elsa/earth-analytics/data/earthpy-downloads/175425c25d8849b58feb89483ef02961_1.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This code will clean up your file name</span>
+<span class="c1"># This is a temporary fix for a bug in our earthpy package!</span>
+<span class="n">old_name_climb</span> <span class="o">=</span> <span class="s1">&#39;&quot;OSMP_Climbing_Formations.csv&quot;&#39;</span>
+<span class="n">new_name_climb</span> <span class="o">=</span> <span class="s1">&#39;OSMP_Climbing_Formations.csv&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_name_climb</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">old_name_climb</span><span class="p">,</span> <span class="n">new_name_climb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>IMPORTANT. When you download the data, you may notice that there are quotes
+around the file name like this: <code class="docutils literal notranslate"><span class="pre">&quot;OSMP_Climbing_Formations.csv&quot;</span></code>. You
+will need to call</p>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data and view the first few rows of data</span>
+<span class="n">boulder_climbing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">new_name_climb</span><span class="p">)</span>
+<span class="n">boulder_climbing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+      <th>OBJECTID</th>
+      <th>ID</th>
+      <th>FEATURE</th>
+      <th>ROUTES</th>
+      <th>HCA</th>
+      <th>OWNER</th>
+      <th>SeasonalClosure</th>
+      <th>AreaAccess</th>
+      <th>UseRating</th>
+      <th>AKA</th>
+      <th>ClosureActive</th>
+      <th>PERMITREQ</th>
+      <th>FormationType</th>
+      <th>Display</th>
+      <th>FixedHardwarePermit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-105.294224</td>
+      <td>40.005020</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>Pumpkin Rock</td>
+      <td>4.0</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>N</td>
+      <td>Flagstaff</td>
+      <td>2.50</td>
+      <td>First Areas</td>
+      <td>N</td>
+      <td>No</td>
+      <td>Boulder</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-105.287861</td>
+      <td>39.975276</td>
+      <td>2</td>
+      <td>2.0</td>
+      <td>Veranda</td>
+      <td>2.0</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>N</td>
+      <td>NCAR</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>N</td>
+      <td>No</td>
+      <td>Wall</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-105.293598</td>
+      <td>39.995411</td>
+      <td>3</td>
+      <td>3.0</td>
+      <td>Third Pinnacle</td>
+      <td>7.0</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>N</td>
+      <td>Gregory Canyon</td>
+      <td>1.25</td>
+      <td>NaN</td>
+      <td>N</td>
+      <td>No</td>
+      <td>Wall</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-105.294391</td>
+      <td>39.986358</td>
+      <td>4</td>
+      <td>4.0</td>
+      <td>The Fin</td>
+      <td>1.0</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>Y</td>
+      <td>Chautauqua</td>
+      <td>1.17</td>
+      <td>NaN</td>
+      <td>Y</td>
+      <td>No</td>
+      <td>Wall</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-105.292811</td>
+      <td>39.995952</td>
+      <td>5</td>
+      <td>6.0</td>
+      <td>First Pinnacle</td>
+      <td>23.0</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>N</td>
+      <td>Gregory Canyon</td>
+      <td>2.20</td>
+      <td>NaN</td>
+      <td>N</td>
+      <td>No</td>
+      <td>Wall</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>450</th>
+      <td>-105.289838</td>
+      <td>39.978304</td>
+      <td>1179</td>
+      <td>NaN</td>
+      <td>Ridge 2</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>Y</td>
+      <td>NCAR</td>
+      <td>2.00</td>
+      <td>Satans Slab</td>
+      <td>Y</td>
+      <td>No</td>
+      <td>Boulder</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>451</th>
+      <td>-105.291101</td>
+      <td>39.978087</td>
+      <td>1180</td>
+      <td>NaN</td>
+      <td>Ridge 3</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>Y</td>
+      <td>NCAR</td>
+      <td>1.50</td>
+      <td>NaN</td>
+      <td>Y</td>
+      <td>No</td>
+      <td>Boulder</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>452</th>
+      <td>-105.288788</td>
+      <td>39.965708</td>
+      <td>1181</td>
+      <td>NaN</td>
+      <td>Fiddlehead</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>Y</td>
+      <td>Cragmoor Rd</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>Y</td>
+      <td>No</td>
+      <td>Wall</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>453</th>
+      <td>-105.288176</td>
+      <td>39.973912</td>
+      <td>1189</td>
+      <td>NaN</td>
+      <td>Sunnny Side One</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>OSMP</td>
+      <td>N</td>
+      <td>NCAR</td>
+      <td>5.50</td>
+      <td>NaN</td>
+      <td>N</td>
+      <td>No</td>
+      <td>Boulder</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>454</th>
+      <td>-105.288568</td>
+      <td>39.973947</td>
+      <td>1191</td>
+      <td>NaN</td>
+      <td>Sunny Side Two</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>OSMP</td>
+      <td>N</td>
+      <td>NCAR</td>
+      <td>4.00</td>
+      <td>NaN</td>
+      <td>N</td>
+      <td>No</td>
+      <td>Boulder</td>
+      <td>Yes</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>455 rows × 17 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="how-to-convert-x-y-coordinate-data-to-a-geodataframe-or-shapefile-spatial-data-in-tabular-formats">
+<h1><span class="section-number">4.4.32. </span>How to Convert x,y Coordinate Data To A GeoDataFrame (or shapefile) - Spatial Data in Tabular Formats<a class="headerlink" href="#how-to-convert-x-y-coordinate-data-to-a-geodataframe-or-shapefile-spatial-data-in-tabular-formats" title="Permalink to this headline">#</a></h1>
+<p>Often you will find that tabular data, stored in a text or
+spreadsheet format, contains spatial coordinate information
+that you wish to plot or convert to a shapefile for use
+in a GIS application. In the challenge below, you will learn
+how to convert tabular data containing coordinate information
+into a spatial file.</p>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-spatial-geodataframe-from-a-dataframe">
+<h1><span class="section-number">4.4.33. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2: Create a Spatial GeoDataframe From a DataFrame<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-spatial-geodataframe-from-a-dataframe" title="Permalink to this headline">#</a></h1>
+<p>You can create a Geopandas <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> from a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> if there is coordinate data in the DataFrame.
+In the data that you opened above, there are columns for the <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> coordinates of each rock formation - with headers named <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
+<p>You can convert columns containing <strong>x,y</strong> coordinate data using the <strong>GeoPandas</strong>  <code class="docutils literal notranslate"><span class="pre">points_from_xy()</span></code> function as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">coordinates</span> <span class="pre">=</span> <span class="pre">gpd.points_from_xy(column-with-x-data,</span> <span class="pre">column-with-y-data.Y)</span></code></p>
+<p>You can then set the geometry column for the new GeoDataFrame
+to the <strong>x,y</strong> data that you extracted from the data frame.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">boulder_climbing</span><span class="p">,</span> 
+                 <span class="n">geometry</span><span class="o">=</span><span class="n">coordinates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>. Copy the code below to create a new GeoDataFrame containing the boulder climbing area data in a spatial format that you can plot.</p>
+<p>IMPORTANT: be sure to assign the output of the code below to a new variable
+name called <code class="docutils literal notranslate"><span class="pre">boulder_climbing_gdf</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">coordinates</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">boulder_climbing</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="n">boulder_climbing</span><span class="o">.</span><span class="n">Y</span><span class="p">)</span>
+<span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">boulder_climbing</span><span class="p">,</span> 
+                 <span class="n">geometry</span><span class="o">=</span><span class="n">coordinates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In your code:</p>
+<ol class="arabic simple">
+<li><p>Copy the code above to create a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> from the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that you created above.</p></li>
+<li><p>Next, plot your data using <code class="docutils literal notranslate"><span class="pre">.plot()</span></code></p></li>
+</ol>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create your geodataframe</span>
+<span class="n">coordinates</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">boulder_climbing</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="n">boulder_climbing</span><span class="o">.</span><span class="n">Y</span><span class="p">)</span>
+
+<span class="n">boulder_climbing_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">boulder_climbing</span><span class="p">,</span>
+                                        <span class="n">geometry</span><span class="o">=</span><span class="n">coordinates</span><span class="p">)</span>
+
+<span class="c1"># Create a plot</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">boulder_climbing_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
+                          <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Climbing Coordinates - Boulder, CO&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/3aafe9a41ca547cae9e23856f7b7c154cd56b614cfce10e525500b0cdd5c57b8.png" src="../../../_images/3aafe9a41ca547cae9e23856f7b7c154cd56b614cfce10e525500b0cdd5c57b8.png" />
+</div>
+</div>
+<div class='notice--success alert alert-info' markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can easily export data
+in a GeoPandas format to a shapefile using <code class="docutils literal notranslate"><span class="pre">object_name_here.to_file(&quot;file-name-here.shp&quot;)</span></code>. Following the example above, if you want to export a shapefile called boulder-climbing.shp, your code would look like
+this: <code class="docutils literal notranslate"><span class="pre">boulder_climbing_gdf.to_file(&quot;boulder-climbing.shp&quot;)</span></code>.</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Export GeoPandas GeoDataFrame to ShapeFile</span>
+<span class="n">boulder_climbing_gdf</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s2">&quot;boulder-climbing.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/dn/99vk45cd5n56wsnl3hxc1bw40000gp/T/ipykernel_6423/751944266.py:2: UserWarning: Column names longer than 10 characters will be truncated when saved to ESRI Shapefile.
+  boulder_climbing_gdf.to_file(&quot;boulder-climbing.shp&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-base-map">
+<h1><span class="section-number">4.4.34. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 3: Create a Base Map<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-base-map" title="Permalink to this headline">#</a></h1>
+<p>Next, you will create a basemap. Run code below to download another file for boulder. Notice that the data this time are in <code class="docutils literal notranslate"><span class="pre">geojson</span></code> format
+rather than a shapefile. Even though the format is different, the data can be worked with using Geopandas in the same way that you would work with
+a shapefile using <code class="docutils literal notranslate"><span class="pre">read_file()</span></code>.</p>
+<p>The data file is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">et.data.get_data(url=&quot;https://opendata.arcgis.com/datasets/955e7a0f52474b60a9866950daf10acb_0.geojson&quot;)</span></code></p>
+<p>The code below downloads and cleans up the file name.</p>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the data</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://opendata.arcgis.com/datasets/955e7a0f52474b60a9866950daf10acb_0.geojson&quot;</span><span class="p">)</span>
+
+<span class="c1"># This code will clean up your file name</span>
+<span class="c1"># This is a temporary fix for a bug in our earthpy package!</span>
+<span class="n">old_name_city</span> <span class="o">=</span> <span class="s1">&#39;&quot;City_Limits.geojson&quot;&#39;</span>
+<span class="n">new_name_city</span> <span class="o">=</span> <span class="s1">&#39;City_Limits.geojson&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_name_city</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">old_name_city</span><span class="p">,</span> <span class="n">new_name_city</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">new_name_city</span> <span class="o">=</span> <span class="s1">&#39;City_Limits.geojson&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_name_city</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">old_name_city</span><span class="p">,</span> <span class="n">new_name_city</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;&quot;City_Limits.geojson&quot;&#39; -&gt; &#39;City_Limits.geojson&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In this cell, open up and plot the `City_Limits.geojson` geojson file</span>
+<span class="n">city_limits</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">new_name_city</span><span class="p">)</span>
+<span class="n">city_limits</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+
+<span class="c1"># Create a plot</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">city_limits</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
+                 <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;City Limits - Boulder, CO&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-two-geodataframes-together-in-the-same-figure">
+<h1><span class="section-number">4.4.35. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 4: Plot Two GeoDataFrames Together in the Same Figure<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-two-geodataframes-together-in-the-same-figure" title="Permalink to this headline">#</a></h1>
+<p>Previously, you learned how to plot multiple shapefiles or spatial
+layers on the same map using <strong>matplotlib</strong>.</p>
+<ol class="arabic simple">
+<li><p>Use what you learned in the spatial vector lesson in this chapter to plot the climbing formations points layer on top of the cities boundary that you opened above.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">edgecolor=</span></code> and the <code class="docutils literal notranslate"><span class="pre">color=</span></code> parameters to change the colors of the city object. (example: color=”white”, edgecolor=”grey”)</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">legend=True</span></code> to add a legend to your map.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">column='FormationType'</span></code> to plot your points according tot he type of climbing formation it is (Boulder vs Wall).</p></li>
+</ol>
+<p>HINT: Refer back to the vector lesson if you forget how to create your plot!</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add your code to plot the data here</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">city_limits</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
+                 <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="n">boulder_climbing_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+                          <span class="n">column</span><span class="o">=</span><span class="s1">&#39;FormationType&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># Add a title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Climbing Locations - Boulder, CO&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Turn of x and y data ticks</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-customize-your-map">
+<h1><span class="section-number">4.4.36. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 5: Customize Your Map<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-customize-your-map" title="Permalink to this headline">#</a></h1>
+<p>Next, you will customize the map that you created above.
+Here’s what you need to do to spruce up your map:</p>
+<ol class="arabic simple">
+<li><p>Add a title to your map using <code class="docutils literal notranslate"><span class="pre">ax.set_title()</span></code>.</p></li>
+<li><p>Set the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> of the map to be larger so the data is more clearly shown. The <code class="docutils literal notranslate"><span class="pre">figsize</span></code> is one of the arguments in <code class="docutils literal notranslate"><span class="pre">plt.subplots</span></code> and needs to be set to a <strong>tuple</strong> of numbers. For example: <code class="docutils literal notranslate"><span class="pre">plt.subplots(figsize=(10,</span> <span class="pre">10)</span></code>.</p></li>
+<li><p>Turn off the x and y axis data ticks to make the plot look more like a map using: <code class="docutils literal notranslate"><span class="pre">ax.set_axis_off()</span></code>.</p></li>
+<li><p>Customize the colors of the city boundary using the parameters: <code class="docutils literal notranslate"><span class="pre">color=&quot;color-name-here&quot;</span></code> to change the color of the fill of the polygon. Use <code class="docutils literal notranslate"><span class="pre">edgecolor=&quot;color-name-here&quot;</span></code> to change the outline color of the polygon. HINT: you may want to set <code class="docutils literal notranslate"><span class="pre">color=&quot;white&quot;</span></code> for the polygon and make the edgecolor a darker color so you have a clean outline.</p></li>
+<li><p>Play around with modifying the markers for the points. The marker is the symbol used to represent the x,y location. The default marker is a circle. Modify the <code class="docutils literal notranslate"><span class="pre">marker=</span></code> and <code class="docutils literal notranslate"><span class="pre">markersize=</span></code> parameters in the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function for the climbing formations in order to make it more legible. Here is a list of marker options in matplotlib: <a class="reference external" href="https://matplotlib.org/3.2.1/api/markers_api.html">https://matplotlib.org/3.2.1/api/markers_api.html</a>.</p></li>
+</ol>
+<p>Examples of modifying the marker and marker size:</p>
+<p><code class="docutils literal notranslate"><span class="pre">object.plot(marker=&quot;*&quot;,</span> <span class="pre">markersize=5)</span></code></p>
+<hr class="docutils" />
+<p>OPTIONAL: See what happens when you use the <code class="docutils literal notranslate"><span class="pre">cmap=&quot;Greens&quot;</span></code> argument.</p>
+<p>HINT: see this documentation to learn more about color maps in python: <a class="reference external" href="https://matplotlib.org/3.2.1/tutorials/colors/colormaps.html">https://matplotlib.org/3.2.1/tutorials/colors/colormaps.html</a></p>
+<hr class="docutils" />
+<p>Have fun customizing your map!</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add your code here to plot the data</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">city_limits</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
+                 <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="n">boulder_climbing_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+                          <span class="n">column</span><span class="o">=</span><span class="s1">&#39;FormationType&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+
+<span class="c1"># Add a title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Climbing Locations - Boulder, CO&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-interactive-spatial-maps-using-folium">
+<h1><span class="section-number">4.4.37. </span>OPTIONAL: Interactive Spatial Maps Using Folium<a class="headerlink" href="#optional-interactive-spatial-maps-using-folium" title="Permalink to this headline">#</a></h1>
+<p>Above you created maps that were static that you could not interact with.
+You can make interactive maps with Python in Jupyter Notebooks too
+using the <strong>Folium</strong> package.</p>
+<p>Set your GeoDataFrame name for your climbing formations to the variable specified in the code below, <code class="docutils literal notranslate"><span class="pre">climbing_locations</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="c1">#Define coordinates of where we want to center our map</span>
+<span class="n">map_center_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mf">40.015</span><span class="p">,</span> <span class="o">-</span><span class="mf">105.2705</span><span class="p">]</span>
+
+<span class="c1">#Create the map</span>
+<span class="n">my_map</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="n">map_center_coords</span><span class="p">,</span> <span class="n">zoom_start</span> <span class="o">=</span> <span class="mi">13</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">lat</span><span class="p">,</span><span class="n">long</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">climbing_locations</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">climbing_locations</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">long</span><span class="p">],</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>
+
+<span class="n">my_map</span>
+
+</pre></div>
+</div>
+<p>and run it in your code to see what happens!</p>
+<p>More reading on how to use <strong>Folium</strong> <a class="reference external" href="https://www.earthdatascience.org/tutorials/introduction-to-leaflet-animated-maps/">here</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In this cell, uncomment the line below.</span>
+<span class="c1"># This should set your GeoDataFrame to our</span>
+<span class="c1"># variable name to make the code with folium run</span>
+
+<span class="c1"># climbing_locations = boulder_climbing_gdf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">climbing_locations</span> <span class="o">=</span> <span class="n">boulder_climbing_gdf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy the code above and paste is in this cell below</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="c1"># Define coordinates of where we want to center our map</span>
+<span class="n">map_center_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mf">40.015</span><span class="p">,</span> <span class="o">-</span><span class="mf">105.2705</span><span class="p">]</span>
+
+<span class="c1"># Create the map</span>
+<span class="n">my_map</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">map_center_coords</span><span class="p">,</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">lat</span><span class="p">,</span> <span class="n">long</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">climbing_locations</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">climbing_locations</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">long</span><span class="p">],</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>
+
+<span class="n">my_map</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-climbing-formations-to-the-city-of-boulder">
+<h1><span class="section-number">4.4.38. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BONUS Challenge: Clip Climbing Formations to the City of Boulder<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-climbing-formations-to-the-city-of-boulder" title="Permalink to this headline">#</a></h1>
+<p>In the vector notebook, you learned how to clip spatial data. In your code, do the following:</p>
+<ol class="arabic simple">
+<li><p>Clip the climbing formations to the boundary of the city of Boulder.</p></li>
+<li><p>Plot the clipped points on top of the city boundary.</p></li>
+</ol>
+</div>
+<p>If you want, you could create another folium map of the clipped data!</p>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Place your code to clip and plot your data here</span>
+<span class="c1"># It&#39;s fine to make new cells below if you wish!</span>
+
+<span class="c1"># Below this line clip the cities data to the Canada boundary that you created above.</span>
+<span class="n">climbing_in_boulder</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">boulder_climbing_gdf</span><span class="p">,</span> <span class="n">city_limits</span><span class="p">)</span>
+
+<span class="c1"># Make a plot</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">city_limits</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                 <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="n">climbing_in_boulder</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Climbing Locations Within Boulder City Limits&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="spatial-data-formats-03-vector-data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.4.14. </span><i class="fa fa-ship" aria-hidden="true"></i> Fundamentals of Vector Data in Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../03-git-github/00-git-github-landing-page.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span><i class="fa fa-ship" aria-hidden="true"></i> Section Three - Git and GitHub</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4.31. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1: Open a Text File</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-convert-x-y-coordinate-data-to-a-geodataframe-or-shapefile-spatial-data-in-tabular-formats">4.4.32. How to Convert x,y Coordinate Data To A GeoDataFrame (or shapefile) - Spatial Data in Tabular Formats</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-spatial-geodataframe-from-a-dataframe">4.4.33. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Create a Spatial GeoDataframe From a DataFrame</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3-create-a-base-map">4.4.34. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3: Create a Base Map</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4-plot-two-geodataframes-together-in-the-same-figure">4.4.35. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 4: Plot Two GeoDataFrames Together in the Same Figure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-customize-your-map">4.4.36. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 5: Customize Your Map</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-interactive-spatial-maps-using-folium">4.4.37. OPTIONAL: Interactive Spatial Maps Using Folium</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-climbing-formations-to-the-city-of-boulder">4.4.38. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> BONUS Challenge: Clip Climbing Formations to the City of Boulder</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</divxs>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

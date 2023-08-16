@@ -1,0 +1,710 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Useful Jupyter Notebook Shortcuts &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-jupyter-notebook-shortcuts';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Manage Jupyter Notebook Files" href="jupyter-notebook-05-manage-files-jupyter-notebook.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02-bash/bash-01-intro-bash.html">Introduction to Bash (Shell) and Manipulating Files and Directores at the Command Line</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-jupyter-notebook-shortcuts.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-jupyter-notebook-shortcuts.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Useful Jupyter Notebook Shortcuts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-useful-jupyter-notebook-shortcuts">List of Useful Jupyter Notebook Shortcuts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menu-tools-vs-keyboard-shortcuts">Menu Tools vs. Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-jupyter-notebook-skills"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Practice Your Jupyter Notebook Skills</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="useful-jupyter-notebook-shortcuts">
+<h1>Useful Jupyter Notebook Shortcuts<a class="headerlink" href="#useful-jupyter-notebook-shortcuts" title="Permalink to this headline">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-p-2 sd-border-0 sd-rounded-1 article-info docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<a class="reference external image-reference" href="https://earthlab.colorado.edu"><img alt="" class="sd-avatar-sm" src="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png" /></a>
+</div>
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Jul 25, 2023</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 minute read</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-border-0 sd-rounded-1 sd-p-2 sd-bg-primary docutils">
+<p>The Jupyter ecosystem contains many useful tools for working with Python including Jupyter Notebook, an interactive coding environment. Learn useful shortcuts in Jupyter Notebook that can help you complete your tasks quickly and efficiently.</p>
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#list-of-useful-jupyter-notebook-shortcuts" id="id1">List of Useful Jupyter Notebook Shortcuts</a></p>
+<ul>
+<li><p><a class="reference internal" href="#menu-tools-vs-keyboard-shortcuts" id="id2">Menu Tools vs. Keyboard Shortcuts</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#additional-resources" id="id3">Additional Resources</a></p></li>
+<li><p><a class="reference internal" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-jupyter-notebook-skills" id="id4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Practice Your Jupyter Notebook Skills</a></p></li>
+</ul>
+</div>
+<div class="admonition-learning-objectives admonition">
+<p class="admonition-title">Learning Objectives</p>
+<ul class="simple">
+<li><p>List useful keyboard shortcuts in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p></li>
+<li><p>Be able to access the list of keyboard shortcuts in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p></li>
+</ul>
+</div>
+</div>
+<section id="list-of-useful-jupyter-notebook-shortcuts">
+<h2><a class="toc-backref" href="#id1">List of Useful Jupyter Notebook Shortcuts</a><a class="headerlink" href="#list-of-useful-jupyter-notebook-shortcuts" title="Permalink to this headline">#</a></h2>
+<section id="menu-tools-vs-keyboard-shortcuts">
+<h3><a class="toc-backref" href="#id2">Menu Tools vs. Keyboard Shortcuts</a><a class="headerlink" href="#menu-tools-vs-keyboard-shortcuts" title="Permalink to this headline">#</a></h3>
+<p>As you have seen in this chapter, you can manipulate your <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> using the drop-down tools from the menu, with keyboard shortcuts, or using both.</p>
+<p>The table below lists common tasks in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> and how to do them using keyboard shortcuts or the menu tool.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Keyboard Shortcut</p></th>
+<th class="head"><p>Menu Tools</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Save notebook</p></td>
+<td><p>Esc + s</p></td>
+<td><p>File → Save and Checkpoint</p></td>
+</tr>
+<tr class="row-odd"><td><p>Create new cell</p></td>
+<td><p>Esc + a (above), Esc + b (below)</p></td>
+<td><p>Insert→ cell above Insert → cell below</p></td>
+</tr>
+<tr class="row-even"><td><p>Run Cell</p></td>
+<td><p>Ctrl + enter</p></td>
+<td><p>Cell → Run Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copy Cell</p></td>
+<td><p>c</p></td>
+<td><p>Copy Key</p></td>
+</tr>
+<tr class="row-even"><td><p>Paste Cell</p></td>
+<td><p>v</p></td>
+<td><p>Paste Key</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interrupt Kernel</p></td>
+<td><p>Esc + i i</p></td>
+<td><p>Kernel → Interrupt</p></td>
+</tr>
+<tr class="row-even"><td><p>Restart Kernel</p></td>
+<td><p>Esc + 0 0</p></td>
+<td><p>Kernel → Restart</p></td>
+</tr>
+<tr class="row-odd"><td><p>Find and replace on your code but not the outputs</p></td>
+<td><p>Esc + f</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>merge multiple cells</p></td>
+<td><p>Shift + M</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>When placed before a function Information about a function from its documentation</p></td>
+<td><p>?</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+<p>For a full list of keyboard shortcuts, click the help button, then the keyboard shortcuts button.</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/help-jupyter.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/help-jupyter.png" alt= "Help menu of Jupyter Notebook."></a>
+ <figcaption> Help menu of Jupyter Notebook. 
+ </figcaption>
+</figure><div class="notice--info" markdown="1">
+</section>
+</section>
+<section id="additional-resources">
+<h2><a class="toc-backref" href="#id3">Additional Resources</a><a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a href="https://unidata.github.io/python-training/python/intro-to-python/" target="_blank">Why Jupyter Notebook and Python</a></p></li>
+<li><p><a href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html" target="_blank">Jupyter Notebook Basics</a></p></li>
+<li><p><a href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" target = "_blank">Dataquest tips and tricks for Jupyter Notebook</a>.</p></li>
+</ul>
+</div><div class="notice--warning" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-jupyter-notebook-skills">
+<h2><a class="toc-backref" href="#id4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Practice Your Jupyter Notebook Skills</a><a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-jupyter-notebook-skills" title="Permalink to this headline">#</a></h2>
+<p>Test your <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> skills to:</p>
+<ol class="arabic simple">
+<li><p>Launch <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> from your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory.</p></li>
+<li><p>Create a new <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file called <code class="docutils literal notranslate"><span class="pre">jupyter-notebook-interface.ipynb</span></code>.</p></li>
+<li><p>Add a Code cell and copy/paste the following <code class="docutils literal notranslate"><span class="pre">Python</span></code> code to determine which day had the most precipitation (i.e. the day of the greatest flooding) during the Fall 2013 flood in Boulder, CO, U.S.A.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary packages</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Create data</span>
+<span class="n">boulder_precip</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;precip&quot;</span><span class="p">],</span> 
+                              <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+                                  <span class="p">[</span><span class="s2">&quot;2013-09-09&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;2013-09-10&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> 
+                                  <span class="p">[</span><span class="s2">&quot;2013-09-11&quot;</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;2013-09-12&quot;</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;2013-09-13&quot;</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">],</span>
+                                  <span class="p">[</span><span class="s2">&quot;2013-09-14&quot;</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;2013-09-15&quot;</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;2013-09-16&quot;</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]])</span>      
+<span class="c1"># Create plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">boulder_precip</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">boulder_precip</span><span class="p">[</span><span class="s1">&#39;precip&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Daily Precipitation (inches)</span><span class="se">\n</span><span class="s2">Boulder, Colorado 2013&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Precipitation (Inches)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">Python</span></code> cell.</p></li>
+</ol>
+<p><strong>You have now experienced the benefits of using <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> for open reproducible science!</strong></p>
+<p>Without writing your own code, you were able to easily replicate this analysis because this code block can be shared with and run by anyone using <code class="docutils literal notranslate"><span class="pre">Python</span></code> in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p>
+<ol class="arabic simple" start="5">
+<li><p>Add a Code cell and run each of the following <code class="docutils literal notranslate"><span class="pre">Python</span></code> calculations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">-</span> <span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">24</span> <span class="pre">/</span> <span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">4</span></code></p>
+<ul>
+<li><p>What do you notice about the output of <code class="docutils literal notranslate"><span class="pre">24</span> <span class="pre">/</span> <span class="pre">4</span></code> compared to the others?</p></li>
+<li><p>What operation does <code class="docutils literal notranslate"><span class="pre">**</span></code> execute?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Create a new directory called <code class="docutils literal notranslate"><span class="pre">chap-3</span></code> in your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory.</p></li>
+<li><p>Create a new directory called <code class="docutils literal notranslate"><span class="pre">test</span></code> in your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory and move it into in the newly created directory called <code class="docutils literal notranslate"><span class="pre">chap-3</span></code>.</p></li>
+<li><p>Delete the <code class="docutils literal notranslate"><span class="pre">test</span></code> directory - do you recall how to find the <code class="docutils literal notranslate"><span class="pre">test</span></code> directory in its new location?</p></li>
+<li><p>Rename the <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file that you created in step 2 (e.g. <code class="docutils literal notranslate"><span class="pre">jupyter-notebook-interface.ipynb</span></code>) using your first initial and last name (e.g. <code class="docutils literal notranslate"><span class="pre">jpalomino-jupyter-notebook-interface.ipynb</span></code>).</p></li>
+<li><p>Create a new folder called <code class="docutils literal notranslate"><span class="pre">chap-3</span></code> in your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory.</p></li>
+<li><p>Move your renamed <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file (e.g. <code class="docutils literal notranslate"><span class="pre">jpalomino-jupyter-notebook-interface.ipynb</span></code>) into the new <code class="docutils literal notranslate"><span class="pre">chap-3</span></code> directory.</p></li>
+</ol>
+</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="jupyter-notebook-05-manage-files-jupyter-notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Manage Jupyter Notebook Files</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-useful-jupyter-notebook-shortcuts">List of Useful Jupyter Notebook Shortcuts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menu-tools-vs-keyboard-shortcuts">Menu Tools vs. Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-practice-your-jupyter-notebook-skills"><i aria-hidden="true" class="fa fa-pencil-square-o"></i> Practice Your Jupyter Notebook Skills</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

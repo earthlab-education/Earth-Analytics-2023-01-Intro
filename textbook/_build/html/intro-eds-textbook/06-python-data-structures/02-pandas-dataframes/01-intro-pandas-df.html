@@ -1,0 +1,844 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter Fifteen - Pandas Dataframes &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/06-python-data-structures/02-pandas-dataframes/01-intro-pandas-df';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Learning Objectives" href="02-import-csv-pandas.html" />
+    <link rel="prev" title="Learning Objectives" href="../01-numpy-arrays/04-indexing-slicing-arrays.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/intro-eds-textbook/00-course-overview.md</span>, line 36)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/textbook-header.md</span>, line 2)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-ds-python-landing.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/06-python-data-structures/02-pandas-dataframes/01-intro-pandas-df.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/06-python-data-structures/02-pandas-dataframes/01-intro-pandas-df.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-ship" aria-hidden="true"></i> Chapter Fifteen - Pandas Dataframes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-ship"></i> Chapter Fifteen - Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pandas-dataframes">What are Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distinguishing-characteristics-of-pandas-dataframes">Distinguishing Characteristics of Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-structure-of-pandas-dataframes">Tabular Structure of Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quick-plot">A Quick Plot</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Chapter” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-ship-aria-hidden-true-i-chapter-fifteen-pandas-dataframes">
+<h1><i class="fa fa-ship" aria-hidden="true"></i> Chapter Fifteen - Pandas Dataframes<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-chapter-fifteen-pandas-dataframes" title="Permalink to this headline">#</a></h1>
+<p>In this chapter, you will learn about another commonly used data structure in Python for scientific data: <strong>pandas</strong> dataframes. You will write <strong>Python</strong> code to import text data (.csv) as <strong>pandas</strong> dataframes and to run calculations, summarize, and select data in <strong>pandas</strong> dataframes.</p>
+<p>After completing this chapter, you will be able to:</p>
+<ul class="simple">
+<li><p>Describe the key characteristics of <strong>pandas</strong> dataframes.</p></li>
+<li><p>Import tabular data from .csv files into <strong>pandas</strong> dataframes.</p></li>
+<li><p>Run calculations and summarize data in <strong>pandas</strong> dataframes.</p></li>
+<li><p>Select data in <strong>pandas</strong> dataframes.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>You should have Conda setup on your computer and the Earth Analytics Python Conda environment. Follow the <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Set up Git, Bash, and Conda on your computer</a> to install these tools.</p>
+<p>Be sure that you have completed the chapters on <a href="{{ site.url }}/courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/">Jupyter Notebook</a>, <a href="{{ site.url }}/courses/intro-to-earth-data-science/python-code-fundamentals/use-python-packages/">working with packages in Python</a>, <a href="{{ site.url }}/courses/intro-to-earth-data-science/python-code-fundamentals/work-with-files-directories-paths-in-python/">working with paths and directories in Python</a>, and <a href="{{ site.url }}/courses/intro-to-earth-data-science/scientific-data-structures-python/numpy-arrays/">working with numpy arrays</a>.</p>
+</div>
+</section>
+<section id="what-are-pandas-dataframes">
+<h1>What are Pandas Dataframes<a class="headerlink" href="#what-are-pandas-dataframes" title="Permalink to this headline">#</a></h1>
+<p>In the chapters introducing <strong>Python</strong> lists and <strong>numpy</strong> arrays, you learn that both of these data structures can store collections of values, instead of just single values. You also learned that while <strong>Python</strong> lists are flexible and can store data items of various types (e.g. integers, floats, text strings), <strong>numpy</strong> arrays require all data elements to be of the same type. Because of this requirement, <strong>numpy</strong> arrays can provide more functionality for running calculations such as element-by-element arithmetic operations (e.g. multiplication of each element in the <code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">array</span></code> by the same value) that <strong>Python</strong> lists do not support.</p>
+<p>You may now be noticing that each data structure provides different functionality that can be useful in different workflows.</p>
+<p>In this chapter, you will learn about <strong>Pandas</strong> dataframes, a data structure in <strong>Python</strong> that provides the ability to work with tabular data. <strong>Pandas</strong> dataframes are composed of rows and columns that can have header names, and the columns in <strong>pandas</strong> dataframes can be different types (e.g. the first column containing integers and the second column containing text strings). Each value in <strong>pandas</strong> dataframe is referred to as a cell that has a specific row index and column index within the tabular structure.</p>
+<p>The dataset below of average monthly precipitation (inches) for Boulder, CO provided by the <a href="https://www.esrl.noaa.gov/psd/boulder/Boulder.mm.precip.html" target="_blank"> U.S. National Oceanic and Atmospheric Administration (NOAA)</a> is an example of the type of tabular dataset that can easily be imported into a <strong>pandas</strong> dataframe.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>month</p></th>
+<th class="head"><p>precip_in</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Jan</p></td>
+<td><p>0.70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Feb</p></td>
+<td><p>0.75</p></td>
+</tr>
+<tr class="row-even"><td><p>Mar</p></td>
+<td><p>1.85</p></td>
+</tr>
+<tr class="row-odd"><td><p>Apr</p></td>
+<td><p>2.93</p></td>
+</tr>
+<tr class="row-even"><td><p>May</p></td>
+<td><p>3.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>June</p></td>
+<td><p>2.02</p></td>
+</tr>
+<tr class="row-even"><td><p>July</p></td>
+<td><p>1.93</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aug</p></td>
+<td><p>1.62</p></td>
+</tr>
+<tr class="row-even"><td><p>Sept</p></td>
+<td><p>1.84</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oct</p></td>
+<td><p>1.31</p></td>
+</tr>
+<tr class="row-even"><td><p>Nov</p></td>
+<td><p>1.39</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dec</p></td>
+<td><p>0.84</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="distinguishing-characteristics-of-pandas-dataframes">
+<h1>Distinguishing Characteristics of Pandas Dataframes<a class="headerlink" href="#distinguishing-characteristics-of-pandas-dataframes" title="Permalink to this headline">#</a></h1>
+<p>These characteristics (i.e. tabular format with rows and columns that can have headers) make <strong>pandas</strong> dataframes very versatile for not only storing different types, but for maintaining the relationships between cells across the same row and/or column.</p>
+<p>Recall that in the chapter on <strong>numpy</strong> arrays, you could not easily connect the values across two numpy arrays, such as those for <code class="docutils literal notranslate"><span class="pre">precip</span></code> and <code class="docutils literal notranslate"><span class="pre">months</span></code>. Using a <strong>pandas</strong> dataframe, the relationship between the value <code class="docutils literal notranslate"><span class="pre">January</span></code> in the <code class="docutils literal notranslate"><span class="pre">months</span></code> column and the value <code class="docutils literal notranslate"><span class="pre">0.70</span></code> in the <code class="docutils literal notranslate"><span class="pre">precip</span></code> column is maintained.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>month</p></th>
+<th class="head"><p>precip_in</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Jan</p></td>
+<td><p>0.70</p></td>
+</tr>
+</tbody>
+</table>
+<p>These two values (<code class="docutils literal notranslate"><span class="pre">January</span></code> and <code class="docutils literal notranslate"><span class="pre">0.70</span></code>) are considered part of the same record, representing the same observation in the <strong>pandas</strong> dataframe. In addition, <strong>pandas</strong> dataframes have other unique characteristics that differentiate them from other data structures:</p>
+<ol class="arabic simple">
+<li><p>Each column in a <strong>pandas</strong> dataframe can have a label name (i.e. header name such as <code class="docutils literal notranslate"><span class="pre">months</span></code>) and can contain a different type of data from its neighboring columns (e.g. column_1 with numeric values and column_2 with text strings).</p></li>
+<li><p>By default, each row has an index within a range of values beginning at <code class="docutils literal notranslate"><span class="pre">[0]</span></code>. However, the row index in <strong>pandas</strong> dataframes can also be set as labels (e.g. a location name, date).</p></li>
+<li><p>All cells in a <strong>pandas</strong> dataframe have both a row index and a column index (i.e. two-dimensional table structure), even if there is only one cell (i.e. value) in the <strong>pandas</strong> dataframe.</p></li>
+<li><p>In addition to selecting cells through location-based indexing (e.g. cell at row 1, column 1), you can also query for data within <strong>pandas</strong> dataframes based on specific values (e.g. querying for specific text strings or numeric values).</p></li>
+<li><p>Because of the tabular structure, you can work with cells in <strong>pandas</strong> dataframes:</p>
+<ul class="simple">
+<li><p>across an entire row</p></li>
+<li><p>across an entire column (or <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html" target="_blank">series</a>, a one-dimensional array in <strong>pandas</strong>)</p></li>
+<li><p>by selecting cells based on location or specific values</p></li>
+</ul>
+</li>
+<li><p>Due to its inherent tabular structure, <strong>pandas</strong> dataframes also allow for cells to have null values (i.e. no data value such as blank space, <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, -999, etc).</p></li>
+</ol>
+</section>
+<section id="tabular-structure-of-pandas-dataframes">
+<h1>Tabular Structure of Pandas Dataframes<a class="headerlink" href="#tabular-structure-of-pandas-dataframes" title="Permalink to this headline">#</a></h1>
+<p>As described in the previous paragraphs, the structure of a <strong>pandas</strong> dataframe includes the column names and the rows that represent individual observations (i.e. records).</p>
+<p>In a typical <strong>pandas</strong> dataframe, the default row index is a range of values beginning at <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, and the column headers are also organized into an index of the column names.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from <strong>pandas</strong> (e.g. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code>) can be used to manually define a <strong>pandas</strong> dataframe.</p>
+<p>One way to use this function is to provide a list of column names (to the parameter <code class="docutils literal notranslate"><span class="pre">columns</span></code>) and a list of data values (to the parameter <code class="docutils literal notranslate"><span class="pre">data</span></code>), which is composed of individual lists of values for each row:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dataframe with 2 columns and 2 rows</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;column_1&quot;</span><span class="p">,</span> <span class="s2">&quot;column_2&quot;</span><span class="p">],</span>
+                         <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+                              <span class="p">[</span><span class="n">value_column_1</span><span class="p">,</span> <span class="n">value_column_2</span><span class="p">],</span>  
+                              <span class="p">[</span><span class="n">value_column_1</span><span class="p">,</span> <span class="n">value_column_2</span><span class="p">]</span>
+                         <span class="p">])</span>
+</pre></div>
+</div>
+<p>In the example below, the <strong>pandas</strong> dataframe is created using the average monthly precipitation values in inches for Boulder, CO.</p>
+<p>The <strong>pandas</strong> dataframe is created with a column called <code class="docutils literal notranslate"><span class="pre">month</span></code> containing abbreviated month names as text strings and another column called <code class="docutils literal notranslate"><span class="pre">precip_in</span></code> for the precipitation (inches) as numeric values.</p>
+<p>For example, the first row is created using <code class="docutils literal notranslate"><span class="pre">[&quot;Jan&quot;,</span> <span class="pre">0.70]</span></code>, with <code class="docutils literal notranslate"><span class="pre">Jan</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">month</span></code> and <code class="docutils literal notranslate"><span class="pre">0.70</span></code> as the value for <code class="docutils literal notranslate"><span class="pre">precip_in</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># Import pandas with alias pd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Average monthly precip for Boulder, CO</span>
+<span class="n">avg_monthly_precip</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;precip_in&quot;</span><span class="p">],</span>
+                                  <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+                                       <span class="p">[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="mf">0.70</span><span class="p">],</span>  <span class="p">[</span><span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s2">&quot;Mar&quot;</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">],</span>  <span class="p">[</span><span class="s2">&quot;Apr&quot;</span><span class="p">,</span> <span class="mf">2.93</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">],</span>  <span class="p">[</span><span class="s2">&quot;June&quot;</span><span class="p">,</span> <span class="mf">2.02</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s2">&quot;July&quot;</span><span class="p">,</span> <span class="mf">1.93</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Aug&quot;</span><span class="p">,</span> <span class="mf">1.62</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s2">&quot;Sept&quot;</span><span class="p">,</span> <span class="mf">1.84</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Oct&quot;</span><span class="p">,</span> <span class="mf">1.31</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s2">&quot;Nov&quot;</span><span class="p">,</span> <span class="mf">1.39</span><span class="p">],</span>  <span class="p">[</span><span class="s2">&quot;Dec&quot;</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Notice the nicely formatted output without use of print</span>
+<span class="n">avg_monthly_precip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>precip_in</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>0.70</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+      <td>1.85</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>2.93</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>3.05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>2.02</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>1.93</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+      <td>1.84</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+      <td>1.31</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+      <td>1.39</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+      <td>0.84</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can see from the <strong>pandas</strong> dataframe that each row has an index value, and that the default indexing still begins with <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, as it does for <code class="docutils literal notranslate"><span class="pre">Python</span></code> lists and <code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">arrays</span></code>.</p>
+</section>
+<section id="a-quick-plot">
+<h1>A Quick Plot<a class="headerlink" href="#a-quick-plot" title="Permalink to this headline">#</a></h1>
+<p>You can plot <strong>pandas</strong> dataframe using <strong>matplotlib</strong> or using the pandas
+<code class="docutils literal notranslate"><span class="pre">.plot()</span></code> method which wraps around <strong>matplotlib</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span>
+                        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;precip_in&quot;</span><span class="p">,</span>
+                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Plot of Pandas Data Frame using Pandas .plot&quot;</span><span class="p">,</span>
+                        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/bf16b19018289689b9791df74670604b91f206a42ec2f065a43b463e05608e17.png" src="../../../_images/bf16b19018289689b9791df74670604b91f206a42ec2f065a43b463e05608e17.png" />
+</div>
+</div>
+<p>Or you can plot using the standard <strong>matplotlib</strong> approach. In this
+course we will encourage you to use the <strong>matplotlib</strong> approach which
+will be more flexible as you begin to create more complex plots.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">month</span><span class="p">,</span>
+        <span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">precip_in</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Plot of Pandas Data Frame using Pandas .plot&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/b6528d727ed55524b04ff021651fa461f5c197848b862263649c58e66f354421.png" src="../../../_images/b6528d727ed55524b04ff021651fa461f5c197848b862263649c58e66f354421.png" />
+</div>
+</div>
+<p>In the pages that follow, you will learn how to import data from .csv files into <strong>pandas</strong> dataframes, run calculations and summary statistics on <strong>pandas</strong> dataframes, and select data from <strong>pandas</strong> dataframes.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/06-python-data-structures/02-pandas-dataframes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../01-numpy-arrays/04-indexing-slicing-arrays.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02-import-csv-pandas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-ship"></i> Chapter Fifteen - Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pandas-dataframes">What are Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distinguishing-characteristics-of-pandas-dataframes">Distinguishing Characteristics of Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-structure-of-pandas-dataframes">Tabular Structure of Pandas Dataframes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quick-plot">A Quick Plot</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

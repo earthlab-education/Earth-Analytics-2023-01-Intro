@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>8.7. Chapter Eleven - Import and Install Python Packages for Earth Data Science &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/04-python-fundamentals/python-packages-for-eds/2019-09-17-python-packages-for-eds-01-intro-eds-packages-python';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="8.15.3. Learning Objectives" href="2019-09-17-python-packages-for-eds-02-conda-environments.html" />
+    <link rel="prev" title="8.6.44. Learning Objectives" href="../get-started-python/2019-09-03-python-fundamentals-05-exercise.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/04-python-fundamentals/python-packages-for-eds/2019-09-17-python-packages-for-eds-01-intro-eds-packages-python.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eleven - Import and Install Python Packages for Earth Data Science</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.7. <i aria-hidden="true" class="fa fa-ship"></i> Chapter Eleven - Import and Install Python Packages for Earth Data Science</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">8.8. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">8.9. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-package">8.10. What is a Python Package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-python-packages-for-earth-data-science">8.11. Open Source Python Packages for Earth Data Science</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-packages-live-on-your-computer">8.12. Where Do Packages Live On Your Computer?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-packages-can-contain-modules">8.12.1. Python Packages Can Contain Modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-module-in-a-python-package">8.12.2. What is a Module in a Python Package?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-package-alias">8.13. What is a Python Package Alias?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#commonly-used-aliases-for-python-packages">8.14. Commonly Used Aliases for Python Packages</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-importing-python-packages-in-scientific-code">8.15. Best Practices for Importing Python Packages In Scientific Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-python-libraries-at-the-top-of-your-script-or-notebook">8.15.1. 1. Import Python Libraries at the Top of Your Script or Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-package-imports-following-pep-8-standards-most-common-first-followed-by-third-party">8.15.2. 2. List Package Imports Following PEP 8 Standards: Most Common First, Followed By Third Party</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Chapter” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-ship-aria-hidden-true-i-chapter-eleven-import-and-install-python-packages-for-earth-data-science">
+<h1><span class="section-number">8.7. </span><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eleven - Import and Install Python Packages for Earth Data Science<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-chapter-eleven-import-and-install-python-packages-for-earth-data-science" title="Permalink to this headline">#</a></h1>
+<p>In this chapter, you will learn more about using packages in <strong>Python</strong> programming language to work with scientific data.</p>
+</section>
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">8.8. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this chapter, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain what a package is in <strong>Python</strong>.</p></li>
+<li><p>Import a package into <strong>Python</strong>.</p></li>
+<li><p>List important <strong>Python</strong> packages for science.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><span class="section-number">8.9. </span><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>You should have Git, Bash and Conda setup on your computer and the Earth Analytics Python Conda environment. Follow the <a href="{{ site.url }}/workshops/setup-earth-analytics-python/">Setup Git, Bash, and Conda on your computer</a> to install these tools.</p>
+</div>
+</section>
+<section id="what-is-a-python-package">
+<h1><span class="section-number">8.10. </span>What is a Python Package<a class="headerlink" href="#what-is-a-python-package" title="Permalink to this headline">#</a></h1>
+<p>In <strong>Python</strong>, a package is a bundle of pre-built functionality that adds to the functionality available in base <strong>Python</strong>. Base <strong>Python</strong> can do many things such as perform math and other operations. However, <strong>Python</strong> packages can significantly extend this functionality.</p>
+<p>You can think of a <strong>Python</strong> package as a toolbox filled with tools. The tools in the toolbox can be used to do things that you would have to otherwise hand code in base <strong>Python</strong>. These tasks are things that many people might want to do in <strong>Python</strong>, thus warranting the creation of a package. After all, it doesn’t make sense for everyone to hand code everything!</p>
+<p>For example, the <strong>matplotlib</strong> package allows you to create plots of data. Since most of us create plots routinely, having a <strong>Python</strong> package to create plots makes programming more efficient for everyone who needs to create plots.</p>
+</section>
+<section id="open-source-python-packages-for-earth-data-science">
+<h1><span class="section-number">8.11. </span>Open Source Python Packages for Earth Data Science<a class="headerlink" href="#open-source-python-packages-for-earth-data-science" title="Permalink to this headline">#</a></h1>
+<p>There are many different packages available for <strong>Python</strong>. Some of these are optimized for scientific tasks such as:</p>
+<ul class="simple">
+<li><p>Statistics</p></li>
+<li><p>Machine learning</p></li>
+<li><p>Using geospatial data</p></li>
+<li><p>Plotting &amp; visualizing data</p></li>
+<li><p>Accessing data programmatically</p></li>
+</ul>
+<p>and more! The list below contains the core packages that you will use in the upcoming chapters of this textbook to work with scientific data.</p>
+<ul class="simple">
+<li><p><strong>os</strong>: handle files and directories.</p></li>
+<li><p><strong>glob</strong>: create lists of files and directories for batch processing.</p></li>
+<li><p><strong>matplotlib</strong>: plot data.</p></li>
+<li><p><strong>numpy</strong>: work with data in array formats (often related to imagery and raster format data).</p></li>
+<li><p><strong>pandas</strong>: work with tabular data in a DataFrame format.</p></li>
+<li><p><strong>rasterio</strong>: work with raster (image and arrays) data.</p></li>
+<li><p><strong>geopandas</strong>: work with vector format (shapefiles, geojson - points, lines and polygons) using a geodataframe format.</p></li>
+<li><p><strong>earthpy</strong>: plot and manipulate spatial data (raster and vector).</p></li>
+</ul>
+</section>
+<section id="where-do-packages-live-on-your-computer">
+<h1><span class="section-number">8.12. </span>Where Do Packages Live On Your Computer?<a class="headerlink" href="#where-do-packages-live-on-your-computer" title="Permalink to this headline">#</a></h1>
+<p>Packages are organized directories of code that can be installed and then imported to your code file (e.g. .py script, <strong>Jupyter Notebook</strong> file).</p>
+<p>When you install a package, you may be wondering, where does it go? If you have not changed any of your default installation settings, the packages that you will use for this textbook are located in your miniconda directory under <code class="docutils literal notranslate"><span class="pre">envs</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">/home/username/miniconda/envs/</span></code>).</p>
+<p>When you install a package into the conda environment of your choice (for example, <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> which is the environment that you installed for this textbook and the associated earth analytics courses), it ends up in the <code class="docutils literal notranslate"><span class="pre">/home/username/miniconda/envs/earth-analytics-python</span></code> folder.</p>
+<figure>
+    <a href="{{ site.url }}/images/earth-analytics/python/conda-environment-python-packages.png">
+    <img src="{{ site.url }}/images/earth-analytics/python/conda-environment-python-packages.png" alt="When you install Python packages in an conda environment, they will be located within the environment directory."></a>
+    <figcaption>When you install Python packages in an conda environment, they will be located within the /home/username/miniconda/envs/environment-name directory.
+    </figcaption>
+</figure>
+<p>Once packages are installed in your <strong>Python</strong> environment (e.g. <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> conda environment), you can call them in  <strong>Python</strong> at the command line, in a script (.py file), or in a <strong>Jupyter Notebook</strong> file.</p>
+<p>You have to explicitly call and load (i.e. import) each package that you want to use in your script (.py file) or <strong>Jupyter Notebook</strong> file, in order for the functions (or tools) in that package to be available for use in your code.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong>  You can import <code class="docutils literal notranslate"><span class="pre">Python</span></code> packages using <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">package-name</span></code>. Once a package has been imported, you can call functions from that package
+{: .notice–success}</p>
+<section id="python-packages-can-contain-modules">
+<h2><span class="section-number">8.12.1. </span>Python Packages Can Contain Modules<a class="headerlink" href="#python-packages-can-contain-modules" title="Permalink to this headline">#</a></h2>
+<p>Packages can contain many modules (i.e. units of code) that each provide different functions and can build on each other. For example, the <strong>matplotlib</strong> package provides functionality to plot data using modules, one of which is the commonly used module called <strong>pyplot</strong>.</p>
+<p>Every <strong>Python</strong> package should have a unique name. This allows you to import the package using the name with the <code class="docutils literal notranslate"><span class="pre">import</span></code> command.</p>
+<p>For example, the command below imports the <strong>matplotlib</strong> package.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+</pre></div>
+</div>
+</section>
+<section id="what-is-a-module-in-a-python-package">
+<h2><span class="section-number">8.12.2. </span>What is a Module in a Python Package?<a class="headerlink" href="#what-is-a-module-in-a-python-package" title="Permalink to this headline">#</a></h2>
+<p>Packages often have modules. A module is a set of related functionality that lives within the package.</p>
+<p>For example, <strong>pyplot</strong> is a module within the matplotlib package that makes it easier to quickly set up plots.</p>
+<p>You can import a specific module like <strong>pyplot</strong> by first calling the package name and then the module name - using <code class="docutils literal notranslate"><span class="pre">.</span></code> to separate the names like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span>
+
+</pre></div>
+</div>
+<p>You can also import the module using an alias or short name, such as <code class="docutils literal notranslate"><span class="pre">plt</span></code> for <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+</pre></div>
+</div>
+<p>From the earthpy package, you can import the earthpy module called plot using the alias <code class="docutils literal notranslate"><span class="pre">ep</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">earthpy.plot</span> <span class="k">as</span> <span class="nn">ep</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="what-is-a-python-package-alias">
+<h1><span class="section-number">8.13. </span>What is a Python Package Alias?<a class="headerlink" href="#what-is-a-python-package-alias" title="Permalink to this headline">#</a></h1>
+<p>An alias, as it refers to a <strong>Python</strong> package, is a short version of the package name. The syntax to assign an alias to an imported package is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">package_name_here</span> <span class="k">as</span> <span class="nn">alias_here</span>
+</pre></div>
+</div>
+<p>Alias allows you to call functions from the imported package and/or module using the short name, rather than having to type out the full name of the packages and/or module each time that you want to call a function from it.</p>
+<p>For example, you could call functions from the <strong>pyplot</strong> module to plot using the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Title Here&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>However, the code above is long or more verbose than it needs to be. It is easier to use aliases for packages and modules to reduce the amount of text that you have to write to call a function within a module.</p>
+<p>For example, you can create an alias for <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> as <code class="docutils literal notranslate"><span class="pre">plt</span></code> and then use that alias to call the same function as before:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Title Here&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Notice that in the above example, you imported the <strong>pyplot</strong> module from the <strong>matplotlib</strong> package using the alias <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
+<p>Now, every time you want to call a function from <strong>pyplot</strong>, you can simply use <code class="docutils literal notranslate"><span class="pre">plt</span></code> (e.g.<code class="docutils literal notranslate"><span class="pre">plt.title(&quot;Title</span> <span class="pre">Here&quot;)</span></code>) rather than <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>(e.g. <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.title(&quot;Title</span> <span class="pre">Here&quot;)</span></code>).</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/import-package.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/import-package.png" alt= "Jupyter Notebook with code cell to import the Python packages called numpy and pandas using the alias np and pd."></a>
+ <figcaption> Jupyter Notebook with code cell to import the Python package called numpy and pandas using the alias np and pd.
+ </figcaption>
+</figure>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can use tab complete to get a list of all available functions in a package. For example, using the alias <code class="docutils literal notranslate"><span class="pre">np</span></code> for <strong>numpy</strong>, you can get a list of the functions available using <code class="docutils literal notranslate"><span class="pre">np.()</span></code> and hitting the tab key. A list of callable functions will appear.
+{: .notice–success}</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/tab-complete.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/tab-complete.png" alt= "Jupyter Notebook with a code cell to get a list of the functions available in numpy, which was imported as np."></a>
+ <figcaption> Jupyter Notebook with a code cell to get a list of the functions available in numpy, which was imported as np.
+ </figcaption>
+</figure>
+</section>
+<section id="commonly-used-aliases-for-python-packages">
+<h1><span class="section-number">8.14. </span>Commonly Used Aliases for Python Packages<a class="headerlink" href="#commonly-used-aliases-for-python-packages" title="Permalink to this headline">#</a></h1>
+<p>There are many packages and modules that have standard alias names. A few commonly used aliases within the <strong>Python</strong> community (and thus used in this textbook) are listed below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>package.module</p></th>
+<th class="head"><p>alias</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>matplotlib</p></td>
+<td><p>mpl</p></td>
+</tr>
+<tr class="row-odd"><td><p>matplotlib.pyplot</p></td>
+<td><p>plt</p></td>
+</tr>
+<tr class="row-even"><td><p>numpy</p></td>
+<td><p>np</p></td>
+</tr>
+<tr class="row-odd"><td><p>pandas</p></td>
+<td><p>pd</p></td>
+</tr>
+<tr class="row-even"><td><p>rasterio</p></td>
+<td><p>rio</p></td>
+</tr>
+<tr class="row-odd"><td><p>geopandas</p></td>
+<td><p>gpd</p></td>
+</tr>
+<tr class="row-even"><td><p>earthpy</p></td>
+<td><p>et</p></td>
+</tr>
+</tbody>
+</table>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> The <strong>os</strong> package has a short name and is not given an alias
+{: .notice–success}</p>
+</section>
+<section id="best-practices-for-importing-python-packages-in-scientific-code">
+<h1><span class="section-number">8.15. </span>Best Practices for Importing Python Packages In Scientific Code<a class="headerlink" href="#best-practices-for-importing-python-packages-in-scientific-code" title="Permalink to this headline">#</a></h1>
+<p>There are a set of best practices that you should follow when importing <strong>Python</strong> packages in your code. These best practices are outlined in the <a href="https://www.python.org/dev/peps/pep-0008/#imports" target="_blank">PEP 8 guidelines</a> and apply to both <strong>Python</strong> scripts and to working in <strong>Jupyter Notebook</strong> files.</p>
+<section id="import-python-libraries-at-the-top-of-your-script-or-notebook">
+<h2><span class="section-number">8.15.1. </span>1. Import Python Libraries at the Top of Your Script or Notebook<a class="headerlink" href="#import-python-libraries-at-the-top-of-your-script-or-notebook" title="Permalink to this headline">#</a></h2>
+<p>It is good practice to import all of the packages that you will need at the top of your <strong>Python</strong> script (.py file) or in the first code cell of a <strong>Jupyter Notebook</strong> file.</p>
+<p>This allows anyone looking at your code to immediately know what packages they need to have installed in order to successfully run the code. This rule also follows the PEP 8 conventions for <strong>Python</strong> code.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/jupyter-interface/import-packages-first-cell.png">
+ <img src="{{ site.url }}/images/earth-analytics/jupyter-interface/import-packages-first-cell.png" alt= "Jupyter Notebook with the first code cell importing the numpy package (and many others) to be used with abbreviations or aliases (e.g. np)."></a>
+ <figcaption> Jupyter Notebook with the first code cell importing the numpy package (and many others) to be used with abbreviations or aliases (e.g. np for numpy).
+ </figcaption>
+</figure>
+<p>Once you have imported all of the packages that you need to run your code, you have access to all of the functions contained within each package.</p>
+<p>So if these imports are at the top of the script or <strong>Jupyter Notebook</strong> file, then you will be able to use those packages in any code lines that follow.</p>
+<p>In essence, this means that if you import a package <em>after</em> running some code that requires that package, your code will not run successfully.</p>
+</section>
+<section id="list-package-imports-following-pep-8-standards-most-common-first-followed-by-third-party">
+<h2><span class="section-number">8.15.2. </span>2. List Package Imports Following PEP 8 Standards: Most Common First, Followed By Third Party<a class="headerlink" href="#list-package-imports-following-pep-8-standards-most-common-first-followed-by-third-party" title="Permalink to this headline">#</a></h2>
+<p><a href="https://www.python.org/dev/peps/pep-0008/#imports" target="_blank">PEP 8</a> also specifies the order in which you should list your imports as follows (starting with the most commonly used):</p>
+<blockquote>
+<div><p>Imports should be grouped in the following order:
+Standard library imports.
+Related third party imports.
+Local application/library specific imports.
+You should put a blank line between each group of imports.</p>
+</div></blockquote>
+<p>You may be wondering, what is a standard library import? The standard library imports are commonly used tools that are general in purpose and are part of the standard library of <strong>Python</strong>. These including things like:</p>
+<ul class="simple">
+<li><p><strong>os</strong>: handle files and directories.</p></li>
+<li><p><strong>glob</strong>: create lists of files and directories for batch processing.</p></li>
+</ul>
+<p>In the PEP 8 order, other commonly used packages that are general in purpose will follow such as:</p>
+<ul class="simple">
+<li><p><strong>numpy</strong>: work with data in array formats.</p></li>
+<li><p><strong>matplotlib</strong>: plot data.</p></li>
+</ul>
+<p>Third party imports might include geospatial tools and others that are less commonly used. These might include:</p>
+<ul class="simple">
+<li><p><strong>rasterio</strong>: work with raster (image and arrays) data.</p></li>
+<li><p><strong>geopandas</strong>: work with vector format (shapefiles, geojson - points, lines and polygons) using a geodataframe format.</p></li>
+<li><p><strong>hydrofunctions</strong>: work with hydrological data.</p></li>
+<li><p><strong>tweepy</strong>: work with Twitter data.</p></li>
+</ul>
+<p>A PEP 8 order of imports for commonly used <strong>Python</strong> packages for science would look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">earthpy</span> <span class="k">as</span> <span class="nn">et</span> 
+</pre></div>
+</div>
+<p>Note that there is a space between the standard imports (<code class="docutils literal notranslate"><span class="pre">glob</span></code> and <code class="docutils literal notranslate"><span class="pre">os</span></code>)
+and the rest of the third party imports.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/04-python-fundamentals/python-packages-for-eds"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../get-started-python/2019-09-03-python-fundamentals-05-exercise.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8.6.44. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2019-09-17-python-packages-for-eds-02-conda-environments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8.15.3. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.7. <i aria-hidden="true" class="fa fa-ship"></i> Chapter Eleven - Import and Install Python Packages for Earth Data Science</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">8.8. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">8.9. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-package">8.10. What is a Python Package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-python-packages-for-earth-data-science">8.11. Open Source Python Packages for Earth Data Science</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-packages-live-on-your-computer">8.12. Where Do Packages Live On Your Computer?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-packages-can-contain-modules">8.12.1. Python Packages Can Contain Modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-module-in-a-python-package">8.12.2. What is a Module in a Python Package?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-package-alias">8.13. What is a Python Package Alias?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#commonly-used-aliases-for-python-packages">8.14. Commonly Used Aliases for Python Packages</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-importing-python-packages-in-scientific-code">8.15. Best Practices for Importing Python Packages In Scientific Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-python-libraries-at-the-top-of-your-script-or-notebook">8.15.1. 1. Import Python Libraries at the Top of Your Script or Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-package-imports-following-pep-8-standards-most-common-first-followed-by-third-party">8.15.2. 2. List Package Imports Following PEP 8 Standards: Most Common First, Followed By Third Party</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

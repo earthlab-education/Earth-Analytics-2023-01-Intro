@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/font_loader.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python-open-source-tool-setup/setup-05-text-editors-for-science-workflows';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Learning Objectives" href="setup-04-setup-conda-earth-analytics-environment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro-eds-textbook/00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup-02-setup-git-bash-and-anacoda.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="setup-04-setup-conda-earth-analytics-environment.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fpython-open-source-tool-setup/setup-05-text-editors-for-science-workflows.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-you-need-a-good-text-editor">Why You Need a Good Text Editor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#features-to-look-for-in-a-text-editor">Features to Look For in a Text Editor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-your-default-text-editor">What is your Default Text Editor?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-vim-text-editor">The Vim Text Editor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-and-edit-a-new-file-in-vim">How To Create and Edit A New file in Vim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-open-an-existing-file-in-vim">How to Open an Existing File in Vim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-edit-an-existing-file-in-vim">How to Edit an Existing File in Vim</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#commonly-used-text-editors">Commonly Used Text Editors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-we-recommend-using-atom">Why We Recommend Using Atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-and-change-your-default-text-editor">Check and Change Your Default Text Editor</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Lesson” icon=”file-text” %}</p>
+<p>In this lesson, you will learn about features to look for in a text editor and how to change your default text editor at the command line</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>At the end of this activity, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain how text editors are used in a scientific workflow.</p></li>
+<li><p>Change your default text editor in the command line.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>Make sure you have followed the installation instructions on the <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Setup Git, Bash &amp; Conda lesson</a>.</p>
+<p>Information below is adapted from materials by <a href="http://software-carpentry.org/" target = "_blank">Software Carpentry</a> and <a href = "https://cs61a.org/articles/vim.html#introduction" target = "_blank">UC Berkeley CS61a</a>.</p>
+</div>
+</section>
+<section id="why-you-need-a-good-text-editor">
+<h1>Why You Need a Good Text Editor<a class="headerlink" href="#why-you-need-a-good-text-editor" title="Permalink to this headline">#</a></h1>
+<p>The right text editor and/or coding GUI (graphical user interface) environments makes a scientific workflow more efficient. You will use text editors for many different purposes including:</p>
+<ul class="simple">
+<li><p>Interacting with tools at that command line: For example, you use a text editor when you use <code class="docutils literal notranslate"><span class="pre">Git</span></code> for version control to write merge and commit message.</p></li>
+<li><p>Writing <code class="docutils literal notranslate"><span class="pre">Bash</span></code> scripts to process files: If you want to very quickly process a large set of text files, you will often use <code class="docutils literal notranslate"><span class="pre">Bash</span></code> at the command line. You will use a text editor to write that script.</p></li>
+<li><p>Scientific programming: Many scientists and coders work in a text editor to write their code.</p></li>
+</ul>
+<p>Often, the default text editor setup for your command line environment is not a graphical text editor. You may want to change the default text editor depending on your workflow.</p>
+<p>In this lesson, you will learn about the different features to look for in a text editor and learn how to set your default text editor.</p>
+</section>
+<section id="features-to-look-for-in-a-text-editor">
+<h1>Features to Look For in a Text Editor<a class="headerlink" href="#features-to-look-for-in-a-text-editor" title="Permalink to this headline">#</a></h1>
+<p>Certain features to look for in a text editor include:</p>
+<ul class="simple">
+<li><p>Automatic Color-coding: In a normal text editor, all of the text is the same color. However, when the text editor is optimized for coding, different parts of your code will be colored in different ways.</p></li>
+</ul>
+<p>For instance, all comments might be displayed using the color grey. Common functions may be blue and so on. This allows you to quickly scan and easily review and scan your code.</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/non-color-code.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/non-color-code.png" alt = "Code that is rendered in a text editor with no color coding."></a>
+ <figcaption> Code that is rendered in a text editor with no color coding.
+ </figcaption>
+</figure>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/color-code.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/color-code.png" alt = "Notice that various types of commands are colored differently, making it easier to quickly scan and review the code."></a>
+ <figcaption> Notice that various types of commands are colored differently, making it easier to quickly scan and review the code.
+ </figcaption>
+</figure>
+<ul class="simple">
+<li><p>Running Code: A text editor lets you write and save a script that is ready to be run in the terminal. Some text editors and gui environments also allow you to run code inline.</p></li>
+<li><p>Find and Replace: If you want to change a word that you’ve used multiple times in a file instead of manually changing that word many times, you can use the find and replace feature to let the text editor automatically change that word.</p></li>
+</ul>
+<p>Some scientists will only code in a text editor. Others will use a text editor for some tasks and <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> (or some other coding GUI) for others. You will figure out your preferred workflow as you code more!</p>
+</section>
+<section id="what-is-your-default-text-editor">
+<h1>What is your Default Text Editor?<a class="headerlink" href="#what-is-your-default-text-editor" title="Permalink to this headline">#</a></h1>
+<p>Most operating systems come with a default text editor as described below. While choosing a text editor is a very personal preference, for this course,  if you don’t already have a favorite, we recommend the <a class="reference external" href="https://atom.io/">Atom</a> text editor which will run on Mac, Linux, and Wndows.</p>
+<p>You can use whatever text editor you are most comfortable, but mainly for this course we will be working in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>. However, it is important to be familiar with text editors because they are powerful tools that many scientists use to write code. If you use <code class="docutils literal notranslate"><span class="pre">Git</span></code>, you will need a text editor to create some commit and merge messages.</p>
+</section>
+<section id="the-vim-text-editor">
+<h1>The Vim Text Editor<a class="headerlink" href="#the-vim-text-editor" title="Permalink to this headline">#</a></h1>
+<p>Vim is the default text editor for Mac, Linux, and Windows (if Windows has <code class="docutils literal notranslate"><span class="pre">Git</span> <span class="pre">Bash</span></code> installed). Vim is a text editor designed to support the command line / terminal interface. This means that rather than buttons to save, open and close files, you need to use the correct key commands as follows:</p>
+<p>To open vim, type <code class="docutils literal notranslate"><span class="pre">vim</span></code> at the command line. Like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim
+</pre></div>
+</div>
+<p>When you open vim, you’ll get a screen like the one below:</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/vim.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/vim.png" alt = "An image showing the welcome screen of vim."></a>
+ <figcaption> The welcome screen of vim.
+ </figcaption>
+</figure>
+<p>Once you are in vim there is one core commands that you need to know about - how to exit vim.</p>
+<p><strong>How to exit vim</strong> : If you need to exit vim, type the following: hit escape to bring up a prompt where you can type. Then type <code class="docutils literal notranslate"><span class="pre">:q!</span></code> (colon, lower-case ‘q’, exclamation mark). Hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and you will return to the terminal.</p>
+<section id="how-to-create-and-edit-a-new-file-in-vim">
+<h2>How To Create and Edit A New file in Vim<a class="headerlink" href="#how-to-create-and-edit-a-new-file-in-vim" title="Permalink to this headline">#</a></h2>
+<p>If you want to edit a new file in vim, then you need to be in insert mode. Insert mode, which allows you to use Vim like a regular text editor – you press keys, and the corresponding characters will show up on the screen.</p>
+<ul class="simple">
+<li><p>To enter the insert mode, press <code class="docutils literal notranslate"><span class="pre">i</span></code> or <code class="docutils literal notranslate"><span class="pre">insert</span></code>.</p></li>
+<li><p>When you are done editing your file, you may want to save it. There are 5 steps to saving and the exiting a file:</p>
+<ol class="arabic simple">
+<li><p>Enter normal mode (press <code class="docutils literal notranslate"><span class="pre">ESC</span></code>)</p></li>
+<li><p>Enter command mode (press <code class="docutils literal notranslate"><span class="pre">:</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">w</span></code> and then give the file a name such as <code class="docutils literal notranslate"><span class="pre">earth-analytics-test.txt</span></code></p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+<li><p>Exit Vim using :q! and hitting <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+</ol>
+</li>
+</ul>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong>
+Before saving a file in vim, it is a good idea to check your current working directory, as that is where the new file will be saved. To do that after you are in the command mode (press <code class="docutils literal notranslate"><span class="pre">:</span></code>), type <code class="docutils literal notranslate"><span class="pre">pwd</span></code>. If you want to save that file in a different directory, type <code class="docutils literal notranslate"><span class="pre">w</span></code> followed by <code class="docutils literal notranslate"><span class="pre">filepath/filename.txt</span></code>.
+{: .notice–success }</p>
+</section>
+<section id="how-to-open-an-existing-file-in-vim">
+<h2>How to Open an Existing File in Vim<a class="headerlink" href="#how-to-open-an-existing-file-in-vim" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Next, open the <code class="docutils literal notranslate"><span class="pre">earth-analytics-test.txt</span></code> file that we just saved from vim.</p></li>
+</ul>
+<p>To open an existing file, type <code class="docutils literal notranslate"><span class="pre">vim</span></code> followed by the name of the file. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim<span class="w"> </span>earth-analytics-test.txt
+</pre></div>
+</div>
+</section>
+<section id="how-to-edit-an-existing-file-in-vim">
+<h2>How to Edit an Existing File in Vim<a class="headerlink" href="#how-to-edit-an-existing-file-in-vim" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>To edit files, make sure you are in the insert mode by pressing <code class="docutils literal notranslate"><span class="pre">i</span></code>. To save your edits, follow the same commands as before to save the file:</p>
+<ul>
+<li><p>Enter normal mode (press <code class="docutils literal notranslate"><span class="pre">ESC</span></code>)</p></li>
+<li><p>Enter command mode (press <code class="docutils literal notranslate"><span class="pre">:</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">w</span></code> (and if desired, save the updated file to a new name such as <code class="docutils literal notranslate"><span class="pre">earth-analytics-test-v2.txt</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+<li><p>Exit Vim using :q! and hitting <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>If you are working on Linux or on may cloud and High Performance Communing (HPC) environments, you may prefer a non-graphical text editor like Vim. However for this course, if you are running a Mac or Windows operating system and haven’t used Vim before, we recommend you work in Atom.</p>
+</section>
+</section>
+<section id="commonly-used-text-editors">
+<h1>Commonly Used Text Editors<a class="headerlink" href="#commonly-used-text-editors" title="Permalink to this headline">#</a></h1>
+<p>You can define any text editor that is installed on your computer, as the default text editor. A few that are often uses include:</p>
+<ul class="simple">
+<li><p><a href="https://atom.io/" target = "_blank">Atom</a></p></li>
+<li><p><a href="http://www.sublimetext.com/" target = "_blank">Sublime Text</a></p></li>
+<li><p><a href="https://notepad-plus-plus.org/" target = "_blank">Notepad ++  (only on Windows)</a></p></li>
+<li><p><a href="https://www.nano-editor.org/" target = "_blank">Nano</a></p></li>
+</ul>
+<section id="why-we-recommend-using-atom">
+<h2>Why We Recommend Using Atom<a class="headerlink" href="#why-we-recommend-using-atom" title="Permalink to this headline">#</a></h2>
+<p>If you don’t already have a favorite text editor, we suggest you use Atom in this course. We like Atom because:</p>
+<ul class="simple">
+<li><p>It’s free and open source!</p></li>
+<li><p>It supports <a href="{{ site.url }}/workshops/intro-version-control-git/" target = "_blank">Git/Github integration</a>, which makes it easier to collaborate with others to write code, address merge conflicts and to complete other common <code class="docutils literal notranslate"><span class="pre">Git</span></code> operations.</p></li>
+<li><p>It has code highlighting support</p></li>
+<li><p>Atom has an active development community which means lots of extra packages are available to gain extra features. For example: <a href="https://github.com/atom/markdown-preview" target = "_blank">Markdown Preview</a> lets you write code in <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> in a .md file and preview the rendered output in a different window. <a href="https://atom.io/packages/hydrogen" target = "_blank">Hydrogen package</a>, allows you to run code inline in Atom, similar to <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p></li>
+</ul>
+</section>
+<section id="check-and-change-your-default-text-editor">
+<h2>Check and Change Your Default Text Editor<a class="headerlink" href="#check-and-change-your-default-text-editor" title="Permalink to this headline">#</a></h2>
+<p>You can check the default editor for <code class="docutils literal notranslate"><span class="pre">Git</span></code> using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>var<span class="w"> </span>-l
+</pre></div>
+</div>
+<p>Look at the GIT_EDITOR part of the output. Vi means vim.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GIT_EDITOR=vi</span></code></p>
+<p>To change your default text editor, you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code> (if git is installed on your computer already).</p>
+<p>Open the terminal and use the table below to change your default text editor.</p>
+<p>IMPORTANT: in order to change your default text editor, the text editor of your choice needs to be already installed on your computer! If it is not installed, the commands below will not work.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Editor</p></th>
+<th class="head"><p>Configuration command</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Atom</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;atom</span> <span class="pre">--wait&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>nano</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;nano</span> <span class="pre">-w&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Sublime Text (Mac)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;subl</span> <span class="pre">-n</span> <span class="pre">-w&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sublime Text (Win, 32-bit install)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;'c:/program</span> <span class="pre">files</span> <span class="pre">(x86)/sublime</span> <span class="pre">text</span>&#160; <span class="pre">3/sublime_text.exe'</span> <span class="pre">-w&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Sublime Text (Win, 64-bit install)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;'c:/program</span> <span class="pre">files/sublime</span> <span class="pre">text</span> <span class="pre">3/sublime_text.exe'</span> <span class="pre">-w&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Notepad++ (Win, 32-bit install)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;'c:/program</span> <span class="pre">files</span> <span class="pre">(x86)/Notepad++/notepad++.exe'</span> <span class="pre">-multiInst</span> <span class="pre">-notabbar</span> <span class="pre">-nosession</span> <span class="pre">-noPlugin&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Notepad++ (Win, 64-bit install)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span> <span class="pre">&quot;'c:/program</span> <span class="pre">files/Notepad++/notepad++.exe'</span> <span class="pre">-multiInst</span> <span class="pre">-notabbar</span> <span class="pre">-nosession</span> <span class="pre">-noPluginin”</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="notice--info" markdown="1">
+</section>
+</section>
+<section id="additional-resources">
+<h1>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h1>
+<p>If you are interested in learning more about the features of these text editors, check out these guides:
+<a href="https://cs61a.org/articles/atom/" target = "_blank">Atom</a>,
+<a href="https://cs61a.org/articles/sublime/" target = "_blank">Sublime</a>, or
+<a href="https://cs61a.org/articles/vim/" target = "_blank">Vim</a></p>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./python-open-source-tool-setup"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="setup-04-setup-conda-earth-analytics-environment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-you-need-a-good-text-editor">Why You Need a Good Text Editor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#features-to-look-for-in-a-text-editor">Features to Look For in a Text Editor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-your-default-text-editor">What is your Default Text Editor?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-vim-text-editor">The Vim Text Editor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-and-edit-a-new-file-in-vim">How To Create and Edit A New file in Vim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-open-an-existing-file-in-vim">How to Open an Existing File in Vim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-edit-an-existing-file-in-vim">How to Edit an Existing File in Vim</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#commonly-used-text-editors">Commonly Used Text Editors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-we-recommend-using-atom">Why We Recommend Using Atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-and-change-your-default-text-editor">Check and Change Your Default Text Editor</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

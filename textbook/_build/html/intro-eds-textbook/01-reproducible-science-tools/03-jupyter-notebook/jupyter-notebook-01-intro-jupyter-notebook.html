@@ -1,0 +1,769 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction to Jupyter For Python &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/font_loader.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Get Started With Jupyter Notebook For Python" href="jupyter-notebook-02-get-started-jupyter-notebook.html" />
+    <link rel="prev" title="How To Organize Your Project: Best Practices for Open Reproducible Science" href="../01-open-reproducible-science/open-reproducible-science-03-best-practices.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Introduction to Jupyter For Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-02-setup-git-bash-and-anacoda.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction to Jupyter For Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-for-open-reproducible-science">Jupyter Notebook for Open Reproducible Science</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows">Combine Markdown and Code in Jupyter Notebooks To Document Workflows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks-are-beneficial-to-your-colleagues">Jupyter Notebooks Are Beneficial to Your Colleagues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks-are-beneficial-to-you-your-future-self">Jupyter Notebooks Are Beneficial to You &amp; Your Future Self</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-notebooks-to-shareable-html-files">Convert Notebooks to Shareable HTML Files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-notebook">What is Jupyter Notebook?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-jupyter-notebook">Advantages of Jupyter Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-makes-coding-and-documentation-more-efficient">Jupyter Notebook Makes Coding and Documentation More Efficient</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-jupyter-notebook">Components of Jupyter Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-jupyter-notebook-files">Structure of Jupyter Notebook Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-and-code-cells-in-jupyter-notebook">Markdown and Code Cells in Jupyter Notebook</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-jupyter-for-python">
+<h1>Introduction to Jupyter For Python<a class="headerlink" href="#introduction-to-jupyter-for-python" title="Permalink to this headline">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<img alt="" class="sd-avatar-sm" src="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png" />
+</div>
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 11, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar objectives admonition">
+<p class="admonition-title">Learn how to…</p>
+<ul class="simple">
+<li><p>List the components and functionality of <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> and explain how it supports open reproducible science.</p></li>
+<li><p>Launch and navigate the <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> dashboard.</p></li>
+<li><p>Open and create <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> files (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>).</p></li>
+<li><p>Run code and <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> cells within <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> to execute <code class="docutils literal notranslate"><span class="pre">Python</span></code> code and render <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> text.</p></li>
+<li><p>Manage directories and files using <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p></li>
+</ul>
+</div>
+<p>The Jupyter ecosystem contains many useful tools for working with Python including Jupyter Notebook, an interactive coding environment. Learn how the components and functionality of Jupyter Notebook can help you implement open reproducible science workflows.</p>
+<hr class="docutils" />
+<section id="jupyter-notebook-for-open-reproducible-science">
+<h2>Jupyter Notebook for Open Reproducible Science<a class="headerlink" href="#jupyter-notebook-for-open-reproducible-science" title="Permalink to this headline">#</a></h2>
+<p>If you recall from the <a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html"><span class="doc std std-doc">Open Reproducible Science chapter</span></a>, Jupyter is an open source platform that contains a suite of tools including:</p>
+<ul class="simple">
+<li><p>Jupyter Notebook: A browser-based application that allows you to create and share documents (i.e. Jupyter Notebook files) that contain live code, equations, visualizations and narrative text.</p></li>
+<li><p>Jupyter Lab: A browser-based application that allows you to access multiple Jupyter Notebook files as well as other code and data files</p></li>
+<li><p>Jupyter Hub: A multi-person version of Jupyter Notebook and Lab that can be run on a server.</p></li>
+</ul>
+<p>The Jupyter Notebook file format (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> ) allows you to combine descriptive text, code blocks and code output in a single file. When you run the code, it generates the outputs, including plots and tables, within the notebook file. You can then export the notebook to a <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> or <code class="docutils literal notranslate"><span class="pre">.html</span></code> that can then be shared with anyone.</p>
+<p>This format is powerful as you can:</p>
+<ol class="arabic simple">
+<li><p>Share the notebook itself with anyone who might want to run it and</p></li>
+<li><p>Convert the notebook to a PDF or HTML format that can be viewed like a report</p></li>
+</ol>
+<p>You can use Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) to document workflows and to share code for data processing, analysis and visualization.</p>
+<section id="combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows">
+<h3>Combine Markdown and Code in Jupyter Notebooks To Document Workflows<a class="headerlink" href="#combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows" title="Permalink to this headline">#</a></h3>
+<p>Using Markdown alongside code in Jupyter Notebooks has many advantages:</p>
+<ul class="simple">
+<li><p><strong>Human readable:</strong> it’s much easier to read a web page or a report containing text and figures. By adding Markdown text around your code, your project becomes more user friendly and easier to understand.</p></li>
+<li><p><strong>Simple syntax:</strong> Markdown uses simple formatting syntax that can be learned quickly. This reduces the learning curve for designing well-documented Jupyter Notebooks.</p></li>
+<li><p><strong>Helpful Reminder for Your Future Self:</strong> When you code, consider your future self. If you leave your future self a well documented set of Jupyter Notebook files that both run your code and describe the steps, then all components of your work are clearly documented. You (and your future self)do not have to remember what steps, assumptions, or tests were used to complete the workflow.</p></li>
+<li><p><strong>Easy to Modify:</strong> You can easily extend or refine analyses contained within a Jupyter Notebook file by modifying existing or adding new code blocks.</p></li>
+<li><p><strong>Flexible export formats:</strong> Analysis results stored in Jupyter Notebook files can be disseminated in various formats including HTML, PDF and slideshows.</p></li>
+<li><p><strong>Easy to share:</strong> If all of your analysis is contained and described in a one or more notebooks, it makes it easy to share with a colleague. Your colleague can also easily replicate your workflow.</p></li>
+</ul>
+<div class="data-tip margin admonition">
+<p class="admonition-title"><strong>Data Tip:</strong></p>
+<p>You can easily create fully reproducible Jupyter Notebook files that can be run online using <a href="https://mybinder.org/" target = "_blank">my binder</a>.</p>
+</div>
+</section>
+<section id="jupyter-notebooks-are-beneficial-to-your-colleagues">
+<h3>Jupyter Notebooks Are Beneficial to Your Colleagues<a class="headerlink" href="#jupyter-notebooks-are-beneficial-to-your-colleagues" title="Permalink to this headline">#</a></h3>
+<p>The link between data, code and results makes Jupyter Notebook powerful. You can share your entire workflow with your colleagues and they can quickly see your process.</p>
+<p>You can also write reports using .ipynb files which contain code and data analysis results. To enrich the document, you can add text, just like you would in a Word document that describes your workflow, discusses your results and presents your conclusions - alongside your analysis results.</p>
+</section>
+<section id="jupyter-notebooks-are-beneficial-to-you-your-future-self">
+<h3>Jupyter Notebooks Are Beneficial to You &amp; Your Future Self<a class="headerlink" href="#jupyter-notebooks-are-beneficial-to-you-your-future-self" title="Permalink to this headline">#</a></h3>
+<p>Jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) are efficient. If you need to make changes to your workflow, you can simply modify the code and run the report again. Your future self will appreciate it too.</p>
+<p>Jupyter Notebooks allows you to add documentation to remind yourself of your process. Further, all of the code that you used is in the notebook ready to be rerun or modified at any time.</p>
+<div class="data-tip margin admonition">
+<p class="admonition-title"><strong>Data Tip:</strong></p>
+<p>Many of the Earth Lab lessons, including this one, were created using Jupyter Notebooks!</p>
+</div>
+</section>
+<section id="convert-notebooks-to-shareable-html-files">
+<h3>Convert Notebooks to Shareable HTML Files<a class="headerlink" href="#convert-notebooks-to-shareable-html-files" title="Permalink to this headline">#</a></h3>
+<p>You can save Jupyter Notebooks containing code and markdown as <code class="docutils literal notranslate"><span class="pre">.html</span></code> files. When you save a notebook as <code class="docutils literal notranslate"><span class="pre">.html</span></code>, it creates a nicely rendered web page with the code and outputs visible along with the markdown rendered as nicely formatted text. This means that you can share the file with a colleague and they can see your entire workflow - without having to rerun your analysis. You will learn how how to export to <code class="docutils literal notranslate"><span class="pre">.html</span></code> and other formats later in this textbook.</p>
+</section>
+</section>
+<section id="what-is-jupyter-notebook">
+<h2>What is Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<p><a href="http://jupyter.org/index.html" target = "_blank">Jupyter Notebook</a> is an Integrated Development Environment (IDE) that allows you to write code, navigate files on our computer, inspect variables and more.</p>
+<p>An IDE is different from a text editor, as IDEs allow you to interactively write, test, and debug code.</p>
+<p>While there are other commonly used <code class="docutils literal notranslate"><span class="pre">Python</span></code> IDEs such as Spyder (which comes with the <code class="docutils literal notranslate"><span class="pre">Python</span></code> Anaconda distribution) and PyCharm, in this textbook, you will use <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> as your IDE.</p>
+<section id="advantages-of-jupyter-notebook">
+<h3>Advantages of Jupyter Notebook<a class="headerlink" href="#advantages-of-jupyter-notebook" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> provides users with useful functionality including the ability to:</p>
+<ul class="simple">
+<li><p>Write and run code interactively.</p></li>
+<li><p>Document all aspects of a workflow using a combination of well-written programming code and text.</p></li>
+<li><p>Share work with colleagues who can see all of the code, the code outputs, and text explanation.</p></li>
+</ul>
+<p>This functionality supports open reproducible science by facilitating documentation and collaboration on workflows.</p>
+</section>
+<section id="jupyter-notebook-makes-coding-and-documentation-more-efficient">
+<h3>Jupyter Notebook Makes Coding and Documentation More Efficient<a class="headerlink" href="#jupyter-notebook-makes-coding-and-documentation-more-efficient" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> can help save your time:</p>
+<ul class="simple">
+<li><p><strong>Shortcuts</strong>: <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> has <a class="reference internal" href="jupyter-notebook-06-shortcuts.html"><span class="doc std std-doc">keyboard shortcuts</span></a> for running cells, adding new cells and formatting the notebook to help save you time.</p></li>
+<li><p><strong>Autocomplete</strong> : Autocomplete is available to quickly find function names, arguments for those functions, and variables that are stored in your environment. This makes typing your code easier and less error-prone. Hitting the <code class="docutils literal notranslate"><span class="pre">tab</span></code> button while typing will prompt <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> to help you complete the name of a variable or function that you want to call.</p></li>
+<li><p><strong>Markdown Integration</strong>: You can combine text and code in the same document. This allows you to document and explain the code you have written and make your workflow more reproducible.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> is also an open source product and free under the <a href="https://github.com/jupyter/jupyter/blob/master/LICENSE" target = "_blank">BSD 3-clause “New” or “Revised” License</a>.</p>
+</section>
+</section>
+<section id="components-of-jupyter-notebook">
+<h2>Components of Jupyter Notebook<a class="headerlink" href="#components-of-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<p>The components of <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> include:</p>
+<ol class="arabic simple">
+<li><p><strong>The Jupyter Notebook IDE</strong> The <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> interactive development environment (IDE) is the application that launches in a web browser like Firefox or Safari and is the environment where you write and run your code.</p></li>
+<li><p><strong>Notebook Files (.ipynb)</strong> The notebook file (.ipynb) is a file type that you can use to store your <code class="docutils literal notranslate"><span class="pre">Python</span></code> code and <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> text for individual projects and workflows.</p></li>
+<li><p><strong>Kernels</strong> A kernel runs your code in a specific programming language. <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> supports over 40 different languages. In this class, you will use the <code class="docutils literal notranslate"><span class="pre">Python</span></code> kernel within the <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> IDE.</p></li>
+</ol>
+<section id="structure-of-jupyter-notebook-files">
+<h3>Structure of Jupyter Notebook Files<a class="headerlink" href="#structure-of-jupyter-notebook-files" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> IDE allows you to organize and execute your work using individual <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> files with the file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) has three main parts, which are highlighted in the image below:</p>
+<ul class="simple">
+<li><p>Menu bar</p></li>
+<li><p>Toolbar</p></li>
+<li><p>Cells</p></li>
+</ul>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/sample-jupyter-nb.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/sample-jupyter-nb.png" alt= "The components of a Jupyter Notebook file include a menu bar, toolbar, and cells just like the ones shown in this image."></a>
+ <figcaption>The components of a Jupyter Notebook file include a menu bar, toolbar, and cells just like the ones shown in this image. 
+ </figcaption>
+</figure>
+<p>Throughout this chapter, you will review the menu and toolbar to complete different tasks within your <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> files such as saving changes, running code, etc.</p>
+</section>
+<section id="markdown-and-code-cells-in-jupyter-notebook">
+<h3>Markdown and Code Cells in Jupyter Notebook<a class="headerlink" href="#markdown-and-code-cells-in-jupyter-notebook" title="Permalink to this headline">#</a></h3>
+<p>In addition to the menu and toolbar, a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> consists of a set of cells, which can be specified to store documentation text such as <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> or programming code such as <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
+<p>Text written using the <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> syntax can be rendered in a cell that is of the cell type <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>.</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/md-cell.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/md-cell.png" alt= "Jupyter Notebook with a non-rendered Markdown cell."></a>
+<figcaption> Jupyter Notebook with a non-rendered Markdown cell. 
+ </figcaption>
+</figure>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/rendered-md-cell.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/rendered-md-cell.png" alt= "Jupyter Notebook with a rendered Markdown cell."></a>
+ <figcaption> Jupyter Notebook with a rendered Markdown cell. 
+ </figcaption>
+</figure>
+<p>You can run code (e.g. <code class="docutils literal notranslate"><span class="pre">Python</span></code>) using the Code cells in <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p>
+<p>Code is written in code chunks. When you run the code in a Code cell, the code output displayed below.</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/basic-code-cell.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/basic-code-cell.png" alt= "Jupyter Notebook with a code cell that contains 4 + 5. When you run the code, the output is 9 and is displayed below the code cell."></a>
+ <figcaption> Jupyter Notebook with a code cell that contains 4 + 5. When you run the code, the output is 9 and is displayed below the code cell. 
+ </figcaption>
+</figure>
+<p>You can check the cell type of any cell within a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> by clicking in the cell and looking at the Cell Type in Toolbar.</p>
+<figure>
+ <a href="{{ site.url }}/images/courses/earth-analytics/python-interface/select-code-cell.png">
+ <img src="{{ site.url }}/images/courses/earth-analytics/python-interface/select-code-cell.png" alt="You can check the cell type of any cell in Jupyter Notebook using the Toolbar. The default cell type is Code."></a>
+ <figcaption> You can check the cell type of any cell in Jupyter Notebook using the Toolbar. The default cell type is Code.
+ </figcaption>
+</figure>
+<p>In the next sections of this chapter, you will learn how to run cells and add new cells to your <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file to build out your workflow.</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../01-open-reproducible-science/open-reproducible-science-03-best-practices.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How To Organize Your Project: Best Practices for Open Reproducible Science</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="jupyter-notebook-02-get-started-jupyter-notebook.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Get Started With Jupyter Notebook For Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-for-open-reproducible-science">Jupyter Notebook for Open Reproducible Science</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows">Combine Markdown and Code in Jupyter Notebooks To Document Workflows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks-are-beneficial-to-your-colleagues">Jupyter Notebooks Are Beneficial to Your Colleagues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks-are-beneficial-to-you-your-future-self">Jupyter Notebooks Are Beneficial to You &amp; Your Future Self</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-notebooks-to-shareable-html-files">Convert Notebooks to Shareable HTML Files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-notebook">What is Jupyter Notebook?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-jupyter-notebook">Advantages of Jupyter Notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-makes-coding-and-documentation-more-efficient">Jupyter Notebook Makes Coding and Documentation More Efficient</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-jupyter-notebook">Components of Jupyter Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-jupyter-notebook-files">Structure of Jupyter Notebook Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-and-code-cells-in-jupyter-notebook">Markdown and Code Cells in Jupyter Notebook</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

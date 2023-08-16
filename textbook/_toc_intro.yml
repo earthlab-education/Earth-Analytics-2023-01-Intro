@@ -1,0 +1,116 @@
+format: jb-book
+root: 00-learning-portal-landing-page
+defaults:  # The defaults key will be applied to all chapters and sub-sections
+  titlesonly: True
+  
+parts:
+  - caption: Introduction to Earth and Environmental Data Science
+    chapters: 
+      - file: intro-eds-textbook/00-course-overview
+
+      - file: intro-eds-textbook/01-reproducible-science-tools/00-reproducible-science-tools-landing-page
+        sections:
+          - file: intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science
+            sections:
+              - file: intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools
+              - file: intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices      
+          - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook
+            sections:
+              - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook
+              - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks
+              - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook
+              - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook
+              - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts
+
+      # - file: intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page
+      #   sections:
+      #     - file: intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/text-file-formats-01-intro-text-file-formats
+      #       sections:
+      #         - file: intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/text-file-formats-02-markdown
+      #         - file: intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/text-file-formats-03-tabular-data
+      #     - file: intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-01-intro-spatial-data
+      #       sections:
+      #         - file: intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-02-raster-data
+      #         - file: intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-03-vector-data
+      #         - file: intro-eds-textbook/02-02-file-formats/05-spatial-data-formats-eds/spatial-data-formats-04-exercise
+
+      # - file: intro-eds-textbook/03-git-github/00-git-github-landing-page
+      #   sections:
+      #     - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control
+      #       sections:
+      #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-02-fork-clone-repos
+      #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-03-setup-git-locally
+      #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-04-git-commands
+      #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-05-undo-changes
+      #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-06-activity-push-pull
+      #     - file: intro-eds-textbook/03-git-github/02-github-collaboration/github-collab-01-intro-collaboration
+      #       sections:
+      #         - file: intro-eds-textbook/03-git-github/02-github-collaboration/github-collab-02-github-pull-requests
+      #         - file: intro-eds-textbook/03-git-github/02-github-collaboration/github-collab-03-sync-repos
+      #         - file: intro-eds-textbook/03-git-github/02-github-collaboration/github-collab-04-issues
+      #         - file: intro-eds-textbook/03-git-github/02-github-collaboration/github-collab-05-workflows
+      #         - file: intro-eds-textbook/03-git-github/02-github-collaboration/github-collab-06-pr-activity
+
+      - file: intro-eds-textbook/04-python-fundamentals/00-python-fundamentals-landing-page
+        sections:
+          - file: intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python
+            sections:
+              - file: intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables
+              - file: intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists
+          #     - file: intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-04-operators
+          #     - file: intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-05-exercise
+          # - file: intro-eds-textbook/04-python-fundamentals/02-python-packages-for-eds/python-packages-for-eds-01-intro-eds-packages-python
+          #   sections:
+          #     - file: intro-eds-textbook/04-python-fundamentals/02-python-packages-for-eds/python-packages-for-eds-02-conda-environments
+          #     - file: intro-eds-textbook/04-python-fundamentals/02-python-packages-for-eds/python-packages-for-eds-03-install-packages
+          # - file: intro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python/work-with-paths-in-python-01-intro-paths-in-python
+          #   sections:
+          #     - file: intro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python/work-with-paths-in-python-02-paths-with-os
+          #     - file: intro-eds-textbook/04-python-fundamentals/03-work-with-paths-in-python/work-with-paths-in-python-03-file-dir-string-manipulation
+
+      # - file: intro-eds-textbook/06-python-data-structures/00-ds-python-landing
+      #   sections:
+      #     - file: intro-eds-textbook/06-python-data-structures/01-numpy-arrays/01-intro-numpy-arrays
+      #       sections:
+      #         - file: intro-eds-textbook/06-python-data-structures/01-numpy-arrays/02-import-text-files-numpy-arrays
+      #         - file: intro-eds-textbook/06-python-data-structures/01-numpy-arrays/03-summarize-arrays
+      #         - file: intro-eds-textbook/06-python-data-structures/01-numpy-arrays/04-indexing-slicing-arrays
+      #     - file: intro-eds-textbook/06-python-data-structures/02-pandas-dataframes/01-intro-pandas-df
+      #       sections:
+      #         - file: intro-eds-textbook/06-python-data-structures/02-pandas-dataframes/02-import-csv-pandas
+      #         - file: intro-eds-textbook/06-python-data-structures/02-pandas-dataframes/03-summarize-pandas-df
+      #         - file: intro-eds-textbook/06-python-data-structures/02-pandas-dataframes/04-selections-pandas-df
+
+      # - file: intro-eds-textbook/07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page
+      #   sections:
+      #     - file: intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/01-intro-clean-code
+      #       sections:
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/02-pep-8
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/03-expressive-names
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/01-intro-to-clean-code/04-dry-modular-code
+      #     - file: intro-eds-textbook/07-efficient-clean-code-python/02-conditional-statements/conditional-statements-python-01-intro-conditional-statements
+      #       sections:
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/02-conditional-statements/conditional-statements-python-02-multiple-conditions
+      #     - file: intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-01-intro
+      #       sections:
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-02-automate-tasks
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-03-workflows
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-04-list-comprehension
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-05-loops-exercise
+      #     - file: intro-eds-textbook/07-efficient-clean-code-python/04-functions/functions-python-01-intro
+      #       sections:
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/04-functions/functions-python-02-write-custom-functions
+      #         - file: intro-eds-textbook/07-efficient-clean-code-python/04-functions/functions-python-03-write-custom-functions-multi-parameters
+
+      - file: python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.md
+        sections:
+          - file: python-open-source-tool-setup/setup-02-setup-git-bash-and-anacoda.md
+          - file: python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.md
+          - file: python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.md
+          - file: python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.md
+          
+  - caption: Want more Earthlab?
+    chapters:
+      - url: https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate
+        title: Earth Data Analytics Professional Graduate Certificate
+  

@@ -1,0 +1,1108 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>8.23.11. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/04-python-fundamentals/work-with-paths-in-python/2019-09-17-work-with-paths-in-python-03-file-dir-string-manipulation';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="9. Section Six - Scientific Data Structures in Python" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html" />
+    <link rel="prev" title="8.23.3. Learning Objectives" href="2019-09-17-work-with-paths-in-python-02-paths-with-os.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/04-python-fundamentals/work-with-paths-in-python/2019-09-17-work-with-paths-in-python-03-file-dir-string-manipulation.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.23.11. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-files-using-earthpy">8.23.12. Download Files Using EarthPy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#glob-in-python">8.23.13. Glob in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-a-specific-folder-or-file">8.23.13.1. Search for a Specific Folder or File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator">8.23.13.2. <code class="docutils literal notranslate"><span class="pre">*</span></code> Operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-searches">8.23.13.3. Recursive Searches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-glob-lists">8.23.13.4. Sorting <code class="docutils literal notranslate"><span class="pre">glob</span></code> Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-sort-glob-lists">8.23.13.5. Why Sort <code class="docutils literal notranslate"><span class="pre">glob</span></code> Lists?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ranges">8.23.13.6. Using Ranges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.23.13.7. <code class="docutils literal notranslate"><span class="pre">?</span></code> Operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-glob-output-to-a-variable">8.23.13.8. Saving a <code class="docutils literal notranslate"><span class="pre">glob</span></code> Output to a Variable</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#os-advanced-functionality">8.23.14. <code class="docutils literal notranslate"><span class="pre">os</span></code> Advanced Functionality</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#string-manipulation">8.23.15. String Manipulation</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">8.23.11. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Use <strong>earthpy</strong> to download files from a URL (internet address).</p></li>
+<li><p>Use <strong>glob</strong> to get customized lists of files or directories.</p></li>
+<li><p>Use various functions in the <strong>os</strong> package to manipulate file paths.</p></li>
+</ul>
+</div>
+<p>For many data projects, it can be helpful to manipulate and parse file and directory paths, especially when you want to programmatically access data files and automate workflows.</p>
+<p>To start working with file and directory paths in <strong>Python</strong>, you first need some files! On this page, you will first learn how to use the <strong>earthpy</strong> package to download files from a URL (internet address).</p>
+<p>Then, you will use the <strong>os</strong> and <strong>glob</strong> packages to access files and directories and to create lists of paths that you can parse to extract useful information from the file and directory names.</p>
+</section>
+<section id="download-files-using-earthpy">
+<h1><span class="section-number">8.23.12. </span>Download Files Using EarthPy<a class="headerlink" href="#download-files-using-earthpy" title="Permalink to this headline">#</a></h1>
+<p>You can use the function <code class="docutils literal notranslate"><span class="pre">data.get_data()</span></code> from the <strong>earthpy</strong> package to download data from online sources such as the <strong><a class="reference external" href="http://Figshare.com">Figshare.com</a></strong> data repository.</p>
+<p>Begin by importing the necessary packages: <strong>os</strong>, <strong>glob</strong>, and <strong>earthpy</strong> (using the alias <code class="docutils literal notranslate"><span class="pre">et</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+
+<span class="kn">import</span> <span class="nn">earthpy</span> <span class="k">as</span> <span class="nn">et</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To use the function <code class="docutils literal notranslate"><span class="pre">et.data.get_data()</span></code>, you can provide a parameter value for the <code class="docutils literal notranslate"><span class="pre">url</span></code>, which you define by providing a text string of the URL (internet address) for the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download data on average monthly temp for two California sites</span>
+<span class="n">file_url</span> <span class="o">=</span> <span class="s2">&quot;https://ndownloader.figshare.com/files/21894528&quot;</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="n">file_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/elsa/earth-analytics/data/earthpy-downloads/avg-monthly-temp-fahr&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">et.data.get_data()</span></code> will download files to <code class="docutils literal notranslate"><span class="pre">earth-analytics/data/earthpy-downloads</span></code> under your home directory, and it will create the necessary directories if they do not already exist.</p>
+<p>With this information, you can set the working directory to your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory and then create a relative path to the downloaded data directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set working directory to earth-analytics</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span> <span class="s2">&quot;earth-analytics&quot;</span><span class="p">))</span>
+
+<span class="c1"># Create a path to the data folder</span>
+<span class="n">data_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span> 
+                           <span class="s2">&quot;avg-monthly-temp-fahr&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="glob-in-python">
+<h1><span class="section-number">8.23.13. </span>Glob in Python<a class="headerlink" href="#glob-in-python" title="Permalink to this headline">#</a></h1>
+<p><strong>glob</strong> is a powerful tool in Python to help with file management and filtering. While <strong>os</strong> helps manage and create specific paths that are friendly to whatever machine they are used on, <strong>glob</strong> helps to filter through large datasets and pull out only files that are of interest.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">glob()</span></code> function uses the rules of Unix shell to help users organize their files. Unix shell follows fairly straight-forward rules to search for items, which you will explore below.</p>
+<section id="search-for-a-specific-folder-or-file">
+<h2><span class="section-number">8.23.13.1. </span>Search for a Specific Folder or File<a class="headerlink" href="#search-for-a-specific-folder-or-file" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">glob</span></code> function can be used to find just one folder or file. This can be done by just giving <code class="docutils literal notranslate"><span class="pre">glob</span></code> the path of the item you are trying to find.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a specific directory</span>
+<span class="n">file_list</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">data_folder</span><span class="p">)</span>
+
+<span class="n">file_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is not very useful, as you already have the data path if you are using it to search for something.</p>
+<p>Notice, however, that <code class="docutils literal notranslate"><span class="pre">glob</span></code> returns a list of all items that match your search, not as individual strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">file_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">glob()</span></code> function in combination with the <code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code> function to create lists of paths that are built programmatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a list containing a specific file name</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;San-Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;San-Diego-1999-temp.csv&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="operator">
+<h2><span class="section-number">8.23.13.2. </span><code class="docutils literal notranslate"><span class="pre">*</span></code> Operator<a class="headerlink" href="#operator" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">glob</span></code> uses different operators to broaden its searching abilities. The primary operator is <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">*</span></code> is a sort of wildcard that can be used to search for items that have differences in their names. Whatever text doesn’t match can be replaced by a <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+<p>For example, if you want every file in a directory to be returned to you, you can put a <code class="docutils literal notranslate"><span class="pre">*</span></code> at the end of a directory path.</p>
+<p><code class="docutils literal notranslate"><span class="pre">glob</span></code> will return a list of all of the files in that directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get list of all files/dirs in data folder</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get list of all files/dirs in San-Diego folder</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;San-Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you only want <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files, than <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> will return every file that ends with <code class="docutils literal notranslate"><span class="pre">.csv</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get only csv files</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;San-Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;*.csv&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you only want <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files with the number <code class="docutils literal notranslate"><span class="pre">2</span></code> somewhere in the file name, than <code class="docutils literal notranslate"><span class="pre">*2*.csv</span></code> will return that list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use multiple wildcards</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;San-Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;*2*.csv&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">2*.csv</span></code> would only return files that <strong>start</strong> with the number <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create empty list (no file names begin with 2)</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;San-Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;2*.csv&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The additional asterix in front of <code class="docutils literal notranslate"><span class="pre">2</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">*2*.csv</span></code>) allows the <code class="docutils literal notranslate"><span class="pre">2</span></code> to be anywhere in the path.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">*</span></code> is meant to replace all text that does not matter to your search.</p>
+</section>
+<section id="recursive-searches">
+<h2><span class="section-number">8.23.13.3. </span>Recursive Searches<a class="headerlink" href="#recursive-searches" title="Permalink to this headline">#</a></h2>
+<p>If you are trying to operate on files across multiple directories, you can use multiple <code class="docutils literal notranslate"><span class="pre">*</span></code> in a file path to indicate that you want every file in all folders in a directory.</p>
+<p>The first <code class="docutils literal notranslate"><span class="pre">*</span></code> is to access all directories in the starting directory (e.g. <code class="docutils literal notranslate"><span class="pre">data_folder</span></code>).</p>
+<p>This followed by the second <code class="docutils literal notranslate"><span class="pre">*</span></code> operator, which loops through all subdirectories to make a list of all their contents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search recursively through both site folders</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sorting-glob-lists">
+<h2><span class="section-number">8.23.13.4. </span>Sorting <code class="docutils literal notranslate"><span class="pre">glob</span></code> Lists<a class="headerlink" href="#sorting-glob-lists" title="Permalink to this headline">#</a></h2>
+<p>Notice that the lists provided by <code class="docutils literal notranslate"><span class="pre">glob</span></code> are not sorted.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get list of CSVs in Sonoma directory</span>
+<span class="n">sonoma_files</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span> <span class="s1">&#39;*.csv&#39;</span><span class="p">))</span>
+<span class="n">sonoma_files</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If it’s important for a list to be in a certain order, then always make sure to sort the list returned by <code class="docutils literal notranslate"><span class="pre">glob</span></code> using the <code class="docutils literal notranslate"><span class="pre">.sort()</span></code> method for lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort glob list</span>
+<span class="n">sonoma_files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another option for sorting lists</span>
+<span class="n">sonoma_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span> <span class="s1">&#39;*.csv&#39;</span><span class="p">)))</span>
+<span class="n">sonoma_files</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that sorting can sometimes work differently than you may think, so check your sorted list before you move on with your project.</p>
+<p>For example, if two items have identical path names, but one ends in <code class="docutils literal notranslate"><span class="pre">10</span></code> and the other ends in <code class="docutils literal notranslate"><span class="pre">1</span></code>, sometimes the file ending in <code class="docutils literal notranslate"><span class="pre">10</span></code> will be put above the file ending in <code class="docutils literal notranslate"><span class="pre">1</span></code>. Always double check!</p>
+</section>
+<section id="why-sort-glob-lists">
+<h2><span class="section-number">8.23.13.5. </span>Why Sort <code class="docutils literal notranslate"><span class="pre">glob</span></code> Lists?<a class="headerlink" href="#why-sort-glob-lists" title="Permalink to this headline">#</a></h2>
+<p>The order in which <code class="docutils literal notranslate"><span class="pre">glob</span></code> returns files from a folder can vary drastically.  Depending on the operating system being used, or the way the files are stored, different people may get results from a <code class="docutils literal notranslate"><span class="pre">glob</span></code> list in different orders.</p>
+<p>This can lead to data errors when running projects across computers.</p>
+<p>For example, consider how sorting a <code class="docutils literal notranslate"><span class="pre">glob</span></code> list changes what files you access when getting an index from the list, such as index <code class="docutils literal notranslate"><span class="pre">[4]</span></code> to access the 5th item in the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unsorted_sonoma</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unsorted_sonoma</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexes change once a list is sorted!</span>
+<span class="n">sorted_sonoma</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+<span class="n">sorted_sonoma</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_sonoma</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-ranges">
+<h2><span class="section-number">8.23.13.6. </span>Using Ranges<a class="headerlink" href="#using-ranges" title="Permalink to this headline">#</a></h2>
+<p>In addition to using <code class="docutils literal notranslate"><span class="pre">*</span></code> to specify which parts of a file name are important to you, you can use <code class="docutils literal notranslate"><span class="pre">[]</span></code> to specify a range of characters to search for.</p>
+<p>For example, you can create a search for all files with 2001 to 2003 in the name by using <code class="docutils literal notranslate"><span class="pre">*200</span></code> and adding <code class="docutils literal notranslate"><span class="pre">[1-3]*</span></code> to it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get files for 2001-2003</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;*200[1-3]*&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is not just limited to numbers. <code class="docutils literal notranslate"><span class="pre">[d-q]</span></code> would also filter results for characters between the letters <code class="docutils literal notranslate"><span class="pre">d</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<p>Note, however, that this search range is for characters only, not strings.</p>
+<p>For example, you can search for numbers 2-7 with <code class="docutils literal notranslate"><span class="pre">[2-7]</span></code> but you would not be able to search for numbers <code class="docutils literal notranslate"><span class="pre">[2-14]</span></code> because <code class="docutils literal notranslate"><span class="pre">14</span></code> is more than one character.</p>
+<p>Notice below that the search does not work correctly because <code class="docutils literal notranslate"><span class="pre">[2001-2003]</span></code> are more than one character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get incorrect range for 2002-2003</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;*[2001-2003]*&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2><span class="section-number">8.23.13.7. </span><code class="docutils literal notranslate"><span class="pre">?</span></code> Operator<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">?</span></code> operator functions similarly to the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator but is used for a single character.</p>
+<p>If one character in the file name can be variable, but everything else must stay the same, than <code class="docutils literal notranslate"><span class="pre">?</span></code> is a good way to just replace that one character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ? operator used for last value in year</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span> <span class="s1">&#39;*200?-temp.csv&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2003-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-2002-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">?</span></code> is not limited to one use per search and can be used to replace more than one character in a query.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiple ? operators</span>
+<span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span> <span class="s1">&#39;*19??-temp.csv&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/Sonoma/Sonoma-1999-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="saving-a-glob-output-to-a-variable">
+<h2><span class="section-number">8.23.13.8. </span>Saving a <code class="docutils literal notranslate"><span class="pre">glob</span></code> Output to a Variable<a class="headerlink" href="#saving-a-glob-output-to-a-variable" title="Permalink to this headline">#</a></h2>
+<p>In order to use the output of <code class="docutils literal notranslate"><span class="pre">glob</span></code> later in a script, be sure to save it to a variable! It can be done easily by just assigning the <code class="docutils literal notranslate"><span class="pre">glob</span></code> function output a variable name.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sd_data</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;San-Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+<span class="n">sd_data</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="n">sd_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="os-advanced-functionality">
+<h1><span class="section-number">8.23.14. </span><code class="docutils literal notranslate"><span class="pre">os</span></code> Advanced Functionality<a class="headerlink" href="#os-advanced-functionality" title="Permalink to this headline">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">os</span></code> is another very powerful tool and has additional functionality that can be useful when dealing with file paths, such as advanced parsing abilities.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">os.path.normpath()</span></code> is a great way to clean up file paths. It takes out any unnecessary characters to make the path more easily read.</p>
+<p>It is a good way to make sure your path is properly formatted before using other <code class="docutils literal notranslate"><span class="pre">os</span></code> functions on the path.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example of normpath cleaning up path</span>
+<span class="n">example_path</span> <span class="o">=</span> <span class="s2">&quot;home//user//example_dir&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">example_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;home/user/example_dir&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">os.path.commonpath()</span></code> is a very useful when combined with <code class="docutils literal notranslate"><span class="pre">glob</span></code>. This function will take a list of file paths and find the lowest directory that all the files have in common.</p>
+<p>So if there were two files, one stored in <code class="docutils literal notranslate"><span class="pre">home/user/dir/dir2/example.txt</span></code> and one stored in <code class="docutils literal notranslate"><span class="pre">home/user/dir/example.txt</span></code>, then <code class="docutils literal notranslate"><span class="pre">os.path.commonpath()</span></code> would return <code class="docutils literal notranslate"><span class="pre">home/user/dir</span></code> as it’s the lowest common directory the two folders share.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print list of files</span>
+<span class="n">sd_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a shared directory from a list of files</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">commonpath</span><span class="p">(</span><span class="n">sd_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">os.path.basename()</span></code> finds the last section of a path and returns that. If a file path is passed in, the file name will be parsed out and returned.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print normalized path</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">data_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data/earthpy-downloads/avg-monthly-temp-fahr&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the last part of a file path with basename</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">data_folder</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;avg-monthly-temp-fahr&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">os.path.split()</span></code> will split a path into two parts:</p>
+<ol class="arabic simple">
+<li><p>the last part of the path.</p></li>
+<li><p>the rest of the path.</p></li>
+</ol>
+<p>It returns the same output as <code class="docutils literal notranslate"><span class="pre">os.path.basename()</span></code> with the addition of the rest of the path that was left out as another .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the last part of a file path and the rest of the path</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">data_folder</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;data/earthpy-downloads&#39;, &#39;avg-monthly-temp-fahr&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can then use indexing on the result to get each piece of the split path.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">data_folder</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data/earthpy-downloads&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">data_folder</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;avg-monthly-temp-fahr&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="string-manipulation">
+<h1><span class="section-number">8.23.15. </span>String Manipulation<a class="headerlink" href="#string-manipulation" title="Permalink to this headline">#</a></h1>
+<p>Recall that when you create a file path using <code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code>, it will properly format a string of the file path, so it can be used on any operating systems.</p>
+<p>Note, however, that the file path is still just a string. Thus, you can parse file paths, just like you would strings, and extract information from them that you may need for a project.</p>
+<p><code class="docutils literal notranslate"><span class="pre">.split()</span></code> is a built-in <strong>Python</strong> function that splits a string into a list of strings based on a separator
+character, and can be used in combination with <code class="docutils literal notranslate"><span class="pre">os.sep</span></code> to separate directories in file paths into their base parts. <code class="docutils literal notranslate"><span class="pre">os.sep</span></code>is a data value stored in <code class="docutils literal notranslate"><span class="pre">os</span></code> that will return the character used to separate pathname components, such as directory or file names. This is <code class="docutils literal notranslate"><span class="pre">\\</span></code> for Windows and <code class="docutils literal notranslate"><span class="pre">/</span></code> for POSIX systems, such as Mac or Linux.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Separate a path into parts</span>
+<span class="n">file_path_list</span> <span class="o">=</span> <span class="n">data_folder</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+<span class="n">file_path_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data&#39;, &#39;earthpy-downloads&#39;, &#39;avg-monthly-temp-fahr&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;avg-monthly-temp-fahr&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>In addition to built-in functions, file paths can be parsed with <code class="docutils literal notranslate"><span class="pre">string[start_index:end_index]</span></code> like a normal string. This can help get important infromation from a file path, such as a date.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print list of files</span>
+<span class="n">sd_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-1999-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2000-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2001-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2002-temp.csv&#39;,
+ &#39;data/earthpy-downloads/avg-monthly-temp-fahr/San-Diego/San-Diego-2003-temp.csv&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get file name</span>
+<span class="n">year_path</span> <span class="o">=</span> <span class="n">sd_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">year_path</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>San-Diego-1999-temp.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parse a date from file name</span>
+<span class="n">year</span> <span class="o">=</span> <span class="n">file_name</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1999
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the range includes the first index value but not the second index value (e.g. <code class="docutils literal notranslate"><span class="pre">1999</span></code> are index values 10 through 13).</p>
+<p>Think about how you can use the same string parsing syntax to get the site name!</p>
+<p>You have now learned the essentials of <strong>glob</strong> and <strong>os</strong> to create custom lists of files and directories to manipulate and parse file names and directories, which can come in handy for future projects.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/04-python-fundamentals/work-with-paths-in-python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2019-09-17-work-with-paths-in-python-02-paths-with-os.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8.23.3. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../06-python-data-structures/2019-09-23-ds-python-landing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span><i class="fa fa-ship" aria-hidden="true"></i> Section Six - Scientific Data Structures in Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.23.11. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-files-using-earthpy">8.23.12. Download Files Using EarthPy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#glob-in-python">8.23.13. Glob in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-a-specific-folder-or-file">8.23.13.1. Search for a Specific Folder or File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator">8.23.13.2. <code class="docutils literal notranslate"><span class="pre">*</span></code> Operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-searches">8.23.13.3. Recursive Searches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-glob-lists">8.23.13.4. Sorting <code class="docutils literal notranslate"><span class="pre">glob</span></code> Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-sort-glob-lists">8.23.13.5. Why Sort <code class="docutils literal notranslate"><span class="pre">glob</span></code> Lists?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ranges">8.23.13.6. Using Ranges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.23.13.7. <code class="docutils literal notranslate"><span class="pre">?</span></code> Operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-glob-output-to-a-variable">8.23.13.8. Saving a <code class="docutils literal notranslate"><span class="pre">glob</span></code> Output to a Variable</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#os-advanced-functionality">8.23.14. <code class="docutils literal notranslate"><span class="pre">os</span></code> Advanced Functionality</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#string-manipulation">8.23.15. String Manipulation</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

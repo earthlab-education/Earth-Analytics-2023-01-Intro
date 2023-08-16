@@ -1,0 +1,1736 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-02-automate-tasks';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Learning Objectives" href="loops-03-workflows.html" />
+    <link rel="prev" title="Chapter Eighteen - Loops" href="loops-01-intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/intro-eds-textbook/00-course-overview.md</span>, line 36)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html"><div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/textbook-header.md</span>, line 2)</p>
+<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
+</div>
+</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-efficient-clean-code-python-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-02-automate-tasks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/07-efficient-clean-code-python/03-loops/loops-02-automate-tasks.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-calculations-on-values-in-lists">Automate Calculations on Values in Lists</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-values-for-loop">Create List of Values For Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-loop">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expand-loop-to-add-results-to-new-list">Expand Loop To Add Results to New List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-the-list-being-iterated-upon-and-the-placeholder-in-loop">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-summary-statistics-on-multiple-numpy-arrays">Automate Summary Statistics on Multiple Numpy Arrays</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-numpy-arrays-for-loop">Create List of Numpy Arrays For Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-calculation-on-multiple-columns-in-pandas-dataframe">Automate Calculation on Multiple Columns in Pandas Dataframe</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-column-names">Create List of Column Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-data-downloads-using-earthpy">Automate Data Downloads Using EarthPy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-urls-for-loop">Create List of URLs For Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-files-in-directory">Check Files in Directory</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this chapter, you will be able to:</p>
+<ul class="simple">
+<li><p>Automate tasks using data structures such as lists, <strong>numpy</strong> arrays, and <strong>pandas</strong> dataframe.</p></li>
+<li><p>Add the results of a loop to a new list.</p></li>
+<li><p>Automate data downloads with <strong>earthpy</strong>.</p></li>
+</ul>
+</div>
+<p>As you have already learned, loops are very useful for removing repetition
+in your code. As such, they are great for automating tasks that you want to
+run on multiple values or data structures. Explore the examples below to see
+how you can automate tasks using data structures such as lists, <strong>numpy</strong>
+arrays, and <strong>pandas</strong> dataframe.</p>
+</section>
+<section id="automate-calculations-on-values-in-lists">
+<h1>Automate Calculations on Values in Lists<a class="headerlink" href="#automate-calculations-on-values-in-lists" title="Permalink to this headline">#</a></h1>
+<p>Recall that in the lessons on variables and lists, you learned how to run
+calculations on individual variables to convert the units, using average monthly
+precipitation values for <a href="https://www.esrl.noaa.gov/psd/boulder/Boulder.mm.precip.html" target="_blank">
+Boulder, Colorado, provided by the U.S. National Oceanic and Atmospheric
+Administration (NOAA)</a>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Month</p></th>
+<th class="head"><p>Precipitation (inches)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Jan</p></td>
+<td><p>0.70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Feb</p></td>
+<td><p>0.75</p></td>
+</tr>
+<tr class="row-even"><td><p>Mar</p></td>
+<td><p>1.85</p></td>
+</tr>
+<tr class="row-odd"><td><p>Apr</p></td>
+<td><p>2.93</p></td>
+</tr>
+<tr class="row-even"><td><p>May</p></td>
+<td><p>3.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>June</p></td>
+<td><p>2.02</p></td>
+</tr>
+<tr class="row-even"><td><p>July</p></td>
+<td><p>1.93</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aug</p></td>
+<td><p>1.62</p></td>
+</tr>
+<tr class="row-even"><td><p>Sept</p></td>
+<td><p>1.84</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oct</p></td>
+<td><p>1.31</p></td>
+</tr>
+<tr class="row-even"><td><p>Nov</p></td>
+<td><p>1.39</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dec</p></td>
+<td><p>0.84</p></td>
+</tr>
+</tbody>
+</table>
+<p>After you converted each variable, you then manually created a list that
+contained the recalculated values. Using a loop, you can automate this task,
+so that you recalculate each value in an existing list.</p>
+<section id="create-list-of-values-for-loop">
+<h2>Create List of Values For Loop<a class="headerlink" href="#create-list-of-values-for-loop" title="Permalink to this headline">#</a></h2>
+<p>Begin by creating the list upon which your loop will execute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create list of average monthly precip (inches) in Boulder, CO</span>
+<span class="n">avg_monthly_precip_in</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.70</span><span class="p">,</span>  <span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">,</span> <span class="mf">2.93</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">,</span> <span class="mf">2.02</span><span class="p">,</span> 
+                         <span class="mf">1.93</span><span class="p">,</span> <span class="mf">1.62</span><span class="p">,</span> <span class="mf">1.84</span><span class="p">,</span> <span class="mf">1.31</span><span class="p">,</span> <span class="mf">1.39</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="write-loop">
+<h2>Write Loop<a class="headerlink" href="#write-loop" title="Permalink to this headline">#</a></h2>
+<p>Next, decide on the type of loop that will work best for your goal of running
+a calculation on each item of a list. In this case, you want to convert each item
+in a list from inches to millimeters (recall than 1 inch = 25.4 mm). So you have a
+fixed list of values upon which you want to iterate a calculation. Think about
+whether a <code class="docutils literal notranslate"><span class="pre">while</span></code> or <code class="docutils literal notranslate"><span class="pre">for</span></code> loop would work better for your task. Which type of loop
+structure is used in the code below?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert each item in list from inches to mm</span>
+<span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">avg_monthly_precip_in</span><span class="p">:</span>
+    <span class="n">month</span> <span class="o">*=</span> <span class="mf">25.4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.779999999999998
+19.049999999999997
+46.99
+74.422
+77.46999999999998
+51.308
+49.022
+41.148
+46.736
+33.274
+35.306
+21.336
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="expand-loop-to-add-results-to-new-list">
+<h2>Expand Loop To Add Results to New List<a class="headerlink" href="#expand-loop-to-add-results-to-new-list" title="Permalink to this headline">#</a></h2>
+<p>In the loop above, each month’s value is converted from inches to millimeters
+and the value is printed; however, the new value is not actually captured anywhere,
+as the original list is not updated. You can expand the loop with more code, so that
+each converted value is actually added to a new list. Previously in the textbook,
+you learned how to append items to the end of an existing list using
+<code class="docutils literal notranslate"><span class="pre">listname</span> <span class="pre">+=</span> <span class="pre">[value]</span></code>, which employs an assignment operator to add the new values
+to the end of an existing list.</p>
+<p>You can add do this with your loop with only two new lines of code:</p>
+<ol class="arabic simple">
+<li><p>First, you create an empty list that will receive new values using <code class="docutils literal notranslate"><span class="pre">listname</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p></li>
+<li><p>Then, you can add a new line of code to append each value after it is calculated using <code class="docutils literal notranslate"><span class="pre">listname.append(value)</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create new empty to receive values</span>
+<span class="n">avg_monthly_precip_mm</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Convert each item from in to mm and add to new list</span>
+<span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">avg_monthly_precip_in</span><span class="p">:</span>
+    <span class="n">month</span> <span class="o">*=</span> <span class="mf">25.4</span> 
+    <span class="n">avg_monthly_precip_mm</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can print the values in both lists to see that the original list has
+not changed, and that the new list contains the converted values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print original list in inches</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">avg_monthly_precip_in</span><span class="p">)</span> 
+    
+<span class="c1"># Print new list after loop is complete</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">avg_monthly_precip_mm</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.7, 0.75, 1.85, 2.93, 3.05, 2.02, 1.93, 1.62, 1.84, 1.31, 1.39, 0.84]
+[17.779999999999998, 19.049999999999997, 46.99, 74.422, 77.46999999999998, 51.308, 49.022, 41.148, 46.736, 33.274, 35.306, 21.336]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="review-the-list-being-iterated-upon-and-the-placeholder-in-loop">
+<h2>Review the List Being Iterated Upon and the Placeholder in Loop<a class="headerlink" href="#review-the-list-being-iterated-upon-and-the-placeholder-in-loop" title="Permalink to this headline">#</a></h2>
+<p>Look carefully at how the variables <code class="docutils literal notranslate"><span class="pre">avg_monthly_precip_mm</span></code> and <code class="docutils literal notranslate"><span class="pre">month</span></code> are created.
+The list variable <code class="docutils literal notranslate"><span class="pre">avg_monthly_precip_mm</span></code> was explicitly created; in this case,
+you manually created the variable <code class="docutils literal notranslate"><span class="pre">avg_monthly_precip_mm</span></code> as an empty list. The variable
+<code class="docutils literal notranslate"><span class="pre">month</span></code> is the placeholder variable, meaning that it was not explicitly created by you.</p>
+<p>Rather, it is created as part of the loop and serves as a placeholder to represent each
+item from the original list (<code class="docutils literal notranslate"><span class="pre">avg_monthly_precip_in</span></code>), as the loop iterates. At the end
+of the loop, the placeholder variable is equal to the last value that it was assigned
+(e.g. <code class="docutils literal notranslate"><span class="pre">month</span></code> is equal to 21.336 when the loop ends).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Final value of month</span>
+<span class="n">month</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.336
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="automate-summary-statistics-on-multiple-numpy-arrays">
+<h1>Automate Summary Statistics on Multiple Numpy Arrays<a class="headerlink" href="#automate-summary-statistics-on-multiple-numpy-arrays" title="Permalink to this headline">#</a></h1>
+<p>By now, you may be excited that you can automate these kinds of tasks,
+but you may also be thinking that you would prefer to iterate on <strong>numpy</strong>
+arrays or <strong>pandas</strong> dataframes, instead of working with data values in lists.</p>
+<p>You can do that, too! For example, you can build a loop that will calculate
+summary statistics (such as the sum or median values) of multiple data structures,
+such as <strong>numpy</strong> arrays. Recall that you can use the functions <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.median()</span></code> to calculate sum and median values of a <strong>numpy</strong> array.</p>
+<p>Begin by creating two <strong>numpy</strong> arrays containing the average monthly precipitation values in 2002 and 2013 for <a href="https://www.esrl.noaa.gov/psd/boulder/Boulder.mm.precip.html" target="_blank">Boulder, Colorado, provided by the U.S. National Oceanic and Atmospheric Administration (NOAA).</a></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Month</p></th>
+<th class="head"><p>Precipitation (inches) in 2002</p></th>
+<th class="head"><p>Precipitation (inches) in 2013</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Jan</p></td>
+<td><p>1.07</p></td>
+<td><p>0.27</p></td>
+</tr>
+<tr class="row-odd"><td><p>Feb</p></td>
+<td><p>0.44</p></td>
+<td><p>1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>Mar</p></td>
+<td><p>1.50</p></td>
+<td><p>1.72</p></td>
+</tr>
+<tr class="row-odd"><td><p>Apr</p></td>
+<td><p>0.20</p></td>
+<td><p>4.14</p></td>
+</tr>
+<tr class="row-even"><td><p>May</p></td>
+<td><p>3.20</p></td>
+<td><p>2.66</p></td>
+</tr>
+<tr class="row-odd"><td><p>June</p></td>
+<td><p>1.18</p></td>
+<td><p>0.61</p></td>
+</tr>
+<tr class="row-even"><td><p>July</p></td>
+<td><p>0.09</p></td>
+<td><p>1.03</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aug</p></td>
+<td><p>1.44</p></td>
+<td><p>1.40</p></td>
+</tr>
+<tr class="row-even"><td><p>Sept</p></td>
+<td><p>1.52</p></td>
+<td><p>18.16</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oct</p></td>
+<td><p>2.44</p></td>
+<td><p>2.24</p></td>
+</tr>
+<tr class="row-even"><td><p>Nov</p></td>
+<td><p>0.78</p></td>
+<td><p>0.29</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dec</p></td>
+<td><p>0.02</p></td>
+<td><p>0.50</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary packages</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Array of average monthly precip (inches) for 2002 in Boulder, CO</span>
+<span class="n">precip_2002_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.07</span><span class="p">,</span> <span class="mf">0.44</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">3.20</span><span class="p">,</span> <span class="mf">1.18</span><span class="p">,</span> 
+                            <span class="mf">0.09</span><span class="p">,</span> <span class="mf">1.44</span><span class="p">,</span> <span class="mf">1.52</span><span class="p">,</span> <span class="mf">2.44</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">])</span>
+
+<span class="c1"># Array of average monthly precip (inches) for 2013 in Boulder, CO</span>
+<span class="n">precip_2013_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.27</span><span class="p">,</span> <span class="mf">1.13</span><span class="p">,</span> <span class="mf">1.72</span><span class="p">,</span> <span class="mf">4.14</span><span class="p">,</span> <span class="mf">2.66</span><span class="p">,</span> <span class="mf">0.61</span><span class="p">,</span> 
+                            <span class="mf">1.03</span><span class="p">,</span> <span class="mf">1.40</span><span class="p">,</span> <span class="mf">18.16</span><span class="p">,</span> <span class="mf">2.24</span><span class="p">,</span> <span class="mf">0.29</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="create-list-of-numpy-arrays-for-loop">
+<h2>Create List of Numpy Arrays For Loop<a class="headerlink" href="#create-list-of-numpy-arrays-for-loop" title="Permalink to this headline">#</a></h2>
+<p>Just like in the previous example, begin by creating the list upon which your
+loop will iterate. As you want to iterate on multiple <strong>numpy</strong> arrays, you can
+create a list that contains the object names for all of the <strong>numpy</strong> arrays that
+you want to work with in the loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create list of numpy arrays</span>
+<span class="n">arr_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">precip_2002_arr</span><span class="p">,</span> <span class="n">precip_2013_arr</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Write Loop<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Again, think about what type of loop would work best for this data. This time,
+you have a list of two object names, upon which you want to iterate a calculation:
+the <strong>numpy</strong> arrays for 2002 and 2013. Which type of loop structure is used in the
+code below?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate sum and median for each numpy array in list</span>
+<span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">arr_list</span><span class="p">:</span>    
+    <span class="n">arr_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sum:&quot;</span><span class="p">,</span> <span class="n">arr_sum</span><span class="p">)</span>
+    
+    <span class="n">arr_median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;median:&quot;</span><span class="p">,</span> <span class="n">arr_median</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sum: 13.879999999999999
+median: 1.125
+sum: 34.15
+median: 1.265
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, you can capture these values in new, separate lists by defining empty
+lists and using the assignment operator (<code class="docutils literal notranslate"><span class="pre">listname</span> <span class="pre">+=</span> <span class="pre">[value]</span></code>) to add the results
+to each list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create new empty lists to receive values</span>
+<span class="n">monthly_precip_sum</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">monthly_precip_median</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Calculate sum and median for each numpy array and add to new lists</span>
+<span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">arr_list</span><span class="p">:</span>    
+    <span class="n">arr_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="n">monthly_precip_sum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arr_sum</span><span class="p">)</span>
+    
+    <span class="n">arr_median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>    
+    <span class="n">monthly_precip_median</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arr_median</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Review the List Being Iterated Upon and the Placeholder in Loop<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>In the example above, you explicitly created both <code class="docutils literal notranslate"><span class="pre">monthly_precip_sum</span></code> and
+<code class="docutils literal notranslate"><span class="pre">monthly_precip_median</span></code> as empty lists to which the loop results could be appended.
+So at the end of the loop, they are no longer empty, as they have been populated with
+the results of each iteration of the loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lists contain the calculated values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monthly_precip_sum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monthly_precip_median</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[13.879999999999999, 34.15]
+[1.125, 1.265]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">arr</span></code> is the placeholder variable that is created as part
+of the loop and serves as a placeholder to represent each item from the
+original list (<code class="docutils literal notranslate"><span class="pre">arr_list</span></code>), as the loop iterates. At the end of the loop,
+<code class="docutils literal notranslate"><span class="pre">arr</span></code> is equal to the last value that it was assigned (e.g.
+<code class="docutils literal notranslate"><span class="pre">precip_2013_arr</span></code>, the last array in the list).</p>
+<p>Similarly, at the end of the loop, <code class="docutils literal notranslate"><span class="pre">arr_sum</span></code> and <code class="docutils literal notranslate"><span class="pre">arr_median</span></code> are also equal
+to the last value that was calculated for each (e.g. the sum and median values
+for <code class="docutils literal notranslate"><span class="pre">precip_2013_arr</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Final value of arr</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="c1"># Final value of arr_sum</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr_sum</span><span class="p">)</span>
+
+<span class="c1"># Final value of arr_median</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr_median</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.27  1.13  1.72  4.14  2.66  0.61  1.03  1.4  18.16  2.24  0.29  0.5 ]
+34.15
+1.265
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="automate-calculation-on-multiple-columns-in-pandas-dataframe">
+<h1>Automate Calculation on Multiple Columns in Pandas Dataframe<a class="headerlink" href="#automate-calculation-on-multiple-columns-in-pandas-dataframe" title="Permalink to this headline">#</a></h1>
+<p>In addition to running a loop on multiple data structures (e.g multiple
+<strong>numpy</strong> arrays like in the previous example), you can also run loops on
+multiple columns of a <strong>pandas</strong> dataframe. For example, you may need to
+convert the measurement units of multiple columns, such as converting the
+precipitation values from inches to millimeters (1 inch = 25.4 millimeters).</p>
+<p>Begin by creating a new <strong>pandas</strong> dataframe of the same average monthly
+precipitation values in 2002 and 2013 for Boulder, CO.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary packages</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Average monthly precip (inches) in 2002 and 2013 for Boulder, CO</span>
+<span class="n">precip_2002_2013_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;precip_2002&quot;</span><span class="p">,</span> <span class="s2">&quot;precip_2013&quot;</span><span class="p">],</span>
+                                   <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+                                        <span class="p">[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="mf">1.07</span><span class="p">,</span> <span class="mf">0.27</span><span class="p">],</span>   <span class="p">[</span><span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="mf">0.44</span><span class="p">,</span> <span class="mf">1.13</span><span class="p">],</span>
+                                        <span class="p">[</span><span class="s2">&quot;Mar&quot;</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mf">1.72</span><span class="p">],</span>   <span class="p">[</span><span class="s2">&quot;Apr&quot;</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">4.14</span><span class="p">],</span>
+                                        <span class="p">[</span><span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="mf">3.20</span><span class="p">,</span> <span class="mf">2.66</span><span class="p">],</span>   <span class="p">[</span><span class="s2">&quot;June&quot;</span><span class="p">,</span> <span class="mf">1.18</span><span class="p">,</span> <span class="mf">0.61</span><span class="p">],</span>
+                                        <span class="p">[</span><span class="s2">&quot;July&quot;</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">1.03</span><span class="p">],</span>  <span class="p">[</span><span class="s2">&quot;Aug&quot;</span><span class="p">,</span> <span class="mf">1.44</span><span class="p">,</span> <span class="mf">1.40</span><span class="p">],</span>
+                                        <span class="p">[</span><span class="s2">&quot;Sept&quot;</span><span class="p">,</span> <span class="mf">1.52</span><span class="p">,</span> <span class="mf">18.16</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Oct&quot;</span><span class="p">,</span> <span class="mf">2.44</span><span class="p">,</span> <span class="mf">2.24</span><span class="p">],</span>
+                                        <span class="p">[</span><span class="s2">&quot;Nov&quot;</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.29</span><span class="p">],</span>   <span class="p">[</span><span class="s2">&quot;Dec&quot;</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">]</span>
+                                   <span class="p">])</span>
+
+<span class="n">precip_2002_2013_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>precip_2002</th>
+      <th>precip_2013</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>1.07</td>
+      <td>0.27</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+      <td>0.44</td>
+      <td>1.13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+      <td>1.50</td>
+      <td>1.72</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>0.20</td>
+      <td>4.14</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>3.20</td>
+      <td>2.66</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>1.18</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>0.09</td>
+      <td>1.03</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>1.44</td>
+      <td>1.40</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+      <td>1.52</td>
+      <td>18.16</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+      <td>2.44</td>
+      <td>2.24</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+      <td>0.78</td>
+      <td>0.29</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+      <td>0.02</td>
+      <td>0.50</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="create-list-of-column-names">
+<h2>Create List of Column Names<a class="headerlink" href="#create-list-of-column-names" title="Permalink to this headline">#</a></h2>
+<p>Just like in the previous examples, begin by creating the list upon which your
+loop will iterate. As you want to iterate on multiple columns in a <strong>pandas</strong>
+dataframe, you can create a list that contains the column names that you want to
+work with in the loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a list of column names</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;precip_2002&quot;</span><span class="p">,</span> <span class="s2">&quot;precip_2013&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Write Loop<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>Once again, think about what type of loop would work best for this data.
+You have two columns in one <strong>pandas</strong> dataframe upon which you want to iterate
+a calculation: 2002 and 2013. Recall from previous chapters that you can use assignment
+operators recalculate columns in <strong>pandas</strong> dataframe:</p>
+<p><code class="docutils literal notranslate"><span class="pre">df[&quot;column_name&quot;]</span> <span class="pre">*=</span> <span class="pre">25.4</span></code></p>
+<p>What do you notice about the syntax below that is a little different?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert values for each column in cols list</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>    
+    <span class="n">precip_2002_2013_df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">25.4</span>
+
+<span class="c1"># Print new values    </span>
+<span class="n">precip_2002_2013_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>precip_2002</th>
+      <th>precip_2013</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>27.178</td>
+      <td>6.858</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+      <td>11.176</td>
+      <td>28.702</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+      <td>38.100</td>
+      <td>43.688</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>5.080</td>
+      <td>105.156</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>81.280</td>
+      <td>67.564</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>29.972</td>
+      <td>15.494</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>2.286</td>
+      <td>26.162</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>36.576</td>
+      <td>35.560</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+      <td>38.608</td>
+      <td>461.264</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+      <td>61.976</td>
+      <td>56.896</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+      <td>19.812</td>
+      <td>7.366</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+      <td>0.508</td>
+      <td>12.700</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id4">
+<h2>Review the List Being Iterated Upon and the Placeholder in Loop<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>Note that because <code class="docutils literal notranslate"><span class="pre">column</span></code> is an implicit variable or placeholder for the
+columns in the list, you do not need to use quotations <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to indicate a
+specific column name in the loop such as <code class="docutils literal notranslate"><span class="pre">&quot;precip_2002&quot;</span></code>.</p>
+<p>In the first iteration, <code class="docutils literal notranslate"><span class="pre">column</span></code> would contain the values in the <code class="docutils literal notranslate"><span class="pre">precip_2002</span></code>
+column, while in the last iteration, <code class="docutils literal notranslate"><span class="pre">column</span></code> would contain the values in the
+<code class="docutils literal notranslate"><span class="pre">precip_2013</span></code> column. You know you are using an implicit variable because the
+column name will change with each iteration. Also, notice the placement of code
+<code class="docutils literal notranslate"><span class="pre">precip_2002_2013</span></code> to display the dataframe <em>after</em> the loop is completed.</p>
+<p>This code is not contained with the loop, so you do not see the dataframe each time that the loop iterates. You only see the dataframe when the loop is completed.</p>
+</section>
+</section>
+<section id="automate-data-downloads-using-earthpy">
+<h1>Automate Data Downloads Using EarthPy<a class="headerlink" href="#automate-data-downloads-using-earthpy" title="Permalink to this headline">#</a></h1>
+<p>Imagine that you have multiple URLs from which you need to download data
+for a workflow. Rather than writing out the same code to download each
+file at time, you can use a loop to download all of these files using one set of code.</p>
+<p>Begin by importing the necessary package, <strong>earthpy</strong>, which is needed to access the
+<code class="docutils literal notranslate"><span class="pre">get_data()</span></code> function. You will also use <strong>os</strong> to print the contents of the default
+data directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">earthpy</span> <span class="k">as</span> <span class="nn">et</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="create-list-of-urls-for-loop">
+<h2>Create List of URLs For Loop<a class="headerlink" href="#create-list-of-urls-for-loop" title="Permalink to this headline">#</a></h2>
+<p>Just like in the previous examples, begin by creating the list upon
+which your loop will iterate. As you want to iterate on multiple URLs,
+you can create a list that contains the URLs for all of the files that
+you want to download.</p>
+<p>In this case, it is useful to create variables for the individual URLs first,
+so that you can easily manage them as well as make the code more readable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># URL for avg monthly precip (inches) for Boulder, CO</span>
+<span class="n">avg_month_precip_url</span> <span class="o">=</span> <span class="s1">&#39;https://ndownloader.figshare.com/files/12565616&#39;</span>
+
+<span class="c1"># URL for precip data for 2002 and 2013 (inches) for array</span>
+<span class="n">precip_2002_2013_url</span> <span class="o">=</span> <span class="s1">&#39;https://ndownloader.figshare.com/files/12707792&#39;</span>
+
+<span class="c1"># Create list of URLs</span>
+<span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">avg_month_precip_url</span><span class="p">,</span> <span class="n">precip_2002_2013_url</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2>Write Loop<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>Once again, think about what type of loop would work best for this task.
+You have a list of URLs upon which you want to iterate some code, which
+in this case is <code class="docutils literal notranslate"><span class="pre">et.data.get_data()</span></code> to download each file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download each url in list</span>
+<span class="k">for</span> <span class="n">file_url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+    <span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">file_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h2>Review the List Being Iterated Upon and the Placeholder in Loop<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>Note that in order for <code class="docutils literal notranslate"><span class="pre">et.data.get_data()</span></code> to execute successfully,
+you must specify that the parameter <code class="docutils literal notranslate"><span class="pre">url</span></code> for the function is equal
+to the placeholder, which in this example is <code class="docutils literal notranslate"><span class="pre">file_url</span></code>.</p>
+<p>This is a specific requirement of this function, as <code class="docutils literal notranslate"><span class="pre">et.data.get_data(url)</span></code>
+will result in an error that <code class="docutils literal notranslate"><span class="pre">url</span></code> is not a valid key for a dataset in
+<strong>earthpy</strong> (see more details in the
+<a href="https://earthpy.readthedocs.io/en/latest/gallery_vignettes/get_data.html#sphx-glr-gallery-vignettes-get-data-py" target="_blank">code examples for earthpy</a>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyError</span><span class="p">:</span> <span class="s2">&quot;Key not found in earthpy.io.DATA_URLS</span>
+</pre></div>
+</div>
+<p>With the correct syntax shown in the example above, the loop will execute
+<code class="docutils literal notranslate"><span class="pre">et.data.get_data(url=file_url)</span></code> successfully on the URLs provided in the
+list. In the first iteration, <code class="docutils literal notranslate"><span class="pre">file_url</span></code> is set to <code class="docutils literal notranslate"><span class="pre">avg_month_precip_url</span></code>,
+and then in the last iteration, <code class="docutils literal notranslate"><span class="pre">file_url</span></code> is set to <code class="docutils literal notranslate"><span class="pre">precip_2002_2013_url</span></code>.</p>
+</section>
+<section id="check-files-in-directory">
+<h2>Check Files in Directory<a class="headerlink" href="#check-files-in-directory" title="Permalink to this headline">#</a></h2>
+<p>You can see that when using <code class="docutils literal notranslate"><span class="pre">et.data.get_data()</span></code> in a loop, you no longer
+get the path printed for each downloaded file. However, you can use another
+function from the <strong>os</strong> package to list the contents (i.e. files and
+subdirectories) of a directory: <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code>. Recall that by default,
+<strong>earthpy</strong> downloads files to a subdirectory called <code class="docutils literal notranslate"><span class="pre">earthpy-downloads</span></code>
+under the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory in the <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory (e.g.
+<code class="docutils literal notranslate"><span class="pre">earth-analytics/data/earthpy-downloads/</span></code>).</p>
+<p>With this knowledge, you can define a path to this directory and provide
+that path to the function <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code> to list out the contents of that
+directory. The files that you downloaded with the loop above will be listed
+in the contents of the directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create path for data directory</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span> 
+                        <span class="s2">&quot;earth-analytics&quot;</span><span class="p">,</span> 
+                        <span class="s2">&quot;data&quot;</span><span class="p">,</span> 
+                        <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">data_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;MCD15A3H-thomas-2018213__2018243.json&#39;,
+ &#39;MCD15A3H-thomas-2014335__2014365.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20160511.ky.data.tif&#39;,
+ &#39;avg-monthly-temp-fahr&#39;,
+ &#39;boulder-climbing.dbf&#39;,
+ &#39;MCD15A3H-thomas--2017091--2017120.json&#39;,
+ &#39;MCD15A3H-thomas-2018213-2018243.json&#39;,
+ &#39;MCD15A3H-thomas-2016001-2016031.json&#39;,
+ &#39;MCD15A3H-thomas-2014244__2014273.json&#39;,
+ &#39;gap-modis-lai&#39;,
+ &#39;MCD15A3H-camp-2017091__2017120.json&#39;,
+ &#39;MCD15A3H-thomas-2017032-2017059.json&#39;,
+ &#39;MCD15A3H-thomas-2018121__2018151.json&#39;,
+ &#39;ca-fires-yearly&#39;,
+ &#39;plot-func.py&#39;,
+ &#39;MCD15A3H-thomas-2016061-2016091.json&#39;,
+ &#39;matilija-pdsi&#39;,
+ &#39;MCD15A3H-thomas-2017244-2017273.json&#39;,
+ &#39;MCD15A3H-camp-2019060__2019090.json&#39;,
+ &#39;MCD15A3H-thomas-2015213-2015243.json&#39;,
+ &#39;fire-modis-lai&#39;,
+ &#39;MCD15A3H-thomas-2017121-2017151.json&#39;,
+ &#39;MCD15A3H-camp-2019152__2019181.json&#39;,
+ &#39;MCD15A3H-thomas-2018305__2018334.json&#39;,
+ &#39;MCD15A3H-thomas-2015091__2015120.json&#39;,
+ &#39;MCD15A3H-thomas-2014091-2014120.json&#39;,
+ &#39;MCD15A3H-thomas-2017060__2017090.json&#39;,
+ &#39;MCD15A3H-thomas-2015274-2015304.json&#39;,
+ &#39;MCD15A3H-thomas-2014213__2014243.json&#39;,
+ &#39;MCD15A3H-thomas-2015335-2015365.json&#39;,
+ &#39;MCD15A3H-thomas-2018335__2018365.json&#39;,
+ &#39;sd_9.png&#39;,
+ &#39;boulder-temp-2017.txt&#39;,
+ &#39;MCD15A3H-thomas--2016275--2016305.json&#39;,
+ &#39;MCD15A3H-camp-2016275__2016305.json&#39;,
+ &#39;peekaboo-fire-perimeter&#39;,
+ &#39;MCD15A3H-camp-2017032__2017059.json&#39;,
+ &#39;MCD15A3H-thomas--2017032--2017059.json&#39;,
+ &#39;MCD15A3H-thomas-2018244__2018273.json&#39;,
+ &#39;MCD15A3H-thomas-2017152__2017181.json&#39;,
+ &#39;MCD15A3H-thomas-2016245-2016274.json&#39;,
+ &#39;MCD15A3H-thomas-2014121__2014151.json&#39;,
+ &#39;MCD15A3H-camp-2016306__2016335.json&#39;,
+ &#39;MCD15A3H-camp-2015060__2015090.json&#39;,
+ &#39;sd_8.png&#39;,
+ &#39;MCD15A3H-thomas--2015060--2015090.json&#39;,
+ &#39;MCD15A3H-thomas--2016306--2016335.json&#39;,
+ &#39;MCD15A3H-thomas-2015032__2015059.json&#39;,
+ &#39;MCD15A3H-thomas--2015152--2015181.json&#39;,
+ &#39;MCD15A3H-thomas-2014305__2014334.json&#39;,
+ &#39;MCD15A3H-thomas-2016183__2016213.json&#39;,
+ &#39;MCD15A3H-thomas-2018274-2018304.json&#39;,
+ &#39;MCD15A3H-camp-2015152__2015181.json&#39;,
+ &#39;MCD15A3H-thomas-2018335-2018365.json&#39;,
+ &#39;MCD15A3H-thomas-2014182-2014212.json&#39;,
+ &#39;sdl_discharge&#39;,
+ &#39;MCD15A3H-thomas-2016122__2016152.json&#39;,
+ &#39;NEON_D13_NIWO_DP3_454000_4432000_reflectance.h5&#39;,
+ &#39;MCD15A3H-thomas-2018182__2018212.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20100512.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas-2014305-2014334.json&#39;,
+ &#39;.DS_Store&#39;,
+ &#39;high-park-modis-lai&#39;,
+ &#39;peekaboo-modis-lai&#39;,
+ &#39;MCD15A3H-camp-2019001__2019031.json&#39;,
+ &#39;175425c25d8849b58feb89483ef02961_1.csv&#39;,
+ &#39;unknown_data-modis-lai&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20090512.ky.data.tif&#39;,
+ &#39;download-perimeter-func.py&#39;,
+ &#39;MCD15A3H-thomas--2018274--2018304.json&#39;,
+ &#39;Camp-modis-Lai_500m&#39;,
+ &#39;MCD15A3H-camp-2018274__2018304.json&#39;,
+ &#39;MCD15A3H-thomas-2017001__2017031.json&#39;,
+ &#39;matilija-modis-lai&#39;,
+ &#39;MCD15A3H-thomas-2014182__2014212.json&#39;,
+ &#39;NEON_Field_Site_Metadata_20220224.csv&#39;,
+ &#39;MCD15A3H-thomas--2015001--2015031.json&#39;,
+ &#39;MCD15A3H-thomas-2016336__2016366.json&#39;,
+ &#39;MCD15A3H-camp-2015001__2015031.json&#39;,
+ &#39;RDS-2013-0009.5_SQLITE&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20110511.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas--2014274--2014304.json&#39;,
+ &#39;MCD15A3H-camp-2015274__2015304.json&#39;,
+ &#39;MCD15A3H-thomas--2015274--2015304.json&#39;,
+ &#39;glv_elev.ky.data.tif&#39;,
+ &#39;MCD15A3H-camp-2017182__2017212.json&#39;,
+ &#39;MCD15A3H-thomas--2017182--2017212.json&#39;,
+ &#39;MCD15A3H-thomas-2014335-2014365.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20130522.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas--2014001--2014031.json&#39;,
+ &#39;MCD15A3H-thomas-2015091-2015120.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20140515.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas-2014274-2014304.json&#39;,
+ &#39;06730500-usgs-stream-data&#39;,
+ &#39;MCD15A3H-thomas-2017060-2017090.json&#39;,
+ &#39;alb_discharge&#39;,
+ &#39;MCD15A3H-thomas-2015182__2015212.json&#39;,
+ &#39;MCD15A3H-thomas-2017274__2017304.json&#39;,
+ &#39;MCD15A3H-thomas-2018091-2018120.json&#39;,
+ &#39;MCD15A3H-camp-2016214__2016244.json&#39;,
+ &#39;MCD15A3H-thomas--2016214--2016244.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20060511.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas--2016061--2016091.json&#39;,
+ &#39;months.txt&#39;,
+ &#39;MCD15A3H-camp-2016061__2016091.json&#39;,
+ &#39;MCD15A3H-thomas-2016092-2016121.json&#39;,
+ &#39;MCD15A3H-thomas-2016001__2016031.json&#39;,
+ &#39;jan&#39;,
+ &#39;MCD15A3H-thomas-2017001-2017031.json&#39;,
+ &#39;MCD15A3H-camp-2019274__2019304.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20190517.ky.data.tif&#39;,
+ &#39;nwis_gauge_data.json.gz&#39;,
+ &#39;MCD15A3H-camp-2018001__2018031.json&#39;,
+ &#39;MCD15A3H-thomas-2017152-2017181.json&#39;,
+ &#39;MCD15A3H-thomas--2018001--2018031.json&#39;,
+ &#39;Camp-perimeter&#39;,
+ &#39;usda-fire-data.csv&#39;,
+ &#39;ca-fires-1992-2015-gt-100-acres.csv&#39;,
+ &#39;naip-before-after&#39;,
+ &#39;high-park-fire-perimeter&#39;,
+ &#39;download-modis-func.py&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20050510.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas-2014213-2014243.json&#39;,
+ &#39;camp-fire_perimeter&#39;,
+ &#39;MCD15A3H-thomas-2018091__2018120.json&#39;,
+ &#39;MCD15A3H-thomas-2014032__2014059.json&#39;,
+ &#39;MCD15A3H-thomas--2014152--2014181.json&#39;,
+ &#39;MCD15A3H-thomas-2015305__2015334.json&#39;,
+ &#39;MCD15A3H-thomas-2016122-2016152.json&#39;,
+ &#39;monthly-precip-mm-1998-to-2017.csv&#39;,
+ &#39;MCD15A3H-thomas-2016032__2016060.json&#39;,
+ &#39;MCD15A3H-thomas-2015121__2015151.json&#39;,
+ &#39;MCD15A3H-thomas--2017213--2017243.json&#39;,
+ &#39;MCD15A3H-camp-2017213__2017243.json&#39;,
+ &#39;MCD15A3H-thomas--2014060--2014090.json&#39;,
+ &#39;thomas-modis-lai&#39;,
+ &#39;MCD15A3H-camp-2017305__2017334.json&#39;,
+ &#39;SpringCreek-modis-lai&#39;,
+ &#39;MCD15A3H-thomas--2017305--2017334.json&#39;,
+ &#39;blueberry-fire-perimeter&#39;,
+ &#39;MCD15A3H-thomas-2015213__2015243.json&#39;,
+ &#39;MCD15A3H-thomas--2017121--2017151.json&#39;,
+ &#39;wolverine-fire-perimeter&#39;,
+ &#39;boulder-climbing.shx&#39;,
+ &#39;MCD15A3H-camp-2017121__2017151.json&#39;,
+ &#39;MCD15A3H-camp-2018152__2018181.json&#39;,
+ &#39;MCD15A3H-camp-2017244__2017273.json&#39;,
+ &#39;MCD15A3H-thomas-2018032__2018059.json&#39;,
+ &#39;MCD15A3H-thomas--2017244--2017273.json&#39;,
+ &#39;MCD15A3H-thomas--2018152--2018181.json&#39;,
+ &#39;MCD15A3H-thomas-2014091__2014120.json&#39;,
+ &#39;gl4_discharge&#39;,
+ &#39;MCD15A3H-thomas-2015305-2015334.json&#39;,
+ &#39;MCD15A3H-camp-2017335__2017365.json&#39;,
+ &#39;MCD15A3H-thomas-2016153__2016182.json&#39;,
+ &#39;LE70220491999322EDC01_stack.gtif?raw=true&#39;,
+ &#39;MCD15A3H-thomas--2017335--2017365.json&#39;,
+ &#39;MCD15A3H-thomas--2018060--2018090.json&#39;,
+ &#39;MCD15A3H-thomas-2015182-2015212.json&#39;,
+ &#39;MCD15A3H-thomas--2016092--2016121.json&#39;,
+ &#39;MCD15A3H-camp-2018060__2018090.json&#39;,
+ &#39;MCD15A3H-camp-2016092__2016121.json&#39;,
+ &#39;avg-precip-months-seasons.csv&#39;,
+ &#39;MCD15A3H-thomas-2016306-2016335.json&#39;,
+ &#39;MCD15A3H-thomas-2015244__2015273.json&#39;,
+ &#39;avg-monthly-precip.txt&#39;,
+ &#39;LE70220491999322EDC01_stack.gtif&#39;,
+ &#39;MCD15A3H-thomas-2018182-2018212.json&#39;,
+ &#39;matilija-wbd-boundary&#39;,
+ &#39;boulder-climbing.cpg&#39;,
+ &#39;MCD15A3H-thomas-2015335__2015365.json&#39;,
+ &#39;MCD15A3H-thomas-2018305-2018334.json&#39;,
+ &#39;camp-fire-perimeter&#39;,
+ &#39;{fire_name}-fire-perimeter&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20170601.ky.data.tif&#39;,
+ &#39;boulder-climbing.shp&#39;,
+ &#39;MCD15A3H-thomas-2016245__2016274.json&#39;,
+ &#39;MCD15A3H-thomas--2014091--2014120.json&#39;,
+ &#39;MCD15A3H-thomas-2018152__2018181.json&#39;,
+ &#39;MCD15A3H-thomas-2017244__2017273.json&#39;,
+ &#39;MCD15A3H-thomas--2018032--2018059.json&#39;,
+ &#39;MCD15A3H-camp-2018032__2018059.json&#39;,
+ &#39;MCD15A3H-camp-2019305__2019334.json&#39;,
+ &#39;MCD15A3H-thomas-2016092__2016121.json&#39;,
+ &#39;MCD15A3H-thomas-2018060__2018090.json&#39;,
+ &#39;MCD15A3H-thomas-2017335__2017365.json&#39;,
+ &#39;MCD15A3H-camp-2019121__2019151.json&#39;,
+ &#39;MCD15A3H-thomas--2016153--2016182.json&#39;,
+ &#39;thomas-fire-perimeter&#39;,
+ &#39;MCD15A3H-camp-2016153__2016182.json&#39;,
+ &#39;MCD15A3H-camp-2015244__2015273.json&#39;,
+ &#39;MCD15A3H-thomas--2015244--2015273.json&#39;,
+ &#39;WBD_18_HU2_Shape&#39;,
+ &#39;MCD15A3H-thomas--2016245--2016274.json&#39;,
+ &#39;MCD15A3H-camp-2015335__2015365.json&#39;,
+ &#39;MCD15A3H-thomas--2015335--2015365.json&#39;,
+ &#39;MCD15A3H-camp-2016245__2016274.json&#39;,
+ &#39;MCD15A3H-camp-2019213__2019243.json&#39;,
+ &#39;MCD15A3H-camp-2016032__2016060.json&#39;,
+ &#39;MCD15A3H-thomas--2016032--2016060.json&#39;,
+ &#39;MCD15A3H-camp-2015305__2015334.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20070510.ky.data.tif&#39;,
+ &#39;MCD15A3H-camp-2018091__2018120.json&#39;,
+ &#39;MCD15A3H-thomas--2015305--2015334.json&#39;,
+ &#39;MCD15A3H-thomas-2014152__2014181.json&#39;,
+ &#39;MCD15A3H-thomas--2014032--2014059.json&#39;,
+ &#39;MCD15A3H-thomas--2018091--2018120.json&#39;,
+ &#39;precip-2002-2013-months-seasons.csv&#39;,
+ &#39;MCD15A3H-thomas-2014060__2014090.json&#39;,
+ &#39;MCD15A3H-thomas-2017213__2017243.json&#39;,
+ &#39;landsat-coldsprings-hw&#39;,
+ &#39;MCD15A3H-thomas--2015121--2015151.json&#39;,
+ &#39;MCD15A3H-camp-2015121__2015151.json&#39;,
+ &#39;mar_discharge&#39;,
+ &#39;MCD15A3H-thomas-2016183-2016213.json&#39;,
+ &#39;MCD15A3H-thomas-2017305__2017334.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20150514.ky.data.tif&#39;,
+ &#39;MCD15A3H-camp-2019244__2019273.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20180531.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas-2016214-2016244.json&#39;,
+ &#39;MCD15A3H-camp-2019335__2019365.json&#39;,
+ &#39;wolverine-modis-lai&#39;,
+ &#39;MCD15A3H-thomas-2017121__2017151.json&#39;,
+ &#39;MCD15A3H-thomas--2015213--2015243.json&#39;,
+ &#39;NEON_D13_NIWO_DP3_445000_4433000_reflectance.h5&#39;,
+ &#39;MCD15A3H-camp-2015213__2015243.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20120428.ky.data.tif&#39;,
+ &#39;monthly-precip-2002-2013.csv&#39;,
+ &#39;MCD15A3H-thomas-2018001__2018031.json&#39;,
+ &#39;MCD15A3H-thomas-2018032-2018059.json&#39;,
+ &#39;MCD15A3H-thomas-2015121-2015151.json&#39;,
+ &#39;MCD15A3H-thomas-2017213-2017243.json&#39;,
+ &#39;MCD15A3H-thomas-2015244-2015273.json&#39;,
+ &#39;MCD15A3H-thomas-2014001-2014031.json&#39;,
+ &#39;MCD15A3H-thomas-2018244-2018273.json&#39;,
+ &#39;MCD15A3H-thomas-2018121-2018151.json&#39;,
+ &#39;MCD15A3H-thomas-2016032-2016060.json&#39;,
+ &#39;MCD15A3H-thomas-2015032-2015059.json&#39;,
+ &#39;MCD15A3H-camp-2019182__2019212.json&#39;,
+ &#39;07126390-usgs-stream-data&#39;,
+ &#39;MCD15A3H-thomas-2014152-2014181.json&#39;,
+ &#39;MCD15A3H-thomas-2017182__2017212.json&#39;,
+ &#39;dec&#39;,
+ &#39;MCD15A3H-thomas-2015274__2015304.json&#39;,
+ &#39;MCD15A3H-thomas-2014060-2014090.json&#39;,
+ &#39;City_of_Boulder_City_Limits.geojson&#39;,
+ &#39;MCD15A3H-thomas-2014001__2014031.json&#39;,
+ &#39;multi-panel.py&#39;,
+ &#39;MCD15A3H-camp-2017274__2017304.json&#39;,
+ &#39;MCD15A3H-thomas--2017274--2017304.json&#39;,
+ &#39;matilija-boundary&#39;,
+ &#39;MCD15A3H-camp-2015182__2015212.json&#39;,
+ &#39;MCD15A3H-thomas--2015182--2015212.json&#39;,
+ &#39;MCD15A3H-thomas-2017274-2017304.json&#39;,
+ &#39;MCD15A3H-thomas--2016001--2016031.json&#39;,
+ &#39;MCD15A3H-camp-2016001__2016031.json&#39;,
+ &#39;MCD15A3H-thomas-2016061__2016091.json&#39;,
+ &#39;download-second-fire.py&#39;,
+ &#39;MCD15A3H-thomas-2017335-2017365.json&#39;,
+ &#39;MCD15A3H-thomas-2016214__2016244.json&#39;,
+ &#39;MCD15A3H-thomas--2017001--2017031.json&#39;,
+ &#39;MCD15A3H-camp-2017001__2017031.json&#39;,
+ &#39;OSMP_Climbing_Formations.csv&#39;,
+ &#39;gap-fire-perimeter&#39;,
+ &#39;sd_3.png&#39;,
+ &#39;CARR-modis-lai&#39;,
+ &#39;sd_15.png&#39;,
+ &#39;MCD15A3H-thomas--2014182--2014212.json&#39;,
+ &#39;boundaries-hu18&#39;,
+ &#39;sd_14.png&#39;,
+ &#39;MCD15A3H-thomas--2016336--2016366.json&#39;,
+ &#39;sd_2.png&#39;,
+ &#39;MCD15A3H-thomas-2015001__2015031.json&#39;,
+ &#39;MCD15A3H-camp-2016336__2016366.json&#39;,
+ &#39;MCD15A3H-thomas-2014274__2014304.json&#39;,
+ &#39;ne_110m_admin_0_countries&#39;,
+ &#39;MCD15A3H-camp-2016122__2016152.json&#39;,
+ &#39;MCD15A3H-thomas--2016122--2016152.json&#39;,
+ &#39;nwis-downloads&#39;,
+ &#39;MCD15A3H-thomas-2016336-2016366.json&#39;,
+ &#39;sd_0.png&#39;,
+ &#39;MCD15A3H-thomas--2018182--2018212.json&#39;,
+ &#39;MCD15A3H-camp-2018182__2018212.json&#39;,
+ &#39;MCD15A3H-thomas-2016153-2016182.json&#39;,
+ &#39;MCD15A3H-thomas-2017182-2017212.json&#39;,
+ &#39;SpringCreek-fire-perimeter&#39;,
+ &#39;sd_1.png&#39;,
+ &#39;MCD15A3H-thomas-2018274__2018304.json&#39;,
+ &#39;MCD15A3H-thomas-2017305-2017334.json&#39;,
+ &#39;MCD15A3H-thomas--2018335--2018365.json&#39;,
+ &#39;MCD15A3H-camp-2018335__2018365.json&#39;,
+ &#39;MCD15A3H-thomas--2014213--2014243.json&#39;,
+ &#39;MCD15A3H-camp-2017060__2017090.json&#39;,
+ &#39;MCD15A3H-thomas--2017060--2017090.json&#39;,
+ &#39;camp-modis-lai&#39;,
+ &#39;sd_5.png&#39;,
+ &#39;boulder-san-fran-precip&#39;,
+ &#39;MCD15A3H-thomas--2017152--2017181.json&#39;,
+ &#39;MCD15A3H-thomas--2018244--2018273.json&#39;,
+ &#39;MCD15A3H-thomas-2015060-2015090.json&#39;,
+ &#39;MCD15A3H-thomas-2017032__2017059.json&#39;,
+ &#39;flake-ans-setup.py&#39;,
+ &#39;MCD15A3H-camp-2018244__2018273.json&#39;,
+ &#39;MCD15A3H-camp-2017152__2017181.json&#39;,
+ &#39;sd_13.png&#39;,
+ &#39;MCD15A3H-thomas-2016275__2016305.json&#39;,
+ &#39;cold-springs&#39;,
+ &#39;MCD15A3H-thomas-2015060__2015090.json&#39;,
+ &#39;MCD15A3H-thomas-2016306__2016335.json&#39;,
+ &#39;MCD15A3H-thomas-2018060-2018090.json&#39;,
+ &#39;sd_12.png&#39;,
+ &#39;MCD15A3H-thomas--2014121--2014151.json&#39;,
+ &#39;CARR-fire-perimeter&#39;,
+ &#39;MCD15A3H-thomas-2017091-2017120.json&#39;,
+ &#39;sd_4.png&#39;,
+ &#39;MCD15A3H-camp-2015032__2015059.json&#39;,
+ &#39;MCD15A3H-camp-2019091__2019120.json&#39;,
+ &#39;MCD15A3H-thomas--2016183--2016213.json&#39;,
+ &#39;MCD15A3H-thomas--2014305--2014334.json&#39;,
+ &#39;MCD15A3H-thomas-2015152__2015181.json&#39;,
+ &#39;MCD15A3H-thomas--2015032--2015059.json&#39;,
+ &#39;MCD15A3H-camp-2016183__2016213.json&#39;,
+ &#39;09105000-usgs-stream-data&#39;,
+ &#39;modis_lai&#39;,
+ &#39;MCD15A3H-thomas-2014121-2014151.json&#39;,
+ &#39;MCD15A3H-thomas-2014244-2014273.json&#39;,
+ &#39;MCD15A3H-thomas--2014335--2014365.json&#39;,
+ &#39;MCD15A3H-thomas-2018001-2018031.json&#39;,
+ &#39;MCD15A3H-camp-2018213__2018243.json&#39;,
+ &#39;matilija-lai-mean.csv&#39;,
+ &#39;MCD15A3H-thomas--2018213--2018243.json&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20080513.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas-2018152-2018181.json&#39;,
+ &#39;sd_6.png&#39;,
+ &#39;MCD15A3H-thomas--2014244--2014273.json&#39;,
+ &#39;MCD15A3H-thomas-2017091__2017120.json&#39;,
+ &#39;sd_10.png&#39;,
+ &#39;07106300-usgs-stream-data&#39;,
+ &#39;flake-setup.py&#39;,
+ &#39;sd_11.png&#39;,
+ &#39;glv_snow_interp_erickson_ss_calib_20040512.ky.data.tif&#39;,
+ &#39;MCD15A3H-thomas-2015152-2015181.json&#39;,
+ &#39;MCD15A3H-camp-2018121__2018151.json&#39;,
+ &#39;sd_7.png&#39;,
+ &#39;MCD15A3H-thomas--2018121--2018151.json&#39;,
+ &#39;MCD15A3H-thomas-2015001-2015031.json&#39;,
+ &#39;MCD15A3H-thomas-2014032-2014059.json&#39;,
+ &#39;sd.gif&#39;,
+ &#39;MCD15A3H-thomas-2016275-2016305.json&#39;,
+ &#39;MCD15A3H-thomas--2015091--2015120.json&#39;,
+ &#39;MCD15A3H-thomas--2018305--2018334.json&#39;,
+ &#39;MCD15A3H-camp-2015091__2015120.json&#39;,
+ &#39;MCD15A3H-camp-2019032__2019059.json&#39;,
+ &#39;MCD15A3H-camp-2018305__2018334.json&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Congratulations - you have automated your first tasks in this textbook using <strong>Python</strong>!</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/07-efficient-clean-code-python/03-loops"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="loops-01-intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eighteen - Loops</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="loops-03-workflows.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-calculations-on-values-in-lists">Automate Calculations on Values in Lists</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-values-for-loop">Create List of Values For Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-loop">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expand-loop-to-add-results-to-new-list">Expand Loop To Add Results to New List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-the-list-being-iterated-upon-and-the-placeholder-in-loop">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-summary-statistics-on-multiple-numpy-arrays">Automate Summary Statistics on Multiple Numpy Arrays</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-numpy-arrays-for-loop">Create List of Numpy Arrays For Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-calculation-on-multiple-columns-in-pandas-dataframe">Automate Calculation on Multiple Columns in Pandas Dataframe</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-column-names">Create List of Column Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-data-downloads-using-earthpy">Automate Data Downloads Using EarthPy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-list-of-urls-for-loop">Create List of URLs For Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Write Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Review the List Being Iterated Upon and the Placeholder in Loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-files-in-directory">Check Files in Directory</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

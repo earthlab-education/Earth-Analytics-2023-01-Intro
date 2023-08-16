@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>8.15.3. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/04-python-fundamentals/python-packages-for-eds/python-packages-for-eds-02-conda-environments';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="8.15.8. Learning Objectives" href="python-packages-for-eds-03-install-packages.html" />
+    <link rel="prev" title="8.7. Chapter Eleven - Import and Install Python Packages for Earth Data Science" href="python-packages-for-eds-01-intro-eds-packages-python.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">1. Welcome to the Introduction to Earth Data Science Textbook!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">2. An Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">2.1. Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">2.1.8. Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../00-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/04-python-fundamentals/python-packages-for-eds/python-packages-for-eds-02-conda-environments.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/04-python-fundamentals/python-packages-for-eds/python-packages-for-eds-02-conda-environments.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.15.3. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-environments-in-python">8.15.4. Conda Environments in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-party-library-issue">8.15.4.1. The Third Party Library Issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environments">8.15.4.2. Python Environments</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-conda">8.15.5. What is Conda</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-conda">8.15.6. Why Conda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-is-cross-platform">8.15.6.1. 1. Conda is Cross Platform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-can-install-specific-versions-of-python">8.15.6.2. 2. Conda Can Install Specific Versions of <strong>Python</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments-are-native-to-conda">8.15.6.3. 3. Environments are Native to Conda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-is-better-at-dependency-management">8.15.6.4. 4. Conda is Better at Dependency Management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-manages-external-dependencies">8.15.6.5. 5. Conda Manages External Dependencies</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#channels-in-conda">8.15.7. Channels in Conda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-channels">8.15.7.1. Default Channels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-forge">8.15.7.2. Conda-Forge</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">8.15.3. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Understand how dependency management can play a large role in <strong>Python</strong> programming.</p></li>
+<li><p>Explain how to use <strong>conda</strong> environments to manage your third party libraries.</p></li>
+</ul>
+</div>
+</section>
+<section id="conda-environments-in-python">
+<h1><span class="section-number">8.15.4. </span>Conda Environments in Python<a class="headerlink" href="#conda-environments-in-python" title="Permalink to this headline">#</a></h1>
+<section id="the-third-party-library-issue">
+<h2><span class="section-number">8.15.4.1. </span>The Third Party Library Issue<a class="headerlink" href="#the-third-party-library-issue" title="Permalink to this headline">#</a></h2>
+<p>Most projects written in <strong>Python</strong> require a certain set of third party libraries that are not in the <strong>Python</strong> standard library. There is a good chance you have used at least one of these libraries such as <strong>numpy</strong>, <strong>matplotlib</strong>, or <strong>pandas</strong>.</p>
+<p>Third party libraries are critical to making <strong>Python</strong> the great tool it is. Developers and scientists all over the world are constantly improving and adding to the functionality <strong>Python</strong> provides by writing new packages. When you require one of these third party libraries in your workflow, they are called dependencies because your workflow depends on them to function.</p>
+<p>While having a plethora of open source functionality available to the community is one of <strong>Python</strong>’s greatest strengths, dependency management is a major challenge for many <strong>Python</strong> programmers. This is especially true for <strong>Python</strong> programmers who are not dedicated software engineers!</p>
+<p>In <strong>Python</strong>, regardless of what project you are working on, your computer will store third party libraries in the same location. This means that if you depend on GDAL 2.4.2 in an older project and GDAL 3.0.1 in your brand new project, you will need a way to store these dependencies separately. If they aren’t stored separately, <strong>Python</strong> will not be able to tell the difference between the two that are both installed in the same location.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/python/python-environment-dependency-issues.jpg">
+   <img src="{{ site.url }}/images/earth-analytics/python/python-environment-dependency-issues.jpg" alt="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues."></a>
+   <figcaption>Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Licensed here: https://xkcd.com/license.html. 
+   </figcaption>
+</figure>
+</section>
+<section id="python-environments">
+<h2><span class="section-number">8.15.4.2. </span>Python Environments<a class="headerlink" href="#python-environments" title="Permalink to this headline">#</a></h2>
+<p>A <strong>Python</strong> environment is a dedicated directory where specific dependencies can be stored and maintained. Environments have unique names and can be activated when you need them, allowing you to have ultimate control over the libraries that are installed at any given time.</p>
+<p>You can create as many environments as you want. Because each one is independent, they will not interact or “mess up” the other. Thus, it is common for programmers to create new environments for each project that they work on.</p>
+<p>Often times, information about your environment can assist you in debugging certain errors. Starting with a clean environment for each project can help you control the number of variables to consider when looking for bugs.</p>
+<p>When it comes to creating environments, you have two choices:</p>
+<ol class="arabic simple">
+<li><p>you can create a virtual environment (venv) using <strong>pip</strong> to install packages or</p></li>
+<li><p>create a <strong>conda</strong> environment with <strong>conda</strong> installing packages for you.</p></li>
+</ol>
+<p>On this page, you will learn about <strong>conda</strong> environments due to several strengths that it has, as compared to *<em>pip</em> and virtual environments.</p>
+</section>
+</section>
+<section id="what-is-conda">
+<h1><span class="section-number">8.15.5. </span>What is Conda<a class="headerlink" href="#what-is-conda" title="Permalink to this headline">#</a></h1>
+<p><a href="https://docs.conda.io/en/latest/" target="_blank">Conda</a> is a package and environment management tool that allows you to install <strong>Python</strong> packages on your computer as well as create and manage multiple <strong>Python</strong> environments, each containing different packages.</p>
+<p>While you will predominately use <strong>conda</strong> for the installation and management of <strong>Python</strong> libraries, it is important to note that <strong>conda</strong> can install and manage software of many different languages; this can be important when working with external dependencies that aren’t built in <strong>Python</strong>.</p>
+</section>
+<section id="why-conda">
+<h1><span class="section-number">8.15.6. </span>Why Conda<a class="headerlink" href="#why-conda" title="Permalink to this headline">#</a></h1>
+<p>As mentioned previously, when it comes to installing packages you have two options: <strong>pip</strong> and <strong>conda</strong>.</p>
+<p><strong>Pip</strong> stands for Pip Installs Packages and is the default package manager available in <strong>Python</strong>. <strong>Conda</strong>, on the other hand, is an environment manager that aims to do what <strong>pip</strong> does with added functionality.</p>
+<p>There are several reasons that make <strong>conda</strong> such a strong contender for managing your <strong>Python</strong> environments over <strong>pip</strong>.</p>
+<section id="conda-is-cross-platform">
+<h2><span class="section-number">8.15.6.1. </span>1. Conda is Cross Platform<a class="headerlink" href="#conda-is-cross-platform" title="Permalink to this headline">#</a></h2>
+<p>Libraries available on <strong>conda</strong> are stored on the Anaconda Cloud and can easily be installed on any system. <strong>Conda</strong> libraries are stored as binary files, which makes them easy for <strong>conda</strong> to unpack anywhere you have Anaconda or Miniconda installed.</p>
+<p><strong>Pip</strong> packages, on the other hand, are stored in a more more complex way (as wheels or source distributions). This storage format requires a compiler to unpack. This means that you need to have <strong>Python</strong> installed to install packages with <strong>pip</strong>, which brings up the next point.</p>
+</section>
+<section id="conda-can-install-specific-versions-of-python">
+<h2><span class="section-number">8.15.6.2. </span>2. Conda Can Install Specific Versions of <strong>Python</strong><a class="headerlink" href="#conda-can-install-specific-versions-of-python" title="Permalink to this headline">#</a></h2>
+<p><strong>Conda</strong> allows you to install and run a specific version of <strong>Python</strong>. Anything installed with <strong>pip</strong> requires a wheel or source distribution for the <strong>Python</strong> compiler to break down.</p>
+<p>Unfortunately, this means that <strong>pip</strong> cannot directly install versions of <strong>Python</strong>. It also means that you have to install your preferred <strong>Python</strong> distribution before even starting the process of working with a new virtual environment.</p>
+</section>
+<section id="environments-are-native-to-conda">
+<h2><span class="section-number">8.15.6.3. </span>3. Environments are Native to Conda<a class="headerlink" href="#environments-are-native-to-conda" title="Permalink to this headline">#</a></h2>
+<p>As discussed previously, when using <strong>pip</strong>, you must use a virtual environment as your environment for managing dependencies. However, <strong>virtualenv</strong> is a <strong>Python</strong> library itself. With some configuration and other wrappers, virtual environments can provide a satisfactory development environment, but <strong>conda</strong> environments are ready to go from the get go.</p>
+</section>
+<section id="conda-is-better-at-dependency-management">
+<h2><span class="section-number">8.15.6.4. </span>4. Conda is Better at Dependency Management<a class="headerlink" href="#conda-is-better-at-dependency-management" title="Permalink to this headline">#</a></h2>
+<p><strong>Pip</strong> makes no attempt to check if all of your dependencies are satisfied at once. Instead, <strong>pip</strong> may allow incompatible dependencies to be installed depending on the order you install packages.</p>
+<p><strong>Conda</strong> instead uses what they call a “satisfiability solver”, which checks that all dependencies are met at all times. This comes with a performance hit due to having to comb through every dependency on each install, but will save you headaches down the road.</p>
+</section>
+<section id="conda-manages-external-dependencies">
+<h2><span class="section-number">8.15.6.5. </span>5. Conda Manages External Dependencies<a class="headerlink" href="#conda-manages-external-dependencies" title="Permalink to this headline">#</a></h2>
+<p><strong>Pip</strong> is lacking when it comes to managing and tracking external dependencies and accessing all of the available libraries out there.</p>
+<p><strong>GDAL</strong> is a prime example of a package that can be installed easily through <strong>conda</strong>, but is difficult to install any other way. Part of this is due to the fact that <strong>GDAL</strong> is not a native <strong>Python</strong> application, and <strong>conda</strong> has a much easier time dealing with that.</p>
+<p>While you may prefer using <strong>conda</strong>, there is no clear consensus whether <strong>pip</strong> or <strong>conda</strong> are better.</p>
+<p>While they both install packages, <strong>conda</strong> is very different than <strong>pip</strong>. <strong>Conda</strong> can do much more than <strong>pip</strong> at the cost of increased complexity.</p>
+<p>For a simple workflow, the benefits of <strong>conda</strong> may not be worth the extra effort to get up and running. For working with geospatial libraries, <strong>conda</strong> is definitely preferred, given it’s ability to resolve
+dependency issues associated with <strong>GDAL</strong>.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong>
+Sometimes <strong>Python</strong> libraries are on <code class="docutils literal notranslate"><span class="pre">Github.com</span></code>. You can install <strong>Python</strong> libraries from <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+git://github.com/path-to-github-user/repo-name.git</span></code>
+{: .notice–success}</p>
+</section>
+</section>
+<section id="channels-in-conda">
+<h1><span class="section-number">8.15.7. </span>Channels in Conda<a class="headerlink" href="#channels-in-conda" title="Permalink to this headline">#</a></h1>
+<p>Above you learned about the differences between using <strong>pip</strong> vs <strong>conda</strong> to install <strong>Python</strong> packages. However, there are also different channels available in <strong>conda</strong> that you can use to install packages into your <strong>conda</strong> environment.</p>
+<p>Below, you will learn about the <strong>conda-forge</strong> channel which is an alternative to the default <strong>conda</strong> channel. This is the channel that you should use as your primary “go to” installation channel, when setting up your <strong>Python</strong> environment for Earth Analytics.</p>
+<p>There are two main <strong>conda</strong> channels that you should consider:</p>
+<ul class="simple">
+<li><p><strong>conda:</strong> this is the default repository that is used and maintained for the Anaconda distribution of <strong>Python</strong>. To install libraries from <strong>conda</strong>, you use the syntax <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">package-name</span></code> at the command line.</p></li>
+<li><p><strong>conda-forge:</strong> This channel is community maintained, and we have found that installing many of the spatial packages using <strong>conda-forge</strong> will minimize conflicts between packages. To install libraries from <strong>conda-forge</strong>, you use the syntax <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">package-name</span></code> at the command line.</p></li>
+</ul>
+<p>For consistency, in this course, you will download most packages from the <strong>conda-forge</strong> repository.</p>
+<section id="default-channels">
+<h2><span class="section-number">8.15.7.1. </span>Default Channels<a class="headerlink" href="#default-channels" title="Permalink to this headline">#</a></h2>
+<p><strong>Conda</strong> doesn’t just have a single repository where all uploaded packages live. When a package is uploaded to <strong>conda</strong>, it must be uploaded to a specific channel, which is just a separate URL where packages published to that channel reside.</p>
+<p>There is a <code class="docutils literal notranslate"><span class="pre">default</span></code> <strong>conda</strong> channel where the stock <strong>conda</strong> packages live. These packages are maintained by <strong>conda</strong> and are generally very stable. If you do not specify channels in your configuration settings, whenever you run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">x</span></code>, <strong>conda</strong> will search its <code class="docutils literal notranslate"><span class="pre">default</span></code> channel for that package; if the package isn’t on that channel, it will throw an error.</p>
+<p>You want to specify one channel (e.g. <strong>conda-forge</strong>) as often as you can to avoid problems that arise with mixing channels. Much like having two different versions of <strong>GDAL</strong> installed in the same place, mixing channels can confuse <strong>conda’s</strong> satisfiability solver for managing dependencies.</p>
+<p>The resulting errors can make it look like you have a package installed; however, <strong>Python</strong> will fail to find dependencies when you run it.</p>
+</section>
+<section id="conda-forge">
+<h2><span class="section-number">8.15.7.2. </span>Conda-Forge<a class="headerlink" href="#conda-forge" title="Permalink to this headline">#</a></h2>
+<p>The <strong>Python</strong> community has responded to this mixing channel issue and created a community managed channel that solves the channel mixing issues associated with default <strong>conda</strong> channels. This community managed channel is called <strong>conda-forge</strong>.</p>
+<p><strong>Conda-forge</strong> has thousands of contributers and functions very similar to PyPi (pip’s central package repository). <strong>Conda-forge</strong> mandates that your dependencies all be installed via <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> or the <code class="docutils literal notranslate"><span class="pre">default</span></code> channels. By requiring packages to be installed via <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> by default, any package installed via <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> should not have issues with mixing channels of dependencies.</p>
+<p><strong>Conda-forge</strong> aims to do better than <strong>PyPi</strong> by providing an automated testing suite along with more peer review of code before it is published. These extra rules make <strong>conda-forge</strong> an ideal choice for creating <strong>Python</strong> environments for science.</p>
+<p>In this textbook, we suggest that you use <strong>conda-forge</strong> to install all needed earth data science packages, as it will save time in the long run as you list of packages and associated dependencies grows.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/04-python-fundamentals/python-packages-for-eds"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="python-packages-for-eds-01-intro-eds-packages-python.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8.7. </span><i class="fa fa-ship" aria-hidden="true"></i> Chapter Eleven - Import and Install Python Packages for Earth Data Science</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="python-packages-for-eds-03-install-packages.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8.15.8. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.15.3. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-environments-in-python">8.15.4. Conda Environments in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-party-library-issue">8.15.4.1. The Third Party Library Issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environments">8.15.4.2. Python Environments</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-conda">8.15.5. What is Conda</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-conda">8.15.6. Why Conda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-is-cross-platform">8.15.6.1. 1. Conda is Cross Platform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-can-install-specific-versions-of-python">8.15.6.2. 2. Conda Can Install Specific Versions of <strong>Python</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments-are-native-to-conda">8.15.6.3. 3. Environments are Native to Conda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-is-better-at-dependency-management">8.15.6.4. 4. Conda is Better at Dependency Management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-manages-external-dependencies">8.15.6.5. 5. Conda Manages External Dependencies</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#channels-in-conda">8.15.7. Channels in Conda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-channels">8.15.7.1. Default Channels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-forge">8.15.7.2. Conda-Forge</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</divxs>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

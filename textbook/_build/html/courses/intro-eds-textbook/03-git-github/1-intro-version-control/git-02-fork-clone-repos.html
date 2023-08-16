@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6.7.1. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/03-git-github/1-intro-version-control/2018-09-06-git-02-fork-clone-repos';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6.7.8. Learning Objectives" href="2018-09-06-git-03-setup-git-locally.html" />
+    <link rel="prev" title="6.1. Chapter Seven - Git/GitHub.com" href="2018-09-06-git-01-intro-version-control.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/03-git-github/1-intro-version-control/2018-09-06-git-02-fork-clone-repos.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.7.1. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-git-and-github">6.7.2. About Git and GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-of-repositories">6.7.3. Directory Structure of Repositories</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#url-of-repositories-on-github-com">6.7.4. URL of Repositories on GitHub.com</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-copy-of-other-users-files-on-github-com-fork-a-repo">6.7.5. Create a Copy of Other Users’ Files on GitHub.com (Fork a Repo)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files-from-github-com-to-your-computer-git-clone">6.7.6. Copy Files From GitHub.com to Your Computer (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-bash-to-change-to-your-desired-working-directory">6.7.6.1. Use <code class="docutils literal notranslate"><span class="pre">Bash</span></code> to Change to Your Desired Working Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-a-github-com-repository-url-from-github-com">6.7.6.2. Copy a Github.com Repository URL From GitHub.com</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-git-clone-command-in-the-terminal">6.7.6.3. Run the Git Clone Command in the Terminal</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-fork-and-clone-a-repository">6.7.7. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge  - Fork and Clone a Repository</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">6.7.1. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this page, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain how a <strong>GitHub</strong> repository stores and tracks changes to files.</p></li>
+<li><p>Create a copy of (i.e. <code class="docutils literal notranslate"><span class="pre">fork</span></code>) other users’ files on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> .</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command to download a copy of a <strong>GitHub</strong> repository to your computer.</p></li>
+</ul>
+ </div>
+</section>
+<section id="about-git-and-github">
+<h1><span class="section-number">6.7.2. </span>About Git and GitHub<a class="headerlink" href="#about-git-and-github" title="Permalink to this headline">#</a></h1>
+<p>Previously in this textbook, you learned that <strong>git</strong> is tool that is used to track changes in files (a process called version control) through a suite of commands that you can execute in the <strong>Terminal</strong>. You also learned that <strong>GitHub</strong> allows you to store files in the cloud to access them from any computer and to share them with others.</p>
+<p>You can use <strong>git</strong> and <strong>GitHub</strong> together in a workflow to make changes to files locally with <strong>git</strong> and to store and share your files on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong>. To work together, <strong>git</strong> and <strong>GitHub</strong> use repositories (i.e. directories of files) to manage and store files.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> A <strong>GitHub</strong> repository is a directory of files and folders that is hosted on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong>.<br />
+{: .notice–success}</p>
+<p>Having a copy of a set of files stored in <strong>GitHub</strong> repositories in the cloud is ideal because:</p>
+<ol class="arabic simple">
+<li><p>There is a backup: If something happens to your computer, the files are still available online.</p></li>
+<li><p>You can share the files with other people easily.</p></li>
+<li><p>You can even create a Digital Object Identifier (DOI) using third party tools like Zenodo to cite your files or ask others to cite your files. You can also add these DOIs to your resume or C.V. to promote your work.</p></li>
+</ol>
+</section>
+<section id="directory-structure-of-repositories">
+<h1><span class="section-number">6.7.3. </span>Directory Structure of Repositories<a class="headerlink" href="#directory-structure-of-repositories" title="Permalink to this headline">#</a></h1>
+<p>In essence, a repository is a directory for a specific project that is identified as a repository by <strong>git</strong> and <strong>GitHub</strong> because it contains a subdirectory called <code class="docutils literal notranslate"><span class="pre">.git</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">.git</span></code> subdirectory is created automatically, either by <strong>GitHub</strong> if it is created on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> or by <strong>git</strong> if the repository is created locally on a computer first (i.e. initialized as a repository). This <code class="docutils literal notranslate"><span class="pre">.git</span></code> subdirectory is used by these tools to manage and track the various tasks that are run on this directory (e.g. tracking changes to files in the repository). Thus, <strong>you never need to access or modify the files in the <code class="docutils literal notranslate"><span class="pre">.git</span></code> subdirectory.</strong></p>
+<p>A typical repository (e.g. <code class="docutils literal notranslate"><span class="pre">project-name</span></code>) is structured as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project-name
+<span class="w">    </span>.git/
+<span class="w">    </span>data/
+<span class="w">    </span>scripts/
+<span class="w">    </span>.gitignore
+<span class="w">    </span>README.md
+</pre></div>
+</div>
+<p>In addition to the <code class="docutils literal notranslate"><span class="pre">.git</span></code> subdirectory, it is common to have subdirectories for specific files of a workflow such  as data or scripts. A few common files in most if not all git repos are:</p>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">README.md</span></code> file:</strong> This is a Markdown file that is used to provide a description of the repository (i.e. its contents, purpose, etc), so that others can learn how to use the files in the repository.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file:</strong> This file can be used to list the files that you do not want <strong>git</strong> to track (i.e. monitor via version control). You will learn more about both of these useful files later in this chapter.</p></li>
+</ol>
+</section>
+<section id="url-of-repositories-on-github-com">
+<h1><span class="section-number">6.7.4. </span>URL of Repositories on <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#url-of-repositories-on-github-com" title="Permalink to this headline">#</a></h1>
+<p>When a repository is stored on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong>, it is assigned a unique URL (i.e. link on the <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> website) that can be used to find the repository and access its files. While repositories on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> can be made either public or private, the default is public for free <strong>GitHub</strong> accounts.</p>
+<p>In either case (public or private), the URL links to a <strong>GitHub</strong> repository always follows the same format:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/username/repository-name</span></code></p>
+<p>The username is the username of the creator (i.e. owner) of the repository. The username can either be an individual such as <code class="docutils literal notranslate"><span class="pre">eastudent</span></code> (or your <strong>GitHub</strong> username!), or it can represent an organization such as <code class="docutils literal notranslate"><span class="pre">earthlab-education</span></code>.</p>
+<p>For example, the repositories that you will work with throughout this textbook will be owned by <code class="docutils literal notranslate"><span class="pre">earthlab-education</span></code>, and thus, will have URLs that look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab-education/repository-name</span></code></p>
+</section>
+<section id="create-a-copy-of-other-users-files-on-github-com-fork-a-repo">
+<h1><span class="section-number">6.7.5. </span>Create a Copy of Other Users’ Files on <a class="reference external" href="http://GitHub.com">GitHub.com</a> (Fork a Repo)<a class="headerlink" href="#create-a-copy-of-other-users-files-on-github-com-fork-a-repo" title="Permalink to this headline">#</a></h1>
+<p>Using <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong>, you can make a copy of a <strong>GitHub</strong> repository (also known as a <strong>repo</strong>) owned by another user or organization (a task referred to as <code class="docutils literal notranslate"><span class="pre">forking</span></code> a repository). This means that <strong>you do not have to fork a repository that you already own</strong>. Instead, other users can fork your repository if they would like a copy to work with, and your original files will not be modified!</p>
+<p>The ability to <code class="docutils literal notranslate"><span class="pre">fork</span></code> a repository is a benefit of using <strong>GitHub</strong> repositories because the forked repository is linked to the original. This means that you (or other users) can update the files in your fork from the original to your (or their) forked repository. It also means that you can suggest changes to the original repository, which can be reviewed by the owner of that repository. Thus, forking allows you to collaborate with others while protecting the original versions of files. When collaborating, everyone will work with copies of the original files. And all changes are tracked in each file’s history and can be undone at any time.</p>
+<p>You can <code class="docutils literal notranslate"><span class="pre">fork</span></code> an existing <strong>GitHub</strong> repository from the main <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> page of the repository that you want to copy.</p>
+<p>To fork a repo:</p>
+<ol class="arabic simple">
+<li><p>Navigate to the repo page that you wish to fork - example:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab-education/practice-git-skillz</span></code></p>
+<ol class="arabic simple" start="2">
+<li><p>On that page, you will see a button in the UPPER RIGHT hand corner that says <code class="docutils literal notranslate"><span class="pre">Fork</span></code>. The number next to that button tells you how many times the repo has already been forked.</p></li>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Fork</span></code> button and select your user account when it asks you where you want to fork the repo.</p></li>
+<li><p>Once you have forked the repo, you will have a copy of it in your account. Navigate to your repo page. The url should look something like this:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/your-user-name/practice-git-skillz</span></code></p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/github-fork-repo.gif">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/github-fork-repo.gif" alt="You can create a copy of repositories created by other users on Github by forking their repository to your Github account."></a>
+ <figcaption> To fork a repo, first navigate to the repo you want to fork. Then click the **fork** button in the upper right hand corner of your screen. You can then create a copy of of this repo in your account.
+ </figcaption>
+</figure>
+<p>Later in this textbook, you will learn how to suggest changes to the original repository, receive updates from the original repository to your fork, and collaborate with others.</p>
+</section>
+<section id="copy-files-from-github-com-to-your-computer-git-clone">
+<h1><span class="section-number">6.7.6. </span>Copy Files From <a class="reference external" href="http://GitHub.com">GitHub.com</a> to Your Computer (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>)<a class="headerlink" href="#copy-files-from-github-com-to-your-computer-git-clone" title="Permalink to this headline">#</a></h1>
+<p>To work locally with a <strong>GitHub</strong> repository (including forked repos), you need to create a local copy of that repository on your computer (a task referred to as <code class="docutils literal notranslate"><span class="pre">cloning</span></code> a repo). You can clone <strong>GitHub</strong> repositories that you own or that are owned by others (e.g. repositories that you have forked to your <strong>GitHub</strong> account).</p>
+<p>In either case, cloning allows you to create a local copy of a <strong>GitHub</strong> repository, so that you can work with the files locally on your computer. Cloning a repository to your computer is a great way to work on your files locally, while still having a copy of your files on the cloud on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong>. Following the steps below, you will use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command in the <strong>terminal</strong> to clone <strong>GitHub</strong> repositories.</p>
+<section id="use-bash-to-change-to-your-desired-working-directory">
+<h2><span class="section-number">6.7.6.1. </span>Use <code class="docutils literal notranslate"><span class="pre">Bash</span></code> to Change to Your Desired Working Directory<a class="headerlink" href="#use-bash-to-change-to-your-desired-working-directory" title="Permalink to this headline">#</a></h2>
+<p>The first step to using any <strong>git</strong> command is to change the current working directory to your desired directory.
+In the case of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>, the current working directory needs to be where you want to download a local copy of a <strong>GitHub</strong> repository.</p>
+<p>For this textbook, you will clone a repo into a directory called <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> on your computer (or wherever you are working. This <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory should be located in the home directory of your computer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># This command with change your directory to home (`~`) /earth-analytics</span>
+<span class="c1"># If the directory doesn&#39;t already exist you can make it using mkdir ~/earth-analytics</span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/earth-analytics
+$<span class="w"> </span><span class="nb">pwd</span>
+<span class="w">    </span>/users/your-user-name/earth-analytics
+</pre></div>
+</div>
+</section>
+<section id="copy-a-github-com-repository-url-from-github-com">
+<h2><span class="section-number">6.7.6.2. </span>Copy a <a class="reference external" href="http://Github.com">Github.com</a> Repository URL From <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#copy-a-github-com-repository-url-from-github-com" title="Permalink to this headline">#</a></h2>
+<p>To run the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command, you need the URL for the repository that you want to clone (i.e. either a repository owned by you or a fork that you created of another user’s repository).</p>
+<p>On the main <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> page of the repository, you can click on the green button for <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">or</span> <span class="pre">download</span></code>, and copy the URL provided in the box, which will look like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/your-username/practice-git-skillz</span></code></p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/github-clone-repo.gif">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/github-clone-repo.gif" alt="You can make a local copy of your forked repository on your computer with the git clone command."></a>
+ <figcaption> You can make a local copy of your forked repository on your computer with the git clone command. 
+ </figcaption>
+</figure>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can also copy the URL directly from your web browser, or in some cases, you might already know the URL. However, in many cases, you will come across a new <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> repository on your own and will need to follow these instructions to copy the URL for future use.
+{: .notice–success}</p>
+</section>
+<section id="run-the-git-clone-command-in-the-terminal">
+<h2><span class="section-number">6.7.6.3. </span>Run the Git Clone Command in the Terminal<a class="headerlink" href="#run-the-git-clone-command-in-the-terminal" title="Permalink to this headline">#</a></h2>
+<p>Now that you have the URL for a repository that you want to copy locally, you can use the <strong>terminal</strong> to run the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command followed by the URL that you copied:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/practice-git-skillz
+</pre></div>
+</div>
+<p>You have now made a local copy of a repository under your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory. You can double check that the directory exists using the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command in the <strong>terminal</strong>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w">     </span>
+<span class="w">    </span>practice-git-skillz
+</pre></div>
+</div>
+<div class="notice--warning" markdown="1">
+</section>
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-fork-and-clone-a-repository">
+<h1><span class="section-number">6.7.7. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge  - Fork and Clone a Repository<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-fork-and-clone-a-repository" title="Permalink to this headline">#</a></h1>
+<p>Go to <a class="reference external" href="http://GitHub.com">GitHub.com</a> and login. Then use the link below to open the <strong>practice-git-skillz</strong> repo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab-education/practice-git-skillz</span></code></p>
+<ul class="simple">
+<li><p>On the main <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> page of this repository, you will see a button on the top right that says <code class="docutils literal notranslate"><span class="pre">Fork</span></code>. The number next to <code class="docutils literal notranslate"><span class="pre">Fork</span></code> tells the number of times that the repository has been copied or forked.</p></li>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Fork</span></code> button and select your <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> account as the home of the forked repository.</p></li>
+<li><p>Once you have forked a repository, you will have a copy (or a fork) of that repository in your <strong>GitHub</strong> account. The URL to your fork will contain your username:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/your-username/practice-git-skillz</span></code></p>
+<ul class="simple">
+<li><p>Finally, clone the fork that you created above so you have a copy of all the files on <a class="reference external" href="http://github.com">github.com</a> on your local computer. You may want to clone this repo into your <strong>earth-anlaytics</strong> directory if you are working through the complete Bootcamp course as a part of our Professional Certificate program.</p></li>
+</ul>
+<p>To make sure you did things right, in bash, cd to the practice-git-skillz directory on your computer.
+Type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code></p>
+<p>The paths returned should look something like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/your-username/practice-git-skillz</span></code></p>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/03-git-github/1-intro-version-control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2018-09-06-git-01-intro-version-control.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6.1. </span><i class="fa fa-ship" aria-hidden="true"></i> Chapter Seven - Git/GitHub.com</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2018-09-06-git-03-setup-git-locally.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.7.8. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.7.1. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-git-and-github">6.7.2. About Git and GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-of-repositories">6.7.3. Directory Structure of Repositories</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#url-of-repositories-on-github-com">6.7.4. URL of Repositories on GitHub.com</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-copy-of-other-users-files-on-github-com-fork-a-repo">6.7.5. Create a Copy of Other Users’ Files on GitHub.com (Fork a Repo)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files-from-github-com-to-your-computer-git-clone">6.7.6. Copy Files From GitHub.com to Your Computer (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-bash-to-change-to-your-desired-working-directory">6.7.6.1. Use <code class="docutils literal notranslate"><span class="pre">Bash</span></code> to Change to Your Desired Working Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-a-github-com-repository-url-from-github-com">6.7.6.2. Copy a Github.com Repository URL From GitHub.com</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-git-clone-command-in-the-terminal">6.7.6.3. Run the Git Clone Command in the Terminal</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-fork-and-clone-a-repository">6.7.7. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge  - Fork and Clone a Repository</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

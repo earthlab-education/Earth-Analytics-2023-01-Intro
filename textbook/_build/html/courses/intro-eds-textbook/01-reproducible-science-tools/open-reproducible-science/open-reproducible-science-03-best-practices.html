@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.19.7. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/01-reproducible-science-tools/open-reproducible-science/2019-07-01-open-reproducible-science-03-best-practices';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3. Section Two - File Formats for Earth Data Science" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html" />
+    <link rel="prev" title="2.19.1. Learning Objectives" href="2019-07-01-open-reproducible-science-02-open-science-tools.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/01-reproducible-science-tools/open-reproducible-science/2019-07-01-open-reproducible-science-03-best-practices.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.19.7. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-organization-and-management-for-open-reproducible-science-projects">2.19.8. Project Organization and Management for Open Reproducible Science Projects</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-your-science-project-directory-to-make-it-easier-to-understand">2.19.8.1. Organize Your Science Project Directory To Make It Easier to Understand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-directory-and-file-names">2.19.8.2. Importance of Directory and File Names</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-open-reproducible-science-projects">2.19.9. Best Practices for Open Reproducible Science Projects</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-consistent-computer-readable-naming-conventions">2.19.9.1. 1. Use Consistent Computer Readable Naming Conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-consistent-when-naming-files-use-lower-case">2.19.9.2. 2. Be Consistent When Naming Files - Use Lower Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs">2.19.9.3. 3. Organize Your Project Directories to Make It Easy to Find Data, Code and Outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-meaningful-expressive-file-and-directory-names">2.19.9.4. 4. Use Meaningful (Expressive) File And Directory Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-your-project-with-a-readme-file">2.19.9.5. 5. Document Your Project With a README File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-use-proprietary-file-formats">2.19.9.6. 6. Don’t Use Proprietary File Formats</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-open-reproducible-science-projects-a-case-study">2.19.10. Best Practices For Open Reproducible Science Projects - A Case Study</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">2.19.7. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Describe machine readable names and the importance of using them to name directories and files.</p></li>
+<li><p>List best practices for organizing open reproducible science projects.</p></li>
+</ul>
+</div>
+</section>
+<section id="project-organization-and-management-for-open-reproducible-science-projects">
+<h1><span class="section-number">2.19.8. </span>Project Organization and Management for Open Reproducible Science Projects<a class="headerlink" href="#project-organization-and-management-for-open-reproducible-science-projects" title="Permalink to this headline">#</a></h1>
+<section id="organize-your-science-project-directory-to-make-it-easier-to-understand">
+<h2><span class="section-number">2.19.8.1. </span>Organize Your Science Project Directory To Make It Easier to Understand<a class="headerlink" href="#organize-your-science-project-directory-to-make-it-easier-to-understand" title="Permalink to this headline">#</a></h2>
+<p>When you are working on a data project, there are often many files that you need to store on your computer. These files may include:</p>
+<ul class="simple">
+<li><p>Raw Data Files</p></li>
+<li><p>Processed data files: you may need to take the raw data and process it in some way</p></li>
+<li><p>Code and scripts</p></li>
+<li><p>Outputs like figures and tables</p></li>
+<li><p>Writing associated with your project</p></li>
+</ul>
+<p>It will save you time and make your project more useable and reproducible if you carefully consider how these files are stored on your computer. Below are some best practices to consider when pulling together a project.</p>
+</section>
+<section id="importance-of-directory-and-file-names">
+<h2><span class="section-number">2.19.8.2. </span>Importance of Directory and File Names<a class="headerlink" href="#importance-of-directory-and-file-names" title="Permalink to this headline">#</a></h2>
+<p>As you create new directories and files on your computer, consider using a carefully crafted naming convention that makes it easier for anyone to find things and also to understand what each files does or contains.</p>
+<p>It is good practice to use file and directory that are:</p>
+<ul class="simple">
+<li><p><strong>Human readable</strong>: use expressive names that clearly describe what the directory or file contains (e.g. code, data, outputs, figures).</p></li>
+<li><p><strong>Machine readable</strong>: avoid strange characters or spaces. Instead of spaces, you can use <code class="docutils literal notranslate"><span class="pre">-</span></code> or <code class="docutils literal notranslate"><span class="pre">_</span></code> to separate words within the name to make them easy to read and parse.</p></li>
+<li><p><strong>Sortable</strong>: it is nice to be able to sort files to quickly see what is there and find what you need. For example, you can create a naming convention for a list of related directories or files (e.g. <code class="docutils literal notranslate"><span class="pre">01-max.jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">02-terry.jpg</span></code>, etc), which will result in sortable files.</p></li>
+</ul>
+<p>These guidelines not only help you to organize your directories and files, but they can also help you to implement machine readable names that can be easily queried or parsed using scientific programming or other forms of scripting.</p>
+<p>Using a good naming convention when structuring a project directory also supports reproducibility by helping others who are not familiar with your project quickly understand your directory and file structure.</p>
+</section>
+</section>
+<section id="best-practices-for-open-reproducible-science-projects">
+<h1><span class="section-number">2.19.9. </span>Best Practices for Open Reproducible Science Projects<a class="headerlink" href="#best-practices-for-open-reproducible-science-projects" title="Permalink to this headline">#</a></h1>
+<section id="use-consistent-computer-readable-naming-conventions">
+<h2><span class="section-number">2.19.9.1. </span>1. Use Consistent Computer Readable Naming Conventions<a class="headerlink" href="#use-consistent-computer-readable-naming-conventions" title="Permalink to this headline">#</a></h2>
+<p>Machine readable file names allow your directory structure to be quickly manipulated and handled by code.</p>
+<p>For example, you may want to write a script that processes a set of images and you may want to sort those images by date. If the date of each image is included in the file name at the very beginning of the name, it will become easier to parse with your code. The files below could be difficult to parse because the naming convention is not standard.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">file</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">*</span> <span class="n">file</span><span class="o">-</span><span class="n">two</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">*</span> <span class="n">filethree</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>However this list of files is easier to parse as the date is included with the file name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="mi">2020</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">*</span> <span class="mi">2019</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">*</span> <span class="mi">2018</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>Sometimes simply numbering the files is enough to allow for sorting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="mi">01</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">*</span> <span class="mi">02</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+<span class="o">*</span> <span class="mi">03</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>If your files and directories follow identifiable patterns or rules, it will allow you to more easily manipulate them. This in turn will make it easier for you to automate file processing tasks.</p>
+<p>A few other best practices to consider when naming files within a project:</p>
+<ul class="simple">
+<li><p>Avoid spaces in file and dir names: spaces in a file name can be difficult when automating workflows.</p></li>
+<li><p>Use dashes-to-separate-words (slugs): dashes or underscores can make is easier for you to create expressive file names. Dashes or underscores are also easier to parse when coding.</p></li>
+<li><p>Consider whether you may need to sort your files. If you do, you may want to number things.</p></li>
+</ul>
+</section>
+<section id="be-consistent-when-naming-files-use-lower-case">
+<h2><span class="section-number">2.19.9.2. </span>2. Be Consistent When Naming Files - Use Lower Case<a class="headerlink" href="#be-consistent-when-naming-files-use-lower-case" title="Permalink to this headline">#</a></h2>
+<p>It might be tempting when naming files and directories to use <code class="docutils literal notranslate"><span class="pre">lower</span></code> and <code class="docutils literal notranslate"><span class="pre">Upper</span></code> case. However, case will cause coding issues for you down the road particularly if you are switching between operating systems (Mac vs Linux vs Windows).</p>
+<p>Case in point, have a look at the file names below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">My</span><span class="o">-</span><span class="n">File</span><span class="o">.</span><span class="n">txt</span>
+
+</pre></div>
+</div>
+<p>If you want to open / read <code class="docutils literal notranslate"><span class="pre">my-file.txt</span></code> it would be easy to call:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pandas.read.csv(&quot;my-file.txt&quot;)</span></code></p>
+<p>in Python. This call will work on all operating systems. However, this call:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pandas.read.csv(&quot;My-file.txt&quot;)</span></code></p>
+<p>may work on some machines  (possibly Windows) but it’s likely to fail on Linux or MAC. To keep things simple and to avoid case sensitvity issues, use lower case naming conventions for all file and directory names.</p>
+</section>
+<section id="organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs">
+<h2><span class="section-number">2.19.9.3. </span>3. Organize Your Project Directories to Make It Easy to Find Data, Code and Outputs<a class="headerlink" href="#organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs" title="Permalink to this headline">#</a></h2>
+<p>Rather than saving a bunch of files into a single directory, consider a directory organization approach that fits your project.</p>
+<p>Create numbered directories that cover the steps of your workflow - for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">vegetation</span><span class="o">-</span><span class="n">health</span><span class="o">-</span><span class="n">project</span>
+    <span class="o">/</span><span class="mi">01</span><span class="o">-</span><span class="n">code</span><span class="o">-</span><span class="n">scripts</span>
+    <span class="o">/</span><span class="mi">02</span><span class="o">-</span><span class="n">raw</span><span class="o">-</span><span class="n">data</span>
+    <span class="o">/</span><span class="mi">03</span><span class="o">-</span><span class="n">processed</span><span class="o">-</span><span class="n">data</span>
+    <span class="o">/</span><span class="mi">04</span><span class="o">-</span><span class="n">graphics</span><span class="o">-</span><span class="n">outputs</span>
+    <span class="o">/</span><span class="mi">05</span><span class="o">-</span><span class="n">paper</span><span class="o">-</span><span class="n">blog</span>
+</pre></div>
+</div>
+<p>The numbers before each folder allow you to sort the directories in a way that makes it easier to parse. Notice also that each directory has an expressive (uses words that describe what is in the directory) name. Expressive naming will be discussed in the next section.</p>
+<p>Using individual directories to store data, scripts, output graphics and then the final paper and blog posts being written for the project makes it easier to find components of your project.</p>
+<p>This is especially useful for your future self who may need to come back to the project in six months to update things. It also makes is easier for a colleague that you are collaborating with to quickly find things.</p>
+<p>There is no one perfect example as each project may require different directories. The best advice is to pick something that works well for you and your team and stick to it. It’s best to be consistent.</p>
+<div class="notice--info" markdown="1">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Organized Project</p></th>
+<th class="head"><p>Non Organized Project</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>/01-scripts <br>    <a class="reference external" href="http://01-clean-data.py">01-clean-data.py</a> <br>     <a class="reference external" href="http://02-run-model.py">02-run-model.py</a> <br>    <a class="reference external" href="http://03-create-plots.py">03-create-plots.py</a> <br> /02-data <br>     /raw-data <br>         /landsat-imagery<br>         /fire-boundary<br>/03-output-graphics<br>    study-area-map.png <br> /04-final-paper <br>    fire-paper.pdf</p></td>
+<td><p><a class="reference external" href="http://file1-new.py">file1-new.py</a><br><a class="reference external" href="http://file1.py">file1.py</a><br> <a class="reference external" href="http://plotting-test.py">plotting-test.py</a> <br> data-file.txt  <br> /old-stuff <br> testoutput1.txt <br>testoutput2.csv</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>Look at the example directory structures above. Which structure is easier to understand? In which could you more easily find what you need?</p>
+</div></blockquote>
+</div>
+</section>
+<section id="use-meaningful-expressive-file-and-directory-names">
+<h2><span class="section-number">2.19.9.4. </span>4. Use Meaningful (Expressive) File And Directory Names<a class="headerlink" href="#use-meaningful-expressive-file-and-directory-names" title="Permalink to this headline">#</a></h2>
+<p>Expressive file names are those that are meaningful and thus describe what each directory or file is or contains. Using expressive file names makes it easier to scan a project directory and quickly understand where things are stored and what files do or contain.</p>
+<p>Expressive names also support machine readibility, as discernible patterns in expressive names can be used by a computer to identify and parse files.</p>
+<div class="notice--info" markdown="1">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Expressive Project</p></th>
+<th class="head"><p>Non Expressive Project</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>/01-scripts <br>    <a class="reference external" href="http://01-process-landsat-data.py">01-process-landsat-data.py</a> <br>     <a class="reference external" href="http://02-calculate-ndvi.py">02-calculate-ndvi.py</a> <br>    <a class="reference external" href="http://03-create-ndvi-maps.py">03-create-ndvi-maps.py</a> <br> /02-data <br>     /raw-data <br>         /landsat-imagery <br>               /june-2016 <br>               /july-2016<br>         /cold-springs-fire-boundary<br>/03-output-graphics<br>    ndvi-map-june-2016.png <br>      ndvi-map-july-2016.png <br>/04-final-paper <br>    veg-impacts-cold-springs-fire.pdf</p></td>
+<td><p><a class="reference external" href="http://work.py">work.py</a><br><a class="reference external" href="http://plotting.py">plotting.py</a><br> <a class="reference external" href="http://plotting-test.py">plotting-test.py</a> <br>landsat/<br> data-file.txt  <br>old-stuff/ <br> testoutput1.txt <br>testoutput2.csv</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>Look at the example directory structures above. Which directory structure (the one on the LEFT or the one on the RIGHT) would you prefer to work with?</p>
+</div></blockquote>
+</div>
+<p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <strong>Windows Users:</strong> Note that the default names of your existing directories often begin with upper case letters (e.g. Documents, Downloads). When creating new directories, use lower case to follow the textbook more easily and for best results from future programming tasks.
+{: .notice–success}</p>
+</section>
+<section id="document-your-project-with-a-readme-file">
+<h2><span class="section-number">2.19.9.5. </span>5. Document Your Project With a README File<a class="headerlink" href="#document-your-project-with-a-readme-file" title="Permalink to this headline">#</a></h2>
+<p>There are many ways to document a project; however, a readme file at the top level of your project is a standard convention. When you begin to use GitHub, you will notice that almost all well designed github repositories contain readme files. The readme is a text file that describes data / software packages and tools used to process data in your project. The readme should also describe files and associated naming conventions. Finally, the readme can be used to document any abbreviations used, units, etc as needed.</p>
+<p>There are other files that you may consider as well such as software installation instructions if those are required, citation information and if the project is one that you want others to contribute to, then a <code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code> file may be in order.</p>
+</section>
+<section id="don-t-use-proprietary-file-formats">
+<h2><span class="section-number">2.19.9.6. </span>6. Don’t Use Proprietary File Formats<a class="headerlink" href="#don-t-use-proprietary-file-formats" title="Permalink to this headline">#</a></h2>
+<p>Proprietary formats are formats that require a specific tool (and a specific license often) to open. Examples include Excel (.xls) or Word (.doc). These formats may change over time as new versions come out (example: <code class="docutils literal notranslate"><span class="pre">.xls</span></code> upgraded to <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>.</p>
+<p>In some cases, certain formats are operating system specific (example: most Linux users do not run Microsoft tools).</p>
+<p>When choosing file formats for your projects, think about whether you will have a license to access that file format in the future and whether others have access to the license.</p>
+<p>When you can, stick to formats that are operating system and tool agnostic such as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">.txt</span></code>. Text files are not proprietary and thus can be opened on any operating system and on any computer with the right open tools. This allows more people to have access to your files including your future self who might not have a license to open these files.</p>
+<p><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <strong>Pro Tip:</strong> Using standard data formats increases opportunities for re-use and expansion of your research.
+{: .notice–success }</p>
+<div class="notice--info" markdown="1">
+</section>
+</section>
+<section id="best-practices-for-open-reproducible-science-projects-a-case-study">
+<h1><span class="section-number">2.19.10. </span>Best Practices For Open Reproducible Science Projects - A Case Study<a class="headerlink" href="#best-practices-for-open-reproducible-science-projects-a-case-study" title="Permalink to this headline">#</a></h1>
+<p>Jennifer recently graduated with a degree in environmental science and got a job working with an environmental non-profit. While a student, she worked on some great projects to build flood models using MATLAB, a proprietary software used to design and run models. In collaboration with a professor and other class mates, Jennifer wrote a paper that was accepted for publication in well known hydrology journal, though some minor changes were requested.</p>
+<p>Excited to get the paper revised for publication, Jennifer tracks down her project files and tries to remember which files produced the final outputs that she included in the submitted paper. However, she realizes that even when she is able to identify which files she needs, she no longer has access to the MATLAB, which she needs to access the files. Unfortunately, her license expired when she graduated, and her non-profit does not have licenses for MATLAB.</p>
+<p>Jennifer’s story can be a common experience for anyone who has moved to a new job where the resources and licenses differ, or who has spent a long time away from a particular project and need to recreate a workflow.</p>
+<p>How could using organized and expressively named directories have helped Jennifer with this project? How could avoiding proprietary file formats contribute to the longevity of this project?</p>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/01-reproducible-science-tools/open-reproducible-science"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2019-07-01-open-reproducible-science-02-open-science-tools.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.19.1. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span><i class="fa fa-ship" aria-hidden="true"></i> Section Two - File Formats for Earth Data Science</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.19.7. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-organization-and-management-for-open-reproducible-science-projects">2.19.8. Project Organization and Management for Open Reproducible Science Projects</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-your-science-project-directory-to-make-it-easier-to-understand">2.19.8.1. Organize Your Science Project Directory To Make It Easier to Understand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-directory-and-file-names">2.19.8.2. Importance of Directory and File Names</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-open-reproducible-science-projects">2.19.9. Best Practices for Open Reproducible Science Projects</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-consistent-computer-readable-naming-conventions">2.19.9.1. 1. Use Consistent Computer Readable Naming Conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-consistent-when-naming-files-use-lower-case">2.19.9.2. 2. Be Consistent When Naming Files - Use Lower Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs">2.19.9.3. 3. Organize Your Project Directories to Make It Easy to Find Data, Code and Outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-meaningful-expressive-file-and-directory-names">2.19.9.4. 4. Use Meaningful (Expressive) File And Directory Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-your-project-with-a-readme-file">2.19.9.5. 5. Document Your Project With a README File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-use-proprietary-file-formats">2.19.9.6. 6. Don’t Use Proprietary File Formats</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-open-reproducible-science-projects-a-case-study">2.19.10. Best Practices For Open Reproducible Science Projects - A Case Study</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

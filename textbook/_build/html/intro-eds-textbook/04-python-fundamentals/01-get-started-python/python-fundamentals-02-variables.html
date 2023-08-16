@@ -1,0 +1,1074 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Give it a name, find it later &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/font_loader.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Learning Objectives" href="python-fundamentals-03-lists.html" />
+    <link rel="prev" title="Introduction to the Python Scientific Programming Language for Earth Data Science" href="python-fundamentals-01-get-started-python.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Give it a name, find it later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-02-setup-git-bash-and-anacoda.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Give it a name, find it later</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-names-to-save-data-in-python">Use <strong>names</strong> to save data in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easy-to-understand-names-make-your-code-easier-to-read">Easy to Understand Names Make Your Code Easier to Read</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#names-are-available-in-your-coding-environment-once-defined">names Are Available In Your Coding Environment Once Defined</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-data-types-in-python">About Data Types in <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeric-names-in-python">Numeric names in <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-store-text-names-strings-in-python">How to Store Text names: Strings in <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-type">Check the type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-data-types-math">Challenge - Data Types &amp; Math</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="give-it-a-name-find-it-later">
+<h1>Give it a name, find it later<a class="headerlink" href="#give-it-a-name-find-it-later" title="Permalink to this headline">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<img alt="" class="sd-avatar-sm" src="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png" />
+</div>
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser, Nathan Korinek, Elsa Culler</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 11, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar objectives admonition">
+<p class="admonition-title">Learn how to…</p>
+<ul class="simple">
+<li><p>Explain how names are used in <code class="docutils literal notranslate"><span class="pre">Python</span></code> to store information.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Python</span></code> code to create names that store single data values including numbers and text strings.</p></li>
+<li><p>Check the data type of a name using <code class="docutils literal notranslate"><span class="pre">Python</span></code></p></li>
+</ul>
+</div>
+<p>Names store data (i.e. information) that you want to re-use in your code (e.g. single numeric value, path to a directory or file). Learn how to to create and work with names in <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
+<hr class="docutils" />
+<section id="use-names-to-save-data-in-python">
+<h2>Use <strong>names</strong> to save data in Python<a class="headerlink" href="#use-names-to-save-data-in-python" title="Permalink to this headline">#</a></h2>
+<div class="note margin admonition">
+<p class="admonition-title">Why names and not variables?</p>
+<p>You may also see named values referred to as <strong>variables</strong> in programming. We think this can be confusing, because most people are used to the word <strong>variable</strong> in the context of algebra. In algebra, a <strong>variable</strong> is a value that you don’t know the value of. In programming, the value of a variable <strong>is</strong> known, and doesn’t change unless you write over it.</p>
+</div>
+<p>A <strong>name</strong> in programming is used to save information that you want to re-use in your code. You can think of it like the contacts in a cellphone – instead of remembering phone numbers, you save them under someone’s name so that you can use them again. Examples of things that you may wish to save in your code include:</p>
+<ul class="simple">
+<li><p>numeric values</p></li>
+<li><p>file names, paths, web addresses</p></li>
+<li><p>or even larger objects such as a remote sensing image or a terrain model</p></li>
+</ul>
+<div class="exercise admonition" id="name-a-variable">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1 </span></p>
+<section id="exercise-content">
+<p>In <code class="docutils literal notranslate"><span class="pre">Python</span></code>, names can be created without explicitly defining the type of data that it will hold (e.g. integer, text string). You can create a name in <code class="docutils literal notranslate"><span class="pre">Python</span></code> using the following syntax, replacing <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> with the information you wish to store:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try it out</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="solution dropdown admonition" id="intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#name-a-variable"> Exercise 1</a></p>
+<section id="s">
+<span id="o"></span><span id="l"></span><span id="u"></span><span id="t"></span><span id="i"></span><span id="o"></span><span id="n"></span><span id="-"></span><span id="c"></span><span id="o"></span><span id="n"></span><span id="t"></span><span id="e"></span><span id="n"></span><span id="t"></span><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_number</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">a_number</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<p>This syntax for creating names is the same whether you are assigning a numeric or text value to a name. For example, below you assign the name name <code class="docutils literal notranslate"><span class="pre">a</span></code> the value of 3 which is a number:</p>
+<p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">3</span></code></p>
+<p>Here is an example of assigning a text string value to the same name named <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">&quot;a</span> <span class="pre">word&quot;</span></code></p>
+<p>Notice that strings (character values) use double quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to indicate a text
+string value.</p>
+<div class="data-tip margin admonition">
+<p class="admonition-title"><strong>Data Tip:</strong></p>
+<p>Some programming languages require a
+name to be explicitly assigned a data type when it is created. You do not
+need to worry about this when using <code class="docutils literal notranslate"><span class="pre">Python</span></code>, however!</p>
+</div>
+<section id="easy-to-understand-names-make-your-code-easier-to-read">
+<h3>Easy to Understand Names Make Your Code Easier to Read<a class="headerlink" href="#easy-to-understand-names-make-your-code-easier-to-read" title="Permalink to this headline">#</a></h3>
+<p>Just like you want to use
+<a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/">
+expressive naming conventions (names that represent what is stored within
+the directory)</a> for directories on your computer, you also want to use
+short, clear names for your names to make your code easier to read. To
+follow best practices for name names, avoid the following:</p>
+<ul class="simple">
+<li><p>spaces in your name names</p></li>
+<li><p>complicated wording</p></li>
+<li><p>long name names</p></li>
+<li><p>words that do not represent what the name contains (example: <code class="docutils literal notranslate"><span class="pre">my_name</span></code> vs <code class="docutils literal notranslate"><span class="pre">precip_data</span></code>)</p></li>
+</ul>
+<p>When naming a name, you want to keep the name short but specific enough
+that someone reading your code can understand what it contains. It is good
+practice to use underscores (e.g. <code class="docutils literal notranslate"><span class="pre">boulder_precip_in</span></code>) to create multi-word
+name names that provide specifics regarding the name’s content. The
+underscore makes the name name easier to read and follows <code class="docutils literal notranslate"><span class="pre">Python</span></code>
+<a href="https://www.`Python`.org/dev/peps/pep-0008/#naming-conventions" target="_blank">PEP 8 best practices for code readability</a>.</p>
+<div class="data-tip margin admonition">
+<p class="admonition-title"><strong>Data Tip:</strong></p>
+<p>Read more about expressive name
+names and clean code <a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-`Python`-code/intro-to-clean-code/expressive-name-names-make-code-easier-to-read/">
+in this earth data science lesson.</a></p>
+</div>
+</section>
+<section id="names-are-available-in-your-coding-environment-once-defined">
+<h3>names Are Available In Your Coding Environment Once Defined<a class="headerlink" href="#names-are-available-in-your-coding-environment-once-defined" title="Permalink to this headline">#</a></h3>
+<p>A key characteristic of names is that once you create a name in your
+coding environment (that is to say you run the actual line of code that defines
+the name), it is available throughout your code. So for example, if you
+create a name at the top of a Jupyter Notebook, the value associated with
+that name will remain the same and can be reused in cells lower down in the
+notebook.</p>
+<div class="data-tip margin admonition">
+<p class="admonition-title"><strong>Data Tip:</strong></p>
+<p>You can overwrite an existing name
+if you create a new name with the same name. For example, if you assign
+<code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">5</span></code> in one cell and then assign <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">&quot;dog&quot;</span></code> in the next cell, the final value
+of <code class="docutils literal notranslate"><span class="pre">a</span></code> will be <code class="docutils literal notranslate"><span class="pre">&quot;dog&quot;</span></code>.</p>
+</div>
+<p>While there are occasions in which you might want to overwrite an existing name
+to assign a new value to it, you want to make sure that you give names both
+clear and distinct names to avoid <em>accidentally</em> overwriting name values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here you assign the name name temperature the value 55 (a number)</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mi">55</span>
+
+<span class="n">temperature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note that you can easily reassign a name name </span>
+<span class="c1"># to contain a new value (a string / word in this case)</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="s2">&quot;doctor&quot;</span>
+
+<span class="n">temperature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;doctor&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="about-data-types-in-python">
+<h2>About Data Types in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#about-data-types-in-python" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> data types are important to understand when coding. Below you will learn
+more about the different types of names that you can store including:</p>
+<ul class="simple">
+<li><p>Numbers (integers and floats)</p></li>
+<li><p>Strings (letters / characters and words)</p></li>
+</ul>
+</section>
+<section id="numeric-names-in-python">
+<h2>Numeric names in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#numeric-names-in-python" title="Permalink to this headline">#</a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">Python</span></code>, you can create names to store numeric values such as integers
+(<code class="docutils literal notranslate"><span class="pre">int</span></code>) which represent whole numbers and floating point numbers which represent
+decimal values (<code class="docutils literal notranslate"><span class="pre">float</span></code>).</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> For more advanced math applications, you can also
+use names to work with <a href="https://docs.`Python`.org/3/library/stdtypes.html#numeric-types-int-float-complex" target="_blank">complex numbers (see <code class="docutils literal notranslate"><span class="pre">Python</span></code> documentation for more details)</a>.
+{: .notice–success}</p>
+<p>As described previously, you do not need to define which numeric type you want to
+use to create a name. For example, you can create a <code class="docutils literal notranslate"><span class="pre">int</span></code> name called
+<code class="docutils literal notranslate"><span class="pre">boulder_precip_in</span></code>, which contains the value for the
+<a class="reference external" href="https://psl.noaa.gov/boulder/Boulder.mm.precip.html">average annual precipitation in inches (in) in Boulder, Colorado</a>, rounded to the nearest integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment line in `Python`</span>
+<span class="n">boulder_precip_integer</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># You can see the value of any name by calling the name name</span>
+<span class="n">boulder_precip_integer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to figure out the type of data stored in a
+name.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># What is the type of data stored in boulder_precip_in</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">boulder_precip_integer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<p>If your data has decimal places associated with it, it will be stored in <code class="docutils literal notranslate"><span class="pre">Python</span></code>
+as a type: <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boulder_precip_float</span> <span class="o">=</span> <span class="mf">20.23</span>
+
+<span class="n">boulder_precip_float</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.23
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">boulder_precip_float</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-store-text-names-strings-in-python">
+<h2>How to Store Text names: Strings in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#how-to-store-text-names-strings-in-python" title="Permalink to this headline">#</a></h2>
+<p>To create a name containing a text string (<code class="docutils literal notranslate"><span class="pre">str</span></code>), you use quotation marks
+(<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) around the value. For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">name_name</span> <span class="pre">=</span> <span class="pre">&quot;text&quot;</span></code></p>
+<p>While in <code class="docutils literal notranslate"><span class="pre">Python</span></code> the single quote (<code class="docutils literal notranslate"><span class="pre">''</span></code>) and the double quote (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) are
+used interchangeably (see the official <a href="https://docs.`Python`.org/3/library/stdtypes.html#text-sequence-type-str" target="_blank"><code class="docutils literal notranslate"><span class="pre">Python</span></code> Docs</a> for more examples), we suggest
+that you use double quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to define strings (type == <code class="docutils literal notranslate"><span class="pre">str</span></code>) following
+<code class="docutils literal notranslate"><span class="pre">PEP8</span></code> code style for <code class="docutils literal notranslate"><span class="pre">Python</span></code> best practices. Using quotes, you can create <code class="docutils literal notranslate"><span class="pre">str</span></code>
+names that contain a single word or many words, including punctuation.
+Below are some examples of creating a string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Boulder&quot;</span>
+
+<span class="n">city</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Boulder&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">city_state</span> <span class="o">=</span> <span class="s2">&quot;Boulder, CO&quot;</span>
+
+<span class="n">city_state</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Boulder, CO&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">city_description</span> <span class="o">=</span> <span class="s2">&quot;Boulder, CO is the home of the University of Colorado, Boulder campus.&quot;</span>
+
+<span class="n">city_description</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Boulder, CO is the home of the University of Colorado, Boulder campus.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="data-tip margin admonition">
+<p class="admonition-title">What Does Float() Do?</p>
+<p>Run the code in the cell below. What does the <code class="docutils literal notranslate"><span class="pre">float()</span></code> function do to the value stored in the name named <code class="docutils literal notranslate"><span class="pre">a</span></code>?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the code below - what does the float() function do? </span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+
+<span class="c1"># What data type is name b? (hint: use the type() function to find out)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>75 75.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Answer to the above activity</span>
+
+<span class="n">b_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Float turned the integer a into a float name and assigned it to b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-interactive-activity-create-some-names admonition">
+<p class="admonition-title">Interactive Activity  - Create Some names</p>
+<p>It’s time for you to create some names of your own! Create the following:</p>
+<ol class="arabic simple">
+<li><p>a name called <code class="docutils literal notranslate"><span class="pre">precip_float</span></code> that stores a float value.</p></li>
+<li><p>a name called <code class="docutils literal notranslate"><span class="pre">precip_int</span></code> that stores an integer value.</p></li>
+<li><p>a name called <code class="docutils literal notranslate"><span class="pre">location</span></code> that stores the string for the location: <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">York</span> <span class="pre">City</span></code>.</p></li>
+</ol>
+<p>For these names, use the <a class="reference external" href="https://www.usclimatedata.com/climate/new-york/new-york/united-states/usny0996">average annual precipitation in New York City</a>, which is 46.23 inches.</p>
+<p>HINT: you can coerce a floating point value to an integer using the <code class="docutils literal notranslate"><span class="pre">int()</span></code> function. Use int() to convert your floating point value to an integer. The name name should be precip_int.</p>
+<p>Try the code below to see how this works:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">75.643</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assigning the names from above</span>
+
+<span class="n">precip_float</span> <span class="o">=</span> <span class="mf">46.23</span>
+<span class="n">precip_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">precip_float</span><span class="p">)</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;New York City&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-the-type">
+<h2>Check the type<a class="headerlink" href="#check-the-type" title="Permalink to this headline">#</a></h2>
+<p>In the activities above, you used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to determine what type of data are stored in a name.</p>
+<p><code class="docutils literal notranslate"><span class="pre">type(name_name)</span></code></p>
+<p>For example, you can check the type of <code class="docutils literal notranslate"><span class="pre">boulder_precip_in</span></code> after each time
+that a name is created with that same name to see that the type changes
+from <code class="docutils literal notranslate"><span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boulder_precip_in</span> <span class="o">=</span> <span class="mi">21</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">boulder_precip_in</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boulder_precip_in</span> <span class="o">=</span> <span class="mf">20.68</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">boulder_precip_in</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also check the type of the name named <code class="docutils literal notranslate"><span class="pre">city</span></code>, which is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) regardless of how many words (or punctuation) it contains.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Boulder&quot;</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Boulder, CO is the home of the University of Colorado, Boulder campus.&quot;</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Checking the type for a name can help you make sure that you understand what a name contains and how it can be used. For example, you can actually create a <code class="docutils literal notranslate"><span class="pre">str</span></code> name that contain numbers if you use the syntax for creating a <code class="docutils literal notranslate"><span class="pre">str</span></code> name (e.g. <code class="docutils literal notranslate"><span class="pre">name_name</span> <span class="pre">=</span> <span class="pre">&quot;value&quot;</span></code>). Notice below that <code class="docutils literal notranslate"><span class="pre">city_precip</span></code> is still a <code class="docutils literal notranslate"><span class="pre">str</span></code>, even though it contains a number.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">city_precip</span> <span class="o">=</span> <span class="s2">&quot;20.68&quot;</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">city_precip</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you wanted to perform math on that name, it would not work the way you think it should.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiply city_precip by 2</span>
+<span class="n">city_precip</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;20.6820.68&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thus, the value itself is not important for determining whether the name is a numeric or string type - the syntax does this.</p>
+<p>A good reminder that it is important to make sure that you are defining names with the appropriate syntax to distinguish between numeric and string types.</p>
+</section>
+<section id="challenge-data-types-math">
+<h2>Challenge - Data Types &amp; Math<a class="headerlink" href="#challenge-data-types-math" title="Permalink to this headline">#</a></h2>
+<p>Run the following code which divides name <code class="docutils literal notranslate"><span class="pre">a</span></code> by name <code class="docutils literal notranslate"><span class="pre">b</span></code> (<code class="docutils literal notranslate"><span class="pre">a/b</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to determine what type of value is stored in each name defined (<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+
+<span class="n">type_a</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">type_b</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">type_c</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "Python3"
+        },
+        kernelOptions: {
+            name: "Python3",
+            path: "./intro-eds-textbook/04-python-fundamentals/01-get-started-python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'Python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="python-fundamentals-01-get-started-python.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to the Python Scientific Programming Language for Earth Data Science</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="python-fundamentals-03-lists.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-names-to-save-data-in-python">Use <strong>names</strong> to save data in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easy-to-understand-names-make-your-code-easier-to-read">Easy to Understand Names Make Your Code Easier to Read</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#names-are-available-in-your-coding-environment-once-defined">names Are Available In Your Coding Environment Once Defined</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-data-types-in-python">About Data Types in <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeric-names-in-python">Numeric names in <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-store-text-names-strings-in-python">How to Store Text names: Strings in <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-type">Check the type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-data-types-math">Challenge - Data Types &amp; Math</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

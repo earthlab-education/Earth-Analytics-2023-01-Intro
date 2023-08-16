@@ -1,0 +1,1266 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.2.13. Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4.3. Chapter Five - Spatial Data Formats for Earth Data Science" href="../05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-01-intro-spatial-data.html" />
+    <link rel="prev" title="4.2.1. Learning Objectives" href="2019-08-29-text-file-formats-02-markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.2.13. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-tabular-data">4.2.14. What is Tabular Data?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data-structure">4.2.15. Tabular Data Structure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#common-tabular-data-file-types-csv-and-txt">4.2.16. Common Tabular Data File Types: .csv and .txt</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#text-files-delimiters">4.2.17. Text Files &amp; Delimiters</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-and-environmental-data-that-are-stored-in-text-file-format">4.2.18. Earth and Environmental Data That Are Stored In Text File Format</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1">4.2.19. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2">4.2.20. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-tabular-text-files-so-you-can-open-them-in-python">4.2.21. Cleaning Tabular Text Files So You Can Open Them in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data-values-headers-in-text-files">4.2.21.1. Missing Data Values &amp; Headers in Text Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-parameters-in-python">4.2.21.2. Function Parameters in Python</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3">4.2.22. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4">4.2.23. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 4</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-optional">4.2.24. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 5 – OPTIONAL</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">4.2.25. Additional Resources</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”On This Page” icon=”file-text” %}</p>
+<div class="notice--success alert alert-info" markdown="1">
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">4.2.13. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>At the end of this activity, you will be able to:</p>
+<ul class="simple">
+<li><p>Define the structure of tabular data.</p></li>
+<li><p>Describe the difference between the two common types of tabular text file formats: <code class="docutils literal notranslate"><span class="pre">txt</span></code> and <code class="docutils literal notranslate"><span class="pre">csv</span></code> files.</p></li>
+<li><p>Be able to list some commonly used scientific data types that often are downloaded in a tabular format.</p></li>
+</ul>
+</div></section>
+<section id="what-is-tabular-data">
+<h1><span class="section-number">4.2.14. </span>What is Tabular Data?<a class="headerlink" href="#what-is-tabular-data" title="Permalink to this headline">#</a></h1>
+<p>Tabular data are data that are stored in a row / column format. Columns (and
+sometimes rows) are often identified by headers, which if named correctly, explain
+what is in that row or column. You may already be
+familiar with spreadsheet tools such as Excel and Google Sheets that can be
+used to open tabular data.</p>
+</section>
+<section id="tabular-data-structure">
+<h1><span class="section-number">4.2.15. </span>Tabular Data Structure<a class="headerlink" href="#tabular-data-structure" title="Permalink to this headline">#</a></h1>
+<p>In the example below, you see a table of values
+that represent precipitation for 3 days. The headers in the data include</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">precipitation-mm</span></code></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>day</p></th>
+<th class="text-left head"><p>precipitation-mm</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>monday</p></td>
+<td class="text-left"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>tuesday</p></td>
+<td class="text-left"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>wednesday</p></td>
+<td class="text-left"><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<p>The tabular data above contains 4 rows - the first of which (row 1) is a header row and subsequent rows contain data. The table also has 2 columns.</p>
+</section>
+<section id="common-tabular-data-file-types-csv-and-txt">
+<h1><span class="section-number">4.2.16. </span>Common Tabular Data File Types: .csv and .txt<a class="headerlink" href="#common-tabular-data-file-types-csv-and-txt" title="Permalink to this headline">#</a></h1>
+<p>Tabular data can be downloaded in many different file formats. Spreadsheet formats
+include <code class="docutils literal notranslate"><span class="pre">.xls</span></code> and <code class="docutils literal notranslate"><span class="pre">xlsx</span></code> which can be directly opened in Microsoft
+Excel. When you are downloading Earth and Environmental data, you will often
+see tablular data stored in file formats including:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code>: Comma Separated Values - This file has each column separated (delimited) by a comma.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.txt</span></code>: A basic text file. In a <code class="docutils literal notranslate"><span class="pre">txt</span></code> file, often the delimiter (the thing that separates out each column) can vary. Delimiters are discussed below in more detail.</p></li>
+</ul>
+<p>These formats are text based and often can be opened in a text editor like Atom or Notepad.
+They can be then imported into <strong>Python</strong> using <strong>Pandas</strong> for further exploration
+and processing.</p>
+<div class="notice--success alert alert-info" markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> The challenge with graphical user
+interface (GUI) based tools like Excel
+is that they often have limitations when it comes to working with larger files.
+Further, it becomes difficult to recreate workflows implemented in Excel because
+you are often pressing buttons rather than scripting workflows. You can use
+Open Source Python to implement any workflow you might implement in Excel
+and that workflow can become fully sharable and reproducible!</p>
+</div>
+</section>
+<section id="text-files-delimiters">
+<h1><span class="section-number">4.2.17. </span>Text Files &amp; Delimiters<a class="headerlink" href="#text-files-delimiters" title="Permalink to this headline">#</a></h1>
+<p>A delimiter refers to the character that defines the boundary for different sets of information.
+In a text file, the delimiter defines the boundary between columns. A line break (a return) defines
+each row.</p>
+<p>Below you will find an example of a comma delimited text file. In the example below, each column of data
+is separated by a comma <code class="docutils literal notranslate"><span class="pre">,</span></code>. The data also include a header row which is also separated by commas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">site_code</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">time_decimal</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">value_std_dev</span>  
+<span class="n">BRW</span><span class="p">,</span><span class="mi">1973</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1973.0</span><span class="p">,</span><span class="o">-</span><span class="mf">999.99</span><span class="p">,</span><span class="o">-</span><span class="mf">99.99</span>
+<span class="n">BRW</span><span class="p">,</span><span class="mi">1973</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1973.0849315068492</span><span class="p">,</span><span class="o">-</span><span class="mf">999.99</span><span class="p">,</span><span class="o">-</span><span class="mf">99.99</span> 
+<span class="n">BRW</span><span class="p">,</span><span class="mi">1973</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1973.1616438356164</span><span class="p">,</span><span class="o">-</span><span class="mf">999.99</span><span class="p">,</span><span class="o">-</span><span class="mf">99.99</span> 
+</pre></div>
+</div>
+<p>Here is an example of a space delimited text file. In the example below, each column of data
+are separated by a single space.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">site_code</span> <span class="n">year</span> <span class="n">month</span> <span class="n">day</span> <span class="n">hour</span> <span class="n">minute</span> <span class="n">second</span> <span class="n">time_decimal</span> <span class="n">value</span> <span class="n">value_std_dev</span>  
+<span class="n">BRW</span> <span class="mi">1973</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">1973.0</span> <span class="o">-</span><span class="mf">999.99</span> <span class="o">-</span><span class="mf">99.99</span>
+<span class="n">BRW</span> <span class="mi">1973</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">1973.0849315068492</span> <span class="o">-</span><span class="mf">999.99</span> <span class="o">-</span><span class="mf">99.99</span> 
+<span class="n">BRW</span> <span class="mi">1973</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">1973.1616438356164</span> <span class="o">-</span><span class="mf">999.99</span> <span class="o">-</span><span class="mf">99.99</span> 
+</pre></div>
+</div>
+<p>There are many different types of delimiters including:</p>
+<ul class="simple">
+<li><p>tabs</p></li>
+<li><p>commas</p></li>
+<li><p>1 (or more) spaces</p></li>
+</ul>
+<p>Sometimes you will find other characters used as delimiters but the above-listed options are the most common.</p>
+<div class='notice--success alert alert-info' markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> The <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file format is most often delimited by a comma. Hence the name:</p>
+</div>
+</section>
+<section id="earth-and-environmental-data-that-are-stored-in-text-file-format">
+<h1><span class="section-number">4.2.18. </span>Earth and Environmental Data That Are Stored In Text File Format<a class="headerlink" href="#earth-and-environmental-data-that-are-stored-in-text-file-format" title="Permalink to this headline">#</a></h1>
+<p>There are many different types of data that are stored in text and tabular file formats.
+Below you will see a few different examples of data that are provided in this format. You
+will also explore some of the cleanup steps that you need to import and begin to work with
+the data.</p>
+<div class="notice--success alert alert-info" markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> Not all text files store tabular text (character) based data. The <code class="docutils literal notranslate"><span class="pre">.asc</span></code> file format is a text based format that stores spatial raster data.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you have a url that links directly to a file online, you can
+open it using pandas <code class="docutils literal notranslate"><span class="pre">.read_csv()</span></code>. Have a look at the data below -
+and notice that is has:</p>
+<ul class="simple">
+<li><p>3 columns: months, precip and seasons</p></li>
+<li><p>12 rows: notice that the first row is numered as <code class="docutils literal notranslate"><span class="pre">0</span></code>. This is because indexing
+in Python always starts at 0 rather than 1.</p></li>
+</ul>
+<div class="notice--success alert alert-info" markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can learn more about zero-based indexing in the <a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/python-code-fundamentals/get-started-using-python/lists/#list-index-in-python" target = "_link" >chapter on lists in this textbook </a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download and open the .csv file using Pandas</span>
+<span class="n">avg_monthly_precip</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;https://ndownloader.figshare.com/files/12710618&quot;</span><span class="p">)</span>
+
+<span class="c1"># View the data that you just downloaded and opened</span>
+<span class="n">avg_monthly_precip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>precip</th>
+      <th>seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jan</td>
+      <td>0.70</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feb</td>
+      <td>0.75</td>
+      <td>Winter</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mar</td>
+      <td>1.85</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Apr</td>
+      <td>2.93</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>May</td>
+      <td>3.05</td>
+      <td>Spring</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>June</td>
+      <td>2.02</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>July</td>
+      <td>1.93</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Aug</td>
+      <td>1.62</td>
+      <td>Summer</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sept</td>
+      <td>1.84</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oct</td>
+      <td>1.31</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Nov</td>
+      <td>1.39</td>
+      <td>Fall</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dec</td>
+      <td>0.84</td>
+      <td>Winter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In <strong>Pandas</strong>, this table format is referred to as a <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>.
+You can view some stats about the <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> including the number of columns
+and rows in the data using <code class="docutils literal notranslate"><span class="pre">.info()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 12 entries, 0 to 11
+Data columns (total 3 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   months   12 non-null     object 
+ 1   precip   12 non-null     float64
+ 2   seasons  12 non-null     object 
+dtypes: float64(1), object(2)
+memory usage: 416.0+ bytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, you can easily plot the data using <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the data</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;months&quot;</span><span class="p">,</span>
+                        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;precip&quot;</span><span class="p">,</span>
+                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Precipitation (mm) for One Year&quot;</span><span class="p">,</span>
+                        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Precipitation (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/4760e766fed5731b0f084313c024f44f49bb8d259459d713588f02f3fdbae627.png" src="../../../../_images/4760e766fed5731b0f084313c024f44f49bb8d259459d713588f02f3fdbae627.png" />
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1">
+<h1><span class="section-number">4.2.19. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Use Python to determine the <code class="docutils literal notranslate"><span class="pre">type</span></code> of data stored in <code class="docutils literal notranslate"><span class="pre">avg_monthly_precip</span></code></p></li>
+</ul>
+<p>HINT: you learned how to determine the type of an object in the variables lessons last week.</p>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the type of the variable avg_monthly_precip in this cell</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">avg_monthly_precip</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.frame.DataFrame
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2">
+<h1><span class="section-number">4.2.20. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2" title="Permalink to this headline">#</a></h1>
+<p>In most programming languages, you can customize the options for how a function
+runs by using parameters. Examples of parameters in the plot above include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x=&quot;months&quot;</span></code> - tell python which data to place on the x-axis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y=&quot;precip&quot;</span></code> - tell python which data to place on the y-axis</p></li>
+</ul>
+<p>Above you created a line plot. You can use the <code class="docutils literal notranslate"><span class="pre">kind=&quot;&quot;</span></code> parameter to
+modify the type of plot that pandas created. You can use the <code class="docutils literal notranslate"><span class="pre">color=&quot;&quot;</span></code>
+parameter to specify a color that you wish to use for each bar in the plot.</p>
+<p>Do the following:</p>
+<ol class="arabic simple">
+<li><p>copy the code below.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">kind=&quot;bar&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> method.</p></li>
+<li><p>Specify the color of each bar using the <code class="docutils literal notranslate"><span class="pre">color=&quot;&quot;</span></code> parameter.</p></li>
+</ol>
+<p>Run your code and see what the final plot looks like. You can select
+any color that you wish to complete your plot.</p>
+<p>Use this link to find a list of colors (open it in a new browser tab!) <a class="reference external" href="https://het.as.utexas.edu/HET/Software/Matplotlib/api/colors_api.html">https://het.as.utexas.edu/HET/Software/Matplotlib/api/colors_api.html</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;months&quot;</span><span class="p">,</span>
+                        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;precip&quot;</span><span class="p">,</span>
+                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Precipitation (mm) for One Year&quot;</span><span class="p">,</span>
+                        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Precipitation (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The plot below is an example of what your final plot should look like.</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modify the plot code above in this cell - to create a bar plot using kind=</span>
+<span class="c1"># Change the color of the bars using color=</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">avg_monthly_precip</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+                        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span>
+                        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;months&quot;</span><span class="p">,</span>
+                        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;precip&quot;</span><span class="p">,</span>
+                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenge 2 Plot: Precipitation (mm) for One Year&quot;</span><span class="p">,</span>
+                        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Precipitation (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/cf0149e0c03bad9681afabfc07eae820b14432f5b52ada392b79072f8bdf5102.png" src="../../../../_images/cf0149e0c03bad9681afabfc07eae820b14432f5b52ada392b79072f8bdf5102.png" />
+</div>
+</div>
+</section>
+<section id="cleaning-tabular-text-files-so-you-can-open-them-in-python">
+<h1><span class="section-number">4.2.21. </span>Cleaning Tabular Text Files So You Can Open Them in Python<a class="headerlink" href="#cleaning-tabular-text-files-so-you-can-open-them-in-python" title="Permalink to this headline">#</a></h1>
+<section id="missing-data-values-headers-in-text-files">
+<h2><span class="section-number">4.2.21.1. </span>Missing Data Values &amp; Headers in Text Files<a class="headerlink" href="#missing-data-values-headers-in-text-files" title="Permalink to this headline">#</a></h2>
+<p>Not all text files are as simple as the example above. Many text files have
+several lines of header text above the data that provide you with useful information
+about the data itself. This data is referred to as metadata.</p>
+<p>Also, often times, there are data missing from the data that were collected.
+These missing values will be identified using a specific value that is hopefully
+documented in the metadata for that file.</p>
+<p>Next you will explore some temperature data that need to be cleaned up.</p>
+<div class="notice--success alert alert-info" markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can visit <a href="https://www.ncdc.noaa.gov/cag/city/time-series/" target = "_link" >the NOAA NCDC website to learn more about the data you are
+using below.</a></p>
+<ul class="simple">
+<li><p>Miami, Florida CSV: <a class="reference external" href="https://www.ncdc.noaa.gov/cag/city/time-series/USW00012839-tmax-12-12-1895-2020.csv">https://www.ncdc.noaa.gov/cag/city/time-series/USW00012839-tmax-12-12-1895-2020.csv</a></p></li>
+<li><p>Seattle, Washington CSV: <a class="reference external" href="https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv">https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv</a></p></li>
+</ul>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open temperature data for Miami, Florida</span>
+<span class="n">miami_temp_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.ncdc.noaa.gov/cag/city/time-series/USW00012839-tmax-12-12-1895-2020.csv&quot;</span>
+
+<span class="n">miami_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">miami_temp_url</span><span class="p">)</span>
+<span class="n">miami_temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Miami</th>
+      <th>Florida January-December Maximum Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Units: Degrees Fahrenheit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Missing: -99</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Date</td>
+      <td>Value</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>194812</td>
+      <td>83.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>194912</td>
+      <td>82.8</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>201612</td>
+      <td>84.6</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>201712</td>
+      <td>85.9</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>201812</td>
+      <td>84.5</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>201912</td>
+      <td>85.9</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>202012</td>
+      <td>85.9</td>
+    </tr>
+  </tbody>
+</table>
+<p>76 rows × 2 columns</p>
+</div></div></div>
+</div>
+<p>Notice that the data above contain a few extra rows of information. This
+information however is important for you to understand.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Missing:</span> <span class="pre">-99</span></code> – this is the value that represents the “no data” value. Misisng data might occur if a sensor stops working or a measurement isn’t recorded. You will want to remove any missing data values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Units:</span> <span class="pre">Degrees</span> <span class="pre">Fahrenheit</span></code> – it’s always important to first understand the units of the data before you try to interpret what the data are showing!</p></li>
+</ul>
+<p>Below you will use all of the information stored in the header to import your data.
+You will also remove the first few rows of data because they don’t actually contain any
+data values. These rows contain metadata.</p>
+</section>
+<section id="function-parameters-in-python">
+<h2><span class="section-number">4.2.21.2. </span>Function Parameters in Python<a class="headerlink" href="#function-parameters-in-python" title="Permalink to this headline">#</a></h2>
+<p>A parameter refers to an option that you can specify when running a function
+in <strong>Python</strong>. You can adjust the parameters associated with importing your data
+in the same way that you adjusted the plot type and colors above.</p>
+<p>Below you use:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">skiprows=</span></code>: to tell <strong>Python</strong> to skip the first 3 rows of your data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">na_values=</span></code>: to tell <strong>Python</strong> to reassign any missing data values to “NA”</p></li>
+</ul>
+<p>NA refers to missing data. When you specify a value as NA (NaN or Not a Number
+in <strong>Python</strong>), it will not be included in plots or any mathematical operations.</p>
+<div class='notice--success' markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> You can learn more about no data values
+in Pandas in the <a href="https://www.earthdatascience.org/courses/use-data-open-source-python/use-time-series-data-in-python/date-time-types-in-pandas-python/" target = "_blank" >intermediate earth data science textbook</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the Miami data skipping the first 3 rows and setting no data values</span>
+<span class="n">miami_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">miami_temp_url</span><span class="p">,</span>
+                         <span class="n">skiprows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                         <span class="n">na_values</span><span class="o">=-</span><span class="mi">99</span><span class="p">)</span>
+
+<span class="c1"># View the first 5 rows of the data</span>
+<span class="n">miami_temp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>194812</td>
+      <td>83.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>194912</td>
+      <td>82.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>195012</td>
+      <td>82.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>195112</td>
+      <td>82.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>195212</td>
+      <td>83.1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3">
+<h1><span class="section-number">4.2.22. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 3<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3" title="Permalink to this headline">#</a></h1>
+<p>Now that you have imported temperature data for Miami, plot the
+data using the code example above!! In your plot code, set <code class="docutils literal notranslate"><span class="pre">Date</span></code> as your
+<code class="docutils literal notranslate"><span class="pre">x-axis</span></code> value and <code class="docutils literal notranslate"><span class="pre">Value</span></code> column as your <code class="docutils literal notranslate"><span class="pre">y-axis</span></code> value.</p>
+<p>The plot below is an example of what your final plot should look like.</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the code needed to plot the miami_data object below</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">miami_temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span>
+                <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span>
+                <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span>
+                <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenge 3 Plot: Temperature (Fahrenheit) - Miami, FL&quot;</span><span class="p">,</span>
+                <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Temperature (Fahrenheit)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/140d78455f2f384c4b9215983dd86d2ea10e4b55b10da76a2a5aef3d4a1ae4dc.png" src="../../../../_images/140d78455f2f384c4b9215983dd86d2ea10e4b55b10da76a2a5aef3d4a1ae4dc.png" />
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4">
+<h1><span class="section-number">4.2.23. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 4<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4" title="Permalink to this headline">#</a></h1>
+<p>Use the link below to open and plot temperature data for Seattle, Washington.</p>
+<p><a href="https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv" target="_blank">https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv</a></p>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add your code to plot the data below</span>
+<span class="n">montgomery_temp_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv&quot;</span>
+
+
+<span class="n">montgomery_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">montgomery_temp_url</span><span class="p">)</span>
+<span class="n">montgomery_temp</span>
+
+
+<span class="c1"># Open the Montgomery data skipping the first 3 rows and setting no data values</span>
+<span class="n">montgomery_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">montgomery_temp_url</span><span class="p">,</span>
+                              <span class="n">skiprows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                              <span class="n">na_values</span><span class="o">=-</span><span class="mi">99</span><span class="p">)</span>
+
+<span class="c1"># View the first 5 rows of the data</span>
+<span class="n">montgomery_temp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">montgomery_temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span>
+                     <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span>
+                     <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span>
+                     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenge 4 Plot: Temperature (Fahrenheit) - Montogmery, AL&quot;</span><span class="p">,</span>
+                     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                     <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Temperature (Fahrenheit)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/4caea68d9a937f4e49c262e30c34074457312f944bb2fe18705e035291db4133.png" src="../../../../_images/4caea68d9a937f4e49c262e30c34074457312f944bb2fe18705e035291db4133.png" />
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-optional">
+<h1><span class="section-number">4.2.24. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 5 – OPTIONAL<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-optional" title="Permalink to this headline">#</a></h1>
+<p>Copy the code below into your code. Run the code.
+It should download and open a new dataset that has CO2 emissions for a field site
+in Barrow, Alaska (brw).</p>
+<p>The code below will download your data into your working directory. You should
+be able to open it using the filename <code class="docutils literal notranslate"><span class="pre">co2-emissions-barrow.csv</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download greenhouse gas CO2 data</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="n">greenhouse_gas_url</span> <span class="o">=</span> <span class="s2">&quot;ftp://aftp.cmdl.noaa.gov/data/trace_gases/co2/in-situ/surface/brw/co2_brw_surface-insitu_1_ccgg_MonthlyData.txt&quot;</span>
+
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">greenhouse_gas_url</span><span class="p">,</span>
+                           <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;co2-emissions-barrow.csv&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Once you have downloaded the data</p>
+<ol class="arabic simple">
+<li><p>Read the data in using pandas <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code></p></li>
+<li><p>The data has some additional rows of information stored as metadata. You will
+need to use the <code class="docutils literal notranslate"><span class="pre">skiprows=</span></code> parameter to skip those metadata rows and properly
+import the data. HINT: remember when you use <code class="docutils literal notranslate"><span class="pre">skiprows</span></code> to consider 0-based indexing.</p></li>
+<li><p>Finally plot the data using pandas. plot the <code class="docutils literal notranslate"><span class="pre">&quot;time_decimal&quot;</span></code> column on the
+x-axis and <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code> on the y-axis.</p></li>
+</ol>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add your code to open and view the data here</span>
+
+<span class="c1"># Download greenhouse gas CO2 data</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="n">greenhouse_gas_url</span> <span class="o">=</span> <span class="s2">&quot;ftp://aftp.cmdl.noaa.gov/data/trace_gases/co2/in-situ/surface/brw/co2_brw_surface-insitu_1_ccgg_MonthlyData.txt&quot;</span>
+
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">greenhouse_gas_url</span><span class="p">,</span>
+                           <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;co2-emissions-barrow.csv&quot;</span><span class="p">)</span>
+
+<span class="n">greenhouse_gas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">greenhouse_gas_url</span><span class="p">,</span>
+                             <span class="n">skiprows</span><span class="o">=</span><span class="mi">148</span><span class="p">,</span>
+                             <span class="n">na_values</span><span class="o">=-</span><span class="mf">999.99</span><span class="p">,</span>
+                             <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="c1"># greenhouse_gas.info()</span>
+<span class="c1"># greenhouse_gas.head()</span>
+<span class="c1"># greenhouse_gas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a plot of [CO2] vs. time</span>
+<span class="c1">#  Add your code to plot the final CO2 data here</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">greenhouse_gas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;time_decimal&quot;</span><span class="p">,</span>
+                    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+                    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenge 5 Plot: CO2 - Barrow, AK&quot;</span><span class="p">,</span>
+                    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/pandas/core/indexes/base.py:3653,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3652</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3653</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3654</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7080,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7088,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;time_decimal&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">greenhouse_gas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;time_decimal&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>                     <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>                     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenge 5 Plot: CO2 - Barrow, AK&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>                     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/pandas/plotting/_core.py:940,</span> in <span class="ni">PlotAccessor.__call__</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">938</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">_holds_integer</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">939</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">data_cols</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">940</span> <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">ABCSeries</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">941</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;x must be a label or position&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">942</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/pandas/core/frame.py:3761,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3759</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3760</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3761</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3762</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3763</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/pandas/core/indexes/base.py:3655,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3653</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3654</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3655</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3656</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3660</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;time_decimal&#39;
+</pre></div>
+</div>
+<img alt="../../../../_images/b939873a0ebfe0d1abe1e7218ce8f485bb698d87d0fd5a003af297c5e30b4bbf.png" src="../../../../_images/b939873a0ebfe0d1abe1e7218ce8f485bb698d87d0fd5a003af297c5e30b4bbf.png" />
+</div>
+</div>
+<div class="notice--info alert alert-info" markdown="1">
+</section>
+<section id="additional-resources">
+<h1><span class="section-number">4.2.25. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/scientific-data-structures-python/pandas-dataframes/" target = "_link" >Chapter on Pandas in the Intro to Earth Data Science textbook </a></p></li>
+<li><p><a href="https://www.earthdatascience.org/courses/use-data-open-source-python/use-time-series-data-in-python/date-time-types-in-pandas-python/" target = "_link" >Chapter on Time Series with Pandas </a></p></li>
+<li><p><a href="https://www.earthdatascience.org/courses/use-data-open-source-python/use-time-series-data-in-python/date-time-types-in-pandas-python/#work-with-no-data-values-in-pandas-dataframe" target = "_link" > Textbook Section on Dealing with No Data Values in Pandas </a></p></li>
+</ul>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2019-08-29-text-file-formats-02-markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.2.1. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-01-intro-spatial-data.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span><i class="fa fa-ship" aria-hidden="true"></i> Chapter Five - Spatial Data Formats for Earth Data Science</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.2.13. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-tabular-data">4.2.14. What is Tabular Data?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data-structure">4.2.15. Tabular Data Structure</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#common-tabular-data-file-types-csv-and-txt">4.2.16. Common Tabular Data File Types: .csv and .txt</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#text-files-delimiters">4.2.17. Text Files &amp; Delimiters</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-and-environmental-data-that-are-stored-in-text-file-format">4.2.18. Earth and Environmental Data That Are Stored In Text File Format</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1">4.2.19. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2">4.2.20. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-tabular-text-files-so-you-can-open-them-in-python">4.2.21. Cleaning Tabular Text Files So You Can Open Them in Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data-values-headers-in-text-files">4.2.21.1. Missing Data Values &amp; Headers in Text Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-parameters-in-python">4.2.21.2. Function Parameters in Python</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-3">4.2.22. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-4">4.2.23. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 4</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-5-optional">4.2.24. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 5 – OPTIONAL</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">4.2.25. Additional Resources</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

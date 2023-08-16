@@ -1,0 +1,57 @@
+/* OVERWRITE THEME */
+:root {
+    --pst-font-family-base: "Poppins", sans-serif;
+    --pst-font-family-heading: "Poppins Bold", sans-serif;
+    --el-color-objectives: #3fd565;
+    --el-color-objectives-highlight: #30a64d;
+    --el-color-case-study: #4aadb4;
+    --el-color-case-study-highlight: #33757a;
+    --el-color-exercise: #5c5c5c;
+    --el-color-exercise-highlight: #000000;
+}
+
+
+/* Light and dark */
+html[data-theme="light"] {
+    --pst-color-background: #fffff8;
+    --pst-color-muted: #7a7199;
+    --el-bg-sidebar: #eff6f6;
+  }
+  
+html[data-theme="dark"] {
+    --el-bg-sidebar: rgb(35, 76, 91);
+}
+
+/* PAGE LAYOUT */
+/* Full width - no maximum */
+@media(min-width:960px) {
+    .bd-page-width {
+        max-width: none;
+    }
+}
+
+/* Sidebar color */
+.bd-sidebar-primary {
+    background-color: var(--el-bg-sidebar);
+}
+
+/* ADMONITIONS */
+/* Learning Objectives Admonition */
+div.objectives { border-left-color: var(--el-color-objectives-highlight); }
+div.objectives .admonition-title:before { background-color: var(--el-color-objectives-highlight); }
+div.objectives .admonition-title:after { color: var(--el-color-objectives-highlight); content: '\f19d'; }
+
+/* Case Study Admonition */
+div.case-study {border-left-color: var(--el-color-case-study-highlight);}
+div.case-study .admonition-title:before {color: var(--el-color-case-study-highlight);}
+div.case-study .admonition-title:after {color: var(--el-color-case-study-highlight); content: '\f19d';}
+
+/* Data Tip Admonition */
+div.data-tip {border-left-color: var(--el-color-primary-highlight);}
+div.data-tip .admonition-title:before {color: var(--el-color-primary-highlight);}
+div.data-tip .admonition-title:after {color: var(--el-color-primary-highlight); content: '\2605';}
+
+/* Exercise */
+div.exercise {border-left-color: var(--el-color-exercise-highlight);}
+div.exercise .admonition-title:before {color: var(--el-color-exercise-highlight);}
+div.exercise .admonition-title:after {color: var(--el-color-exercise-highlight); content: '\25B6';}

@@ -1,0 +1,1228 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.4.14. Fundamentals of Vector Data in Python &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-03-vector-data';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4.4.31. Challenge 1: Open a Text File" href="spatial-data-formats-04-exercise.html" />
+    <link rel="prev" title="4.4.1. Fundamentals of Raster Data in Python" href="spatial-data-formats-02-raster-data.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to earthdatascience.org
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">1. Welcome to the Introduction to Earth Data Science Textbook!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">2. An Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">2.1. Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">2.1.8. Bash Commands to Manage Directories and Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../00-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/00-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate">Earth Data Analytics Professional Graduate Certificate</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-03-vector-data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-03-vector-data.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-ship" aria-hidden="true"></i> Fundamentals of Vector Data in Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4.14. <i aria-hidden="true" class="fa fa-ship"></i> Fundamentals of Vector Data in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">4.4.15. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-readings">4.4.16. Recommended Readings</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-spatial-vector-data">4.4.17. About Spatial Vector Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-shapefile-file-format-which-stores-points-lines-and-polygons">4.4.18. Introduction to the Shapefile File Format Which Stores Points, Lines, and Polygons</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geojson-files-and-other-vector-formats">4.4.19. GeoJSON Files and Other Vector Formats</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-data-are-stored-in-spatial-vector-formats">4.4.20. What Data Are Stored In Spatial Vector Formats?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-shapefile-data-into-python-using-geopandas">4.4.21. Import Shapefile Data Into Python Using Geopandas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geopandas-creates-geodataframes-which-have-the-same-structure-as-pandas-dataframes">4.4.21.1. GeoPandas Creates GeoDataFrames Which Have the Same Structure As Pandas DataFrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-spatial-vector-data-type">4.4.21.2. Check the Spatial Vector Data Type</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-point-data">4.4.22. Open Vector Point Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-what-geometry-type-are-your-data">4.4.23. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1:  What Geometry Type Are Your Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-maps-using-multiple-shapefiles">4.4.24. Creating Maps Using Multiple Shapefiles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-global-map">4.4.25. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Create a Global Map</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-bonus-customize-your-map">4.4.25.1. Challenge BONUS: Customize your Map</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-data-attributes">4.4.26. Spatial Data Attributes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data">4.4.27. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge: Plot Cities Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data-using-quantiles-categorical-plot">4.4.28. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge: Plot Cities Data Using Quantiles – Categorical Plot</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-geoprocessing-vector-data-geoprocessing-in-python-clip-data">4.4.29. Optional: Geoprocessing Vector Data Geoprocessing in Python: Clip Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-vector-data-in-python">4.4.30. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> BONUS Challenge: Clip Vector Data in Python</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>{% include toc title=”In This Chapter” icon=”file-text” %}</p>
+<div class='notice--success alert alert-info' markdown="1">
+<section id="i-class-fa-fa-ship-aria-hidden-true-i-fundamentals-of-vector-data-in-python">
+<h1><span class="section-number">4.4.14. </span><i class="fa fa-ship" aria-hidden="true"></i> Fundamentals of Vector Data in Python<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-fundamentals-of-vector-data-in-python" title="Permalink to this headline">#</a></h1>
+<p>In this lesson, you will be introduced to the spatial vector data structure
+and the shapefile file format (<code class="docutils literal notranslate"><span class="pre">.shp</span></code>). You will also learn how to open, explore and plot
+vector data using the <strong>Geopandas</strong> package in <strong>Python</strong>.</p>
+</section>
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">4.4.15. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this lesson, you will be able to:</p>
+<ul class="simple">
+<li><p>Describe the characteristics of 3 key vector data structures: points, lines and polygons.</p></li>
+<li><p>Open a shapefile in <strong>Python</strong> using <strong>Geopandas</strong> - <code class="docutils literal notranslate"><span class="pre">gpd.read_file()</span></code>.</p></li>
+<li><p>Plot a shapfile in <strong>Python</strong> using <strong>Geopandas</strong> - <code class="docutils literal notranslate"><span class="pre">gpd.plot()</span></code>.</p></li>
+</ul>
+</section>
+<section id="recommended-readings">
+<h1><span class="section-number">4.4.16. </span>Recommended Readings<a class="headerlink" href="#recommended-readings" title="Permalink to this headline">#</a></h1>
+<p>This lesson is an introduction to working with spatial data. If you wish to dive more deeply
+into working with spatial data, check out the intermediate earth data science textbook
+<a href="https://www.earthdatascience.org/courses/use-data-open-source-python/intro-vector-data-python/spatial-data-vector-shapefiles/" target="_blank">chapter on
+spatial vector data.</a></p>
+</div></section>
+<section id="about-spatial-vector-data">
+<h1><span class="section-number">4.4.17. </span>About Spatial Vector Data<a class="headerlink" href="#about-spatial-vector-data" title="Permalink to this headline">#</a></h1>
+<p>Vector data are composed of discrete geometric locations (x, y values) known as <strong>vertices</strong> that define the “shape” of the spatial object. The organization of the vertices determines the type of vector that you are working
+with. There are three types of vector data:</p>
+<ul class="simple">
+<li><p><strong>Points:</strong> Each individual point is defined by a single x, y coordinate. Examples of point data include: sampling locations, the location of individual trees or the location of plots.</p></li>
+<li><p><strong>Lines:</strong> Lines are composed of many (at least 2) vertices, or points, that are connected. For instance, a road or a stream may be represented by a line. This line is composed of a series of segments, each “bend” in the road or stream represents a vertex that has defined <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y</span></code> location.</p></li>
+<li><p><strong>Polygons:</strong> A polygon consists of 3 or more vertices that are connected and “closed”. Thus, the outlines of plot boundaries, lakes, oceans, and states or countries are often represented by polygons.</p></li>
+</ul>
+<figure>
+    <a href="https://www.earthdatascience.org/images/earth-analytics/spatial-data/points-lines-polygons-vector-data-types.png">
+    <img src="https://www.earthdatascience.org/images/earth-analytics/spatial-data/points-lines-polygons-vector-data-types.png" alt="There are 3 types of vector objects: points, lines or polygons. Each object type has a different structure. Image Source: Colin Williams (NEON)."></a>
+    <figcaption> There are 3 types of vector objects: points, lines or polygons. Each object type has a different structure. Image Source: Colin Williams (NEON)
+    </figcaption>
+</figure>
+</section>
+<section id="introduction-to-the-shapefile-file-format-which-stores-points-lines-and-polygons">
+<h1><span class="section-number">4.4.18. </span>Introduction to the Shapefile File Format Which Stores Points, Lines, and Polygons<a class="headerlink" href="#introduction-to-the-shapefile-file-format-which-stores-points-lines-and-polygons" title="Permalink to this headline">#</a></h1>
+<p>Geospatial data in vector format are often stored in a <code class="docutils literal notranslate"><span class="pre">shapefile</span></code>
+format (<code class="docutils literal notranslate"><span class="pre">.shp</span></code>). Because the structure of points, lines, and polygons are
+different, each individual shapefile can only contain one vector
+type (all points, all lines or all polygons). You will not find
+a mixture of point, line and polygon objects in a single shapefile.</p>
+<p>Objects stored in a shapefile often have a set of associated
+<code class="docutils literal notranslate"><span class="pre">attributes</span></code> that describe the data. For example, a line
+shapefile that contains the locations of streams might also
+contain the associated stream name, stream “order” and other
+information about each stream line object.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> More about shapefiles can found on
+<a href="https://en.wikipedia.org/wiki/Shapefile" target="_blank">Wikipedia</a>.
+{: .notice–success }</p>
+</section>
+<section id="geojson-files-and-other-vector-formats">
+<h1><span class="section-number">4.4.19. </span>GeoJSON Files and Other Vector Formats<a class="headerlink" href="#geojson-files-and-other-vector-formats" title="Permalink to this headline">#</a></h1>
+<p>The shapefile is not the only way that vector data are stored. Geospatial data
+can also be delivered in a
+<a href="https://en.wikipedia.org/wiki/GeoJSON" target="_blank">GeoJSON format</a>,
+or even a tabular format where the spatial information is contained in columns.</p>
+</section>
+<section id="what-data-are-stored-in-spatial-vector-formats">
+<h1><span class="section-number">4.4.20. </span>What Data Are Stored In Spatial Vector Formats?<a class="headerlink" href="#what-data-are-stored-in-spatial-vector-formats" title="Permalink to this headline">#</a></h1>
+<p>Some examples of data that often are provided in a vector format include:</p>
+<ul class="simple">
+<li><p>census data including municipal boundaries</p></li>
+<li><p>roads, powerlines and other infrastructure boundaries</p></li>
+<li><p>political boundaries</p></li>
+<li><p>building outlines</p></li>
+<li><p>water bodies and river systems</p></li>
+<li><p>ecological boundaries</p></li>
+<li><p>city locations</p></li>
+<li><p>object locations including plots, stream gages, and building locations</p></li>
+</ul>
+</section>
+<section id="import-shapefile-data-into-python-using-geopandas">
+<h1><span class="section-number">4.4.21. </span>Import Shapefile Data Into Python Using Geopandas<a class="headerlink" href="#import-shapefile-data-into-python-using-geopandas" title="Permalink to this headline">#</a></h1>
+<p>You will use the <strong>geopandas</strong> library to work with vector data in
+<strong>Python</strong>. <strong>Geopandas</strong> is built on top of the <strong>Python</strong> <strong>Pandas</strong> library.
+It stores spatial data in a tabular, <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">earthpy</span> <span class="k">as</span> <span class="nn">et</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To begin, set your working directory to <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> and then download a
+single shapefile. You will start with working with the Natural Earth
+country boundary lines layer.</p>
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong>  Note that below you are using <strong>EarthPy</strong>
+to download a dataset from <a class="reference external" href="http://naturalearthdata.com">naturalearthdata.com</a>. <strong>EarthPy</strong> creates the earth-analytics
+directory for you when you use it. You set the working directory
+after you download the data as a precaution to ensure that the earth-analytics
+directory already exists on your computer. This is not a standard order of
+operations but we are demonstrating it here to ensure the notebook runs on
+all computers!
+{: .notice–success }</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the data and set working directory</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_boundary_lines_land.zip&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set working directory - earthpy creates earth-analytics for you in your home dir</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span> <span class="s1">&#39;earth-analytics&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading from https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_boundary_lines_land.zip
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">BadZipFile</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Download the data and set working directory</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_boundary_lines_land.zip&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Set working directory - earthpy creates earth-analytics for you in your home dir</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">et</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">HOME</span><span class="p">,</span> <span class="s1">&#39;earth-analytics&#39;</span><span class="p">))</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/earthpy/io.py:247,</span> in <span class="ni">Data.get_data</span><span class="nt">(self, key, url, replace, verbose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span>     <span class="k">if</span> <span class="n">kind</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOWED_FILE_TYPES</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>             <span class="s2">&quot;kind must be one of </span><span class="si">{}</span><span class="s2">, got </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>                 <span class="n">ALLOWED_FILE_TYPES</span><span class="p">,</span> <span class="n">kind</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">247</span>     <span class="n">this_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_download</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">249</span>         <span class="n">path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_root</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">250</span>         <span class="n">kind</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">251</span>         <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">252</span>         <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">253</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">254</span>     <span class="n">data_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">this_path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">255</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_paths</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/earthpy/io.py:300,</span> in <span class="ni">Data._download</span><span class="nt">(self, url, path, kind, replace, verbose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">298</span>         <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">299</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">300</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_download_and_extract</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">301</span> <span class="k">return</span> <span class="n">path</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/site-packages/earthpy/io.py:328,</span> in <span class="ni">Data._download_and_extract</span><span class="nt">(self, path, r, kind, verbose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="n">file_like_object</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;zip&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">328</span>     <span class="n">archive</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">file_like_object</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;tar&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="n">archive</span> <span class="o">=</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fileobj</span><span class="o">=</span><span class="n">file_like_object</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/zipfile.py:1269,</span> in <span class="ni">ZipFile.__init__</span><span class="nt">(self, file, mode, compression, allowZip64, compresslevel, strict_timestamps)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1267</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1268</span>     <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1269</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_RealGetContents</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">elif</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="c1"># set the modified flag so central directory gets written</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>         <span class="c1"># even if no files are added to the archive</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_didModify</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/ea-jb/lib/python3.10/zipfile.py:1336,</span> in <span class="ni">ZipFile._RealGetContents</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1334</span>     <span class="k">raise</span> <span class="n">BadZipFile</span><span class="p">(</span><span class="s2">&quot;File is not a zip file&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1335</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">endrec</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1336</span>     <span class="k">raise</span> <span class="n">BadZipFile</span><span class="p">(</span><span class="s2">&quot;File is not a zip file&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1337</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1338</span>     <span class="nb">print</span><span class="p">(</span><span class="n">endrec</span><span class="p">)</span>
+
+<span class="ne">BadZipFile</span>: File is not a zip file
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, you open the data using <strong>Geopandas</strong>. You can view the first 5 rows of the
+data using <code class="docutils literal notranslate"><span class="pre">.head()</span></code> in the same way you used <code class="docutils literal notranslate"><span class="pre">.head()</span></code> for <strong>Pandas</strong> dataframes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coastlines_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/physical/ne_50m_coastline.zip&quot;</span>
+
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">coastlines_url</span><span class="p">)</span>
+
+<span class="n">coastlines_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span>
+                               <span class="s2">&quot;ne_50m_coastline&quot;</span><span class="p">,</span>
+                               <span class="s2">&quot;ne_50m_coastline.shp&quot;</span><span class="p">)</span>
+
+<span class="n">coastlines</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">coastlines_path</span><span class="p">)</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="geopandas-creates-geodataframes-which-have-the-same-structure-as-pandas-dataframes">
+<h2><span class="section-number">4.4.21.1. </span>GeoPandas Creates GeoDataFrames Which Have the Same Structure As Pandas DataFrames<a class="headerlink" href="#geopandas-creates-geodataframes-which-have-the-same-structure-as-pandas-dataframes" title="Permalink to this headline">#</a></h2>
+<p>The structure of a <strong>Geopandas</strong> <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> is very similar to a
+<strong>Pandas</strong> dataframe. A few differences include:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> contains a geometry column which stores spatial information. The geometry column in your <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> stores the boundary information (the lines that make up each
+shape in your data). This allows you to plot points, lines or polygons.</p></li>
+<li><p>the<code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> stores spatial attributes such as coordinate reference systems and spatial extents.</p></li>
+</ul>
+<p>Similar to <strong>Pandas</strong>, you can plot the data using <code class="docutils literal notranslate"><span class="pre">.plot()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the data</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+
+<span class="c1"># Add a title to your plot</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Global Coastline Boundaries&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-the-spatial-vector-data-type">
+<h2><span class="section-number">4.4.21.2. </span>Check the Spatial Vector Data Type<a class="headerlink" href="#check-the-spatial-vector-data-type" title="Permalink to this headline">#</a></h2>
+<p>You can look at the data to figure out what type of data are stored in the
+shapefile (points, line or polygons). However, you can also get that information
+by calling <code class="docutils literal notranslate"><span class="pre">.geom_type</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is the geometry type point, line or polygon?</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">geom_type</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also similar to <strong>Pandas</strong>, you can view descriptive information about the
+<code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> using <code class="docutils literal notranslate"><span class="pre">.info()</span></code>. This includes the number of columns, rows
+and the header name and type of each column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coastlines</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="open-vector-point-data">
+<h1><span class="section-number">4.4.22. </span>Open Vector Point Data<a class="headerlink" href="#open-vector-point-data" title="Permalink to this headline">#</a></h1>
+<p>Next, you will open up another shapefile using <strong>Geopandas</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open a second layer</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_populated_places_simple.zip&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a path to the populated places shapefile</span>
+<span class="n">populated_places_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;ne_50m_populated_places_simple&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;ne_50m_populated_places_simple.shp&quot;</span><span class="p">)</span>
+
+<span class="n">cities</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">populated_places_path</span><span class="p">)</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-what-geometry-type-are-your-data">
+<h1><span class="section-number">4.4.23. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1:  What Geometry Type Are Your Data<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-what-geometry-type-are-your-data" title="Permalink to this headline">#</a></h1>
+<p>Check the geometry type of the <code class="docutils literal notranslate"><span class="pre">cities</span></code> object that you opened above in your code.</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the code here to check the geometry type of the cities object</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">geom_type</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-maps-using-multiple-shapefiles">
+<h1><span class="section-number">4.4.24. </span>Creating Maps Using Multiple Shapefiles<a class="headerlink" href="#creating-maps-using-multiple-shapefiles" title="Permalink to this headline">#</a></h1>
+<p>You can create maps using multiple shapefiles with <strong>Geopandas</strong> in a similar way
+that you may do so using a graphical user interface (GUI) tool like ArcGIS
+or QGIS (open source alternative to ArcGIS). To do this you will need to open
+a second spatial file. Below you will use the Natural Earth populated places
+shapefile to add additional layers to your map.</p>
+<p>To plot two datasets together, you will first create a <strong>Matplotlib</strong> figure object.
+Notice in the example below that you define the figure <code class="docutils literal notranslate"><span class="pre">ax1</span></code> in the first line.
+You then tell <strong>GeoPandas</strong> to plot the data on that particular figure using the
+parameter <code class="docutils literal notranslate"><span class="pre">ax=</span></code></p>
+<p>The code looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">boundary_lines.plot(ax=ax1)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To add another layer to your map, you can add a second <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> call and
+specify the <code class="docutils literal notranslate"><span class="pre">ax=</span></code> to be <code class="docutils literal notranslate"><span class="pre">ax1</span></code> again. This tells <strong>Python</strong> to layer the two
+datasets in the same figure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a map or plot with two data layers</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Map of Cities and Global Lines&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you don’t specify the axis when you plot using <code class="docutils literal notranslate"><span class="pre">ax=</span></code>, each layer will be plotted on a
+separate figure! See the example below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-global-map">
+<h1><span class="section-number">4.4.25. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2: Create a Global Map<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-global-map" title="Permalink to this headline">#</a></h1>
+<p>The code below will download one additional file for you that contains global country
+boundaries. Your goal is to create a map that contains 3 layers:</p>
+<ol class="arabic simple">
+<li><p>the cities or populated places layer that you opened above</p></li>
+<li><p>the coastlines layer that you opened above and</p></li>
+<li><p>the countries layer that you will open using the code below</p></li>
+</ol>
+<p>To create a map with the three layers, you can:</p>
+<ol class="arabic simple">
+<li><p>Copy the code below that downloads the countries layer.</p></li>
+<li><p>Next, use <strong>Geopandas</strong> <code class="docutils literal notranslate"><span class="pre">read_file()</span></code> to open the countries layer as a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>.</p></li>
+<li><p>Create a map of all three layers - in the same figure using the same <code class="docutils literal notranslate"><span class="pre">ax=</span></code>. The countries should be the bottom layer, and the cities and lines should be on top of that layer.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country_data_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip&quot;</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">country_data_url</span><span class="p">)</span>
+
+<span class="c1"># Create a path to the countries shapefile</span>
+<span class="n">countries_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;ne_50m_admin_0_countries&quot;</span><span class="p">,</span> 
+                              <span class="s2">&quot;ne_50m_admin_0_countries.shp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="challenge-bonus-customize-your-map">
+<h2><span class="section-number">4.4.25.1. </span>Challenge BONUS: Customize your Map<a class="headerlink" href="#challenge-bonus-customize-your-map" title="Permalink to this headline">#</a></h2>
+<p>If you have time, customize your map as follows:</p>
+<ul class="simple">
+<li><p>Adjust the linewidth of lines with <code class="docutils literal notranslate"><span class="pre">linewidth=4</span></code></p></li>
+<li><p>Adjust the edge color of polygons using: <code class="docutils literal notranslate"><span class="pre">edgecolor=&quot;grey&quot;</span></code></p></li>
+<li><p>Adjust the color of your objects (the line color, or point color) using: <code class="docutils literal notranslate"><span class="pre">color='springgreen'</span></code>.</p></li>
+</ul>
+<p>Finally, add a title to your map using
+<code class="docutils literal notranslate"><span class="pre">ax1.set(title=&quot;my</span> <span class="pre">title</span> <span class="pre">here&quot;)</span></code></p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write the code for your map in this cell</span>
+<span class="n">country_data_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip&quot;</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">country_data_url</span><span class="p">)</span>
+
+<span class="c1"># Create a path to the countries shapefile</span>
+<span class="n">countries_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;ne_50m_admin_0_countries&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;ne_50m_admin_0_countries.shp&quot;</span><span class="p">)</span>
+
+
+<span class="n">countries</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">countries_path</span><span class="p">)</span>
+<span class="n">countries</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># Create a map or plot with two data layers</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">coastlines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">countries</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;springgreen&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Map of Cities, Countries, and Coastlines&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--success alert alert-info" markdown="1">
+<i class="fa fa-star"></i> **Data Tip:** There are many options to customize plots in Python. Below are 
+a few lessons that cover some of this information!
+<ul class="simple">
+<li><p><a href="https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-spatial-data/customize-vector-plots/python-customize-map-legends-geopandas/" target="_blank">Earth data science plotting textbook.</a></p></li>
+<li><p><a href="https://geopandas.org/gallery/plotting_with_geoplot.html" target="_blank">Geopandas plotting tutorial</a></p></li>
+</ul>
+</div></section>
+</section>
+<section id="spatial-data-attributes">
+<h1><span class="section-number">4.4.26. </span>Spatial Data Attributes<a class="headerlink" href="#spatial-data-attributes" title="Permalink to this headline">#</a></h1>
+<p>Each object in a shapefile has one or more attributes associated with it.
+Shapefile attributes are similar to fields or columns in a spreadsheet. Each row
+in the spreadsheet has a set of columns associated with it that describe the row
+element. In the case of a shapefile, each row represents a spatial object - for
+example, a road, represented as a line in a line shapefile, will have one “row”
+of attributes associated with it.</p>
+<figure>
+    <a href="https://www.earthdatascience.org/images/earth-analytics/spatial-data/spatial-attribute-tables.png">
+    <img src="https://www.earthdatascience.org/images/earth-analytics/spatial-data/spatial-attribute-tables.png" alt="A shapefile has an associated attribute table. Each spatial feature in a spatial object has the same set of
+    associated attributes that describe or characterize the feature.
+    Attribute data are stored in a separate .dbf file. Attribute data can be
+    compared to a spreadsheet. Each row in a spreadsheet represents one feature
+    in the spatial object. Image Source: National Ecological Observatory Network (NEON)"></a>
+    <figcaption>Each spatial feature in a spatial object has the same set of
+    associated attributes that describe or characterize the feature.
+    Attribute data are stored in a separate *.dbf file. Attribute data can be
+    compared to a spreadsheet. Each row in a spreadsheet represents one feature
+    in the spatial object.
+    Image Source: National Ecological Observatory Network (NEON)
+    </figcaption>
+</figure>
+<p>The attributes for a shapefile imported into a GeoDataFrame can be viewed in the GeoDataFrame
+itself.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View first 5 rows of GeoDataFrame</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View data just in the pop_max column of the cities object</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">pop_max</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class='notice--success alert alert-info' markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> Vector Metadata</p>
+<p>The spatial and attribute data are not the only important aspects of a shapefile.
+The metadata of a shapefile are also very important. The metadata includes data
+on the Coordinate Reference System (CRS), the extent, and much more. For more
+information on what the metadata is, and how to access it, see the full lesson
+on vector data on the Earth Lab website, <a class="reference external" href="https://www.earthdatascience.org/courses/use-data-open-source-python/intro-vector-data-python/spatial-data-vector-shapefiles/">here</a>.</div></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1</span> <span class="kn">import</span> <span class="n">make_axes_locatable</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">divider</span> <span class="o">=</span> <span class="n">make_axes_locatable</span><span class="p">(</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">cax</span> <span class="o">=</span> <span class="n">divider</span><span class="o">.</span><span class="n">append_axes</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">,</span>
+                          <span class="n">size</span><span class="o">=</span><span class="s2">&quot;5%&quot;</span><span class="p">,</span>
+                          <span class="n">pad</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">countries</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;POP_EST&#39;</span><span class="p">,</span>
+               <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+               <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span>
+               <span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data">
+<h1><span class="section-number">4.4.27. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge: Plot Cities Data<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data" title="Permalink to this headline">#</a></h1>
+<p>Plot the cities object so each point is colored according to the max population
+value.</p>
+<p>HINT: checkout <a href="https://geopandas.org/mapping.html" target="_blank">this page on creating maps with Geopandas </a> for more information on customizing maps in <strong>Geopandas</strong>:</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open your dataset below this line. Make sure to view the geom_type and the first few rows of the dataset</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_populated_places_simple.zip&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a path to the populated places shapefile</span>
+<span class="n">populated_places_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;ne_50m_populated_places_simple&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;ne_50m_populated_places_simple.shp&quot;</span><span class="p">)</span>
+
+<span class="n">cities</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">populated_places_path</span><span class="p">)</span>
+
+<span class="n">cities</span><span class="o">.</span><span class="n">geom_type</span>
+
+<span class="n">cities</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data-using-quantiles-categorical-plot">
+<h1><span class="section-number">4.4.28. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge: Plot Cities Data Using Quantiles – Categorical Plot<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data-using-quantiles-categorical-plot" title="Permalink to this headline">#</a></h1>
+<p>You can plot your data according to categorical groups similar to what you might do in a tool
+like ArcGIS or QGIS. See what happens when you customize your plot code above.</p>
+<p>Set the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">legend=True</span></code> and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme=&quot;quantiles</span></code></p></li>
+</ul>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add your plot code here</span>
+<span class="c1"># Open the data</span>
+<span class="n">et</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_populated_places_simple.zip&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a path to the populated places shapefile</span>
+<span class="n">populated_places_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;earthpy-downloads&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;ne_50m_populated_places_simple&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;ne_50m_populated_places_simple.shp&quot;</span><span class="p">)</span>
+
+<span class="n">cities</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">populated_places_path</span><span class="p">)</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+
+<span class="c1"># Add your plot code here</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">column</span><span class="o">=</span><span class="s2">&quot;pop_max&quot;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-geoprocessing-vector-data-geoprocessing-in-python-clip-data">
+<h1><span class="section-number">4.4.29. </span>Optional: Geoprocessing Vector Data Geoprocessing in Python: Clip Data<a class="headerlink" href="#optional-geoprocessing-vector-data-geoprocessing-in-python-clip-data" title="Permalink to this headline">#</a></h1>
+<p>Sometimes you have spatial data for a larger area than you need to process.
+For example you may be working on a project for your state or country. But
+perhaps you have data for the entire globe.</p>
+<p>You can clip the data spatially to another boundary to make it smaller. Once
+the data are clipped, your processing operations will be faster. It will also
+make creating maps of your study area easier and cleaner.</p>
+<figure>
+    <a href="https://www.earthdatascience.org/images/earth-analytics/spatial-data/vector-clip.png">
+    <img src="https://www.earthdatascience.org/images/earth-analytics/spatial-data/vector-clip.png" alt="When you clip a vector data set with another layer, you remove points, lines or polygons that are outside of the spatial extent of the area that you use to clip the data. This images shows a circular clip region - you will be using a rectangular region in this example. Image Source: ESRI"></a>
+    <figcaption>When you clip a vector data set with another layer, you remove points, lines or polygons that are outside of the spatial extent of the area that you use to clip the data. This images shows a circular clip region - you will be using a rectangular region in this example. Image Source: ESRI
+    </figcaption>
+</figure>
+<p>In the bonus challenge below, you will clip the cities point data to the boundary of a single
+country. This will make the data smaller and easier to use.</p>
+<div class='notice--success alert alert-info' markdown="1">
+<p><i class="fa fa-star"></i> <strong>Data Tip:</strong> Vector Metadata
+Check out the <a href="https://www.earthdatascience.org/courses/use-data-open-source-python/intro-vector-data-python/vector-data-processing/clip-vector-data-in-python-geopandas-shapely/">spatial data lessons in the intermediate earth-analytics textbook for a more in depth
+look at clipping data.</a></p>
+</div>
+<p>Below you do the following:</p>
+<ol class="arabic simple">
+<li><p>you subset the countries layer to just the boundary of the United State of America</p></li>
+<li><p>you then plot the data to look at the newly subsetted data!</p></li>
+<li><p>Finally you clip the cities data to only include cities that fall within the boundary of the United States</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the countries data to just a single</span>
+<span class="n">united_states_boundary</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">countries</span><span class="p">[</span><span class="s1">&#39;SOVEREIGNT&#39;</span><span class="p">]</span>
+                                       <span class="o">==</span> <span class="s1">&#39;United States of America&#39;</span><span class="p">]</span>
+
+<span class="c1"># Notice in the plot below, that only the boundary for the USA is in the new variable</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">united_states_boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clip the cities data to the USA boundary</span>
+<span class="c1"># Note -- this operation may take some time to run - be patient</span>
+<span class="n">cities_in_usa</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">cities</span><span class="p">,</span> <span class="n">united_states_boundary</span><span class="p">)</span>
+
+<span class="c1"># Plot your final clipped data</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">cities_in_usa</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cities clipped to the USA Boundary&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notice--warning alert alert-info" markdown="1">
+</section>
+<section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-vector-data-in-python">
+<h1><span class="section-number">4.4.30. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BONUS Challenge: Clip Vector Data in Python<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-vector-data-in-python" title="Permalink to this headline">#</a></h1>
+<p>For this bonus challenge, you will clip the cities data that you opened above
+to the extent of a single country - Canada.</p>
+<p><code class="docutils literal notranslate"><span class="pre">gpd.clip(data_to_clip,</span> <span class="pre">boundary_to_clip_to)</span></code>.</p>
+<p>Follow the example above to perform your clip operation.</p>
+<p>To perform the clip you need the following:</p>
+<ol class="arabic simple">
+<li><p>Create the boundary for Canada by subsetting the countries object</p></li>
+<li><p>Clip the cities layer to the Canada boundary layer</p></li>
+<li><p>Plot your final cities clipped layer!</p></li>
+</ol>
+<p>When you clip, all of the spatial data outside of the spatial clip boundary (Canada) will not be
+included in the output dataset.</p>
+</div><div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the countries data to just a single</span>
+<span class="n">canada_boundary</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">countries</span><span class="p">[</span><span class="s1">&#39;SOVEREIGNT&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Canada&#39;</span><span class="p">]</span>
+
+<span class="c1"># Below this line clip the cities data to the Canada boundary that you created above.</span>
+<span class="n">cities_in_canada</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">cities</span><span class="p">,</span> <span class="n">canada_boundary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot your final clipped data here</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">cities_in_canada</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cities clipped to the Canada Boundary&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="spatial-data-formats-02-raster-data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.4.1. </span><i class="fa fa-ship" aria-hidden="true"></i> Fundamentals of Raster Data in Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="spatial-data-formats-04-exercise.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.4.31. </span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1: Open a Text File</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.4.14. <i aria-hidden="true" class="fa fa-ship"></i> Fundamentals of Vector Data in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">4.4.15. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-readings">4.4.16. Recommended Readings</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#about-spatial-vector-data">4.4.17. About Spatial Vector Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-shapefile-file-format-which-stores-points-lines-and-polygons">4.4.18. Introduction to the Shapefile File Format Which Stores Points, Lines, and Polygons</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geojson-files-and-other-vector-formats">4.4.19. GeoJSON Files and Other Vector Formats</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-data-are-stored-in-spatial-vector-formats">4.4.20. What Data Are Stored In Spatial Vector Formats?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-shapefile-data-into-python-using-geopandas">4.4.21. Import Shapefile Data Into Python Using Geopandas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geopandas-creates-geodataframes-which-have-the-same-structure-as-pandas-dataframes">4.4.21.1. GeoPandas Creates GeoDataFrames Which Have the Same Structure As Pandas DataFrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-spatial-vector-data-type">4.4.21.2. Check the Spatial Vector Data Type</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-point-data">4.4.22. Open Vector Point Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-1-what-geometry-type-are-your-data">4.4.23. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 1:  What Geometry Type Are Your Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-maps-using-multiple-shapefiles">4.4.24. Creating Maps Using Multiple Shapefiles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-2-create-a-global-map">4.4.25. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge 2: Create a Global Map</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-bonus-customize-your-map">4.4.25.1. Challenge BONUS: Customize your Map</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-data-attributes">4.4.26. Spatial Data Attributes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data">4.4.27. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge: Plot Cities Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-plot-cities-data-using-quantiles-categorical-plot">4.4.28. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> Challenge: Plot Cities Data Using Quantiles – Categorical Plot</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-geoprocessing-vector-data-geoprocessing-in-python-clip-data">4.4.29. Optional: Geoprocessing Vector Data Geoprocessing in Python: Clip Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-bonus-challenge-clip-vector-data-in-python">4.4.30. <i aria-hidden="true" class="fa fa-pencil-square-o"></i> BONUS Challenge: Clip Vector Data in Python</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="l-footer">
+  <div style="display: inline-flex; align-items:center; justify-content:center;">
+    <div style="padding-right: 20px;">
+      <a href="https://earthlab.colorado.edu">
+        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://colorado.edu" target="_blank">
+        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
+      </a>
+    </div>
+
+    <div style="padding-right: 20px;">
+      <a href="https://cires.colorado.edu" target="_blank">
+      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
+      </a>
+    </div>
+
+  </div>
+      
+  <div style="margin-top: 20px;">
+    <div class="copyright ">
+      <h3 class="copyright__title">University of Colorado Boulder</h3>
+      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
+      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
+    </div>
+  </div>
+
+</divxs>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

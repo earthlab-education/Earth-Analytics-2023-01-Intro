@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>12.11. Chapter Nineteen - Functions &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'courses/intro-eds-textbook/07-efficient-clean-code-python/functions/2019-11-05-functions-python-01-intro-functions';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="12.17.1. Learning Objectives" href="2019-11-05-functions-python-02-write-custom-functions.html" />
+    <link rel="prev" title="12.10.1. Learning Objectives" href="../conditional-statements/2019-10-22-conditional-statements-python-02-multiple-conditions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <i class="fa fa-ship" aria-hidden="true"></i> Welcome to the Introduction to Earth Data Science Textbook!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../01-reproducible-science-tools/2019-07-01-reproducible-science-tools-landing-page.html">1. <i aria-hidden="true" class="fa fa-ship"></i> Section One - An Introduction to Open Reproducible Science Workflows</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/2019-08-29-file-formats-eds-landing-page.html">3. <i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../03-git-github/2019-09-05-git-github-landing-page.html">5. <i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../04-python-fundamentals/2019-09-03-python-fundamentals-landing-page.html">7. <i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../06-python-data-structures/2019-09-23-ds-python-landing.html">9. <i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../2019-10-22-efficient-clean-code-python-landing-page.html">11. <i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/courses/intro-eds-textbook/07-efficient-clean-code-python/functions/2019-11-05-functions-python-01-intro-functions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fa fa-ship" aria-hidden="true"></i> Chapter Nineteen - Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">12.11. <i aria-hidden="true" class="fa fa-ship"></i> Chapter Nineteen - Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">12.12. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">12.13. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-efficient-modular-code-using-functions">12.14. Write Efficient Modular Code Using Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-benefits-of-functions">12.15. The Benefits of Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-modular-functions-and-code">12.15.1. Write Modular Functions and Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-create-fewer-variables">12.15.2. Functions Create Fewer Variables</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-why-functions-improve-code-readability">12.16. Reasons Why Functions Improve Code Readability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-can-result-in-better-documentation">12.16.1. Functions Can Result in Better Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressive-function-names-make-code-self-describing">12.16.2. Expressive Function Names Make Code Self-Describing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-code-is-easier-to-maintain-and-edit">12.16.3. Modular Code is Easier to Maintain and Edit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-can-incorporate-testing-to-ensure-code-runs-properly">12.16.4. You Can Incorporate Testing To Ensure Code Runs Properly</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-writing-modular-code-with-functions">12.17. Summary of Writing Modular Code with Functions</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <!-- #region -->
+<p>{% include toc title=”In This Chapter” icon=”file-text” %}</p>
+<div class='notice--success' markdown="1">
+<section id="i-class-fa-fa-ship-aria-hidden-true-i-chapter-nineteen-functions">
+<h1><span class="section-number">12.11. </span><i class="fa fa-ship" aria-hidden="true"></i> Chapter Nineteen - Functions<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-chapter-nineteen-functions" title="Permalink to this headline">#</a></h1>
+<p>In this chapter, you will learn how functions can be used to write DRY and modular code that helps eliminate repetition and improve the efficiency of <strong>Python</strong> code.</p>
+</section>
+<section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
+<h1><span class="section-number">12.12. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<p>After completing this chapter, you will be able to:</p>
+<ul class="simple">
+<li><p>Explain how using functions help you to write DRY (Don’t Repeat Yourself) code in <strong>Python</strong>.</p></li>
+<li><p>Describe the components needed to define a function in <strong>Python</strong>.</p></li>
+<li><p>Write and execute a custom function in <strong>Python</strong>.</p></li>
+<li><p>Write nested functions (functions inside of other functions) in <strong>Python</strong>.</p></li>
+</ul>
+</section>
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h1><span class="section-number">12.13. </span><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<p>You should have Conda setup on your computer and the Earth Analytics Python Conda environment. Follow the <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Set up Git, Bash, and Conda on your computer</a> to install these tools.</p>
+<p>Be sure that you have completed the chapters on <a href="{{ site.url }}/courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/">Jupyter Notebook</a>, <a href="{{ site.url }}/courses/intro-to-earth-data-science/scientific-data-structures-python/numpy-arrays/">Numpy Arrays</a>, and <a href="{{ site.url }}/courses/intro-to-earth-data-science/scientific-data-structures-python/pandas-dataframes/">Pandas Dataframes</a>.</p>
+</div>
+</section>
+<section id="write-efficient-modular-code-using-functions">
+<h1><span class="section-number">12.14. </span>Write Efficient Modular Code Using Functions<a class="headerlink" href="#write-efficient-modular-code-using-functions" title="Permalink to this headline">#</a></h1>
+<p>In the introduction to DRY code, you learned about the DRY (i.e. Do Not Repeat Yourself) code principle. You were also introduced to three strategies for eliminating repetition and improving the efficiency of your code:</p>
+<ol class="arabic simple">
+<li><p>loops,</p></li>
+<li><p>conditional statements, and</p></li>
+<li><p>functions.</p></li>
+</ol>
+<p>In previous chapters, you learned how to use conditional structures to control the flow of your code and how to loops to eliminate repetitive lines of code. In this chapter, you will learn how writing functions in <strong>Python</strong> can help you to execute a specific task.</p>
+<p>A function is a reusable block of code that performs a specific task. Functions receive inputs to which code is applied and return outputs (or results) of the code.</p>
+<p><code class="docutils literal notranslate"><span class="pre">input</span> <span class="pre">parameter</span> <span class="pre">–&gt;</span> <span class="pre">function</span> <span class="pre">does</span> <span class="pre">something</span> <span class="pre">–&gt;</span> <span class="pre">output</span> <span class="pre">results</span></code></p>
+<p>For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># Print value of input</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which returns:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+
+</pre></div>
+</div>
+<p>Functions can help you to both eliminate repetition and improve efficiency in your code through modularity.</p>
+<p>Modularity means that code is separated into independent units that can be reused and even be combined to complete a longer chain of tasks.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/clean-code/write-functions-for-all-things.png">
+ <img src="{{ site.url }}/images/earth-analytics/clean-code/write-functions-for-all-things.png" alt="You can implement strategies such as loops and functions in your code to replace tasks that you are performing over and over. Source: Francois Michonneau."></a>
+ <figcaption> You can implement strategies such as loops and functions in your code to replace tasks that you are performing over and over. Source: Francois Michonneau.
+ </figcaption>
+</figure>
+</section>
+<section id="the-benefits-of-functions">
+<h1><span class="section-number">12.15. </span>The Benefits of Functions<a class="headerlink" href="#the-benefits-of-functions" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Modularity: Functions only need to be defined once in a workflow (e.g. <strong>Jupyter Notebook</strong> file, script). Functions that you write for specific tasks can be used over and over, without needing to redefine the function again. A function that you write for one <strong>Python</strong> workflow can also be reused in other workflows!</p></li>
+<li><p>Fewer variables: When you run a function, the intermediate variables (i.e. placeholders) that it creates are not stored as explicit variables unless you specify otherwise. This saves memory and keeps your <strong>Python</strong> environment cleaner.</p></li>
+<li><p>Better documentation: Well-documented functions help other users understand the steps of your processing and helps your future self to understand previously written code.</p></li>
+<li><p>Easier to maintain and edit your code: Because a function is only defined once in the workflow, you can simply just update the original function definition. Then, each instance in which you call that function in your code (i.e. when same task is performed) is automatically updated.</p></li>
+<li><p>Testing: You won’t learn about this in this class, but writing functions allows you to more easily test your code to identify issues (i.e. bugs).</p></li>
+</ul>
+<section id="write-modular-functions-and-code">
+<h2><span class="section-number">12.15.1. </span>Write Modular Functions and Code<a class="headerlink" href="#write-modular-functions-and-code" title="Permalink to this headline">#</a></h2>
+<p>A well-defined function only does one thing, but it does it well and often in a variety of contexts. Often, the operations contained in a good function are generally useful for many tasks.</p>
+<p>Take, for instance, the <strong>numpy</strong> function called <code class="docutils literal notranslate"><span class="pre">mean()</span></code>, which computes mean values from a <strong>numpy</strong> array.</p>
+<p>This function only does one thing (i.e. computes a mean); however, you may use the <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code> function many times in your code on multiple <strong>numpy</strong> arrays because it has been defined to take any <strong>numpy</strong> array as an input.</p>
+<p>For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c1"># Calculate mean of input array</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which returns:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mf">2.0</span>
+
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code> function is modular, and it can be easily combined with other functions to accomplish a variety of tasks.</p>
+<p>When you write modular functions, you can re-use them for other workflows and projects. Some people even write their own <strong>Python</strong> packages for personal and professional use that contain custom functions for tasks that they have to complete regularly.</p>
+</section>
+<section id="functions-create-fewer-variables">
+<h2><span class="section-number">12.15.2. </span>Functions Create Fewer Variables<a class="headerlink" href="#functions-create-fewer-variables" title="Permalink to this headline">#</a></h2>
+<p>When you code tasks line by line, you often create numerous intermediate variables that you do not need to use again.</p>
+<p>This is inefficient and can cause your code to be repetitive, if you are constantly creating variables that you will not use again.</p>
+<p>Functions allow you to focus on the inputs and the outputs of your workflow, rather than the intermediate steps, such as creating extra variables that are not needed.</p>
+</section>
+</section>
+<section id="reasons-why-functions-improve-code-readability">
+<h1><span class="section-number">12.16. </span>Reasons Why Functions Improve Code Readability<a class="headerlink" href="#reasons-why-functions-improve-code-readability" title="Permalink to this headline">#</a></h1>
+<section id="functions-can-result-in-better-documentation">
+<h2><span class="section-number">12.16.1. </span>Functions Can Result in Better Documentation<a class="headerlink" href="#functions-can-result-in-better-documentation" title="Permalink to this headline">#</a></h2>
+<p>Ideally, your code is easy to understand and is well-documented with <strong>Python</strong> comments (and <strong>Markdown</strong> in <strong>Jupyter Notebook</strong>). However, what might seem clear to you now might not be clear 6 months from now, or even 3 weeks from now.</p>
+<p>Well-written functions help you document your workflow because:</p>
+<ul class="simple">
+<li><p>They are well-documented by clearly outlining the inputs and outputs.</p></li>
+<li><p>They use descriptive names that help you better understand the task that the function performs.</p></li>
+</ul>
+</section>
+<section id="expressive-function-names-make-code-self-describing">
+<h2><span class="section-number">12.16.2. </span>Expressive Function Names Make Code Self-Describing<a class="headerlink" href="#expressive-function-names-make-code-self-describing" title="Permalink to this headline">#</a></h2>
+<p>When writing your own functions, you should name functions using verbs and/or clear labels to indicate what the function does (i.e. <code class="docutils literal notranslate"><span class="pre">in_to_mm</span></code> for converting inches to millimeters).</p>
+<p>This makes your code more expressive (or self-describing), and in turn, makes it easier to read for you, your future self, and your colleagues.</p>
+</section>
+<section id="modular-code-is-easier-to-maintain-and-edit">
+<h2><span class="section-number">12.16.3. </span>Modular Code is Easier to Maintain and Edit<a class="headerlink" href="#modular-code-is-easier-to-maintain-and-edit" title="Permalink to this headline">#</a></h2>
+<p>If all your code is written line by line (with repeated code in multiple parts of your document) it can be challenging to maintain and edit.</p>
+<p>Imagine having to fix one element of a line of code that is repeated many times. You will have to find and replace that code to implement the fix in EVERY INSTANCE it occurs in your code!</p>
+<p>You may also be duplicating your comments where you duplicate parts of your code. So how do you keep the duplicated comments in sync?</p>
+<p>A comment that is misleading because the code changed is actually worse than no comment at all.</p>
+<p>Organizing your code using functions from the beginning allows you to explicitly document the tasks that your code performs, as all code and documentation for the function is contained in the function definition.</p>
+</section>
+<section id="you-can-incorporate-testing-to-ensure-code-runs-properly">
+<h2><span class="section-number">12.16.4. </span>You Can Incorporate Testing To Ensure Code Runs Properly<a class="headerlink" href="#you-can-incorporate-testing-to-ensure-code-runs-properly" title="Permalink to this headline">#</a></h2>
+<p>While you will not learn about testing in this chapter, note that functions are also very useful for testing.</p>
+<p>As your code gets longer and more complex, it is more prone to mistakes. For example, if your analysis relies on data that gets updated often, you may want to make sure that all the columns in your spreadsheet are present before performing an analysis. Or, that the new data are not formatted in a different way.</p>
+<p>Changes in data structure and format could cause your code to not run. Or, in the worse case scenario, your code may run but return the wrong values!</p>
+<p>If all your code is made up of functions (with built-in tests to ensure that they run as expected), then you can control the input to the function and test that the output returned is correct for that input. It is something that would be difficult to do if all of your code is written line by line with repeated steps.</p>
+</section>
+</section>
+<section id="summary-of-writing-modular-code-with-functions">
+<h1><span class="section-number">12.17. </span>Summary of Writing Modular Code with Functions<a class="headerlink" href="#summary-of-writing-modular-code-with-functions" title="Permalink to this headline">#</a></h1>
+<p>It is a good idea to learn how to:</p>
+<ol class="arabic simple">
+<li><p>Modularize your code into generalizable tasks using functions.</p></li>
+<li><p>Write functions for parts of your code which include repeated steps.</p></li>
+<li><p>Document your functions clearly, specifying the structure of the inputs and outputs with clear comments about what the function can do.</p></li>
+</ol>
+<p>In the rest of the chapter, you will learn about the components needed to define a function in <strong>Python</strong> and you will write and execute custom functions in <strong>Python</strong>.</p>
+<!-- #endregion -->
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses/intro-eds-textbook/07-efficient-clean-code-python/functions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../conditional-statements/2019-10-22-conditional-statements-python-02-multiple-conditions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">12.10.1. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2019-11-05-functions-python-02-write-custom-functions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">12.17.1. </span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">12.11. <i aria-hidden="true" class="fa fa-ship"></i> Chapter Nineteen - Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">12.12. <i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">12.13. <i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-efficient-modular-code-using-functions">12.14. Write Efficient Modular Code Using Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-benefits-of-functions">12.15. The Benefits of Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-modular-functions-and-code">12.15.1. Write Modular Functions and Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-create-fewer-variables">12.15.2. Functions Create Fewer Variables</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-why-functions-improve-code-readability">12.16. Reasons Why Functions Improve Code Readability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-can-result-in-better-documentation">12.16.1. Functions Can Result in Better Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressive-function-names-make-code-self-describing">12.16.2. Expressive Function Names Make Code Self-Describing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-code-is-easier-to-maintain-and-edit">12.16.3. Modular Code is Easier to Maintain and Edit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-can-incorporate-testing-to-ensure-code-runs-properly">12.16.4. You Can Incorporate Testing To Ensure Code Runs Properly</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-writing-modular-code-with-functions">12.17. Summary of Writing Modular Code with Functions</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
