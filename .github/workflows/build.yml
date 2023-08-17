@@ -13,11 +13,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.5.3
-      - name: Change to book directory
-        run: cd textbook
       - name: Install Jupyter Book
         run: mamba install jupyter-book sphinx-exercise ghp-import
-      - name: Build Website
-        run: jb build . --toc _toc_intro.yml
-      - name: Push to gh-pages branch
-        run: ghp-import -n -p -f _build/html
+      - name: Build and Publish Website
+        working-directory: textbook
+        run: |
+          jb build . --toc _toc_intro.yml
+          ghp-import -n -p -f _build/html
