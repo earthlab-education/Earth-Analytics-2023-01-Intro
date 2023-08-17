@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Give it a name, find it later &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -66,10 +67,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Learning Objectives" href="python-fundamentals-03-lists.html" />
-    <link rel="prev" title="Introduction to the Python Scientific Programming Language for Earth Data Science" href="python-fundamentals-01-get-started-python.html" />
+    <link rel="next" title="Lists keep your data in order" href="python-fundamentals-03-lists.html" />
+    <link rel="prev" title="Get started using Python for Earth Data Science workflows" href="python-fundamentals-01-get-started-python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -177,25 +178,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Give it a name, find it later</a></li>
-<li class="toctree-l3"><a class="reference internal" href="python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
 </ul>
 </li>
 </ul>
@@ -451,7 +439,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="give-it-a-name-find-it-later">
-<h1>Give it a name, find it later<a class="headerlink" href="#give-it-a-name-find-it-later" title="Permalink to this headline">#</a></h1>
+<h1>Give it a name, find it later<a class="headerlink" href="#give-it-a-name-find-it-later" title="Permalink to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
 <div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
@@ -464,7 +452,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser, Nathan Korinek, Elsa Culler</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 11, 2023</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 16, 2023</p>
 </div>
 </div>
 </div>
@@ -482,7 +470,7 @@ document.write(`
 <p>Names store data (i.e. information) that you want to re-use in your code (e.g. single numeric value, path to a directory or file). Learn how to to create and work with names in <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
 <hr class="docutils" />
 <section id="use-names-to-save-data-in-python">
-<h2>Use <strong>names</strong> to save data in Python<a class="headerlink" href="#use-names-to-save-data-in-python" title="Permalink to this headline">#</a></h2>
+<h2>Use <strong>names</strong> to save data in Python<a class="headerlink" href="#use-names-to-save-data-in-python" title="Permalink to this heading">#</a></h2>
 <div class="note margin admonition">
 <p class="admonition-title">Why names and not variables?</p>
 <p>You may also see named values referred to as <strong>variables</strong> in programming. We think this can be confusing, because most people are used to the word <strong>variable</strong> in the context of algebra. In algebra, a <strong>variable</strong> is a value that you don’t know the value of. In programming, the value of a variable <strong>is</strong> known, and doesn’t change unless you write over it.</p>
@@ -513,8 +501,8 @@ document.write(`
 <div class="solution dropdown admonition" id="intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables-solution-1">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#name-a-variable"> Exercise 1</a></p>
-<section id="s">
-<span id="o"></span><span id="l"></span><span id="u"></span><span id="t"></span><span id="i"></span><span id="o"></span><span id="n"></span><span id="-"></span><span id="c"></span><span id="o"></span><span id="n"></span><span id="t"></span><span id="e"></span><span id="n"></span><span id="t"></span><div class="cell docutils container">
+<section id="solution-content">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_number</span> <span class="o">=</span> <span class="mi">5</span>
 
@@ -543,7 +531,7 @@ name to be explicitly assigned a data type when it is created. You do not
 need to worry about this when using <code class="docutils literal notranslate"><span class="pre">Python</span></code>, however!</p>
 </div>
 <section id="easy-to-understand-names-make-your-code-easier-to-read">
-<h3>Easy to Understand Names Make Your Code Easier to Read<a class="headerlink" href="#easy-to-understand-names-make-your-code-easier-to-read" title="Permalink to this headline">#</a></h3>
+<h3>Easy to Understand Names Make Your Code Easier to Read<a class="headerlink" href="#easy-to-understand-names-make-your-code-easier-to-read" title="Permalink to this heading">#</a></h3>
 <p>Just like you want to use
 <a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/">
 expressive naming conventions (names that represent what is stored within
@@ -570,7 +558,7 @@ in this earth data science lesson.</a></p>
 </div>
 </section>
 <section id="names-are-available-in-your-coding-environment-once-defined">
-<h3>names Are Available In Your Coding Environment Once Defined<a class="headerlink" href="#names-are-available-in-your-coding-environment-once-defined" title="Permalink to this headline">#</a></h3>
+<h3>names Are Available In Your Coding Environment Once Defined<a class="headerlink" href="#names-are-available-in-your-coding-environment-once-defined" title="Permalink to this heading">#</a></h3>
 <p>A key characteristic of names is that once you create a name in your
 coding environment (that is to say you run the actual line of code that defines
 the name), it is available throughout your code. So for example, if you
@@ -621,7 +609,7 @@ clear and distinct names to avoid <em>accidentally</em> overwriting name values.
 </section>
 </section>
 <section id="about-data-types-in-python">
-<h2>About Data Types in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#about-data-types-in-python" title="Permalink to this headline">#</a></h2>
+<h2>About Data Types in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#about-data-types-in-python" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Python</span></code> data types are important to understand when coding. Below you will learn
 more about the different types of names that you can store including:</p>
 <ul class="simple">
@@ -630,7 +618,7 @@ more about the different types of names that you can store including:</p>
 </ul>
 </section>
 <section id="numeric-names-in-python">
-<h2>Numeric names in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#numeric-names-in-python" title="Permalink to this headline">#</a></h2>
+<h2>Numeric names in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#numeric-names-in-python" title="Permalink to this heading">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">Python</span></code>, you can create names to store numeric values such as integers
 (<code class="docutils literal notranslate"><span class="pre">int</span></code>) which represent whole numbers and floating point numbers which represent
 decimal values (<code class="docutils literal notranslate"><span class="pre">float</span></code>).</p>
@@ -702,7 +690,7 @@ as a type: <code class="docutils literal notranslate"><span class="pre">float</s
 </div>
 </section>
 <section id="how-to-store-text-names-strings-in-python">
-<h2>How to Store Text names: Strings in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#how-to-store-text-names-strings-in-python" title="Permalink to this headline">#</a></h2>
+<h2>How to Store Text names: Strings in <code class="docutils literal notranslate"><span class="pre">Python</span></code><a class="headerlink" href="#how-to-store-text-names-strings-in-python" title="Permalink to this heading">#</a></h2>
 <p>To create a name containing a text string (<code class="docutils literal notranslate"><span class="pre">str</span></code>), you use quotation marks
 (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) around the value. For example:</p>
 <p><code class="docutils literal notranslate"><span class="pre">name_name</span> <span class="pre">=</span> <span class="pre">&quot;text&quot;</span></code></p>
@@ -817,7 +805,7 @@ Below are some examples of creating a string.</p>
 </div>
 </section>
 <section id="check-the-type">
-<h2>Check the type<a class="headerlink" href="#check-the-type" title="Permalink to this headline">#</a></h2>
+<h2>Check the type<a class="headerlink" href="#check-the-type" title="Permalink to this heading">#</a></h2>
 <p>In the activities above, you used the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to determine what type of data are stored in a name.</p>
 <p><code class="docutils literal notranslate"><span class="pre">type(name_name)</span></code></p>
 <p>For example, you can check the type of <code class="docutils literal notranslate"><span class="pre">boulder_precip_in</span></code> after each time
@@ -913,7 +901,7 @@ from <code class="docutils literal notranslate"><span class="pre">int</span></co
 <p>A good reminder that it is important to make sure that you are defining names with the appropriate syntax to distinguish between numeric and string types.</p>
 </section>
 <section id="challenge-data-types-math">
-<h2>Challenge - Data Types &amp; Math<a class="headerlink" href="#challenge-data-types-math" title="Permalink to this headline">#</a></h2>
+<h2>Challenge - Data Types &amp; Math<a class="headerlink" href="#challenge-data-types-math" title="Permalink to this heading">#</a></h2>
 <p>Run the following code which divides name <code class="docutils literal notranslate"><span class="pre">a</span></code> by name <code class="docutils literal notranslate"><span class="pre">b</span></code> (<code class="docutils literal notranslate"><span class="pre">a/b</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -978,7 +966,7 @@ from <code class="docutils literal notranslate"><span class="pre">int</span></co
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to the Python Scientific Programming Language for Earth Data Science</p>
+        <p class="prev-next-title">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</p>
       </div>
     </a>
     <a class="right-next"
@@ -986,7 +974,7 @@ from <code class="docutils literal notranslate"><span class="pre">int</span></co
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives</p>
+        <p class="prev-next-title"><strong>Lists</strong> keep your data in order</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

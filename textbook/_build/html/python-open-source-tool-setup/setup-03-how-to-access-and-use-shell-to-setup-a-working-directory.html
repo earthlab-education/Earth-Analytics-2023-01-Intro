@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Learning Objectives" href="setup-04-setup-conda-earth-analytics-environment.html" />
     <link rel="prev" title="Learning Objectives" href="setup-02-setup-git-bash-and-anacoda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -177,25 +178,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
 </ul>
 </li>
 </ul>
@@ -466,7 +454,7 @@ document.write(`
 <p>In this tutorial, you will access <code class="docutils literal notranslate"><span class="pre">Bash</span></code>/Shell through the Terminal, use basic commands in the terminal for file organization,  and set up a working directory for the course.</p>
 <div class='notice--success' markdown="1">
 <section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
-<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this heading">#</a></h1>
 <p>At the end of this activity, you will be able to:</p>
 <ul class="simple">
 <li><p>Open the Terminal.</p></li>
@@ -475,15 +463,15 @@ document.write(`
 </ul>
 </section>
 <section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
-<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this heading">#</a></h1>
 <p>You will need to have Git and Bash setup on your computer to complete this lesson. Instructions for setting up Git and Bash are here: <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Setup Git, Bash &amp; Conda lesson</a>.</p>
 </div>
 </section>
 <section id="how-to-access-bash">
-<h1>How to Access Bash<a class="headerlink" href="#how-to-access-bash" title="Permalink to this headline">#</a></h1>
+<h1>How to Access Bash<a class="headerlink" href="#how-to-access-bash" title="Permalink to this heading">#</a></h1>
 <p>Information below is adapted from materials developed by: <a href="https://cs61a.org/lab/lab00/" target="_blank">U.C. Berkeley’s cs61a</a>, <a href="http://swcarpentry.github.io/shell-novice/" target = "_blank">Software Carpentry</a> and <a href="https://github.com/thehackerwithin/berkeley/blob/master/code_examples/bash/tutorial.md" target="_blank">The Hacker Within, Berkeley</a>.</p>
 <section id="get-started-with-the-terminal">
-<h2>Get Started with the Terminal<a class="headerlink" href="#get-started-with-the-terminal" title="Permalink to this headline">#</a></h2>
+<h2>Get Started with the Terminal<a class="headerlink" href="#get-started-with-the-terminal" title="Permalink to this heading">#</a></h2>
 <p>In the early days of computing, the computer that processed data or performed operations was separate from the tool that gave it the instructions to do the processing. There was:</p>
 <ul class="simple">
 <li><p>Terminal: which was used to send commands to the computer and</p></li>
@@ -498,7 +486,7 @@ document.write(`
 </figure>
 </section>
 <section id="about-bash">
-<h2>About Bash<a class="headerlink" href="#about-bash" title="Permalink to this headline">#</a></h2>
+<h2>About Bash<a class="headerlink" href="#about-bash" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Bash</span></code> is command line program that allows you to efficiently perform many tasks. The command line or terminal is where you provide <code class="docutils literal notranslate"><span class="pre">Bash</span></code> commands that the computer then executes. This allows you to control your computer by typing in commands entered with a keyboard, instead of using buttons or drop down menus in a graphical user interface (GUI) with a mouse/keyboard.</p>
 <p>For example, you can use <code class="docutils literal notranslate"><span class="pre">Bash</span></code> to access and process files at the command line. Working with files at the command line is faster and more efficient than working with files in a graphic environment like Windows Explorer or Mac Finder.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">Bash</span></code>, you can perform multiple operations on multiple files quickly. You can also write and execute scripts in <code class="docutils literal notranslate"><span class="pre">Bash</span></code> just like you can in <code class="docutils literal notranslate"><span class="pre">R</span></code> or <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
@@ -510,21 +498,21 @@ document.write(`
 </section>
 </section>
 <section id="what-is-a-terminal">
-<h1>What is a Terminal?<a class="headerlink" href="#what-is-a-terminal" title="Permalink to this headline">#</a></h1>
+<h1>What is a Terminal?<a class="headerlink" href="#what-is-a-terminal" title="Permalink to this heading">#</a></h1>
 <p>A terminal is the command line interface (CLI) that gives you access to <code class="docutils literal notranslate"><span class="pre">Bash</span></code>. There are many different terminal programs, and thus, the terminal program that you use on your computer will vary according to your operating system.</p>
 <p>For instance, Mac computers have a terminal program already installed that provides access to <code class="docutils literal notranslate"><span class="pre">Bash</span></code>. However, on a Windows machine, you will have to install a new program to access <code class="docutils literal notranslate"><span class="pre">Bash</span></code> - like <code class="docutils literal notranslate"><span class="pre">Git</span> <span class="pre">Bash</span></code>, which we will use in this course.</p>
 <p>For the rest of this course, we will refer to the command line environment that you use to access <code class="docutils literal notranslate"><span class="pre">Bash</span></code> as the terminal. For Windows users, this terminal can be accessed using a tool like <code class="docutils literal notranslate"><span class="pre">Git</span> <span class="pre">Bash</span></code>.</p>
 </section>
 <section id="why-use-the-terminal">
-<h1>Why Use the Terminal?<a class="headerlink" href="#why-use-the-terminal" title="Permalink to this headline">#</a></h1>
+<h1>Why Use the Terminal?<a class="headerlink" href="#why-use-the-terminal" title="Permalink to this heading">#</a></h1>
 <section id="interact-with-your-computer-and-organize-files">
-<h2>Interact With Your Computer and Organize Files<a class="headerlink" href="#interact-with-your-computer-and-organize-files" title="Permalink to this headline">#</a></h2>
+<h2>Interact With Your Computer and Organize Files<a class="headerlink" href="#interact-with-your-computer-and-organize-files" title="Permalink to this heading">#</a></h2>
 <p>Using <code class="docutils literal notranslate"><span class="pre">Bash</span></code> in the Terminal is a powerful way of interacting with your computer. GUIs and command line <code class="docutils literal notranslate"><span class="pre">Bash</span></code> are complementary - by knowing both, you will greatly expand the range of tasks you can accomplish with your computer.</p>
 <p>You will also be able to perform many tasks more efficiently. Common tasks that you can run at the command line include checking your current working directory, changing directories, making a new directory, extracting files, and finding files on your computer.</p>
 </section>
 </section>
 <section id="access-bash">
-<h1>Access Bash<a class="headerlink" href="#access-bash" title="Permalink to this headline">#</a></h1>
+<h1>Access Bash<a class="headerlink" href="#access-bash" title="Permalink to this heading">#</a></h1>
 <p>How you access <code class="docutils literal notranslate"><span class="pre">Bash</span></code> will depend on your operating system.</p>
 <ul class="simple">
 <li><p>OS X: The <code class="docutils literal notranslate"><span class="pre">Bash</span></code> program is called Terminal. You can search for it in Spotlight.</p></li>
@@ -533,11 +521,11 @@ document.write(`
 </ul>
 </section>
 <section id="bash-commands">
-<h1>Bash Commands<a class="headerlink" href="#bash-commands" title="Permalink to this headline">#</a></h1>
+<h1>Bash Commands<a class="headerlink" href="#bash-commands" title="Permalink to this heading">#</a></h1>
 <p>The dollar sign is a prompt, that shows you that <code class="docutils literal notranslate"><span class="pre">Bash</span></code> is waiting for input; your shell may use a different character as a prompt and may add information before the prompt.</p>
 <p>When typing commands, either from these tutorials or from other sources, do not type the dollar sign only the commands that follow it. In these tutorials, subsequent lines that follow a prompt and do not start with $ are the output of the command.</p>
 <section id="basic-bash-commands">
-<h2>Basic Bash Commands<a class="headerlink" href="#basic-bash-commands" title="Permalink to this headline">#</a></h2>
+<h2>Basic Bash Commands<a class="headerlink" href="#basic-bash-commands" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code>: This command `lists all files in the current directory in alphabetical order, arranged neatly into columns.</p></li>
 </ul>
@@ -591,11 +579,11 @@ Notice that you are creating an easy to read directory name. The name has no spa
 </section>
 </section>
 <section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge">
-<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge" title="Permalink to this heading">#</a></h1>
 <p>Project organization is integral to efficient research. In this challenge, you will use <code class="docutils literal notranslate"><span class="pre">Bash</span></code> to create an <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory that you will use throughout this course.</p>
 <p>You will then create a  <code class="docutils literal notranslate"><span class="pre">data</span></code> directory within the <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory to save all of the data that you will need to complete the homework assignments and follow along with the course.</p>
 <section id="create-a-directory-for-earth-analytics">
-<h2>Create a Directory for earth-analytics<a class="headerlink" href="#create-a-directory-for-earth-analytics" title="Permalink to this headline">#</a></h2>
+<h2>Create a Directory for earth-analytics<a class="headerlink" href="#create-a-directory-for-earth-analytics" title="Permalink to this heading">#</a></h2>
 <p>Begin by creating an <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory (or folder) in your home directory. This is the default directory in which the Terminal opens.</p>
 <ul class="simple">
 <li><p>Create a <strong>new directory</strong> called <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code>.</p></li>

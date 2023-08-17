@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Lists keep your data in order &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer" href="../../../python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.html" />
     <link rel="prev" title="Give it a name, find it later" href="python-fundamentals-02-variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -177,8 +178,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#"><strong>Lists</strong> keep your data in order</a></li>
 </ul>
@@ -449,7 +452,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lists-keep-your-data-in-order">
-<h1><strong>Lists</strong> keep your data in order<a class="headerlink" href="#lists-keep-your-data-in-order" title="Permalink to this headline">#</a></h1>
+<h1><strong>Lists</strong> keep your data in order<a class="headerlink" href="#lists-keep-your-data-in-order" title="Permalink to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
 <div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
@@ -480,7 +483,7 @@ document.write(`
 <p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code> list is a data structure that stores a collection of values in a specified order (or sequence) and is mutable (or changeable). Learn how to create and work with lists in Python.</p>
 <hr class="docutils" />
 <section id="what-are-python-lists">
-<h2>What are Python Lists?<a class="headerlink" href="#what-are-python-lists" title="Permalink to this headline">#</a></h2>
+<h2>What are Python Lists?<a class="headerlink" href="#what-are-python-lists" title="Permalink to this heading">#</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code> list is a data structure that stores a collection of values or
 objects in a <strong>specified order</strong> (or sequence). Some additional features of <code class="docutils literal notranslate"><span class="pre">Python</span></code> lists include:</p>
 <ul class="simple">
@@ -506,7 +509,7 @@ objects in a <strong>specified order</strong> (or sequence). Some additional fea
 <p>Python has a data type called a <code class="docutils literal notranslate"><span class="pre">tuple</span></code> that is very similar to lists. Tuples are created with parentheses instead of brackets (tuple: <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code> vs. list: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code>). For most applications <strong>they can be used interchangeably</strong>. The difference? Tuples are <strong>immutable</strong>, meaning that you can’t change them. This comes with some increased <strong>memory efficiency</strong> – but it’s pretty unusual for a list to be taking up so much memory that you would notice.</p>
 </div>
 <section id="items-within-a-python-list-can-be-subsetted-using-an-index">
-<h3>Items Within a Python List Can Be Subsetted Using an Index<a class="headerlink" href="#items-within-a-python-list-can-be-subsetted-using-an-index" title="Permalink to this headline">#</a></h3>
+<h3>Items Within a Python List Can Be Subsetted Using an Index<a class="headerlink" href="#items-within-a-python-list-can-be-subsetted-using-an-index" title="Permalink to this heading">#</a></h3>
 <p>Each value in a list is called an item. Since lists are sequences of items
 in a specified order, there is a label for the location or order number of
 each item in the list. This order label is referred to as an index. Indexing
@@ -514,7 +517,7 @@ allows lists to be iterable, meaning that you can access each item in the list,
 in the order in which they appear in the list object.</p>
 </section>
 <section id="list-indices-in-python-start-at-zero">
-<h3>List indices in Python start at zero<a class="headerlink" href="#list-indices-in-python-start-at-zero" title="Permalink to this headline">#</a></h3>
+<h3>List indices in Python start at zero<a class="headerlink" href="#list-indices-in-python-start-at-zero" title="Permalink to this heading">#</a></h3>
 <p>You can use an index value in <code class="docutils literal notranslate"><span class="pre">Python</span></code> to access objects within lists, to
 organize data and to manage the order of the items within the data structure.
 By default, <code class="docutils literal notranslate"><span class="pre">Python</span></code> indexing will always begin at <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, rather <code class="docutils literal notranslate"><span class="pre">[1]</span></code>.
@@ -569,7 +572,7 @@ Cons</div>
 </section>
 </section>
 <section id="how-to-create-a-list-in-python">
-<h2>How to Create a List in Python<a class="headerlink" href="#how-to-create-a-list-in-python" title="Permalink to this headline">#</a></h2>
+<h2>How to Create a List in Python<a class="headerlink" href="#how-to-create-a-list-in-python" title="Permalink to this heading">#</a></h2>
 <p>To create a <code class="docutils literal notranslate"><span class="pre">Python</span></code> list, you use the following syntax:</p>
 <p><code class="docutils literal notranslate"><span class="pre">list_name</span> <span class="pre">=</span> <span class="pre">[item_1,</span> <span class="pre">item_2,</span> <span class="pre">item_3]</span></code></p>
 <p>Notice that the values (soon to be items in a list) are enclosed within square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> and are separated from each other using commas <code class="docutils literal notranslate"><span class="pre">,</span></code>. Below, you create a list of numeric floating point values (type = float).</p>
@@ -634,14 +637,14 @@ Cons</div>
 </div>
 </section>
 <section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-test-your-knowledge">
-<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Test Your Knowledge<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-test-your-knowledge" title="Permalink to this headline">#</a></h2>
+<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Test Your Knowledge<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <p>Look at the list above called boulder_avg_precip. Why did the value <code class="docutils literal notranslate"><span class="pre">jan</span></code> translate to <code class="docutils literal notranslate"><span class="pre">0.7</span></code> when you printed the list in the cell above?</p>
 <section id="answer-to-the-test-you-knowledge">
-<h3>Answer to the test you knowledge<a class="headerlink" href="#answer-to-the-test-you-knowledge" title="Permalink to this headline">#</a></h3>
+<h3>Answer to the test you knowledge<a class="headerlink" href="#answer-to-the-test-you-knowledge" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">jan</span></code> translated to <code class="docutils literal notranslate"><span class="pre">0.7</span></code> instead of <code class="docutils literal notranslate"><span class="pre">0.70</span></code> because <code class="docutils literal notranslate"><span class="pre">Python</span></code> stored the value of the variable, not the variable exactly as you wrote it. Since the trailing 0 on the end of <code class="docutils literal notranslate"><span class="pre">0.70</span></code> contained no information, <code class="docutils literal notranslate"><span class="pre">Python</span></code> didn’t store it in the variable.</p>
 </section>
 <section id="use-the-type-function-in-python-to-determine-the-object-type">
-<h3>Use the Type() Function in Python to Determine the Object Type<a class="headerlink" href="#use-the-type-function-in-python-to-determine-the-object-type" title="Permalink to this headline">#</a></h3>
+<h3>Use the Type() Function in Python to Determine the Object Type<a class="headerlink" href="#use-the-type-function-in-python-to-determine-the-object-type" title="Permalink to this heading">#</a></h3>
 <p>Similar to the previous lesson, you can use the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to confirm the type of
 an object. Below you see that the object that we created above, is indeed a list:</p>
 <p><code class="docutils literal notranslate"><span class="pre">type(list_name)</span></code></p>
@@ -660,7 +663,7 @@ an object. Below you see that the object that we created above, is indeed a list
 </section>
 </section>
 <section id="print-the-length-of-a-list-using-len">
-<h2>Print the Length of a List Using <code class="docutils literal notranslate"><span class="pre">len()</span></code><a class="headerlink" href="#print-the-length-of-a-list-using-len" title="Permalink to this headline">#</a></h2>
+<h2>Print the Length of a List Using <code class="docutils literal notranslate"><span class="pre">len()</span></code><a class="headerlink" href="#print-the-length-of-a-list-using-len" title="Permalink to this heading">#</a></h2>
 <p>To use list indexing efficiently, it is helpful to know how long the list is. Length in this case refers to how many items are stored in the list. You can use the <code class="docutils literal notranslate"><span class="pre">Python</span></code> function <code class="docutils literal notranslate"><span class="pre">len()</span></code> to query this information by including the name of the list as a parameter, or input, to the function as follows:</p>
 <p><code class="docutils literal notranslate"><span class="pre">len(list_name)</span></code></p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">len()</span></code>, you can see that <code class="docutils literal notranslate"><span class="pre">months</span></code> contains 3 items, as it only contained <code class="docutils literal notranslate"><span class="pre">str</span></code> values for January through March.</p>
@@ -690,7 +693,7 @@ an object. Below you see that the object that we created above, is indeed a list
 </div>
 </section>
 <section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-create-your-first-list">
-<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create Your First List<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-create-your-first-list" title="Permalink to this headline">#</a></h2>
+<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create Your First List<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-create-your-first-list" title="Permalink to this heading">#</a></h2>
 <p>Make a list called <code class="docutils literal notranslate"><span class="pre">precip_by_location</span></code> that has a length of 3 and contains a string for <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">York</span> <span class="pre">City</span></code> at index <code class="docutils literal notranslate"><span class="pre">2</span></code>, a float for the <a class="reference external" href="https://www.usclimatedata.com/climate/new-york/new-york/united-states/usny0996">average annual precipitation in New York City</a> (46.23 inches), and a string for the units (<code class="docutils literal notranslate"><span class="pre">inches</span></code>).</p>
 <p>Note that this means the float value for precipitation and the string value for units can be in any location, but the string for <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">York</span> <span class="pre">City</span></code> needs to be at index <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
 <div class="cell tag_hide docutils container">
@@ -704,7 +707,7 @@ an object. Below you see that the object that we created above, is indeed a list
 </div>
 </section>
 <section id="access-objects-stored-in-a-python-list-indexing">
-<h2>Access Objects Stored in a Python List: Indexing<a class="headerlink" href="#access-objects-stored-in-a-python-list-indexing" title="Permalink to this headline">#</a></h2>
+<h2>Access Objects Stored in a Python List: Indexing<a class="headerlink" href="#access-objects-stored-in-a-python-list-indexing" title="Permalink to this heading">#</a></h2>
 <p>As <code class="docutils literal notranslate"><span class="pre">Python</span></code> indexing begins at <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, you can use the list index to query the value of the nth item in the list using the syntax <code class="docutils literal notranslate"><span class="pre">month[index]</span></code>, where index is equal to:</p>
 <p><code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">items</span> <span class="pre">-</span> <span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">n-1</span></code></p>
 <p>For example, if you want to query the second item in the <code class="docutils literal notranslate"><span class="pre">months</span></code> list, you will need to use the index value that results from <code class="docutils literal notranslate"><span class="pre">2-1</span></code>, or <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
@@ -725,7 +728,7 @@ an object. Below you see that the object that we created above, is indeed a list
 <p>because there are only three items in the list and the index value of <code class="docutils literal notranslate"><span class="pre">3</span></code> actually represents a 4th item that does not exist.</p>
 </section>
 <section id="update-items-in-python-lists">
-<h2>Update Items in Python Lists<a class="headerlink" href="#update-items-in-python-lists" title="Permalink to this headline">#</a></h2>
+<h2>Update Items in Python Lists<a class="headerlink" href="#update-items-in-python-lists" title="Permalink to this heading">#</a></h2>
 <p>In addition to querying values, you can also use the list index to update items in a list by assigning a new value to that index location. For example, if you want to update the value stored at <code class="docutils literal notranslate"><span class="pre">months[index]</span></code>, you can assign a new value with:</p>
 <p><code class="docutils literal notranslate"><span class="pre">months[index]</span> <span class="pre">=</span> <span class="pre">value</span></code></p>
 <div class="cell docutils container">
@@ -758,7 +761,7 @@ an object. Below you see that the object that we created above, is indeed a list
 </div>
 </section>
 <section id="insert-items-into-lists">
-<h2>Insert Items into Lists<a class="headerlink" href="#insert-items-into-lists" title="Permalink to this headline">#</a></h2>
+<h2>Insert Items into Lists<a class="headerlink" href="#insert-items-into-lists" title="Permalink to this heading">#</a></h2>
 <p>You can also use the list index to insert new items into a list by specifying
 at which index location you want to the new value to be. The index locations
 for the other values in the list will be automatically updated. For example,
@@ -827,7 +830,7 @@ and becomes index <code class="docutils literal notranslate"><span class="pre">1
 </div>
 </section>
 <section id="delete-items-from-a-python-list">
-<h2>Delete Items From a Python List<a class="headerlink" href="#delete-items-from-a-python-list" title="Permalink to this headline">#</a></h2>
+<h2>Delete Items From a Python List<a class="headerlink" href="#delete-items-from-a-python-list" title="Permalink to this heading">#</a></h2>
 <p>You can delete unwanted items from an existing list using the <code class="docutils literal notranslate"><span class="pre">del</span></code> statement:</p>
 <p><code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">list_name[index]</span></code></p>
 <p>Once again, checking the length of a list is helpful before using the list index to modify the list.</p>
@@ -859,7 +862,7 @@ and becomes index <code class="docutils literal notranslate"><span class="pre">1
 </div>
 </section>
 <section id="append-an-item-to-a-python-list">
-<h2>Append an Item to a Python List<a class="headerlink" href="#append-an-item-to-a-python-list" title="Permalink to this headline">#</a></h2>
+<h2>Append an Item to a Python List<a class="headerlink" href="#append-an-item-to-a-python-list" title="Permalink to this heading">#</a></h2>
 <p>To add an item to the end of a list, you can use the <code class="docutils literal notranslate"><span class="pre">.append()</span></code> function that is associated with lists (referred to as a method of the list object). You can call this method to add values to a list using the syntax:</p>
 <p><code class="docutils literal notranslate"><span class="pre">listname.append(value)</span></code></p>
 <div class="cell docutils container">
@@ -892,7 +895,7 @@ and becomes index <code class="docutils literal notranslate"><span class="pre">1
 </div>
 </section>
 <section id="add-items-to-list">
-<h2>Add Items to List<a class="headerlink" href="#add-items-to-list" title="Permalink to this headline">#</a></h2>
+<h2>Add Items to List<a class="headerlink" href="#add-items-to-list" title="Permalink to this heading">#</a></h2>
 <p>You can also add items to a list using the addition operation <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p>
 <p>For example, you can add items to the beginning of a list using the following syntax:</p>
 <p><code class="docutils literal notranslate"><span class="pre">listname</span> <span class="pre">=</span> <span class="pre">[value]</span> <span class="pre">+</span> <span class="pre">listname</span></code></p>
@@ -912,7 +915,7 @@ and becomes index <code class="docutils literal notranslate"><span class="pre">1
 </div>
 </section>
 <section id="i-class-fa-fa-star-i-data-tip-append-items-to-an-existing-python-list">
-<h2><i class="fa fa-star"></i> <strong>Data Tip:</strong> Append Items to an Existing Python List<a class="headerlink" href="#i-class-fa-fa-star-i-data-tip-append-items-to-an-existing-python-list" title="Permalink to this headline">#</a></h2>
+<h2><i class="fa fa-star"></i> <strong>Data Tip:</strong> Append Items to an Existing Python List<a class="headerlink" href="#i-class-fa-fa-star-i-data-tip-append-items-to-an-existing-python-list" title="Permalink to this heading">#</a></h2>
 <p>You can add items to a list using the addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code>.
 For example, you can add items to the beginning of a list using the following syntax:</p>
 <p><code class="docutils literal notranslate"><span class="pre">listname</span> <span class="pre">=</span> <span class="pre">[value]</span> <span class="pre">+</span> <span class="pre">listname</span></code></p>
@@ -923,7 +926,7 @@ For example, you can add items to the beginning of a list using the following sy
 the addition operator as a <code class="docutils literal notranslate"><span class="pre">Python</span></code> best practice.</p>
 </section>
 <section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-modify-lists">
-<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Modify Lists<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-modify-lists" title="Permalink to this headline">#</a></h2>
+<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Modify Lists<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-modify-lists" title="Permalink to this heading">#</a></h2>
 <p>Use the skills you just learned to modify the list <code class="docutils literal notranslate"><span class="pre">precip_by_location</span></code> created above. It should look like:</p>
 <p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">20.23,</span> <span class="pre">'inches',</span> <span class="pre">'Boulder',</span> <span class="pre">'Colorado']</span></code></p>
 <p>There are a lot of ways to update the <code class="docutils literal notranslate"><span class="pre">precip_by_location</span></code> object with the new values. Don’t be afraid to be creative!</p>
@@ -951,7 +954,7 @@ the addition operator as a <code class="docutils literal notranslate"><span clas
 </div>
 </section>
 <section id="i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-create-a-list-of-lists">
-<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create a List of Lists<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-create-a-list-of-lists" title="Permalink to this headline">#</a></h2>
+<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create a List of Lists<a class="headerlink" href="#i-class-fa-fa-pencil-square-o-aria-hidden-true-i-challenge-create-a-list-of-lists" title="Permalink to this heading">#</a></h2>
 <p>The syntax for creating a list composed of sublists is below.</p>
 <p><code class="docutils literal notranslate"><span class="pre">[[&quot;sub-list-one&quot;],[&quot;sub-list-two&quot;]]</span></code></p>
 <p>Notice that the hierarchy for the top level of the list of lists is defined
@@ -978,7 +981,7 @@ syntax below:</p>
 </div>
 </section>
 <section id="id1">
-<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create a List of Lists<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create a List of Lists<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>The syntax for accessing the second item in the first sublist is as follows:</p>
 <p><code class="docutils literal notranslate"><span class="pre">list_of_lists[0][1]</span></code></p>
 <p>Access the second item in the second sublist. HINT: the value returned should be <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>

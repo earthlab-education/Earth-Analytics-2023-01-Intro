@@ -9,55 +9,24 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
+myst:
+  substitutions:
+    title: 'Text Editors for the Command Line and Scientific Programming'
+    excerpt: |
+      Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text editor at the command line.
+    authors: 'Leah Wasser, Martha Morrissey'
+    objective: |
+      * Explain how text editors are used in a scientific workflow.
+      * Change your default text editor in the command line.
 ---
-
-```{raw-cell}
-
----
-layout: single
-category: courses
-title: 'Text Editors for the Command Line and Scientific Programming'
-excerpt: 'Text editors can be used to edit code and for commit messages in git. Learn about features to look for in a text editor and how to change your default text editor at the command line.'
-authors: ['Leah Wasser', 'Martha Morrissey']
-modified: '{:%Y-%m-%d}'.format(datetime.now())
-module: "setup-earth-analytics-environment"
-permalink: /workshops/setup-earth-analytics-python/text-editors-for-science-workflows/
-nav-title: 'Text Editors For Coding'
-week: 0
-sidebar:
-    nav:
-author_profile: false
-comments: true
-order: 5
-topics:
-    reproducible-science-and-programming: ['python']
----
-```
-
-{% include toc title="In This Lesson" icon="file-text" %}
-
-In this lesson, you will learn about features to look for in a text editor and how to change your default text editor at the command line
-
-<div class='notice--success' markdown="1">
-
-
-## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives
-
-At the end of this activity, you will be able to:
-
-* Explain how text editors are used in a scientific workflow.
-* Change your default text editor in the command line.
-
+:::{include} ../../../textbook-header.md
+:::
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need
 
 Make sure you have followed the installation instructions on the <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Setup Git, Bash & Conda lesson</a>. 
 
 Information below is adapted from materials by <a href="http://software-carpentry.org/" target = "_blank">Software Carpentry</a> and <a href = "https://cs61a.org/articles/vim.html#introduction" target = "_blank">UC Berkeley CS61a</a>.
-
-
-</div>
-
 
 ## Why You Need a Good Text Editor
 
@@ -115,7 +84,7 @@ Vim is the default text editor for Mac, Linux, and Windows (if Windows has `Git 
 
 To open vim, type `vim` at the command line. Like this:
 
-```bash
+```{code-block} bash
 vim
 ```
 
@@ -155,7 +124,7 @@ Before saving a file in vim, it is a good idea to check your current working dir
 
 To open an existing file, type `vim` followed by the name of the file. For example:
 
-```bash
+```{code-block} bash
 vim earth-analytics-test.txt
 ```
 
@@ -196,7 +165,7 @@ If you don’t already have a favorite text editor, we suggest you use Atom in t
 
 You can check the default editor for `Git` using:
 
-```bash
+```{code-block} bash
 $ git var -l
 ```
 Look at the GIT_EDITOR part of the output. Vi means vim.
@@ -220,20 +189,9 @@ Sublime Text (Win, 64-bit install)| `git config --global core.editor "'c:/progra
 Notepad++ (Win, 32-bit install)| `git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`
 Notepad++ (Win, 64-bit install) | `git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPluginin”`
 
-
-
-<div class="notice--info" markdown="1">
-
 ## Additional Resources
 
 If you are interested in learning more about the features of these text editors, check out these guides:
 <a href="https://cs61a.org/articles/atom/" target = "_blank">Atom</a>,
 <a href="https://cs61a.org/articles/sublime/" target = "_blank">Sublime</a>, or
 <a href="https://cs61a.org/articles/vim/" target = "_blank">Vim</a>
-
-
-</div>
-
-```{code-cell} ipython3
-
-```

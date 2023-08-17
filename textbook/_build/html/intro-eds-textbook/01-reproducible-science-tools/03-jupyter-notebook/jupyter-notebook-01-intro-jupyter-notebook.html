@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction to Jupyter For Python &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Get Started With Jupyter Notebook For Python" href="jupyter-notebook-02-get-started-jupyter-notebook.html" />
     <link rel="prev" title="How To Organize Your Project: Best Practices for Open Reproducible Science" href="../01-open-reproducible-science/open-reproducible-science-03-best-practices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -177,25 +178,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
 </ul>
 </li>
 </ul>
@@ -458,7 +446,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-jupyter-for-python">
-<h1>Introduction to Jupyter For Python<a class="headerlink" href="#introduction-to-jupyter-for-python" title="Permalink to this headline">#</a></h1>
+<h1>Introduction to Jupyter For Python<a class="headerlink" href="#introduction-to-jupyter-for-python" title="Permalink to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
 <div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
@@ -471,7 +459,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 11, 2023</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 16, 2023</p>
 </div>
 </div>
 </div>
@@ -491,7 +479,7 @@ document.write(`
 <p>The Jupyter ecosystem contains many useful tools for working with Python including Jupyter Notebook, an interactive coding environment. Learn how the components and functionality of Jupyter Notebook can help you implement open reproducible science workflows.</p>
 <hr class="docutils" />
 <section id="jupyter-notebook-for-open-reproducible-science">
-<h2>Jupyter Notebook for Open Reproducible Science<a class="headerlink" href="#jupyter-notebook-for-open-reproducible-science" title="Permalink to this headline">#</a></h2>
+<h2>Jupyter Notebook for Open Reproducible Science<a class="headerlink" href="#jupyter-notebook-for-open-reproducible-science" title="Permalink to this heading">#</a></h2>
 <p>If you recall from the <a class="reference internal" href="../01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html"><span class="doc std std-doc">Open Reproducible Science chapter</span></a>, Jupyter is an open source platform that contains a suite of tools including:</p>
 <ul class="simple">
 <li><p>Jupyter Notebook: A browser-based application that allows you to create and share documents (i.e. Jupyter Notebook files) that contain live code, equations, visualizations and narrative text.</p></li>
@@ -506,7 +494,7 @@ document.write(`
 </ol>
 <p>You can use Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) to document workflows and to share code for data processing, analysis and visualization.</p>
 <section id="combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows">
-<h3>Combine Markdown and Code in Jupyter Notebooks To Document Workflows<a class="headerlink" href="#combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows" title="Permalink to this headline">#</a></h3>
+<h3>Combine Markdown and Code in Jupyter Notebooks To Document Workflows<a class="headerlink" href="#combine-markdown-and-code-in-jupyter-notebooks-to-document-workflows" title="Permalink to this heading">#</a></h3>
 <p>Using Markdown alongside code in Jupyter Notebooks has many advantages:</p>
 <ul class="simple">
 <li><p><strong>Human readable:</strong> it’s much easier to read a web page or a report containing text and figures. By adding Markdown text around your code, your project becomes more user friendly and easier to understand.</p></li>
@@ -522,12 +510,12 @@ document.write(`
 </div>
 </section>
 <section id="jupyter-notebooks-are-beneficial-to-your-colleagues">
-<h3>Jupyter Notebooks Are Beneficial to Your Colleagues<a class="headerlink" href="#jupyter-notebooks-are-beneficial-to-your-colleagues" title="Permalink to this headline">#</a></h3>
+<h3>Jupyter Notebooks Are Beneficial to Your Colleagues<a class="headerlink" href="#jupyter-notebooks-are-beneficial-to-your-colleagues" title="Permalink to this heading">#</a></h3>
 <p>The link between data, code and results makes Jupyter Notebook powerful. You can share your entire workflow with your colleagues and they can quickly see your process.</p>
 <p>You can also write reports using .ipynb files which contain code and data analysis results. To enrich the document, you can add text, just like you would in a Word document that describes your workflow, discusses your results and presents your conclusions - alongside your analysis results.</p>
 </section>
 <section id="jupyter-notebooks-are-beneficial-to-you-your-future-self">
-<h3>Jupyter Notebooks Are Beneficial to You &amp; Your Future Self<a class="headerlink" href="#jupyter-notebooks-are-beneficial-to-you-your-future-self" title="Permalink to this headline">#</a></h3>
+<h3>Jupyter Notebooks Are Beneficial to You &amp; Your Future Self<a class="headerlink" href="#jupyter-notebooks-are-beneficial-to-you-your-future-self" title="Permalink to this heading">#</a></h3>
 <p>Jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) are efficient. If you need to make changes to your workflow, you can simply modify the code and run the report again. Your future self will appreciate it too.</p>
 <p>Jupyter Notebooks allows you to add documentation to remind yourself of your process. Further, all of the code that you used is in the notebook ready to be rerun or modified at any time.</p>
 <div class="data-tip margin admonition">
@@ -536,17 +524,17 @@ document.write(`
 </div>
 </section>
 <section id="convert-notebooks-to-shareable-html-files">
-<h3>Convert Notebooks to Shareable HTML Files<a class="headerlink" href="#convert-notebooks-to-shareable-html-files" title="Permalink to this headline">#</a></h3>
+<h3>Convert Notebooks to Shareable HTML Files<a class="headerlink" href="#convert-notebooks-to-shareable-html-files" title="Permalink to this heading">#</a></h3>
 <p>You can save Jupyter Notebooks containing code and markdown as <code class="docutils literal notranslate"><span class="pre">.html</span></code> files. When you save a notebook as <code class="docutils literal notranslate"><span class="pre">.html</span></code>, it creates a nicely rendered web page with the code and outputs visible along with the markdown rendered as nicely formatted text. This means that you can share the file with a colleague and they can see your entire workflow - without having to rerun your analysis. You will learn how how to export to <code class="docutils literal notranslate"><span class="pre">.html</span></code> and other formats later in this textbook.</p>
 </section>
 </section>
 <section id="what-is-jupyter-notebook">
-<h2>What is Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<h2>What is Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-notebook" title="Permalink to this heading">#</a></h2>
 <p><a href="http://jupyter.org/index.html" target = "_blank">Jupyter Notebook</a> is an Integrated Development Environment (IDE) that allows you to write code, navigate files on our computer, inspect variables and more.</p>
 <p>An IDE is different from a text editor, as IDEs allow you to interactively write, test, and debug code.</p>
 <p>While there are other commonly used <code class="docutils literal notranslate"><span class="pre">Python</span></code> IDEs such as Spyder (which comes with the <code class="docutils literal notranslate"><span class="pre">Python</span></code> Anaconda distribution) and PyCharm, in this textbook, you will use <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> as your IDE.</p>
 <section id="advantages-of-jupyter-notebook">
-<h3>Advantages of Jupyter Notebook<a class="headerlink" href="#advantages-of-jupyter-notebook" title="Permalink to this headline">#</a></h3>
+<h3>Advantages of Jupyter Notebook<a class="headerlink" href="#advantages-of-jupyter-notebook" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> provides users with useful functionality including the ability to:</p>
 <ul class="simple">
 <li><p>Write and run code interactively.</p></li>
@@ -556,7 +544,7 @@ document.write(`
 <p>This functionality supports open reproducible science by facilitating documentation and collaboration on workflows.</p>
 </section>
 <section id="jupyter-notebook-makes-coding-and-documentation-more-efficient">
-<h3>Jupyter Notebook Makes Coding and Documentation More Efficient<a class="headerlink" href="#jupyter-notebook-makes-coding-and-documentation-more-efficient" title="Permalink to this headline">#</a></h3>
+<h3>Jupyter Notebook Makes Coding and Documentation More Efficient<a class="headerlink" href="#jupyter-notebook-makes-coding-and-documentation-more-efficient" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> can help save your time:</p>
 <ul class="simple">
 <li><p><strong>Shortcuts</strong>: <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> has <a class="reference internal" href="jupyter-notebook-06-shortcuts.html"><span class="doc std std-doc">keyboard shortcuts</span></a> for running cells, adding new cells and formatting the notebook to help save you time.</p></li>
@@ -567,7 +555,7 @@ document.write(`
 </section>
 </section>
 <section id="components-of-jupyter-notebook">
-<h2>Components of Jupyter Notebook<a class="headerlink" href="#components-of-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<h2>Components of Jupyter Notebook<a class="headerlink" href="#components-of-jupyter-notebook" title="Permalink to this heading">#</a></h2>
 <p>The components of <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> include:</p>
 <ol class="arabic simple">
 <li><p><strong>The Jupyter Notebook IDE</strong> The <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> interactive development environment (IDE) is the application that launches in a web browser like Firefox or Safari and is the environment where you write and run your code.</p></li>
@@ -575,7 +563,7 @@ document.write(`
 <li><p><strong>Kernels</strong> A kernel runs your code in a specific programming language. <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> supports over 40 different languages. In this class, you will use the <code class="docutils literal notranslate"><span class="pre">Python</span></code> kernel within the <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> IDE.</p></li>
 </ol>
 <section id="structure-of-jupyter-notebook-files">
-<h3>Structure of Jupyter Notebook Files<a class="headerlink" href="#structure-of-jupyter-notebook-files" title="Permalink to this headline">#</a></h3>
+<h3>Structure of Jupyter Notebook Files<a class="headerlink" href="#structure-of-jupyter-notebook-files" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> IDE allows you to organize and execute your work using individual <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> files with the file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> file (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) has three main parts, which are highlighted in the image below:</p>
 <ul class="simple">
@@ -592,7 +580,7 @@ document.write(`
 <p>Throughout this chapter, you will review the menu and toolbar to complete different tasks within your <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> files such as saving changes, running code, etc.</p>
 </section>
 <section id="markdown-and-code-cells-in-jupyter-notebook">
-<h3>Markdown and Code Cells in Jupyter Notebook<a class="headerlink" href="#markdown-and-code-cells-in-jupyter-notebook" title="Permalink to this headline">#</a></h3>
+<h3>Markdown and Code Cells in Jupyter Notebook<a class="headerlink" href="#markdown-and-code-cells-in-jupyter-notebook" title="Permalink to this heading">#</a></h3>
 <p>In addition to the menu and toolbar, a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> consists of a set of cells, which can be specified to store documentation text such as <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> or programming code such as <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
 <p>Text written using the <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> syntax can be rendered in a cell that is of the cell type <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>.</p>
 <figure>

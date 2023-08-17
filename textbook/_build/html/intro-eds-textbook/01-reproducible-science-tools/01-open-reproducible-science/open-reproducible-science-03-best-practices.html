@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>How To Organize Your Project: Best Practices for Open Reproducible Science &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -69,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Introduction to Jupyter For Python" href="../03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html" />
     <link rel="prev" title="Tools For Open Reproducible Science" href="open-reproducible-science-02-open-science-tools.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -177,25 +178,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
 </ul>
 </li>
 </ul>
@@ -455,7 +443,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-organize-your-project-best-practices-for-open-reproducible-science">
-<h1>How To Organize Your Project: Best Practices for Open Reproducible Science<a class="headerlink" href="#how-to-organize-your-project-best-practices-for-open-reproducible-science" title="Permalink to this headline">#</a></h1>
+<h1>How To Organize Your Project: Best Practices for Open Reproducible Science<a class="headerlink" href="#how-to-organize-your-project-best-practices-for-open-reproducible-science" title="Permalink to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
 <div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
@@ -468,7 +456,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser, Max Joseph</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 11, 2023</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 16, 2023</p>
 </div>
 </div>
 </div>
@@ -485,9 +473,9 @@ document.write(`
 <p>Open reproducible science refers to developing workflows that others can easily understand and use. Learn about best practices for organizing open reproducible science projects including the use of machine readable names.</p>
 <hr class="docutils" />
 <section id="project-organization-and-management-for-open-reproducible-science-projects">
-<h2>Project Organization and Management for Open Reproducible Science Projects<a class="headerlink" href="#project-organization-and-management-for-open-reproducible-science-projects" title="Permalink to this headline">#</a></h2>
+<h2>Project Organization and Management for Open Reproducible Science Projects<a class="headerlink" href="#project-organization-and-management-for-open-reproducible-science-projects" title="Permalink to this heading">#</a></h2>
 <section id="organize-your-science-project-directory-to-make-it-easier-to-understand">
-<h3>Organize Your Science Project Directory To Make It Easier to Understand<a class="headerlink" href="#organize-your-science-project-directory-to-make-it-easier-to-understand" title="Permalink to this headline">#</a></h3>
+<h3>Organize Your Science Project Directory To Make It Easier to Understand<a class="headerlink" href="#organize-your-science-project-directory-to-make-it-easier-to-understand" title="Permalink to this heading">#</a></h3>
 <p>When you are working on a data project, there are often many files that you need to store on your computer. These files may include:</p>
 <ul class="simple">
 <li><p>Raw Data Files</p></li>
@@ -499,7 +487,7 @@ document.write(`
 <p>It will save you time and make your project more useable and reproducible if you carefully consider how these files are stored on your computer. Below are some best practices to consider when pulling together a project.</p>
 </section>
 <section id="importance-of-directory-and-file-names">
-<h3>Importance of Directory and File Names<a class="headerlink" href="#importance-of-directory-and-file-names" title="Permalink to this headline">#</a></h3>
+<h3>Importance of Directory and File Names<a class="headerlink" href="#importance-of-directory-and-file-names" title="Permalink to this heading">#</a></h3>
 <p>As you create new directories and files on your computer, consider using a carefully crafted naming convention that makes it easier for anyone to find things and also to understand what each files does or contains.</p>
 <p>It is good practice to use file and directory that are:</p>
 <ul class="simple">
@@ -512,9 +500,9 @@ document.write(`
 </section>
 </section>
 <section id="best-practices-for-open-reproducible-science-projects">
-<h2>Best Practices for Open Reproducible Science Projects<a class="headerlink" href="#best-practices-for-open-reproducible-science-projects" title="Permalink to this headline">#</a></h2>
+<h2>Best Practices for Open Reproducible Science Projects<a class="headerlink" href="#best-practices-for-open-reproducible-science-projects" title="Permalink to this heading">#</a></h2>
 <section id="use-consistent-computer-readable-naming-conventions">
-<h3>1. Use Consistent Computer Readable Naming Conventions<a class="headerlink" href="#use-consistent-computer-readable-naming-conventions" title="Permalink to this headline">#</a></h3>
+<h3>1. Use Consistent Computer Readable Naming Conventions<a class="headerlink" href="#use-consistent-computer-readable-naming-conventions" title="Permalink to this heading">#</a></h3>
 <p>Machine readable file names allow your directory structure to be quickly manipulated and handled by code.</p>
 <p>For example, you may want to write a script that processes a set of images and you may want to sort those images by date. If the date of each image is included in the file name at the very beginning of the name, it will become easier to parse with your code. The files below could be difficult to parse because the naming convention is not standard.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">file</span><span class="o">.</span><span class="n">jpg</span>
@@ -543,7 +531,7 @@ document.write(`
 </ul>
 </section>
 <section id="be-consistent-when-naming-files-use-lower-case">
-<h3>2. Be Consistent When Naming Files - Use Lower Case<a class="headerlink" href="#be-consistent-when-naming-files-use-lower-case" title="Permalink to this headline">#</a></h3>
+<h3>2. Be Consistent When Naming Files - Use Lower Case<a class="headerlink" href="#be-consistent-when-naming-files-use-lower-case" title="Permalink to this heading">#</a></h3>
 <p>It might be tempting when naming files and directories to use <code class="docutils literal notranslate"><span class="pre">lower</span></code> and <code class="docutils literal notranslate"><span class="pre">Upper</span></code> case. However, case will cause coding issues for you down the road particularly if you are switching between operating systems (Mac vs Linux vs Windows).</p>
 <p>Case in point, have a look at the file names below.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">txt</span>
@@ -558,7 +546,7 @@ document.write(`
 <p>may work on some machines  (possibly Windows) but it’s likely to fail on Linux or MAC. To keep things simple and to avoid case sensitvity issues, use lower case naming conventions for all file and directory names.</p>
 </section>
 <section id="organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs">
-<h3>3. Organize Your Project Directories to Make It Easy to Find Data, Code and Outputs<a class="headerlink" href="#organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs" title="Permalink to this headline">#</a></h3>
+<h3>3. Organize Your Project Directories to Make It Easy to Find Data, Code and Outputs<a class="headerlink" href="#organize-your-project-directories-to-make-it-easy-to-find-data-code-and-outputs" title="Permalink to this heading">#</a></h3>
 <p>Rather than saving a bunch of files into a single directory, consider a directory organization approach that fits your project.</p>
 <p>Create numbered directories that cover the steps of your workflow - for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">vegetation</span><span class="o">-</span><span class="n">health</span><span class="o">-</span><span class="n">project</span>
@@ -574,7 +562,7 @@ document.write(`
 <p>This is especially useful for your future self who may need to come back to the project in six months to update things. It also makes is easier for a colleague that you are collaborating with to quickly find things.</p>
 <p>There is no one perfect example as each project may require different directories. The best advice is to pick something that works well for you and your team and stick to it. It’s best to be consistent.</p>
 <div class="notice--info" markdown="1">
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Organized Project</p></th>
 <th class="head"><p>Non Organized Project</p></th>
@@ -592,11 +580,11 @@ document.write(`
 </div>
 </section>
 <section id="use-meaningful-expressive-file-and-directory-names">
-<h3>4. Use Meaningful (Expressive) File And Directory Names<a class="headerlink" href="#use-meaningful-expressive-file-and-directory-names" title="Permalink to this headline">#</a></h3>
+<h3>4. Use Meaningful (Expressive) File And Directory Names<a class="headerlink" href="#use-meaningful-expressive-file-and-directory-names" title="Permalink to this heading">#</a></h3>
 <p>Expressive file names are those that are meaningful and thus describe what each directory or file is or contains. Using expressive file names makes it easier to scan a project directory and quickly understand where things are stored and what files do or contain.</p>
 <p>Expressive names also support machine readibility, as discernible patterns in expressive names can be used by a computer to identify and parse files.</p>
 <div class="notice--info" markdown="1">
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Expressive Project</p></th>
 <th class="head"><p>Non Expressive Project</p></th>
@@ -616,12 +604,12 @@ document.write(`
 {: .notice–success}</p>
 </section>
 <section id="document-your-project-with-a-readme-file">
-<h3>5. Document Your Project With a README File<a class="headerlink" href="#document-your-project-with-a-readme-file" title="Permalink to this headline">#</a></h3>
+<h3>5. Document Your Project With a README File<a class="headerlink" href="#document-your-project-with-a-readme-file" title="Permalink to this heading">#</a></h3>
 <p>There are many ways to document a project; however, a readme file at the top level of your project is a standard convention. When you begin to use GitHub, you will notice that almost all well designed github repositories contain readme files. The readme is a text file that describes data / software packages and tools used to process data in your project. The readme should also describe files and associated naming conventions. Finally, the readme can be used to document any abbreviations used, units, etc as needed.</p>
 <p>There are other files that you may consider as well such as software installation instructions if those are required, citation information and if the project is one that you want others to contribute to, then a <code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code> file may be in order.</p>
 </section>
 <section id="don-t-use-proprietary-file-formats">
-<h3>6. Don’t Use Proprietary File Formats<a class="headerlink" href="#don-t-use-proprietary-file-formats" title="Permalink to this headline">#</a></h3>
+<h3>6. Don’t Use Proprietary File Formats<a class="headerlink" href="#don-t-use-proprietary-file-formats" title="Permalink to this heading">#</a></h3>
 <p>Proprietary formats are formats that require a specific tool (and a specific license often) to open. Examples include Excel (.xls) or Word (.doc). These formats may change over time as new versions come out (example: <code class="docutils literal notranslate"><span class="pre">.xls</span></code> upgraded to <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>.</p>
 <p>In some cases, certain formats are operating system specific (example: most Linux users do not run Microsoft tools).</p>
 <p>When choosing file formats for your projects, think about whether you will have a license to access that file format in the future and whether others have access to the license.</p>

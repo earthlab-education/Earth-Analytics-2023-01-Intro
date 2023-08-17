@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Section Two - File Formats for Earth Data Science &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -54,6 +55,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/font_loader.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -65,10 +67,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Section Three - Git and GitHub" href="../03-git-github/00-git-github-landing-page.html" />
-    <link rel="prev" title="Bash Commands to Manage Directories and Files" href="../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html" />
+    <link rel="next" title="Python Code Fundamentals" href="../04-python-fundamentals/00-python-fundamentals-landing-page.html" />
+    <link rel="prev" title="Useful Jupyter Notebook Shortcuts" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -153,39 +155,71 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../00-learning-portal-landing-page.html">
-                    Welcome to earthdatascience.org
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../00-course-overview.html"><div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/intro-eds-textbook/00-course-overview.md</span>, line 36)</p>
-<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
-</div>
-</a></li>
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html"><div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/elsa/05-certificate/earth-analytics/curriculum/earth-analytics-lessons/jupyter-books/textbook-header.md</span>, line 2)</p>
-<p>Substitution error:UndefinedError: ‘title’ is undefined</p>
-</div>
-</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../01-reproducible-science-tools/02-bash/bash-01-intro-bash.html">Introduction to Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html">Bash Commands to Manage Directories and Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../03-git-github/00-git-github-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Three - Git and GitHub</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../python-open-source-tool-setup/setup-02-setup-git-bash-and-anacoda.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../04-python-fundamentals/00-python-fundamentals-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Four - Python Code Fundamentals</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../06-python-data-structures/00-ds-python-landing.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Six - Scientific Data Structures in Python</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../07-efficient-clean-code-python/00-efficient-clean-code-python-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Seven - Write Efficient and Clean Code Using Open Source Python</a></li>
 
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Want more Earthlab?</span></p>
 <ul class="nav bd-sidenav">
@@ -398,11 +432,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="i-class-fa-fa-ship-aria-hidden-true-i-section-two-file-formats-for-earth-data-science">
-<h1><i class="fa fa-ship" aria-hidden="true"></i> Section Two - File Formats for Earth Data Science<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-section-two-file-formats-for-earth-data-science" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-ship" aria-hidden="true"></i> Section Two - File Formats for Earth Data Science<a class="headerlink" href="#i-class-fa-fa-ship-aria-hidden-true-i-section-two-file-formats-for-earth-data-science" title="Permalink to this heading">#</a></h1>
 <p>In section two of this textbook, you will learn about common text file formats for earth data science workflows including Markdown, text (.txt, .csv) files, YAML (Yet Another Markup Language). You will also learn about open tools that you can use to edit and work with these files.</p>
 </section>
 <section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
-<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this heading">#</a></h1>
 <p>After completing this section of the introduction to earth analytics online textbook, you will be able to:</p>
 <ul class="simple">
 <li><p>Explain what the <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> format is and describe its role in the documentation of earth data science workflows.</p></li>
@@ -413,8 +447,6 @@ document.write(`
 </ul>
 </div>
 <p>{% include textbook-section-toc.html %}</p>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -449,20 +481,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../01-reproducible-science-tools/02-bash/bash-02-useful-bash-commands.html"
+       href="../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Bash Commands to Manage Directories and Files</p>
+        <p class="prev-next-title">Useful Jupyter Notebook Shortcuts</p>
       </div>
     </a>
     <a class="right-next"
-       href="../03-git-github/00-git-github-landing-page.html"
+       href="../04-python-fundamentals/00-python-fundamentals-landing-page.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><i class="fa fa-ship" aria-hidden="true"></i> Section Three - Git and GitHub</p>
+        <p class="prev-next-title">Python Code Fundamentals</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -523,40 +555,6 @@ By CU Boulder Earthlab Education
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <div class="l-footer">
-  <div style="display: inline-flex; align-items:center; justify-content:center;">
-    <div style="padding-right: 20px;">
-      <a href="https://earthlab.colorado.edu">
-        <img class="img-fluid" src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/earthlab_white.png">
-      </a>
-    </div>
-
-    <div style="padding-right: 20px;">
-      <a href="https://colorado.edu" target="_blank">
-        <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/755113100761987580ae7df9f11ab82a_400x400.png">
-      </a>
-    </div>
-
-    <div style="padding-right: 20px;">
-      <a href="https://cires.colorado.edu" target="_blank">
-      <img src="https://earthlab.colorado.edu/sites/default/files/styles/footer_logo/public/media/image/cireslogo-footer.png">
-      </a>
-    </div>
-
-  </div>
-      
-  <div style="margin-top: 20px;">
-    <div class="copyright ">
-      <h3 class="copyright__title">University of Colorado Boulder</h3>
-      <div class="copyright__teaser">4001 Discovery Drive Suite S348 - UCB 611 Boulder, CO 80303</div>
-      <div class="copyright__info">Copyright © 2023 Regents of the University of Colorado</div>
-    </div>
-  </div>
-
-</div>
-
-</div>
   </div>
   
 </div>

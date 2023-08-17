@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Learning Objectives &#8212; Introduction to Earth and Environmental Data Science</title>
   
@@ -46,6 +46,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Learning Objectives" href="setup-05-text-editors-for-science-workflows.html" />
     <link rel="prev" title="Learning Objectives" href="setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -177,25 +178,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page.html"><i aria-hidden="true" class="fa fa-ship"></i> Section Two - File Formats for Earth Data Science</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Introduction to the Python Scientific Programming Language for Earth Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Give it a name, find it later</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Learning Objectives</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
 </ul>
 </li>
 </ul>
@@ -461,7 +449,7 @@ document.write(`
 <p>In this lesson, you will learn how to install a conda environment from a .yml file that contains a list of desired <strong>Python</strong> packages. You will install a conda environment called <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code>, which has been designed specifically for the <strong>Python</strong> lessons on this website.</p>
 <div class='notice--success' markdown="1">
 <section id="i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives">
-<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives<a class="headerlink" href="#i-class-fa-fa-graduation-cap-aria-hidden-true-i-learning-objectives" title="Permalink to this heading">#</a></h1>
 <p>At the end of this activity, you will be able to:</p>
 <ul class="simple">
 <li><p>Install a new environment using conda.</p></li>
@@ -470,7 +458,7 @@ document.write(`
 </ul>
 </section>
 <section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
-<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this headline">#</a></h1>
+<h1><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this heading">#</a></h1>
 <p>You should have <strong>Bash</strong> and the Miniconda distribution of <strong>Python</strong> 3.x setup on your computer and an <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> working directory. Be sure you have:</p>
 <ul class="simple">
 <li><p>Completed <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">the setup for Git, Bash and Conda</a>.</p></li>
@@ -480,7 +468,7 @@ document.write(`
 <p>Information below is adapted from materials developed by the Conda documentation for <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/" target="_blank">installing conda</a> and <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">managing conda environments</a>.</p>
 </section>
 <section id="why-use-conda-environments-for-python">
-<h1>Why Use Conda Environments for Python<a class="headerlink" href="#why-use-conda-environments-for-python" title="Permalink to this headline">#</a></h1>
+<h1>Why Use Conda Environments for Python<a class="headerlink" href="#why-use-conda-environments-for-python" title="Permalink to this heading">#</a></h1>
 <p>Conda allows you to have different environments installed on your computer to access different versions of <strong>Python</strong> and different libraries. Sometimes libraries conflict which causes errors and packages not to work.</p>
 <p>To avoid conflicts, we created an environment called <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> that contains all of the libraries that you will need for the <strong>Earth Analytics Python</strong> course lessons on this website.</p>
 <div class='notice--success' markdown="1">
@@ -491,7 +479,7 @@ document.write(`
 </div>
 </section>
 <section id="install-the-earth-analytics-python-conda-environment">
-<h1>Install the Earth Analytics Python Conda Environment<a class="headerlink" href="#install-the-earth-analytics-python-conda-environment" title="Permalink to this headline">#</a></h1>
+<h1>Install the Earth Analytics Python Conda Environment<a class="headerlink" href="#install-the-earth-analytics-python-conda-environment" title="Permalink to this heading">#</a></h1>
 <p>To install the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment, you will need to follow these steps:</p>
 <ol class="arabic simple">
 <li><p>Fork and clone a GitHub repository from <code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab/earth-analytics-python-env</span></code> to your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory.</p>
@@ -518,9 +506,9 @@ The instructions above will only work if you run them in the directory where you
 {: .notice–success}</p>
 </section>
 <section id="about-conda-environments">
-<h1>About Conda Environments<a class="headerlink" href="#about-conda-environments" title="Permalink to this headline">#</a></h1>
+<h1>About Conda Environments<a class="headerlink" href="#about-conda-environments" title="Permalink to this heading">#</a></h1>
 <section id="what-is-a-yaml-yml-file">
-<h2>What is a YAML (.yml) File?<a class="headerlink" href="#what-is-a-yaml-yml-file" title="Permalink to this headline">#</a></h2>
+<h2>What is a YAML (.yml) File?<a class="headerlink" href="#what-is-a-yaml-yml-file" title="Permalink to this heading">#</a></h2>
 <p>When you work with conda, you can create custom lists that tell conda where to install libraries from, and in what order. You can even specify a particular version.</p>
 <p>You write this list using  <a href="http://yaml.org/" target="_blank">YAML</a> (Yet Another Markup Language). This is an alternative to using <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install <strong>Python</strong> packages.</p>
 <p>In previous steps, you used a custom .yml list to install all of the <strong>Python</strong> libraries that you will need to complete the <strong>Python</strong> lessons on this website. This .yml list is customized to install libraries from the repositories and in an order that minimizes conflicts.</p>
@@ -548,13 +536,13 @@ The instructions above will only work if you run them in the directory where you
 </section>
 </section>
 <section id="use-conda-environments">
-<h1>Use Conda Environments<a class="headerlink" href="#use-conda-environments" title="Permalink to this headline">#</a></h1>
+<h1>Use Conda Environments<a class="headerlink" href="#use-conda-environments" title="Permalink to this heading">#</a></h1>
 <p>You can have different <strong>Python</strong> environments on your computer. Conda allows you to easily jump between environments using a set of commands that you run in your terminal.</p>
 <p>This section provides an overview of various commands to manage your conda environments.</p>
 <p>For more detailed instructions for using these commands, see the Intro to Earth Data Science textbook page on <a href="{{ site.url }}/courses/intro-to-earth-data-science/python-code-fundamentals/use-python-packages/use-conda-environments-and-install-packages/">Installing Python Packages in Conda Environments</a>.</p>
 <p>Or, have a look at the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#viewing-a-list-of-your-environments" target = "_blank">Conda documentation notes that review the steps below and more!</a></p>
 <section id="view-a-list-of-all-installed-conda-environments">
-<h2>View a List of All Installed Conda Environments<a class="headerlink" href="#view-a-list-of-all-installed-conda-environments" title="Permalink to this headline">#</a></h2>
+<h2>View a List of All Installed Conda Environments<a class="headerlink" href="#view-a-list-of-all-installed-conda-environments" title="Permalink to this heading">#</a></h2>
 <p>You can see a list of all installed conda environments by typing:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>info<span class="w"> </span>--envs
 </pre></div>
@@ -563,7 +551,7 @@ The instructions above will only work if you run them in the directory where you
 <p>For example, if a <strong>Python</strong> package such as <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> is only installed in the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment, and not the default conda environment, you will not be able to access it (e.g. import it to <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>), unless you have the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment activated.</p>
 </section>
 <section id="activate-a-conda-environment">
-<h2>Activate a Conda Environment<a class="headerlink" href="#activate-a-conda-environment" title="Permalink to this headline">#</a></h2>
+<h2>Activate a Conda Environment<a class="headerlink" href="#activate-a-conda-environment" title="Permalink to this heading">#</a></h2>
 <p><strong>To activate an environment</strong>, use the Terminal to navigate to your earth-analytics directory (e.g. <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the directory). Then, type the following command to activate the environment (e.g. <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>earth-analytics-python
 </pre></div>
@@ -580,14 +568,14 @@ Note that after you restart the Terminal, the <code class="docutils literal notr
 {: .notice–success}</p>
 </section>
 <section id="deactivate-a-conda-environment">
-<h2>Deactivate a Conda Environment<a class="headerlink" href="#deactivate-a-conda-environment" title="Permalink to this headline">#</a></h2>
+<h2>Deactivate a Conda Environment<a class="headerlink" href="#deactivate-a-conda-environment" title="Permalink to this heading">#</a></h2>
 <p>If needed, you can deactivate a conda environment. Deactivating the environment switches you back to the default environment in your computer.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate
 </pre></div>
 </div>
 </section>
 <section id="delete-a-conda-environment">
-<h2>Delete a Conda Environment<a class="headerlink" href="#delete-a-conda-environment" title="Permalink to this headline">#</a></h2>
+<h2>Delete a Conda Environment<a class="headerlink" href="#delete-a-conda-environment" title="Permalink to this heading">#</a></h2>
 <p>If you ever want to delete an envrionment, you must first deactivate that environment and then type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>remove<span class="w"> </span>--name<span class="w"> </span>myenv
 </pre></div>
@@ -596,7 +584,7 @@ Note that after you restart the Terminal, the <code class="docutils literal notr
 <p><strong>Remember to never delete your root environment.</strong></p>
 </section>
 <section id="update-a-conda-environment-using-a-yaml-file">
-<h2>Update a Conda Environment Using a YAML File<a class="headerlink" href="#update-a-conda-environment-using-a-yaml-file" title="Permalink to this headline">#</a></h2>
+<h2>Update a Conda Environment Using a YAML File<a class="headerlink" href="#update-a-conda-environment-using-a-yaml-file" title="Permalink to this heading">#</a></h2>
 <p>Once you have created a conda environment, you can update it anytime by first activating the environment and then running the <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span></code> command.</p>
 <p>The example below updates the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span> <span class="pre">environment</span></code> using the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file. In this example, the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span></code> is run in the same directory that contains the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>earth-analytics-python
