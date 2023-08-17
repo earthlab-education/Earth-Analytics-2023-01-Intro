@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.5.3
+      - name: Change to book directory
+        run: cd textbook
       - name: Build Website
         run: jb build .
       - name: Install ghp-import
