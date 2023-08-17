@@ -7,7 +7,9 @@ on:
 jobs:
   build-website:
     runs-on: ubuntu-latest
-    container: earthlab/earth-analytics-python-env
+    container: 
+      image: earthlab/earth-analytics-python-env
+      options: --user root
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.5.3
