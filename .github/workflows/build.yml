@@ -1,0 +1,24 @@
+on:
+  push:
+    paths:
+      - textbook/**
+  workflow_dispatch:
+
+jobs:
+  build-website:
+    runs-on: ubuntu-latest
+    container: 
+      image: earthlab/earth-analytics-python-env
+      options: --user root
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+      - name: Install Jupyter Book
+        run: mamba install jupyter-book sphinx-exercise ghp-import
+      - name: Mark website directory as safe
+        run: git config --global --add safe.directory /__w/Earth-Analytics-2023-01-Intro/Earth-Analytics-2023-01-Intro
+      - name: Build and Publish Website
+        working-directory: textbook
+        run: |
+          jb build . --toc _toc_intro.yml
+          ghp-import -n -p -f _build/html
