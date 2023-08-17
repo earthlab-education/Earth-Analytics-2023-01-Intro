@@ -1,5 +1,5 @@
-# Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
+# Book settings --------------------
+## Learn more at https://jupyterbook.org/customize/config.html
 
 title: Introduction to Earth and Environmental Data Science
 author: CU Boulder Earthlab Education
@@ -18,24 +18,37 @@ only_build_toc_files: true
 #bibtex_bibfiles:
 # - references.bib
 
-# Information about where the book exists on the web
+# Launch buttons  --------------------
+## Information about where the book exists on the web
 repository:
  url: https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro
  path_to_book: textbook/
  branch: main
 
+## Thebe (in line)
+launch_buttons:
+  thebe: true
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# GitHub tie-ins: buttons and comments
 html:
   use_issues_button: true
   use_repository_button: true
+  comments:
+    utterances:
+      repo: "github-org/github-repo"
+      issue-term: "url"
+      label: "Comments"
+      theme: "preferred-color-scheme"
 
+
+# Extensions -------------------------
+## Sphinx
 sphinx:
     extra_extensions:
         - sphinx_exercise
         - sphinx_design
 
+## MyST
 parse:
   myst_enable_extensions:
     - deflist
