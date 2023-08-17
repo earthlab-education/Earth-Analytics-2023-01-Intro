@@ -20,5 +20,5 @@ jobs:
       - name: Build and Publish Website
         working-directory: textbook
         run: |
-          jb build . --toc _toc_intro.yml
+          jb build .
           ghp-import -n -p -f _build/html

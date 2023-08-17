@@ -20,8 +20,10 @@ only_build_toc_files: true
 
 # Information about where the book exists on the web
 repository:
- url: https://github.com/earthlab/earth-analytics-lessons/textbooks/intro-eds
+ url: https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro
+ path_to_book: textbook/
  branch: main
+
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
