@@ -1,0 +1,19 @@
+on:
+  push:
+    paths:
+      - textbook/**
+  workflow_dispatch:
+
+jobs:
+  build-website:
+    runs-on: ubuntu-latest
+    container: earthlab/earth-analytics-python-env
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+      - name: Build Website
+        run: jb build .
+      - name: Install ghp-import
+        run: conda install -c conda-forge ghp-import
+      - name: Push to gh-pages branch
+        run: ghp-import -n -p -f _build/html
