@@ -18,6 +18,6 @@ jobs:
       - name: Install Jupyter Book
         run: mamba install jupyter-book sphinx-exercise ghp-import
       - name: Build Website
-        run: jb build .
+        run: jb build . --toc _toc_intro.yml
       - name: Push to gh-pages branch
         run: ghp-import -n -p -f _build/html
