@@ -34,6 +34,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   favicon: https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png
+  announcement: 'Click on the <i class="fa fa-rocket"></i> icon to <b style="color: #d98619;">run and edit code</b> on this page'
   comments:
     utterances:
       repo: "earthlab-education/Earth-Analytics-2023-01-Intro"
