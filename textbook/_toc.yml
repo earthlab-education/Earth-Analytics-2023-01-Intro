@@ -109,8 +109,8 @@ parts:
           - file: python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.md
           - file: python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.md
           
-  - caption: Want more Earthlab?
+  - caption: Not finding what you need? Search the rest of our textbooks.
     chapters:
-      - url: https://earthlab.colorado.edu/earth-data-analytics-professional-graduate-certificate
-        title: Earth Data Analytics Professional Graduate Certificate
+      - url: https://www.earthdatascience.org
+        title: earthdatascience.org
   
