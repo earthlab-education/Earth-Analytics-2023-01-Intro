@@ -19,7 +19,7 @@ myst:
       * Explain how text editors are used in a scientific workflow.
       * Change your default text editor in the command line.
 ---
-:::{include} ../../../textbook-header.md
+:::{include} ../textbook-header.md
 :::
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need

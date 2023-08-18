@@ -17,6 +17,7 @@ myst:
       One of the features that makes computer programming such a powerful tool is the ability to retrieve data (i.e. information) you computed earlier from **memory**. In the analogy of your computer as a kitchen, your memory is the **countertop space** - you can access everything in it quickly, but it's easy for it to get too crowded (and you don't want to leave anything there when you're done cooking!). Storing data in memory allows you to:
         * **Hard code** values into your code, like physical constants, conversion factors, and file locations
         * Perform multiple-step **workflows** without needing to save every intermediate step on your hard disk
+      
       You can store data (i.e. information) in `Python` by giving it a **name**. You will need to name everything that you want to re-use in your code (e.g. single numeric value, path to a directory or file). Without names for data, `Python` would only be able to perform the same calculations as a handheld calculator. 
     authors: 'Jenny Palomino, Leah Wasser, Nathan Korinek, Elsa Culler'
     objective: |
