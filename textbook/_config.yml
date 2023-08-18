@@ -37,8 +37,6 @@ html:
   comments:
     utterances:
       repo: "earthlab-education/Earth-Analytics-2023-01-Intro"
-      issue-term: "url"
-      label: "Comments"
 
 
 # Extensions -------------------------
