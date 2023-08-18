@@ -12,13 +12,19 @@ kernelspec:
   name: Python3
 myst:
   substitutions:
-    title: 'Give it a name, find it later'
-    excerpt: "Names store data (i.e. information) that you want to re-use in your code (e.g. single numeric value, path to a directory or file). Learn how to to create and work with names in `Python`."
+    title: 'Use names to save information for later'
+    excerpt: |
+      One of the features that makes computer programming such a powerful tool is the ability to retrieve data (i.e. information) you computed earlier from **memory**. In the analogy of your computer as a kitchen, your memory is the **countertop space** - you can access everything in it quickly, but it's easy for it to get too crowded (and you don't want to leave anything there when you're done cooking!). Storing data in memory allows you to:
+        * **Hard code** values into your code, like physical constants, conversion factors, and file locations
+        * Perform multiple-step **workflows** without needing to save every intermediate step on your hard disk
+      You can store data (i.e. information) in `Python` by giving it a **name**. You will need to name everything that you want to re-use in your code (e.g. single numeric value, path to a directory or file). Without names for data, `Python` would only be able to perform the same calculations as a handheld calculator. 
     authors: 'Jenny Palomino, Leah Wasser, Nathan Korinek, Elsa Culler'
     objective: |
       * Explain how names are used in `Python` to store information.
-      * Use `Python` code to create names that store single data values including numbers and text strings. 
-      * Check the data type of a name using `Python`
+      * Use `Python` code to give names to single data values including numbers and text strings. 
+      * Define computer **memory** and **disk space**
+      * Describe what the **workspace** is in `Python`
+      * Check the data type of a value in your workspace.
 ---
 
 :::{include} ../../../textbook-header.md
