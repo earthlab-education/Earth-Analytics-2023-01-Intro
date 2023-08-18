@@ -36,10 +36,9 @@ html:
   favicon: https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png
   comments:
     utterances:
-      repo: "github-org/github-repo"
+      repo: "earthlab-education/Earth-Analytics-2023-01-Intro"
       issue-term: "url"
       label: "Comments"
-      theme: "preferred-color-scheme"
 
 
 # Extensions -------------------------
