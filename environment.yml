@@ -5,16 +5,16 @@ channels:
 
 dependencies:
   - python=3.10
-  # - numpy
+  - numpy
   
-  # # Plotting
-  # - matplotlib
-  # - seaborn
-  # - hvplot
+  # Plotting
+  - matplotlib
+  - seaborn
+  - hvplot
 
-  # # Spatial packages
-  # - earthpy
-  # - folium
-  # - xarray
-  # - rioxarray
-  # - rasterstats
+  # Spatial packages
+  - earthpy
+  - folium
+  - xarray
+  - rioxarray
+  - rasterstats
