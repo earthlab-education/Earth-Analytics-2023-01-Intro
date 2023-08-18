@@ -12,7 +12,7 @@ kernelspec:
   name: Python3
 myst:
   substitutions:
-    title: 'Use names to save information for later'
+    title: 'Use **names** to save information for later'
     excerpt: |
       One of the features that makes computer programming such a powerful tool is the ability to retrieve data (i.e. information) you computed earlier from **memory**. In the analogy of your computer as a kitchen, your memory is the **countertop space** - you can access everything in it quickly, but it's easy for it to get too crowded (and you don't want to leave anything there when you're done cooking!). Storing data in memory allows you to:
         * **Hard code** values into your code, like physical constants, conversion factors, and file locations
@@ -31,15 +31,15 @@ myst:
 :::{include} ../../../textbook-header.md
 :::
 
-## Use **names** to save data in Python
+## Get started with naming data in Python
 
 :::{admonition} Why names and not variables?
 :class: note margin
 
-You may also see named values referred to as **variables** in programming. We think this can be confusing, because most people are used to the word **variable** in the context of algebra. In algebra, a **variable** is a value that you don't know the value of. In programming, the value of a variable **is** known, and doesn't change unless you write over it.
+You may also see named values referred to as **variables** in programming. We think this can be confusing, because most people are used to the word **variable** in the context of algebra. In algebra, a **variable** is a value that you don't know the value of. In programming, the value of a variable **is** known, and doesn't change unless you write over it. But if you prefer the term **variable**, other programmers will know what you mean!
 :::
 
-A **name** in programming is used to save information that you want to re-use in your code. You can think of it like the contacts in a cellphone -- instead of remembering phone numbers, you save them under someone's name so that you can use them again. Examples of things that you may wish to save in your code include:
+A **name** in `Python` is used to save information that you want to re-use later in your code. You can think of it like the contacts in a cellphone -- instead of remembering phone numbers, you save them under someone's name so that you can use them again. Examples of things that you may wish to save in your code include:
 
 * numeric values
 * file names, paths, web addresses
@@ -50,14 +50,17 @@ A **name** in programming is used to save information that you want to re-use in
 :label: name-a-variable
 ```
 
-In `Python`, names can be created without explicitly defining the type of data that it will hold (e.g. integer, text string). You can create a name in `Python` using the following syntax, replacing `name` and `value` with the information you wish to store:
+You can name a value in `Python` using the syntax `name = value`, replacing `value` and `name` with the information you wish to store, and the name you wish to give it:
 
-```{code-block} python
-name = value
-```
+:::{note} 
+In order to see your results, you will have to **call** your variable (type out it's name on the last line) at the end of the code cell. 
+:::
+
+Use the code cell below to practice naming some values. You can start by running the code below, which stores the value `5` under the name `an_int`. Then, try saving the value `6.3` under the name `a_float`:
 
 ```{code-cell}
-# Try it out
+an_int = 5
+an_int
 ```
 
 ```{exercise-end}
@@ -92,9 +95,8 @@ string value.
 :::{admonition} **Data Tip:**
 :class: data-tip margin
 
-Some programming languages require a 
-name to be explicitly assigned a data type when it is created. You do not 
-need to worry about this when using ``Python``, however! 
+Some programming languages require values to be explicitly assigned a data type before storing them in memory (or creating a variable). You do not 
+need to worry about this when using `Python`! `Python` is known as a **dynamically typed** language, meaning that it does it guesses the type of data based on how you enter it. For example, if you enter `2`, Python will assume that is an integer, while `"2"` would be a string and `2.0` would be a float.
 :::
 
 
