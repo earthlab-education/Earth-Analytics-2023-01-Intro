@@ -38,11 +38,10 @@ topics:
   reproducible-science-and-programming: ['markdown']
 ---
 
-:::{contents}
-:local:
+:::{include} ../../../textbook-header.md
 :::
 
-## <i class="fa fa-ship" aria-hidden="true"></i> Chapter Four - Text File Formats for Earth Data Science
+## Text File Formats for Earth Data Science
 
 In this chapter, you will learn about common text file formats for earth data science workflows including Markdown, text (.txt, .csv) files, and YAML (Yet Another Markup Language). 
 
@@ -57,5 +56,3 @@ After completing this chapter, you will be able to:
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need
 
 Be sure that you have completed the previous chapter on <a href="{{ site.url }}/courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/">Jupyter Notebook</a>.
-
-</div>

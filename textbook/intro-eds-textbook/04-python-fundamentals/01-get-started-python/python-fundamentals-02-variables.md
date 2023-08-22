@@ -36,7 +36,7 @@ myst:
 :::{admonition} Why names and not variables?
 :class: note margin
 
-You may also see named values referred to as **variables** in programming. We think this can be confusing, because most people are used to the word **variable** in the context of algebra. In algebra, a **variable** is a value that you don't know the value of. In programming, the value of a variable **is** known, and doesn't change unless you write over it. But if you prefer the term **variable**, other programmers will know what you mean!
+You may also see named values referred to as **variables** in programming. We think this can be confusing, because most people are used to the word **variable** in the context of algebra, where a **variable** is a value that you don't know the value of. In programming, the value of a variable **is** known, and doesn't change unless you write over it. But if you prefer the term **variable**, other programmers will know what you mean!
 :::
 
 A **name** in `Python` is used to save information that you want to re-use later in your code. You can think of it like the contacts in a cellphone -- instead of remembering phone numbers, you save them under someone's name so that you can use them again. Examples of things that you may wish to save in your code include:
@@ -72,9 +72,9 @@ an_int
 ```
 
 ```{code-cell} ipython3
-a_number = 5
+a_float = 6.3
 
-a_number
+a_float
 ```
 
 ```{solution-end}

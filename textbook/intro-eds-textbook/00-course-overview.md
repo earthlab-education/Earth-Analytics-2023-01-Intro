@@ -1,5 +1,4 @@
 ---
-file_format: mystnb
 jupytext:
   text_representation:
     extension: .md
