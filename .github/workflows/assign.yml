@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        assignee: ${{ needs.get_members.outputs.members }}
+        assignee: ${{fromJson(needs.get_members.outputs.members)}}
 
     steps:
       - name: Create duplicate issue for each member
