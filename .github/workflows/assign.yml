@@ -8,29 +8,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Read team slug
-        id: team
         run: >-
           echo "${{ github.event.comment.body }}" |
-            sed 's/\/assign @\(.*\)$/\1/' |
-            awk '{print "TEAM_SLUG="$1}'
+          sed 's/\/assign @\(.*\)$/\1/' |
+          awk '{print "TEAM_SLUG="$1}' 
+          >> $GITHUB_ENV
+      - name: Print team slug
+        run: echo $TEAM_SLUG
+        
+      - name: Request team info
+        id: get-members
+        run: >-
+          echo "RESP=$(gh api --paginate -X GET /orgs/earthlab-education/teams/$TEAM_SLUG/members\?role=member | jq 'reduce inputs as $i (.; . += $i)')" 
+          >> $GITHUB_ENV
+      - Extract member list
+        id: members
+        run: >-
+          echo ${{ join(fromJson($RESP).*.login, ', ') }} |
+            awk '{print "MEMBERS=["$1"]"}'
             >> $GITHUB_OUTPUT
-      - name: Get team members
-        id: assignees
-        uses: GuillaumeFalourd/github-team-members@v1
-        with:
-          team_slug: ${{ steps.team.outputs.TEAM_SLUG }}
-          role: member
       - name: Print team members
-        run: echo ${{ steps.assignees.outputs.members }}
+        run: echo ${{ steps.assignees.outputs.MEMBERS }}
     outputs:
-      members: ${{ steps.assignees.outputs.members }}
+      members: ${{ steps.assignees.outputs.MEMBERS }}
             
   assign_issues:
     needs: get_members
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        assignee: ${{fromJson(needs.get_members.outputs.members)}}
+        assignee: {{ needs.get_members.outputs.MEMBERS }}
 
     steps:
       - name: Create duplicate issue for each member
