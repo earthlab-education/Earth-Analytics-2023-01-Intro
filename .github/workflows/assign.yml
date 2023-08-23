@@ -12,7 +12,7 @@ jobs:
         run: >-
           echo "::set-output name=TEAM_SLUG::$(
             echo ${{ github.event.comment.body }} |
-            sed 's/\/assign :\(.*\):$/\1/'
+            sed 's/\/assign @\(.*\)$/\1/'
           )"
       - name: Get team members
         id: assignees
