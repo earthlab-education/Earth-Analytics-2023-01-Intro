@@ -1,0 +1,42 @@
+on:
+  issue_comment: created
+
+jobs:
+  get_members:
+    if: startsWith(github.event.comment.body, '/assign')
+    name: Assign duplicate issue to each member of a group
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read team slug
+        id: team
+        run: >-
+          echo "::set-output name=TEAM_SLUG::$(
+            echo ${{ github.event.comment.body }} |
+            sed 's/\/assign :\(.*\):$/\1/'
+          )"
+      - name: Get team members
+        id: assignees
+        uses: garnertb/get-team-members@v1
+        with:
+          team_slug: ${{ steps.team.outputs.TEAM_SLUG }}
+          role: member
+    outputs:
+      members: ${{ steps.assignees.outputs.members }}
+            
+  assign_issues:
+    needs: get_members
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        assignee: ${{ needs.get_members.outputs.members) }}
+
+    steps:
+      - name: Create duplicate issue for each member
+        uses: imjohnbo/issue-bot@v3.4.3
+        with:
+          title: ${{ matrix.assignee }} ${{ github.event.issue.title }}
+          body: ${{ github.event.issue.body }} 
+          labels: |- 
+            {{#each github.event.issue.labels}}@{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+          assignees: ${{ matrix.assignee }}
+          milestone: ${{ github.event.issue.milestone.title }}
