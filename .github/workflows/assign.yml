@@ -14,7 +14,7 @@ jobs:
           awk '{print "TEAM_SLUG="$1}' 
           >> $GITHUB_ENV
       - name: Print team slug
-        run: echo $TEAM_SLUG
+        run: env
         
       - name: Request team info
         id: get-team-info
