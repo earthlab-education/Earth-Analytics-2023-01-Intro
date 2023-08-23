@@ -1,5 +1,9 @@
+name: Assign Issues to all Students
+
 on:
   issue_comment
+
+permissions: read-all
 
 jobs:
   get-members:
