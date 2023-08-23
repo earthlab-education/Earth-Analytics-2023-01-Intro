@@ -21,7 +21,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: >-
-          gh api --method GET /orgs/earthlab-education/teams/$TEAM_SLUG/members -f role=member
+          gh api --method GET /orgs/earthlab-education/teams
       - name: Extract member list
         id: members
         run: >-
