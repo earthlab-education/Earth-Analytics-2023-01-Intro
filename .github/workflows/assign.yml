@@ -18,6 +18,8 @@ jobs:
         
       - name: Request team info
         id: get-team-info
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: >-
           gh api --method GET /orgs/earthlab-education/teams/$TEAM_SLUG/members -f role=member
       - name: Extract member list
