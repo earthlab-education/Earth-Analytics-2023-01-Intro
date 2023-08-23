@@ -20,6 +20,8 @@ jobs:
         with:
           team_slug: ${{ steps.team.outputs.TEAM_SLUG }}
           role: member
+      - name: Print team members
+        run: echo ${{ steps.assignees.outputs.members }}
     outputs:
       members: ${{ steps.assignees.outputs.members }}
             
