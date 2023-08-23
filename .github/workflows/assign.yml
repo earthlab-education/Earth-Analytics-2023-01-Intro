@@ -27,14 +27,16 @@ jobs:
             github.rest.teams.list({
               org: context.repo.owner
             })
+      - name: Print teams
+        run: echo ${{ steps.get-team-info.outputs.result }}
+        
       - name: Extract member list
         id: members
         run: >-
           echo ${{ join(fromJson(steps.get-team-info.outputs.RESP).*.login, ', ') }} |
             awk '{print "MEMBERS=["$1"]"}'
             >> $GITHUB_OUTPUT
-      - name: Print team members
-        run: echo ${{ steps.members.outputs.MEMBERS }}
+
     outputs:
       members: ${{ steps.members.outputs.MEMBERS }}
             
