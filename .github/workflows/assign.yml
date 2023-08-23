@@ -19,8 +19,9 @@ jobs:
       - name: Request team info
         id: get-team-info
         run: >-
-          echo "RESP=$(gh api --paginate -X GET /orgs/earthlab-education/teams/$TEAM_SLUG/members\?role=member | jq 'reduce inputs as $i (.; . += $i)')" 
-          >> $GITHUB_OUTPUT
+          gh api GET /orgs/earthlab-education/teams/$TEAM_SLUG/members -f role=member
+          #echo "RESP=$(gh api --paginate -X GET /orgs/earthlab-education/teams/$TEAM_SLUG/members\?role=member | jq 'reduce inputs as $i (.; . += $i)')" 
+          #>> $GITHUB_OUTPUT
       - name: Extract member list
         id: members
         run: >-
