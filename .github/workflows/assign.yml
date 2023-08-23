@@ -10,7 +10,7 @@ jobs:
       - name: Read team slug
         id: team
         run: >-
-          echo ${{ github.event.comment.body }} |
+          echo "${{ github.event.comment.body }}" |
             sed 's/\/assign @\(.*\)$/\1/' |
             awk '{print "TEAM_SLUG="$1}'
             >> $GITHUB_OUTPUT
