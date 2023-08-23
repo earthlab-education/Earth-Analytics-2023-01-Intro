@@ -19,7 +19,7 @@ jobs:
       - name: Request team info
         id: get-team-info
         run: >-
-          gh api GET /orgs/earthlab-education/teams/$TEAM_SLUG/members -f role=member
+          gh api --method GET /orgs/earthlab-education/teams/$TEAM_SLUG/members -f role=member
       - name: Extract member list
         id: members
         run: >-
