@@ -1,5 +1,5 @@
 on:
-  issue_comment: created
+  issue_comment
 
 jobs:
   get_members:
