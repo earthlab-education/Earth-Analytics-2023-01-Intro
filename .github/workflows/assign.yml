@@ -10,10 +10,10 @@ jobs:
       - name: Read team slug
         id: team
         run: >-
-          echo "::set-output name=TEAM_SLUG::$(
+          echo "TEAM_SLUG=$(
             echo ${{ github.event.comment.body }} |
             sed 's/\/assign @\(.*\)$/\1/'
-          )"
+          )" >> $GITHUB_OUTPUT
       - name: Get team members
         id: assignees
         uses: garnertb/get-team-members@v1
