@@ -18,7 +18,7 @@ jobs:
           awk '{print "TEAM_SLUG="$1}' 
           >> $GITHUB_ENV
       - name: Print team slug
-        run: env
+        run: echo $TEAM_SLUG
         
       - name: Request team info
         id: get-team-info
@@ -26,7 +26,7 @@ jobs:
         with:
           script: |
             github.rest.teams.list({
-              earthlab-education
+              org: earthlab-education
             })
       - name: Extract member list
         id: members
