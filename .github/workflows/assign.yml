@@ -16,7 +16,7 @@ jobs:
             >> $GITHUB_OUTPUT
       - name: Get team members
         id: assignees
-        uses: garnertb/get-team-members@v1
+        uses: GuillaumeFalourd/github-team-members@v1
         with:
           team_slug: ${{ steps.team.outputs.TEAM_SLUG }}
           role: member
