@@ -2,7 +2,7 @@ on:
   issue_comment
 
 jobs:
-  get_members:
+  get-members:
     if: startsWith(github.event.comment.body, '/assign')
     name: Assign duplicate issue to each member of a group
     runs-on: ubuntu-latest
@@ -20,11 +20,11 @@ jobs:
         id: get-members
         run: >-
           echo "RESP=$(gh api --paginate -X GET /orgs/earthlab-education/teams/$TEAM_SLUG/members\?role=member | jq 'reduce inputs as $i (.; . += $i)')" 
-          >> $GITHUB_ENV
+          >> $GITHUB_OUTPUT
       - name: Extract member list
         id: members
         run: >-
-          echo ${{ join(fromJson($RESP).*.login, ', ') }} |
+          echo ${{ join(fromJson(steps.get-members.outputs.RESP).*.login, ', ') }} |
             awk '{print "MEMBERS=["$1"]"}'
             >> $GITHUB_OUTPUT
       - name: Print team members
