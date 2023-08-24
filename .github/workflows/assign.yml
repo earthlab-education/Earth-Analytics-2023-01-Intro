@@ -1,7 +1,8 @@
 name: Assign Issues to all Students
 
 on:
-  issue_comment
+  issue_comment:
+    created
 
 jobs:
   get-members:
