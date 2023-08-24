@@ -32,8 +32,9 @@ jobs:
       - name: Extract member list
         id: members
         run: >-
-          echo [${{ join(fromJson(steps.get-members.outputs.result).data.*.login, ', ') }}] |
-          awk '{print "MEMBERS="$1}'
+          echo ${{ join(fromJson(steps.get-members.outputs.result).data.*.login, ', ') }} |
+          awk '{print "MEMBERS=["$1"]"}' 
+          >> $GITHUB_ENV
 
     outputs:
       members: ${{ steps.members.outputs.MEMBERS }}
@@ -43,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        assignee: ${{ needs.get-members.outputs.MEMBERS }}
+        assignee: ${{ needs.get-members.outputs.members }}
 
     steps:
       - name: Create duplicate issue for each member
