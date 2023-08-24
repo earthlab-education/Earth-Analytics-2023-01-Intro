@@ -15,8 +15,6 @@ jobs:
           sed 's/\/assign @${{ github.repository_owner }}\/\(.*\)$/\1/' |
           awk '{print "TEAM_SLUG="$1}' 
           >> $GITHUB_ENV
-      - name: Print team slug
-        run: echo $TEAM_SLUG
           
       - name: Request team info
         id: get-members
@@ -35,9 +33,11 @@ jobs:
           echo ${{ join(fromJson(steps.get-members.outputs.result).data.*.login, ', ') }} |
           awk '{print "MEMBERS=["$1"]"}' 
           >> $GITHUB_ENV
+      - name: Print members
+        run: echo $MEMBERS
 
     outputs:
-      members: ${{ steps.members.outputs.MEMBERS }}
+      members: ${{ env.MEMBERS }}
             
   assign_issues:
     needs: get-members
