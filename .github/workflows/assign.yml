@@ -28,13 +28,11 @@ jobs:
               org: context.repo.owner,
               team_slug: "${{env.TEAM_SLUG}}"
             })
-      - name: Print teams
-        run: echo ${{ steps.get-team-info.outputs.result }}
         
       - name: Extract member list
         id: members
         run: >-
-          echo ${{ fromJson(steps.get-team-info.outputs.result) }}
+          echo ${{ join(fromJson(steps.get-team-info.outputs.result).*.login, ', ' }}
 
     outputs:
       members: ${{ steps.members.outputs.MEMBERS }}
