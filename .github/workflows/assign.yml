@@ -27,7 +27,7 @@ jobs:
           script: |
             github.rest.teams.getByName({
               org: context.repo.owner,
-              team_slug: $TEAM_SLUG
+              team_slug: ${{env.TEAM_SLUG}}
             })
       - name: Print teams
         run: echo ${{ steps.get-team-info.outputs.result }}
