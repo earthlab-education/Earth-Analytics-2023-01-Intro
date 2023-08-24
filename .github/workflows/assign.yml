@@ -25,8 +25,9 @@ jobs:
           github-token: ${{ secrets.EA_BOT_F23_PAT }}
           result-encoding: string
           script: |
-            github.rest.teams.list({
-              org: context.repo.owner
+            github.rest.teams.getByName({
+              org: context.repo.owner,
+              team_slug: $TEAM_SLUG
             })
       - name: Print teams
         run: echo ${{ steps.get-team-info.outputs.result }}
