@@ -33,9 +33,7 @@ jobs:
       - name: Extract member list
         id: members
         run: >-
-          echo ${{ join(fromJson(steps.get-team-info.outputs.RESP).*.login, ', ') }} |
-            awk '{print "MEMBERS=["$1"]"}'
-            >> $GITHUB_OUTPUT
+          echo ${{ fromJson(steps.get-team-info.outputs.result) }}
 
     outputs:
       members: ${{ steps.members.outputs.MEMBERS }}
