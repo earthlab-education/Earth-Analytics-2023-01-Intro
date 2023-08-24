@@ -1,7 +1,6 @@
 name: Assign an issue copy to one person
 
-on:
-  issue_comment: [created]
+on: issue_comment
 
 jobs:
   assign-issue:
