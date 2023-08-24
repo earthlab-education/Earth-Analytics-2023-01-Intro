@@ -17,7 +17,7 @@ jobs:
           >> $GITHUB_ENV
           
       - name: Request team info
-        id: get-members
+        id: request-members
         uses: actions/github-script@v6.4.1
         with:
           github-token: ${{ secrets.EA_BOT_F23_PAT }}
@@ -26,25 +26,16 @@ jobs:
               org: context.repo.owner,
               team_slug: "${{env.TEAM_SLUG}}"
             })
-        
-      - name: Extract member list
-        id: members
-        run: >-
-          echo ${{ join(fromJson(steps.get-members.outputs.result).data.*.login) }} |
-          awk '{print "MEMBERS=["$1"]"}' 
-          >> $GITHUB_ENV
-      - name: Print members
-        run: echo $MEMBERS
 
     outputs:
-      members: ${{ env.MEMBERS }}
+      members: steps.request.members.output.result
             
   assign_issues:
     needs: get-members
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        assignee: ${{ needs.get-members.outputs.members }}
+        assignee: ${{fromJson(needs.get-members.outputs.members).data.*.login}}
 
     steps:
       - name: Create duplicate issue for each member
