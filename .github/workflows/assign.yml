@@ -23,6 +23,7 @@ jobs:
         uses: actions/github-script@v6.4.1
         with:
           github-token: ${{ secrets.EA_BOT_F23_PAT }}
+          result-encoding: string
           script: |
             github.rest.teams.list({
               org: context.repo.owner
