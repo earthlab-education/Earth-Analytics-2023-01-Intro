@@ -17,13 +17,21 @@ jobs:
           >> $GITHUB_ENV
       - name: Print team slug
         run: echo $TEAM_SLUG
+
         
+      - uses: actions/github-script@v6
+        id: set-result
+        with:
+          script: return "Hello!"
+          result-encoding: string
+      - name: Get result
+        run: echo "${{steps.set-result.outputs.result}}"
+          
       - name: Request team info
         id: get-team-info
         uses: actions/github-script@v6.4.1
         with:
           github-token: ${{ secrets.EA_BOT_F23_PAT }}
-          result-encoding: string
           script: |
             github.rest.teams.getByName({
               org: context.repo.owner,
