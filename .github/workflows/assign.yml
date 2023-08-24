@@ -24,7 +24,7 @@ jobs:
         with:
           github-token: ${{ secrets.EA_BOT_F23_PAT }}
           script: |
-            return github.rest.teams.getByName({
+            return github.rest.teams.listMembersInOrg({
               org: context.repo.owner,
               team_slug: "${{env.TEAM_SLUG}}"
             })
