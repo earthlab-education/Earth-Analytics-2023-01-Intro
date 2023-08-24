@@ -28,7 +28,7 @@ jobs:
             })
 
     outputs:
-      members: steps.request.members.output.result
+      members: ${{steps.request-members.outputs.result}}
             
   assign_issues:
     needs: get-members
