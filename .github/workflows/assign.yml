@@ -32,7 +32,7 @@ jobs:
       - name: Extract member list
         id: members
         run: >-
-          echo ${{ join(fromJson(steps.get-team-info.outputs.result).*.login, ', ') }}
+          echo ${{ fromJson(steps.get-team-info.outputs.result.data).*.login }}
 
     outputs:
       members: ${{ steps.members.outputs.MEMBERS }}
