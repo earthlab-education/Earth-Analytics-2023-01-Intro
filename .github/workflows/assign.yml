@@ -17,20 +17,6 @@ jobs:
           >> $GITHUB_ENV
       - name: Print team slug
         run: echo $TEAM_SLUG
-
-        
-      - uses: actions/github-script@v6
-        id: my-script
-        with:
-          result-encoding: string
-          script: |
-            return github.rest.issues.get({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            })
-      - name: Get result
-        run: echo "${{steps.my-script.outputs.result}}"
           
       - name: Request team info
         id: get-team-info
@@ -38,7 +24,7 @@ jobs:
         with:
           github-token: ${{ secrets.EA_BOT_F23_PAT }}
           script: |
-            github.rest.teams.getByName({
+            return github.rest.teams.getByName({
               org: context.repo.owner,
               team_slug: "${{env.TEAM_SLUG}}"
             })
