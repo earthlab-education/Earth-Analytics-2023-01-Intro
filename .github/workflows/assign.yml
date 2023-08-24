@@ -19,7 +19,7 @@ jobs:
         run: echo $TEAM_SLUG
 
         
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@v6
         id: my-script
         with:
           result-encoding: string
