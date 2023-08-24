@@ -18,7 +18,7 @@ jobs:
       - name: Create duplicate issue
         uses: imjohnbo/issue-bot@v3.4.3
         with:
-          title: ${{ matrix.assignee }} ${{ github.event.issue.title }}
+          title: ${{ env.USERNAME }} ${{ github.event.issue.title }}
           body: ${{ github.event.issue.body }} 
           labels: ${{ join(github.event.issue.labels.*.name) }}
           assignees: ${{ env.USERNAME }}
