@@ -32,7 +32,8 @@ jobs:
       - name: Extract member list
         id: members
         run: >-
-          echo ${{ join(fromJson(steps.get-members.outputs.result).data.*.login, ', ') }}
+          echo [${{ join(fromJson(steps.get-members.outputs.result).data.*.login, ', ') }}] |
+          awk '{print "MEMBERS="$1}'
 
     outputs:
       members: ${{ steps.members.outputs.MEMBERS }}
