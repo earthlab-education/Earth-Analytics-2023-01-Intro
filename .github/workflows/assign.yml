@@ -5,7 +5,7 @@ on:
 
 jobs:
   get-members:
-    if: startsWith(github.event.comment.body, '/assign')
+    if: startsWith(github.event.comment.body, '/teamassign')
     name: Get a list of group members tagged in an issue
     runs-on: ubuntu-latest
     steps:
