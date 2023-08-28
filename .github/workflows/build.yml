@@ -2,6 +2,8 @@ on:
   push:
     paths:
       - textbook/**
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
