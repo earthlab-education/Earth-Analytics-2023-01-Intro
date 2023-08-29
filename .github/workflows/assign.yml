@@ -1,0 +1,25 @@
+name: Assign an issue copy to one person
+
+on: issue_comment
+
+jobs:
+  assign-issue:
+    if: startsWith(github.event.comment.body, '/assign')
+    name: Assign a copy of an issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read username
+        run: >-
+          echo "${{ github.event.comment.body }}" |
+          sed 's/\/assign @\(.*\)$/\1/' |
+          awk '{print "USERNAME="$1}' 
+          >> $GITHUB_ENV
+
+      - name: Create duplicate issue
+        uses: imjohnbo/issue-bot@v3.4.3
+        with:
+          title: ${{ env.USERNAME }} ${{ github.event.issue.title }}
+          body: ${{ github.event.issue.body }} 
+          labels: ${{ join(github.event.issue.labels.*.name) }}
+          assignees: ${{ env.USERNAME }}
+          milestone: ${{ github.event.issue.milestone.title }}
