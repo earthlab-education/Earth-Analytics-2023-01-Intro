@@ -34,10 +34,10 @@ parts:
       #         - file: intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-03-vector-data
       #         - file: intro-eds-textbook/02-02-file-formats/05-spatial-data-formats-eds/spatial-data-formats-04-exercise
 
-      # - file: intro-eds-textbook/03-git-github/00-git-github-landing-page
-      #   sections:
-      #     - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control
-      #       sections:
+      - file: intro-eds-textbook/03-git-github/00-git-github-landing-page
+        sections:
+          - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control
+          - file: create-portfolio-website/00-create-portfolio-website
       #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-02-fork-clone-repos
       #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-03-setup-git-locally
       #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-04-git-commands

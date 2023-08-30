@@ -56,7 +56,7 @@ Once you have a GitHub account, get started by creating a new **repository** for
 Sometimes buttons on GitHub are blue instead of green.
 :::
 
-:::{admonition}
+:::{admonition} What is a **repository**?
 :class: info margin
 
 A GitHub **repository** is a collection of code, documentation, and configuration files. All changes you make in a repository will be tracked using the version control system **git**. You can discuss and manage your project's work within the repository.
@@ -85,8 +85,8 @@ To do this you can:
     * Once you're done, select the green **Create Repository** button at the bottom of the page
 
 
-:::{admonition}
-:class: info margin
+:::{admonition} Speak Code
+:class: data-tip margin
 
 When reading code snippets, the `<` and `>` symbols are used to surround text you should replace with something applicable to you and your project. **Do not leave the `<` and `>` symbols in place!**. For example, in this case your repository name might look something like `jdoe.github.io`, if `jdoe` was your GitHub username.
 ::: 
@@ -150,7 +150,7 @@ Now you're ready to start adding some more information to your webpage. Navigate
 
 <img src="https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/edit-file.png">
 
-#### Here you should think about adding the following information to your webpage:
+### Here you should think about adding the following information to your webpage:
 * A **photo** of yourself
 * Your name (as a _**header**_) if you haven't already
 * A **bulleted list** of links to your public **contact information** (email, GitHub account, LinkedIn account, social media accounts, etc.)
@@ -177,3 +177,30 @@ You will want to review the <a href="https://www.markdownguide.org/basic-syntax/
 Always remember to **commit changes** so that your updated content gets added to your webpage.
 :::
 
+***
+
+## Step 7: Add website metadata and theme
+
+<a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme" target="_blank">GitHub pages has some build in themes</a> that you can use to make your website more attractive.
+
+To preview themes:
+  1. Go to the <a href="https://pages.github.com/themes/" target="_blank">GitHub theme page</a>
+  2. Click on the link to a theme you are interested in. This will take you to the theme **repository**.
+  3. Scroll down in the repository until you see a link like "preview what this theme will look like" at the top of the README file (below the code).
+
+The `_config.yml` file that you created to add a theme can also be used to **change the title of your website from the default (the name of your repository)**. Check out the README for your theme to see what parameters are available For example, and example `_config.yml` file for the `minimal` theme looks like:
+
+:::{code-block}
+title: J. Doe's Awesome Portfolio Website
+description: Check out my projects!
+logo: img/headshot.png
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+:::
+
+:::{admonition} So what **is** YAML?
+:class: data-tip margin
+
+The `_config.yml` file is written in **YAML**, a human-readable format for structured information (lists and key/value pairs). <a href="https://yaml.org/" target="_blank">Learn more about YAML on their website</a>
+:::
