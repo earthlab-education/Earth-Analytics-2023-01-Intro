@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>What Is Version Control &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "earthlab-education/Earth-Analytics-2023-01-Intro");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/font_loader.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control';</script>
+    <link rel="shortcut icon" href="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Create your own webpage using GitHub pages" href="../../../create-portfolio-website/00-create-portfolio-website.html" />
+    <link rel="prev" title="Git and GitHub" href="../00-git-github-landing-page.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Click on the <i class="fa fa-rocket"></i> icon to <b style="color: #d98619;">run and edit code</b> on this page</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-git-github-landing-page.html">Git and GitHub</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">What Is Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../create-portfolio-website/00-create-portfolio-website.html">Create your own webpage using GitHub pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Use <strong>names</strong> to save information for later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-02-setup-git-bash-and-anaconda.html">Setup Git, Bash, and Conda on Your Computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html">How to Access and Use Shell to Set Up a Working Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.html">Set Up Your Conda Earth Analytics Python Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.html">Text Editors for the Command Line and Scientific Programming</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Not finding what you need? Search the rest of our textbooks.</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.earthdatascience.org">earthdatascience.org</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control.ipynb" target="_blank"
+   class="btn btn-sm btn-download-notebook-button dropdown-item"
+   title="Download notebook file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>What Is Version Control</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">What is Version Control?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-version-control">Types of Version control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-version-control-is-important">Why Version Control is Important</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-version-control-systems-works">How Version Control Systems Works</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-version-control-model">Simple Version Control Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-github-a-distributed-version-control-model">Git and GitHub - A Distributed Version Control Model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-git-and-github-support-version-control">How Git and GitHub Support Version Control</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-version-control">
+<h1>What Is Version Control<a class="headerlink" href="#what-is-version-control" title="Permalink to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<img alt="" class="sd-avatar-sm" src="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png" />
+</div>
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0">Max Joseph, Leah Wasser, Jenny Palomino, Martha Morrissey</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 30, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar objectives admonition">
+<p class="admonition-title">Learn how to…</p>
+<ul class="simple">
+<li><p>Define <strong>version control</strong>.</p></li>
+<li><p>Explain why <strong>version control</strong> is useful in a scientific workflow.</p></li>
+<li><p>Implement version control using <strong>git</strong>.</p></li>
+</ul>
+</div>
+<p>A version control system allows you to track and manage changes to your files. Learn benefits of version control for scientific workflows and how git and <a class="reference external" href="http://GitHub.com">GitHub.com</a> support version control.</p>
+<hr class="docutils" />
+<p>The text and graphics in the first three sections were borrowed, with some modifications, from Software Carpentry’s Version Control with <strong>git</strong> lessons.</p>
+<section id="id1">
+<h2>What is Version Control?<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>A version control system maintains a record of changes to code and other content. It also allows us to revert changes to a previous point in time.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/final-doc-phd-comics.gif">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/final-doc-phd-comics.gif" alt="Many of us have appended a date to a file name as a method of version control at some point in our lives. Source: Piled Higher and Deeper by Jorge Cham www.phdcomics.com."></a>
+   <figcaption> Many of us have used the "append a date" to a file name version of version control at some point in our lives. Source: "Piled Higher and Deeper" by <a href="http://phdcomics.com/comics/archive/phd101212s.gif">Jorge Cham on www.phdcomics.com</a>.
+   </figcaption>
+</figure></section>
+<section id="types-of-version-control">
+<h2>Types of Version control<a class="headerlink" href="#types-of-version-control" title="Permalink to this heading">#</a></h2>
+<p>There are many forms of version control. Some not as good:</p>
+<ul class="simple">
+<li><p>Save a document with a new date or name (we’ve all done it, but it isn’t efficient and easy to lose track of the latest file).</p></li>
+<li><p>Google Docs “history” function (not bad for some documents, but limited in scope).</p></li>
+</ul>
+<p>Some better:</p>
+<ul class="simple">
+<li><p>Version control tools like Git, Mercurial, or Subversion.</p></li>
+</ul>
+</section>
+<section id="why-version-control-is-important">
+<h2>Why Version Control is Important<a class="headerlink" href="#why-version-control-is-important" title="Permalink to this heading">#</a></h2>
+<p>Version control facilitates two important aspects of many scientific workflows:</p>
+<ol class="arabic simple">
+<li><p>The ability to save and review or revert to previous versions.</p></li>
+<li><p>The ability to collaborate on a single project.</p></li>
+</ol>
+<p>This means that you don’t have to worry about a collaborator (or your future self) overwriting something important. It also allows two people working on the same document to efficiently combine ideas and changes.</p>
+<div class="notice--success" markdown="1">
+<p><i class="fa fa-star"></i><strong>Thought Questions</strong>: Think of a specific time when you weren’t using version control that it would have been useful.</p>
+<ol class="arabic simple">
+<li><p>Why would version control have been helpful to your project and workflow?</p></li>
+<li><p>What were the consequences of not having a version control system in place?</p></li>
+</ol>
+</div>
+</section>
+<section id="how-version-control-systems-works">
+<h2>How Version Control Systems Works<a class="headerlink" href="#how-version-control-systems-works" title="Permalink to this heading">#</a></h2>
+<section id="simple-version-control-model">
+<h3>Simple Version Control Model<a class="headerlink" href="#simple-version-control-model" title="Permalink to this heading">#</a></h3>
+<p>A version control system tracks what has changed in one or more files over
+time. Version control systems begin with a base version of a document. Then,
+they save the committed changes that you make.</p>
+<p>You can think of version control as a tape: if you rewind the tape and
+start at the base document, then you can play back each change and end
+up with your latest version.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-play-changes.png">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-play-changes.png" alt="A version control system saves changes to a document, sequentially as you add and commit them to the system. Source: Software Carpentry."></a>
+   <figcaption> A version control system saves changes to a document, sequentially as you add and commit them to the system. <a href="http://swcarpentry.github.io/git-novice/fig/play-changes.svg">Source: Software Carpentry</a>.
+   </figcaption>
+</figure><p>Once you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes onto the base document. You can then retrieve, or revert to, different versions of the document.</p>
+<p>Collaboration with version control allows users to make independent changes to the same document.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-versions.png">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-versions.png" alt="Different versions of the same document can be saved within a version control system. Source: Software Carpentry."></a>
+   <figcaption> Different versions of the same document can be saved within a version control system. <a href="http://swcarpentry.github.io/git-novice/fig/versions.svg">Source: Software Carpentry</a>.
+   </figcaption>
+</figure><p>If there aren’t conflicts between the users’ changes (a conflict is an area where both users modified the same part of the same document in different ways), you can review two sets of changes on the same base document. If there are conflicts, they can be resolved by choosing which change you want to keep.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-merge.png">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-merge.png" alt="Two sets of changes to the same base document can be merged together within a version control system if there are no conflicts (areas where both users modified the same part of the same document in different ways). If there are conflicts, they can resolved by choosing which change you want to keep. After conflicts are resolved, all other changes submitted by both users can then be merged together. Source: Software Carpentry."></a>
+   <figcaption> Two sets of changes to the same base document can be merged together within a version control system if there are no conflicts (areas where both users modified the same part of the same document in different ways). If there are conflicts, they can resolved by choosing which change you want to keep. After conflicts are resolved, all other changes submitted by both users can then be merged together. <a href="http://swcarpentry.github.io/git-novice/fig/merge.svg">Source: Software Carpentry</a>.
+   </figcaption>
+</figure><p>A version control system is a tool that keeps track of all of these changes for us.
+Each version of a file can be viewed and reverted to at any time. That way if you
+add something that you end up not liking or delete something that you need, you can
+simply go back to a previous version.</p>
+</section>
+<section id="git-and-github-a-distributed-version-control-model">
+<h3>Git and GitHub - A Distributed Version Control Model<a class="headerlink" href="#git-and-github-a-distributed-version-control-model" title="Permalink to this heading">#</a></h3>
+<p><strong>Git</strong> uses a distributed version control model. This means that there can be
+many copies (or forks/branches in <strong>GitHub</strong> world) of the repository. When
+working locally, <strong>git</strong> is the program that you will use to keep track of
+changes to your repository.</p>
+<p><strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> is a location on the internet (a cloud web server) that acts as a remote location for your repository. <strong>GitHub</strong> provides a backup of your work that can be retrieved if your local copy is lost (e.g. if your computer falls off a pier). <strong>GitHub</strong> also allows you to share your work and collaborate with others on projects.</p>
+<figure>
+   <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-distributed-version-control-model.png">
+   <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-distributed-version-control-model.png" alt="One advantage of a distributed version control system is that there are many copies of the repository. Thus, if any one server or computer dies, any of the client repositories can be copied and used to restore the data! Source: Pro Git by Scott Chacon & Ben Straub. "></a>
+   <figcaption> One advantage of a distributed version control system is that there are many copies of the repository. Thus, if any one server or computer dies, any of the client repositories can be copied and used to restore the data! <a href="https://git-scm.com/book/en/v2/book/01-introduction/images/distributed.png">Source: Pro Git by Scott Chacon and Ben Straub</a>.
+    </figcaption>
+</figure></section>
+</section>
+<section id="how-git-and-github-support-version-control">
+<h2>How Git and GitHub Support Version Control<a class="headerlink" href="#how-git-and-github-support-version-control" title="Permalink to this heading">#</a></h2>
+<p>Due to the functionality that each tool provides, you can use <strong>git</strong> and <strong>GitHub</strong> together in the same workflow to:</p>
+<ul class="simple">
+<li><p>keep track of changes to your code locally using <strong>git</strong>.</p></li>
+<li><p>synchronizing code between different versions (i.e. either your own versions or others’ versions).</p></li>
+<li><p>test changes to code without losing the original.</p></li>
+<li><p>revert back to older version of code, if needed.</p></li>
+<li><p>back-up your files on the cloud (<strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong>).</p></li>
+<li><p>share your files on <strong><a class="reference external" href="http://GitHub.com">GitHub.com</a></strong> and collaborate with others.</p></li>
+</ul>
+<p>Throughout this textbook, you will learn more about the functionality of <strong>git</strong> and <strong>GitHub</strong> for version control and collaboration to support open reproducible science.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "earthlab-education/Earth-Analytics-2023-01-Intro",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/03-git-github/01-intro-version-control"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../00-git-github-landing-page.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Git and GitHub</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../create-portfolio-website/00-create-portfolio-website.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Create your own webpage using GitHub pages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">What is Version Control?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-version-control">Types of Version control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-version-control-is-important">Why Version Control is Important</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-version-control-systems-works">How Version Control Systems Works</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-version-control-model">Simple Version Control Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-github-a-distributed-version-control-model">Git and GitHub - A Distributed Version Control Model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-git-and-github-support-version-control">How Git and GitHub Support Version Control</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

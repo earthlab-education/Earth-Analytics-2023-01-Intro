@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Get started using Python for Earth Data Science workflows &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "earthlab-education/Earth-Analytics-2023-01-Intro");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/font_loader.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python';</script>
+    <link rel="shortcut icon" href="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Use names to save information for later" href="python-fundamentals-02-variables.html" />
+    <link rel="prev" title="Python Code Fundamentals" href="../00-python-fundamentals-landing-page.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Click on the <i class="fa fa-rocket"></i> icon to <b style="color: #d98619;">run and edit code</b> on this page</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03-git-github/00-git-github-landing-page.html">Git and GitHub</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03-git-github/01-intro-version-control/git-01-intro-version-control.html">What Is Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../create-portfolio-website/00-create-portfolio-website.html">Create your own webpage using GitHub pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="python-fundamentals-02-variables.html">Use <strong>names</strong> to save information for later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-02-setup-git-bash-and-anaconda.html">Setup Git, Bash, and Conda on Your Computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html">How to Access and Use Shell to Set Up a Working Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.html">Set Up Your Conda Earth Analytics Python Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.html">Text Editors for the Command Line and Scientific Programming</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Not finding what you need? Search the rest of our textbooks.</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.earthdatascience.org">earthdatascience.org</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro/issues/new?title=Issue%20on%20page%20%2Fintro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.ipynb" target="_blank"
+   class="btn btn-sm btn-download-notebook-button dropdown-item"
+   title="Download notebook file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="../../../_sources/intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Get started using Python for Earth Data Science workflows</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started-using-python">Get Started Using Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need">What You Need</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-for-earth-data-science">Why Use Python For Earth Data Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-run-python-code">Where to Run Python Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-python-code-using-interactive-development-environments-ide-such-as-jupyter-notebook">Write Python Code Using Interactive Development Environments (IDE) Such as Jupyter Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-using-ides">Benefits of Using IDEs</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-text-editors-to-write-python-code">Use Text Editors To Write Python Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-python-code-using-the-terminal">Write Python Code Using the Terminal</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#execute-python-commands-in-the-terminal">Execute Python Commands In the Terminal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#write-scripts-that-can-run-in-the-terminal">Write Scripts That Can Run in the terminal</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-ways-to-write-python-code">Other Ways to Write Python Code</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="get-started-using-python-for-earth-data-science-workflows">
+<h1>Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows<a class="headerlink" href="#get-started-using-python-for-earth-data-science-workflows" title="Permalink to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<img alt="" class="sd-avatar-sm" src="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png" />
+</div>
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0">Jenny Palomino, Leah Wasser</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 30, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar objectives admonition">
+<p class="admonition-title">Learn how to…</p>
+<ul class="simple">
+<li><p>List key characteristics and benefits of using the <code class="docutils literal notranslate"><span class="pre">Python</span></code> language for scientific workflows.</p></li>
+<li><p>Explain how variables and lists are used in <code class="docutils literal notranslate"><span class="pre">Python</span></code> to store data.</p></li>
+<li><p>Write <code class="docutils literal notranslate"><span class="pre">Python</span></code> code to create variables and lists and run basic operations on them (e.g. updates, comparisons).</p></li>
+<li><p>Implement key ideas of the PEP 8 Style Guide to your <code class="docutils literal notranslate"><span class="pre">Python</span></code> code.</p></li>
+</ul>
+</div>
+<p>Python is a free, open source programming language that can be used to work with scientific data. <code class="docutils literal notranslate"><span class="pre">Python</span></code> is   a useful programming language for scientific workflows. You will get started with writing <code class="docutils literal notranslate"><span class="pre">Python</span></code> code to create variables and lists to store information (i.e. data) and run basic operations on them (e.g. updates, comparisons). You will also learn about the PEP 8 Style Guide for <code class="docutils literal notranslate"><span class="pre">Python</span></code>, which provides useful standards for naming conventions and organization of code to support readibility.</p>
+<hr class="docutils" />
+<section id="get-started-using-python">
+<h2>Get Started Using Python<a class="headerlink" href="#get-started-using-python" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="what-you-need">
+<h2>What You Need<a class="headerlink" href="#what-you-need" title="Permalink to this heading">#</a></h2>
+<p>Be sure that you have followed the instructions on <a href="{{ site.url }}/workshops/setup-earth-analytics-python/">Setting up Git, Bash, and Conda on your computer</a> to install the tools for your operating system (Windows, Mac, Linux).</p>
+<p>Be sure that you have completed the chapter on <a href="{{ site.url }}/courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/">Jupyter Notebook</a>.</p>
+</section>
+<section id="what-is-python">
+<h2>What is Python<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
+<p><a href="https://www.python.org/doc/essays/blurb/" target="_blank"><code class="docutils literal notranslate"><span class="pre">Python</span></code></a> is a free, open source scientific programming language.</p>
+<p>Key Characteristics:</p>
+<ul class="simple">
+<li><p><strong>Interpreted Language:</strong> <code class="docutils literal notranslate"><span class="pre">Python</span></code> is an interpreted programming language. At the most basic level, an interpreted language means that you can run <code class="docutils literal notranslate"><span class="pre">Python</span></code> code and associated commands without needed additional steps such as compiling the code first before running it. This makes getting started and working with <code class="docutils literal notranslate"><span class="pre">Python</span></code> quick and easy.</p></li>
+<li><p><strong>Object-Oriented:</strong> Python is most often used in an object-oriented way, which allows data to be stored as objects that have unique characteristics and functionality. You will learn more about object oriented programming later in this textbook. But in short, this means that rather than create generalized functions to perform tasks, most programmers will create methods, which are functions that are applied to specific object types, such as a method that is only applicable to a list or dataframe.</p></li>
+<li><p><strong>High Level Programming Language:</strong> <code class="docutils literal notranslate"><span class="pre">Python</span></code> is also a high level programming language, which provides the ability to work with code that is human readable, as opposed to machine language (such as 0s and 1s). As the <code class="docutils literal notranslate"><span class="pre">Python</span></code> language abstracts away many of those technical details, you are free to write code and to process data using <code class="docutils literal notranslate"><span class="pre">Python</span></code> without worrying about what type of computer you are using. So you can get more quickly to your science and be able to share your code with others who may be using a different operating system.</p></li>
+<li><p><strong>Free and Open Source:</strong> <code class="docutils literal notranslate"><span class="pre">Python</span></code> is a free and open source programming language. This means that the source code for the entire language is freely available, and that anyone can contribute new functionality or documentation for the benefit of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> community.</p></li>
+</ul>
+</section>
+<section id="why-use-python-for-earth-data-science">
+<h2>Why Use Python For Earth Data Science<a class="headerlink" href="#why-use-python-for-earth-data-science" title="Permalink to this heading">#</a></h2>
+<p>Each programming language has its benefits and its drawbacks. <code class="docutils literal notranslate"><span class="pre">Python</span></code> is being used in our earth analytics courses and in this textbook for many reasons including:</p>
+<ol class="arabic simple">
+<li><p><strong>Python is one of the most commonly used languages in the earth and environmental sciences:</strong> Many different sources have identified <code class="docutils literal notranslate"><span class="pre">Python</span></code> as being one of the most popularly used languages, particularly in the sciences. <a href="https://insights.stackoverflow.com/survey/2019" target="_blank">An analysis conducted by Stack Overflow</a>
+found that <code class="docutils literal notranslate"><span class="pre">Python</span></code> is one of the most active programming language threads on their widely used website and the overall fastest-growing major programming language. Earth Lab’s own <a href="https://www.earthdatascience.org/blog/four-skills-earth-data-science/" target="_blank">market research of hiring managers in industry and public agencies </a> also  identified <code class="docutils literal notranslate"><span class="pre">Python</span></code> as a highly desired programming background for new employees.</p></li>
+<li><p><strong>Python is free and open source:</strong> This means that anyone can use it without worrying about licenses. This also makes it easy to migrate code over to cloud and high performance computing (HPC) environments, given that there are no license restrictions.</p></li>
+<li><p><strong>Python has an active open source community for science:</strong> There is an active open source community who are building <code class="docutils literal notranslate"><span class="pre">Python</span></code> tools to support scientific applications, such as the widely used scientific packages <a href="https://github.com/numpy/numpy" target="_blank">numpy</a> and <a href="https://github.com/pandas-dev/pandas" target="_blank">pandas</a>.</p></li>
+<li><p><strong>Python is the core language for many spatial data tools:</strong> Example tools that use <code class="docutils literal notranslate"><span class="pre">Python</span></code> as their core include ESRI ArcGIS, QGIS and others. This makes the language versatile if you wish to create macros (i.e. widgets) in a Desktop tool like QGIS.</p></li>
+</ol>
+</section>
+<section id="where-to-run-python-code">
+<h2>Where to Run Python Code<a class="headerlink" href="#where-to-run-python-code" title="Permalink to this heading">#</a></h2>
+<p>There are many different ways to write and run <code class="docutils literal notranslate"><span class="pre">Python</span></code> code. In this textbook, you will learn how to write code using the Jupyter environment (discussed below). However, you can also write code at the command line (using the terminal), in a text editor, or in another tool such as Spyder or PyCharm.</p>
+<section id="write-python-code-using-interactive-development-environments-ide-such-as-jupyter-notebook">
+<h3>Write Python Code Using Interactive Development Environments (IDE) Such as Jupyter Notebook<a class="headerlink" href="#write-python-code-using-interactive-development-environments-ide-such-as-jupyter-notebook" title="Permalink to this heading">#</a></h3>
+<p>An interactive development environment (IDE) is a graphical interface that supports writing code efficiently by allowing you interactively write, test, and debug code.</p>
+<section id="benefits-of-using-ides">
+<h4>Benefits of Using IDEs<a class="headerlink" href="#benefits-of-using-ides" title="Permalink to this heading">#</a></h4>
+<p>There are many benefits of using IDEs for programming.</p>
+<p><strong>IDEs Make Coding Faster - Tab Completion</strong>: Most IDEs have built in shortcuts that make it easier to write code quickly. Tab completion is a great example of this.</p>
+<p>For example, you can try the following in <strong>Jupyter Notebook</strong>:</p>
+<ol class="arabic simple">
+<li><p>add a new code cell</p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code>, and hit return</p></li>
+<li><p>then type <code class="docutils literal notranslate"><span class="pre">os.get</span></code> and hit <kbd>tab</kbd></p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># What happens when you hit tab after typing the t in os.get?</span>
+<span class="n">os</span><span class="o">.</span><span class="n">get</span>
+</pre></div>
+</div>
+<p>What happens? You get a list of all commands that begin with <code class="docutils literal notranslate"><span class="pre">os.get</span></code>!</p>
+<p>Once you get the hang of tab completion, you will see how much more quickly you can code. It also makes it easier to avoid mistakes when typing commands such as <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code>, which identifies the current working directory.</p>
+<p>Tab completion also helps with paths to directories, files, etc - allowing you to generate paths to objects using tab <kbd>tab completion</kbd> after you have started to type a path.</p>
+<p><strong>Work With Objects and Files</strong>: Tools like Spyder and PyCharm will show you objects that exist in your environment that have been created by your code.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/run-python-options/pycharm.png">
+ <img src="{{ site.url }}/images/earth-analytics/run-python-options/pycharm.png" alt="PyCharm is an interactive development environment (IDE) that can be used to run Python code interactively, access other files on your computer, and access objects created by your code."></a>
+ <figcaption> PyCharm is an interactive development environment (IDE) (with a free, basic tier) that can be used to run Python code interactively, access other files on your computer, and access objects created by your code. Source: <a href="https://semanti.ca/blog/?recommended-ide-for-data-scientists-and-machine-learning-engineers" target="_blank">semanti.ca</a>.
+ </figcaption>
+</figure>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/run-python-options/spyder.png">
+ <img src="{{ site.url }}/images/earth-analytics/run-python-options/spyder.png" alt="Spyder is free interactive development environment (IDE) for Python that allows you to access other files on your computer, and access objects created by your code."></a>
+ <figcaption> Spyder is free interactive development environment (IDE) for Python that allows you to access other files on your computer and access objects created by your code. Source: <a href="https://semanti.ca/blog/?recommended-ide-for-data-scientists-and-machine-learning-engineers" target="_blank">semanti.ca</a>.
+ </figcaption>
+</figure>
+<p>Some IDEs such as Jupyter Lab, PyCharm and Spyder will also make it easy for you to work within a working directory that may contain many different files.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/run-python-options/jupyterlab.png">
+ <img src="{{ site.url }}/images/earth-analytics/run-python-options/jupyterlab.png" alt="Jupyter Lab is a free interactive development environment (IDE) for Python that allows you to run code interactively and work with multiple files, including Jupyter Notebook files, on your computer at one time."></a>
+ <figcaption> Jupyter Lab is a free interactive development environment (IDE) for Python that allows you to run code interactively and work with multiple files, including Jupyter Notebook files, on your computer at one time. Source: <a href="https://medium.com/@swaroopkml96/jupyterlab-and-google-drive-integration-with-google-colab-42a8d64a9b63" target="_blank">Swaroop Kumar</a>.
+ </figcaption>
+</figure>
+<p><strong>Most IDEs for Python are free</strong>: For example, Spyder is a free IDE that comes with the Anaconda <code class="docutils literal notranslate"><span class="pre">Python</span></code> distribution. The base version of PyCharm is also free but you need to pay for the full version if you want complete debugging functionality.</p>
+<p>The <a href="{{ site.url }}/courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/">Jupyter Platform, including Jupyter Notebook,</a> is completely free for you to use. As <strong>Jupyter Notebook</strong>  supports reproducible science by allowing you to connect code, data, documentation, and associated inputs and outputs, all of our Earth Analytics courses and this textbook use <strong>Jupyter Notebook</strong> to support open reproducible science. In fact, the lessons that you are reading now were generated from <strong>Jupyter Notebooks</strong> files!</p>
+</section>
+</section>
+<section id="use-text-editors-to-write-python-code">
+<h3>Use Text Editors To Write Python Code<a class="headerlink" href="#use-text-editors-to-write-python-code" title="Permalink to this heading">#</a></h3>
+<p>Many people use text editors for writing <code class="docutils literal notranslate"><span class="pre">Python</span></code> code.</p>
+<p>One way to use text editors is to create <code class="docutils literal notranslate"><span class="pre">Python</span></code> scripts (.py files) and then run them at the command line (see below).</p>
+<p>Alternatively, some text editors, such as Atom, have plugins that allow you to run code directly in the text editor like you would in PyCharm or Spyder.</p>
+<p>Some people prefer using text editors to write <code class="docutils literal notranslate"><span class="pre">Python</span></code> code because they are light weight, making them easier to use to edit code quickly, and have nice features such as automatic color coding of code, text editing options such as find/replace, and the ability to directly connect to repositories on <a class="reference external" href="http://GitHub.com">GitHub.com</a> to track changes to files and share code with others.</p>
+<p>Learn more about the benefits of <a href="{{ site.url }}/workshops/setup-earth-analytics-python/text-editors-for-science-workflows/">different text editors</a> including Atom, Nano, and Sublime Text.</p>
+</section>
+<section id="write-python-code-using-the-terminal">
+<h3>Write Python Code Using the Terminal<a class="headerlink" href="#write-python-code-using-the-terminal" title="Permalink to this heading">#</a></h3>
+<p>You can also execute Python code at the command line using the terminal.</p>
+<section id="execute-python-commands-in-the-terminal">
+<h4>Execute Python Commands In the Terminal<a class="headerlink" href="#execute-python-commands-in-the-terminal" title="Permalink to this heading">#</a></h4>
+<p>One way to do this is to open up a terminal, and type <code class="docutils literal notranslate"><span class="pre">python</span></code>. This will send you into an interactive <code class="docutils literal notranslate"><span class="pre">Python</span></code> session where you can import packages and run code.</p>
+<p>The following example launches an interactive <code class="docutils literal notranslate"><span class="pre">Python</span></code> session to import the <code class="docutils literal notranslate"><span class="pre">os</span></code> package and then run the <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> function to get the current working directory. The output of the commands are displayed under the executed code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python
+<span class="w">  </span>Python<span class="w"> </span><span class="m">3</span>.7.3<span class="w"> </span><span class="p">|</span><span class="w"> </span>packaged<span class="w"> </span>by<span class="w"> </span>conda-forge<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>default,<span class="w"> </span>Jul<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">2019</span>,<span class="w"> </span><span class="m">21</span>:52:21<span class="o">)</span><span class="w"> </span>
+<span class="w">  </span><span class="o">[</span>GCC<span class="w"> </span><span class="m">7</span>.3.0<span class="o">]</span><span class="w"> </span>::<span class="w"> </span>Anaconda,<span class="w"> </span>Inc.<span class="w"> </span>on<span class="w"> </span>linux
+<span class="w">  </span>Type<span class="w"> </span><span class="s2">&quot;help&quot;</span>,<span class="w"> </span><span class="s2">&quot;copyright&quot;</span>,<span class="w"> </span><span class="s2">&quot;credits&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;license&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+$<span class="w"> </span>import<span class="w"> </span>os
+$<span class="w"> </span>os.getcwd<span class="o">()</span>
+<span class="w">  </span><span class="s1">&#39;/home/jpalomino&#39;</span>
+</pre></div>
+</div>
+<p>Writing code interactively in the terminal is a nice way to quickly test out a few code lines. However, it is much more efficient to create scripts (.py files) where you can save the code and rerun it.</p>
+</section>
+<section id="write-scripts-that-can-run-in-the-terminal">
+<h4>Write Scripts That Can Run in the terminal<a class="headerlink" href="#write-scripts-that-can-run-in-the-terminal" title="Permalink to this heading">#</a></h4>
+<p>Alternatively, a more efficient approach to using the terminal with <code class="docutils literal notranslate"><span class="pre">Python</span></code> is to write <code class="docutils literal notranslate"><span class="pre">Python</span></code> scripts. These script files have a <code class="docutils literal notranslate"><span class="pre">.py</span></code> extension. You can then call the script at the terminal using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="c1"># Execute a python script named myscript.py at the command line</span>
+$<span class="w"> </span>python<span class="w"> </span>myscript.py
+</pre></div>
+</div>
+<p>To write scripts, you will want to use either an IDE or a text editor as discussed above.</p>
+</section>
+</section>
+<section id="other-ways-to-write-python-code">
+<h3>Other Ways to Write Python Code<a class="headerlink" href="#other-ways-to-write-python-code" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> is also used in many GIS applications. Tools like QGIS and ArcGIS that support working with geospatial data often have command line interfaces that allow you to execute <code class="docutils literal notranslate"><span class="pre">Python</span></code> code.</p>
+<p>Both QGIS and ArcGIS also have <code class="docutils literal notranslate"><span class="pre">Python</span></code> packages that are specifically created to run analyses and access other functionality in their software.</p>
+<p><a href="https://pro.arcgis.com/en/pro-app/arcpy/get-started/what-is-arcpy-.htm" target="_blank">ArcPy</a> is used by ArcGIS users to access proprietary functionality that ESRI has built to work with geospatial data. With a license, users can use ArcPy programmatically access the same analyses and workflows that can be executed using the user interface. The ArcPy package is maintained by ESRI.</p>
+<p><a href="https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/" target="_blank">PyQGIS</a> is used by QGIS users to programmatically access the functionality provided by the free, open source QGIS software. The PyQGIS package is maintained by the open source community of geospatial <code class="docutils literal notranslate"><span class="pre">Python</span></code> users.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/run-python-options/qgis-python-console.png">
+ <img src="{{ site.url }}/images/earth-analytics/run-python-options/qgis-python-console.png" alt="QGIS provides a built-in console to run Python code, including use of the PyQGIS package, directly in the desktop user interface."></a>
+ <figcaption> QGIS provides a built-in console to run Python code, including use of the PyQGIS package, directly in the desktop user interface. Source: <a href="https://gis.stackexchange.com/questions/227613/export-shp-geometry-into-wkb-format-using-pyqgis" target="_blank">Stack Exchange</a>.
+ </figcaption>
+</figure></section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "earthlab-education/Earth-Analytics-2023-01-Intro",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./intro-eds-textbook/04-python-fundamentals/01-get-started-python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../00-python-fundamentals-landing-page.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Code Fundamentals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="python-fundamentals-02-variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Use <strong>names</strong> to save information for later</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started-using-python">Get Started Using Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need">What You Need</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-for-earth-data-science">Why Use Python For Earth Data Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-run-python-code">Where to Run Python Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-python-code-using-interactive-development-environments-ide-such-as-jupyter-notebook">Write Python Code Using Interactive Development Environments (IDE) Such as Jupyter Notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-using-ides">Benefits of Using IDEs</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-text-editors-to-write-python-code">Use Text Editors To Write Python Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-python-code-using-the-terminal">Write Python Code Using the Terminal</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#execute-python-commands-in-the-terminal">Execute Python Commands In the Terminal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#write-scripts-that-can-run-in-the-terminal">Write Scripts That Can Run in the terminal</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-ways-to-write-python-code">Other Ways to Write Python Code</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

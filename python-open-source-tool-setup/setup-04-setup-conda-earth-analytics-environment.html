@@ -1,0 +1,872 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Set Up Your Conda Earth Analytics Python Environment &#8212; Introduction to Earth and Environmental Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "earthlab-education/Earth-Analytics-2023-01-Intro");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/font_loader.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment';</script>
+    <link rel="shortcut icon" href="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Text Editors for the Command Line and Scientific Programming" href="setup-05-text-editors-for-science-workflows.html" />
+    <link rel="prev" title="How to Access and Use Shell to Set Up a Working Directory" href="setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Click on the <i class="fa fa-rocket"></i> icon to <b style="color: #d98619;">run and edit code</b> on this page</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../00-learning-portal-landing-page.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../00-learning-portal-landing-page.html">
+                    Welcome to the Learning Portal at Earthlab, University of Colorado Boulder
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Earth and Environmental Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro-eds-textbook/00-course-overview.html">Introduction to Earth Data Science | Earth Lab CU Boulder</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/00-reproducible-science-tools-landing-page.html">Introduction to Open Reproducible Science Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-01-intro-open-science.html">What Is Open Reproducible Science</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-02-open-science-tools.html">Tools For Open Reproducible Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/01-open-reproducible-science/open-reproducible-science-03-best-practices.html">How To Organize Your Project: Best Practices for Open Reproducible Science</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-01-intro-jupyter-notebook.html">Introduction to Jupyter For Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-02-get-started-jupyter-notebook.html">Get Started With Jupyter Notebook For Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-03-cells-kernels-in-jupyter-notebooks.html">Code and Markdown Cells in Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-04-manage-directories-jupyter-notebook.html">Manage Directories in Jupyter Notebook Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook.html">Manage Jupyter Notebook Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts.html">Useful Jupyter Notebook Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/03-git-github/00-git-github-landing-page.html">Git and GitHub</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control.html">What Is Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create-portfolio-website/00-create-portfolio-website.html">Create your own webpage using GitHub pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/00-python-fundamentals-landing-page.html">Python Code Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-01-get-started-python.html">Get started using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for Earth Data Science workflows</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-02-variables.html">Use <strong>names</strong> to save information for later</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro-eds-textbook/04-python-fundamentals/01-get-started-python/python-fundamentals-03-lists.html"><strong>Lists</strong> keep your data in order</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="setup-01-landing-earth-analytics-python-setup.html">Setup Your Earth Analytics Python, Git, Bash Environment On Your Computer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup-02-setup-git-bash-and-anaconda.html">Setup Git, Bash, and Conda on Your Computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html">How to Access and Use Shell to Set Up a Working Directory</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Set Up Your Conda Earth Analytics Python Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup-05-text-editors-for-science-workflows.html">Text Editors for the Command Line and Scientific Programming</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Not finding what you need? Search the rest of our textbooks.</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://www.earthdatascience.org">earthdatascience.org</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro/issues/new?title=Issue%20on%20page%20%2Fpython-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.ipynb" target="_blank"
+   class="btn btn-sm btn-download-notebook-button dropdown-item"
+   title="Download notebook file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="../_sources/python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Set Up Your Conda Earth Analytics Python Environment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-conda-environments-for-python">Why Use Conda Environments for Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mamba-will-save-you-so-much-time">Mamba will save you SO much time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-earth-analytics-python-conda-environment">Install the Earth Analytics Python Conda Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-conda-environments">About Conda Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-yaml-yml-file">What is a YAML (.yml) File?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-conda-environments">Use Conda Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-a-list-of-all-installed-conda-environments">View a List of All Installed Conda Environments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-a-conda-environment">Activate a Conda Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deactivate-a-conda-environment">Deactivate a Conda Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-a-conda-environment">Delete a Conda Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-a-conda-environment-using-a-yaml-file">Update a Conda Environment Using a YAML File</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="set-up-your-conda-earth-analytics-python-environment">
+<h1>Set Up Your Conda Earth Analytics Python Environment<a class="headerlink" href="#set-up-your-conda-earth-analytics-python-environment" title="Permalink to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-background-info docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<img alt="" class="sd-avatar-sm" src="https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png" />
+</div>
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0">Leah Wasser, Jenny Palomino, Martha Morrissey, Will Norris, Elsa Culler</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Modified Aug 30, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar objectives admonition">
+<p class="admonition-title">Learn how to…</p>
+<ul class="simple">
+<li><p>Install a new environment using conda and mamba.</p></li>
+<li><p>View a list of the available environments in conda.</p></li>
+<li><p>Activate, update and delete conda environments.</p></li>
+</ul>
+</div>
+<p>Conda environments allow you to easily manage the Python package installations on your computer. Learn how to install a conda environment using a yml file.</p>
+<hr class="docutils" />
+<section id="i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need">
+<h2><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need<a class="headerlink" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need" title="Permalink to this heading">#</a></h2>
+<p>You should have <strong>Bash</strong> and the Miniconda distribution of <strong>Python</strong> 3.x setup on your computer and an <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> working directory. Be sure you have:</p>
+<ul class="simple">
+<li><p>Completed <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">the setup for Git, Bash and Conda</a>.</p></li>
+<li><p>Created a <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory on your computer.</p></li>
+</ul>
+<p>Information below is adapted from materials developed by the Conda documentation for <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/" target="_blank">installing conda</a> and <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">managing conda environments</a>.</p>
+</section>
+<section id="why-use-conda-environments-for-python">
+<h2>Why Use Conda Environments for Python<a class="headerlink" href="#why-use-conda-environments-for-python" title="Permalink to this heading">#</a></h2>
+<p>Conda allows you to have different environments installed on your computer to access different versions of <strong>Python</strong> and different libraries. Sometimes libraries conflict which causes errors and packages not to work.</p>
+<p>To avoid conflicts, we created an environment called <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> that contains all of the libraries that you will need for the <strong>Earth Analytics Python</strong> course lessons on this website.</p>
+<div class="data-tip margin admonition">
+<p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">conda</span></code> resources</p>
+<p>For a more detailed explanation of conda environments, see the Intro to Earth Data Science textbook page on <a href="{{ site.url }}/courses/intro-to-earth-data-science/python-code-fundamentals/use-python-packages/introduction-to-python-conda-environments/">Using Conda Environments to Manage Python Dependencies</a>.</p>
+<p>You can also check out the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html" target="_blank">documentation on conda environments</a>.</p>
+</div>
+</section>
+<section id="mamba-will-save-you-so-much-time">
+<h2>Mamba will save you SO much time<a class="headerlink" href="#mamba-will-save-you-so-much-time" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">mamba</span></code> is an extension of <code class="docutils literal notranslate"><span class="pre">conda</span></code> that contains all the same commands. It is also <em>much</em> faster (~5 minutes to install the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span> <span class="pre">environment,</span> <span class="pre">instead</span> <span class="pre">of</span> <span class="pre">~90</span> <span class="pre">minutes</span> <span class="pre">with</span> <span class="pre">plain</span> </code>conda`).</p>
+<p>To install mamba in your base environment:</p>
+<ol class="arabic simple">
+<li><p>If it’s not already open, open the Terminal on your computer (e.g. Git Bash for Windows or Terminal on a Mac/Linux).</p></li>
+<li><p>Make sure the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment is active. You should see <code class="docutils literal notranslate"><span class="pre">(base)</span></code> in your terminal prompt. If you don’t, run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code>.</p></li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">mamba</span></code> with the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">mamba</span></code>.</p></li>
+</ol>
+<div class="warning margin admonition">
+<p class="admonition-title">Use the conda-forge channel</p>
+<p>When you install individual packages with conda, don’t forget to specify <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> as the channel where applicable (if you’re not sure, it probably is). This is one of the most common problems new users run into, since the <code class="docutils literal notranslate"><span class="pre">default</span></code> channel package recipes are less reliable in our experience.</p>
+</div>
+</section>
+<section id="install-the-earth-analytics-python-conda-environment">
+<h2>Install the Earth Analytics Python Conda Environment<a class="headerlink" href="#install-the-earth-analytics-python-conda-environment" title="Permalink to this heading">#</a></h2>
+<p>To install the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment, you will need to follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Fork and clone a GitHub repository from <code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab/earth-analytics-python-env</span></code> to your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory.</p>
+<ul class="simple">
+<li><p>This repository contains a file called <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> that contains the instructions to install the environment.</p></li>
+<li><p>For a refresher on forking/cloning repositories, see the section below on <strong>Fork and Clone GitHub Repository</strong> at the bottom of this lesson.</p></li>
+</ul>
+</li>
+<li><p>If it’s not already open, open the Terminal on your computer (e.g. Git Bash for Windows or Terminal on a Mac/Linux).</p></li>
+<li><p>In the Terminal, set your directory to the cloned <code class="docutils literal notranslate"><span class="pre">earth-analytics-python-env</span></code> dir using <code class="docutils literal notranslate"><span class="pre">cd</span></code> to change directories (e.g. <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">earth-analytics-python-env</span></code>).</p></li>
+<li><p>Once you are in the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python-env</span></code> directory, you can create your environment. To do this run: <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code>.</p>
+<ul class="simple">
+<li><p>Once the environment is installed you can activate it using: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">earth-analytics-python</span></code>.</p></li>
+</ul>
+</li>
+<li><p>To view a list of all conda environments available on your machine run: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code>.</p></li>
+</ol>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p><strong>Always make sure that the earth-analytics-python environment is activated</strong> before doing work for lessons on this website. If you are using live coding on this page, we’ve taken care of that for you already.</p>
+</div>
+<p>Note that it takes time to install of the packages found in the earth-analytics-python environment as it needs to download and install each library. It should not take as long with <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, however.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> needs internet access
+You need to have internet access to install packages and environments!</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Check your working directory</p>
+<p>The instructions above will only work if you run them in the directory where you placed the environment.yml file.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Windows Users</p>
+<p>A reminder that the lessons on this website assume that you are using Git Bash as your primary terminal.</p>
+</div>
+</section>
+<section id="about-conda-environments">
+<h2>About Conda Environments<a class="headerlink" href="#about-conda-environments" title="Permalink to this heading">#</a></h2>
+<section id="what-is-a-yaml-yml-file">
+<h3>What is a YAML (.yml) File?<a class="headerlink" href="#what-is-a-yaml-yml-file" title="Permalink to this heading">#</a></h3>
+<p>When you work with conda, you can create custom lists that tell conda where to install libraries from, and in what order. You can even specify a particular version.</p>
+<p>You write this list using  <a href="http://yaml.org/" target="_blank">YAML</a> (Yet Another Markup Language). This is an alternative to using <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install <strong>Python</strong> packages.</p>
+<p>In previous steps, you used a custom .yml list to install all of the <strong>Python</strong> libraries that you will need to complete the <strong>Python</strong> lessons on this website. This .yml list is customized to install libraries from the repositories and in an order that minimizes conflicts.</p>
+<p>If you run into any issues installing the environment from the .yml, let us know!</p>
+<p>Next, explore your new conda environment. Here’s what part of the .yml file looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">earth</span><span class="o">-</span><span class="n">analytics</span><span class="o">-</span><span class="n">python</span>
+<span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+  <span class="o">-</span> <span class="n">defaults</span>
+
+<span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
+  <span class="o">-</span> <span class="n">pip</span>
+  <span class="c1"># Core scientific python</span>
+  <span class="o">-</span> <span class="n">numpy</span>
+  <span class="o">-</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+<p>Notice at the top of the file there is the environment name. This file has a few key parts:</p>
+<ol class="arabic simple">
+<li><p>Name: the name of the environment that you will call when you want to activate the environment. The name <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> is defined in the environment.yml file.</p></li>
+<li><p>Channels: this list identifies where packages will be installed from. There are many options including conda, conda-forge and pip. You will be predominately using conda-forge for the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment.</p></li>
+<li><p>Dependencies: Dependencies are all of the things that you need installed in order for the environment to be complete. In the example, <strong>Python</strong> version 3.7 is specified. The order in which the libraries should be installed is also specified.</p></li>
+</ol>
+</section>
+</section>
+<section id="use-conda-environments">
+<h2>Use Conda Environments<a class="headerlink" href="#use-conda-environments" title="Permalink to this heading">#</a></h2>
+<p>You can have different <strong>Python</strong> environments on your computer. Conda allows you to easily jump between environments using a set of commands that you run in your terminal.</p>
+<p>This section provides an overview of various commands to manage your conda environments.</p>
+<p>For more detailed instructions for using these commands, see the Intro to Earth Data Science textbook page on <span class="xref myst">Installing Python Packages in Conda Environments</span>.</p>
+<p>Or, have a look at the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#viewing-a-list-of-your-environments" target = "_blank">Conda documentation notes that review the steps below and more!</a></p>
+<section id="view-a-list-of-all-installed-conda-environments">
+<h3>View a List of All Installed Conda Environments<a class="headerlink" href="#view-a-list-of-all-installed-conda-environments" title="Permalink to this heading">#</a></h3>
+<p>You can see a list of all installed conda environments by typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>info<span class="w"> </span>--envs
+</pre></div>
+</div>
+<p>If you want to use a particular environment that you have installed on your computer, you need to activate it.</p>
+<p>For example, if a <strong>Python</strong> package such as <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> is only installed in the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment, and not the default conda environment, you will not be able to access it (e.g. import it to <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>), unless you have the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment activated.</p>
+</section>
+<section id="activate-a-conda-environment">
+<h3>Activate a Conda Environment<a class="headerlink" href="#activate-a-conda-environment" title="Permalink to this heading">#</a></h3>
+<p><strong>To activate an environment</strong>, use the Terminal to navigate to your earth-analytics directory (e.g. <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the directory). Then, type the following command to activate the environment (e.g. <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>earth-analytics-python
+</pre></div>
+</div>
+<p><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">For older installations of conda (versions prior to 4.6)</a> on Mac, Linux, and Git Bash for Windows, type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>earth-analytics-python
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Windows Users</p>
+<p>The first time that you try to run the “conda activate” command, you may be asked to configure Git Bash to use “conda activate”. You can do this by running the command “conda init bash”, just one time. After that, Git Bash will be configured to use “conda activate” moving forward.</p>
+</div>
+<p>Once the environment is activated, the name of the activated environment will appear in parentheses on the left side of your terminal (e.g. <code class="docutils literal notranslate"><span class="pre">(earth-analytics-python</span></code>).</p>
+<div class="data-tip admonition">
+<p class="admonition-title">Always activate your environment</p>
+<p>Note that after you restart the Terminal, the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment is no longer active. You will need to activate the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment each time you start the Terminal by running the appropriate command provided above for your operating system.</p>
+</div>
+</section>
+<section id="deactivate-a-conda-environment">
+<h3>Deactivate a Conda Environment<a class="headerlink" href="#deactivate-a-conda-environment" title="Permalink to this heading">#</a></h3>
+<p>If needed, you can deactivate a conda environment. Deactivating the environment switches you back to the default environment in your computer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate
+</pre></div>
+</div>
+</section>
+<section id="delete-a-conda-environment">
+<h3>Delete a Conda Environment<a class="headerlink" href="#delete-a-conda-environment" title="Permalink to this heading">#</a></h3>
+<p>If you ever want to delete an envrionment, you must first deactivate that environment and then type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>remove<span class="w"> </span>--name<span class="w"> </span>myenv
+</pre></div>
+</div>
+<p>and replace <code class="docutils literal notranslate"><span class="pre">myenv</span></code> with the name of the environment that you want to remove.</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p><strong>Remember to never delete your root environment.</strong></p>
+</div>
+</section>
+<section id="update-a-conda-environment-using-a-yaml-file">
+<h3>Update a Conda Environment Using a YAML File<a class="headerlink" href="#update-a-conda-environment-using-a-yaml-file" title="Permalink to this heading">#</a></h3>
+<p>Once you have created a conda environment, you can update it anytime by first activating the environment and then running the <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span></code> command.</p>
+<p>The example below updates the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span> <span class="pre">environment</span></code> using the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file. In this example, the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span></code> is run in the same directory that contains the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>earth-analytics-python
+$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w"> </span>-f<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+<p>Running this command will update your current <code class="docutils literal notranslate"><span class="pre">earth-analytics-python</span></code> environment to include the most current versions of the packages listed in that environment file.</p>
+<div class="info admonition">
+<p class="admonition-title">How to Fork and Clone a GitHub Repository</p>
+<p>This section provides the basic steps for forking a <strong>GitHub</strong> repository (i.e. copying an existing repository to your <code class="docutils literal notranslate"><span class="pre">Github</span></code> account) and cloning a forked repository (i.e. downloading your forked repository locally to your computer).</p>
+<p>For a more detailed explanation of these steps, see the Intro to Earth Data Science textbook chapter on <a href="{{ site.url }}/courses/intro-to-earth-data-science/git-github/version-control/fork-clone-github-repositories/">Copy (Fork) and Download (Clone) GitHub Repositories</a>.</p>
+<p><strong>1. Fork a Repository on <a class="reference external" href="http://GitHub.com">GitHub.com</a></strong></p>
+<p>You can <code class="docutils literal notranslate"><span class="pre">fork</span></code> an existing <strong>GitHub</strong> repository from the main <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> page of the repository that you want to copy (example: <code class="docutils literal notranslate"><span class="pre">https://github.com/earthlab/earth-analytics-python-env</span></code>).</p>
+<p>On the main <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> page of the repository, you will see a button on the top right that says <code class="docutils literal notranslate"><span class="pre">Fork</span></code>.</p>
+<p>Click on the <code class="docutils literal notranslate"><span class="pre">Fork</span></code> button and select your <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> account as the home of the forked repository.</p>
+<figure>
+ <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-fork-repo.gif">
+ <img src="{{ site.url }}/images/earth-analytics/git-version-control/git-fork-repo.gif" alt="You can create a copy of repositories created by other users on Github by forking their repository to your Github account."></a>
+ <figcaption> You can create a copy of repositories created by other users on Github by forking their repository to your Github account. 
+ </figcaption>
+</figure>
+<p><strong>2. Clone a Repository to Local Computer or JupyterHub</strong></p>
+<p>To download your forked copy of the <code class="docutils literal notranslate"><span class="pre">earth-analytics-python-env</span></code> repository to your computer, open the Terminal and change directories to your <code class="docutils literal notranslate"><span class="pre">earth-analytics</span></code> directory (e.g. <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>, then <code class="docutils literal notranslate"><span class="pre">cd</span>&#160; <span class="pre">earth-analytics</span></code>).</p>
+<p>Then, run the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> followed by the URL to your fork on <strong>GitHub</strong> (e.g. <code class="docutils literal notranslate"><span class="pre">https://github.com/your-username/earth-analytics-python-env</span></code>). Be sure to change <code class="docutils literal notranslate"><span class="pre">your-username</span></code> to your <code class="docutils literal notranslate"><span class="pre">Github.com</span></code> account username.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
+<span class="nb">cd</span><span class="w"> </span>earth-analytics
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/earth-analytics-python-env
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "earthlab-education/Earth-Analytics-2023-01-Intro",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./python-open-source-tool-setup"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to Access and Use Shell to Set Up a Working Directory</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="setup-05-text-editors-for-science-workflows.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Text Editors for the Command Line and Scientific Programming</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-class-fa-fa-check-square-o-fa-2-aria-hidden-true-i-what-you-need"><i aria-hidden="true" class="fa fa-check-square-o fa-2"></i> What You Need</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-conda-environments-for-python">Why Use Conda Environments for Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mamba-will-save-you-so-much-time">Mamba will save you SO much time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-earth-analytics-python-conda-environment">Install the Earth Analytics Python Conda Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-conda-environments">About Conda Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-yaml-yml-file">What is a YAML (.yml) File?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-conda-environments">Use Conda Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-a-list-of-all-installed-conda-environments">View a List of All Installed Conda Environments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-a-conda-environment">Activate a Conda Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deactivate-a-conda-environment">Deactivate a Conda Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-a-conda-environment">Delete a Conda Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-a-conda-environment-using-a-yaml-file">Update a Conda Environment Using a YAML File</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CU Boulder Earthlab Education
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
