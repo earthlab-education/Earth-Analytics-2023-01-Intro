@@ -22,7 +22,7 @@ parts:
               - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook
               - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts
 
-      - file: intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page
+      # - file: intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page
       #   sections:
       #     - file: intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/text-file-formats-01-intro-text-file-formats
       #       sections:
