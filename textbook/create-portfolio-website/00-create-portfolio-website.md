@@ -80,7 +80,8 @@ To do this you can:
   6. Customize the settings. You can name your repository anything short and descriptive. We recommend `<yourusername>.github.io` because it results in the simplest url for your website. You can also:
     * Give your repository a **description**
     * Make your repository **Public**
-    * You can skip adding the **README** and **gitignore** files for now
+    * You can skip adding the **gitignore** file for now
+    * Add a README if you like
     * Choose a **License** for your repository, if you plan to keep any code in the repository. Check out <a href="https://choosealicense.com" target="_blank">choosealicense.com</a> for more information about popular options.
     * Once you're done, select the green **Create Repository** button at the bottom of the page
 
@@ -135,12 +136,12 @@ Now you'll want to select the **main** option under the **Branch** heading and t
 ***
 
 ## Step 5: Check on your webpage
-Check in on your webpage to see how it is doing by opening the link **`https://username.github.io/repository-name/`** in a **new tab** in your web browser. Here, you'll need to replace `username` with your GitHub username and `repository-name` with the name of the repository that you created above. Once you see your name (or whatever text you added to your `index.md` file in **Step 2**) appear as a Markdown header, then you know your webpage is working!
+Check in on your webpage to see how it is doing by opening the link **`https://username.github.io/`** in a **new tab** in your web browser. Here, you'll need to replace `username` with your GitHub username. Once you see your name (or whatever text you added to your `index.md` file in **Step 2**) appear as a Markdown header, then you know your webpage is working!
 
 
 :::{note} 
 
-Sometimes your webpage can take a minute or so to build so _be patient_ and refresh every 30 seconds or so until the page is done building.
+Sometimes your webpage can take a minute or so to build so _be patient_ and refresh every 30 seconds or so until the page is done building. You can track the progress in the `Actions` tab.
 :::
 
 ***
