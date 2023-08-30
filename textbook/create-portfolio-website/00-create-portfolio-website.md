@@ -67,21 +67,21 @@ To do this you can:
   2. Click on the dropdown arrow next to your profile photo in the upper right corner
   3. Select `Your profile`
 
-    ![Select `Your profile`](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/your-profile.png)
+  ![Select `Your profile`](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/your-profile.png)
   
   4. Select the **Repositories** tab from the menu near the top of the page.
 
-    ![Select the **Repositories** tab from the menu near the top of the page.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/repositories.png)
+  ![Select the **Repositories** tab from the menu near the top of the page.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/repositories.png)
 
   5. From here, you can select the green **New** button on the right to get started.
 
-    ![Select the green **New** button on the right to get started.]("https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/new-repo.png)
+  ![Select the green **New** button on the right to get started.]("https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/new-repo.png)
 
   6. Customize the settings. You can name your repository anything short and descriptive. We recommend `<yourusername>.github.io` because it results in the simplest url for your website. You can also:
     * Give your repository a **description**
     * Make your repository **Public**
     * You can skip adding the **README** and **gitignore** files for now
-    * Choose a **License** for your repository, if you plan to keep any code in the repository. Check out <a href="https://choosealicense.com" target="_blank">choosealicense.com</> for more information about popular options.
+    * Choose a **License** for your repository, if you plan to keep any code in the repository. Check out <a href="https://choosealicense.com" target="_blank">choosealicense.com</a> for more information about popular options.
     * Once you're done, select the green **Create Repository** button at the bottom of the page
 
 
@@ -98,12 +98,12 @@ You will create a new file called `index.md` that will serve as the content for 
   1. Select the **Add file** button from the menu on the right
   2. Select **Create new file**. 
 
-      ![Select **Create new file**.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/create-new-file.png)
+  ![Select **Create new file**.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/create-new-file.png)
 
   3. Name your new **Markdown** file `index.md`. This will make it the home page of your website. Then, add a **Markdown header** text to your index file, e.g. 
-    ```markdown
-    # A fabulous Earth Data Science Portfolio
-    ```
+  ```{code-block}
+  # A fabulous Earth Data Science Portfolio
+  ```
 
 :::{note}
 
@@ -115,7 +115,7 @@ You can change this text to your name or something else. This is _**your**_ webs
 ## Step 3: Commit changes
 Now that you've created your `index.md` file and added some text, you'll want to **commit changes** to your repository. Add an optional extended description of your changes and then select the green **Commit changes** button at the bottom of the page.
 
-<img src="https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/commit-changes.png">
+![Commit changes](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/commit-changes.png)
 
 ***
 
