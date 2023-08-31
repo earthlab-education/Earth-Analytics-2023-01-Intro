@@ -11,7 +11,7 @@ jobs:
       - name: Read team slug
         run: >-
           echo "${{ github.event.comment.body }}" |
-          sed 's/\/assign @${{ github.repository_owner }}\/\(.*\)$/\1/' |
+          sed 's/\/teamassign @${{ github.repository_owner }}\/\(.*\)$/\1/' |
           awk '{print "TEAM_SLUG="$1}' 
           >> $GITHUB_ENV
           

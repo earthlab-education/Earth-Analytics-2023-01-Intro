@@ -9,52 +9,24 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
+myst:
+  substitutions:
+    title: 'How to Access and Use Shell to Set Up a Working Directory'
+    excerpt: 'This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directory for the course.'
+    authors: 'Leah Wasser, Martha Morrissey'
+    objective: |
+      * Open the Terminal.
+      * Navigate and change directories in the Terminal.
+      * Create an easy-to-use and well-structured project structure.
 ---
 
-```{raw-cell}
-
----
-layout: single
-category: courses
-title: 'How to Access and Use Shell to Set Up a Working Directory'
-excerpt: 'This tutorial walks you through how access the shell through terminal, use basic commands in the terminal for file organization, and set up a working directory for the course.'
-authors: ['Leah Wasser', 'Martha Morrissey']
-modified: '{:%Y-%m-%d}'.format(datetime.now())
-module: "setup-earth-analytics-environment"
-permalink: /workshops/setup-earth-analytics-python/introduction-to-bash-shell/ 
-nav-title: 'Intro to Bash'
-sidebar:
-    nav:
-author_profile: false
-comments: true
-order: 3
-topics:
-    reproducible-science-and-programming: ['python']
----
-```
-
-{% include toc title="In This Lesson" icon="file-text" %}
-
-In this tutorial, you will access `Bash`/Shell through the Terminal, use basic commands in the terminal for file organization,  and set up a working directory for the course.
-
-
-<div class='notice--success' markdown="1">
-
-
-## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives
-
-At the end of this activity, you will be able to:
-
-* Open the Terminal.
-* Navigate and change directories in the Terminal.
-* Create an easy-to-use and well-structured project structure.
-
+:::{include} ../textbook-header.md
+:::
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need
 
-You will need to have Git and Bash setup on your computer to complete this lesson. Instructions for setting up Git and Bash are here: <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Setup Git, Bash & Conda lesson</a>. 
+You will need to have Git and Bash setup on your computer to complete this lesson. Instructions for setting up Git and Bash are here: <a href="python=open-source-tool-setup/setup-git-bash-conda/">Setup Git, Bash & Conda lesson</a>. 
 
-</div>
 
 ## How to Access Bash
 
@@ -87,9 +59,11 @@ In `Bash`, you can perform multiple operations on multiple files quickly. You ca
 
 Finally, you can use `Bash` to launch tools like `Python`, `R` and `Jupyter Notebook`. Throughout this class, you will use `Python` and `Jupyter Notebook`. 
 
-<i class="fa fa-star"></i> **Data Tip:**  
+:::{admonition} Learn to speak code
+:class: data-tip
+
 `Bash` stands for “bourne again shell” and is an updated version of Shell. Sometimes you will hear `Bash` and Shell used interchangeably; in this course, we will use the term `Bash`.
-{: .notice--success}
+:::
 
 You access `Bash` using a terminal program which we will discuss next. 
 
@@ -105,7 +79,7 @@ For the rest of this course, we will refer to the command line environment that 
 
 ## Why Use the Terminal?
 
-#### Interact With Your Computer and Organize Files 
+### Interact With Your Computer and Organize Files 
 
 Using `Bash` in the Terminal is a powerful way of interacting with your computer. GUIs and command line `Bash` are complementary - by knowing both, you will greatly expand the range of tasks you can accomplish with your computer. 
 
@@ -187,27 +161,25 @@ $ ls documents
 
 Notice that `mkdir` command has no ouput. Also, because `notes` is a relative path (i.e., doesn’t have a leading slash), the new directory is created in the current working directory (e.g. `documents`). 
 
-<i class="fa fa-star"></i> **Data Tip:** 
-Directory vs Folder: You can think of a directory as a folder. However the term directory considers the relationship between that folder and the folders within it and around it. 
-{: .notice--success}
+:::{admonition} Directory vs Folder
+:class: data-tip margin
+
+You can think of a directory as a folder. However the term directory considers the relationship between that folder and the folders within it and around it. 
+:::
 
 
-<i class="fa fa-star"></i> **Data Tip:**
+:::{admonition} Coding Tip
+:class: data-tip
+
 Notice that you are creating an easy to read directory name. The name has no spaces and uses all lower case to support machine reading down the road. Sometimes this format of naming using dashes is referred to as a slug.
-{: .notice--success}
+:::
 
-+++
+:::{exercise-start} Create a Directory for earth-analytics
+:::
 
-<div class="notice--warning" markdown="1">
-
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
-    
 Project organization is integral to efficient research. In this challenge, you will use `Bash` to create an `earth-analytics` directory that you will use throughout this course. 
 
 You will then create a  `data` directory within the `earth-analytics` directory to save all of the data that you will need to complete the homework assignments and follow along with the course.
-
-
-### Create a Directory for earth-analytics
 
 Begin by creating an `earth-analytics` directory (or folder) in your home directory. This is the default directory in which the Terminal opens. 
 
@@ -229,14 +201,11 @@ $ mkdir data
 * Last, go back to the home directory and confirm that you can then access the directories you just made.
 
 ```bash 
-
 $ cd ~ 
-
 $ cd earth-analytics 
-
-$ ls 
-
+$ ls
 data
 ```
 
-</div>
+:::{exercise-end}
+:::

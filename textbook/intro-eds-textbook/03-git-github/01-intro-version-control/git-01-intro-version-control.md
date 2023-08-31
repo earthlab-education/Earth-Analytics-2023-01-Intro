@@ -9,65 +9,19 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
----
-
-```{raw-cell}
-
----
 layout: single
-title: 'What Is Version Control'
-excerpt: "A version control system allows you to track and manage changes to your files. Learn benefits of version control for scientific workflows and how git and GitHub.com support version control."
-authors: ['Max Joseph', 'Leah Wasser', 'Jenny Palomino', 'Martha Morrissey']
-category: [courses]
-class-lesson: ['version-control-git-github']
-permalink: /courses/intro-to-earth-data-science/git-github/version-control/
-nav-title: "About Version Control"
-dateCreated: 2019-09-06
-modified: '{:%Y-%m-%d}'.format(datetime.now())
-module-title: 'Git/GitHub For Version Control'
-module-nav-title: 'Git/GitHub For Version Control'
-module-description: 'A version control system allows you to track and manage changes to your files. Learn how to get started with version control using git and GitHub.com.'
-module-type: 'class'
-chapter: 7
-class-order: 1
-course: "intro-to-earth-data-science-textbook"
-week: 3
-estimated-time: "2-3 hours"
-difficulty: "beginner"
-sidebar:
-  nav:
-author_profile: false
-comments: true
-order: 1
-topics:
-  reproducible-science-and-programming: ['git']
-redirect_from:
-  - "/courses/earth-analytics-bootcamp/git-github-version-control/intro-version-control/"
+myst:
+  substitutions:
+    title: 'What Is Version Control'
+    excerpt: "A version control system allows you to track and manage changes to your files. Learn benefits of version control for scientific workflows and how git and GitHub.com support version control."
+    authors: 'Max Joseph, Leah Wasser, Jenny Palomino, Martha Morrissey'
+    objective: |
+      * Define **version control**.
+      * Explain why **version control** is useful in a scientific workflow.
+      * Implement version control using **git**.
 ---
-```
-
-{% include toc title="In This Chapter" icon="file-text" %}
-
-<div class='notice--success' markdown="1">
-
-## <i class="fa fa-ship" aria-hidden="true"></i> Chapter Seven - Git/GitHub.com
-
-In this chapter, you will learn about the benefits of version control for tracking and managing changes to your files. You will also learn how to implement version control using **git** and then upload changes to the cloud version of your files on **Github.com**. 
-
-After completing this chapter, you will be able to:
-
-* Define **version control**.
-* Explain why **version control** is useful in a scientific workflow.
-* Implement version control using **git**.
-
-
-## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need
-
-Be sure that you have completed the instructions on <a href="{{ site.url }}/workshops/setup-earth-analytics-python/setup-git-bash-conda/">Setting up Git, Bash, and Conda on your computer</a> to install the tools for your operating system (Windows, Mac, Linux). 
-
-You will also need a web browser and your **GitHub.com** login (username and password).
-
-</div>
+:::{include} ../../../textbook-header.md
+:::
 
 The text and graphics in the first three sections were borrowed, with some modifications, from Software Carpentry’s Version Control with **git** lessons.
 
