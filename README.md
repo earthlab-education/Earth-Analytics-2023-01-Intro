@@ -7,3 +7,4 @@ Contributors:
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
+| Ed Chan | eggvoice | https://eggvoice.github.io/ |
