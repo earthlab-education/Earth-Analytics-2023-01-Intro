@@ -6,3 +6,6 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Nate Quarderer| nquarder | https://nquarder.github.io/ |
+| Ed Chan | eggvoice | https://eggvoice.github.io/ |
+| Alexie Millikin | alexiemillikin | |
