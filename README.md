@@ -5,4 +5,5 @@ Welcome to the Earth Analytics Program! You will use this repository to ask ques
 Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
-| Elsa Culler | eculler | https://eculler.github.io/ |
+| Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
+
