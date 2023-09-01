@@ -9,3 +9,4 @@ Contributors:
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Alexie Millikin | alexiemillikin | |
+| Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/ |
