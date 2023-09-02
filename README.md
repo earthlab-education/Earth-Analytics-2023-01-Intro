@@ -6,3 +6,4 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Paige Hammond | pth6570 | https://pth6570.github.io |
