@@ -10,3 +10,4 @@ Contributors:
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Alexie Millikin | alexiemillikin | |
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
+| Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
