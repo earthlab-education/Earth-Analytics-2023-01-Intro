@@ -6,3 +6,4 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Theo Kuhn | thku8507 | https://thku8507.github.io/ |
