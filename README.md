@@ -9,5 +9,6 @@ Contributors:
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Alexie Millikin | alexiemillikin | |
+| Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
