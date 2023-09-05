@@ -10,3 +10,6 @@ Contributors:
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Alexie Millikin | alexiemillikin | |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/ |
+| Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
+| Skye Corbett | misterskye | https://misterskye.github.io/ |
+| Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
