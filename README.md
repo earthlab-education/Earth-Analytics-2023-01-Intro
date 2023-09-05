@@ -6,4 +6,4 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | @eculler | https://eculler.github.io/ |
-| Nathan Bol | @nbol48 | |
+| Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
