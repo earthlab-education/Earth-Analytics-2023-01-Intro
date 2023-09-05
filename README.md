@@ -6,3 +6,4 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
