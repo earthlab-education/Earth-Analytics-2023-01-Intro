@@ -13,3 +13,9 @@ Contributors:
 | Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
+| Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
+| Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
+| Adrianna Luger | Adriannaluger | https://github.com/Adriannaluger |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
+
