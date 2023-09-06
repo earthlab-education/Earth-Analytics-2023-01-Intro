@@ -12,3 +12,4 @@ Contributors:
 | Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
+| Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
