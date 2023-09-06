@@ -6,7 +6,6 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
-| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Alexie Millikin | alexiemillikin | |
@@ -15,3 +14,4 @@ Contributors:
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
 | Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
