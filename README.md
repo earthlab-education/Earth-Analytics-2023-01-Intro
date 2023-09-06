@@ -15,4 +15,4 @@ Contributors:
 | Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
-| Adrianna Luger | Adriannaluger | https://github.com/Adriannaluger |
+| Adrianna Luger | Adriannaluger | https://Adriannaluger.github.io/ |
