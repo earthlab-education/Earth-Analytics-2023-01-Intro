@@ -56,7 +56,7 @@ Once you have a GitHub account, get started by creating a new **repository** for
 Sometimes buttons on GitHub are blue instead of green.
 :::
 
-:::{admonition}
+:::{admonition} What is a **repository**?
 :class: info margin
 
 A GitHub **repository** is a collection of code, documentation, and configuration files. All changes you make in a repository will be tracked using the version control system **git**. You can discuss and manage your project's work within the repository.
@@ -67,26 +67,27 @@ To do this you can:
   2. Click on the dropdown arrow next to your profile photo in the upper right corner
   3. Select `Your profile`
 
-    ![Select `Your profile`](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/your-profile.png)
+  ![Select `Your profile`](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/your-profile.png)
   
   4. Select the **Repositories** tab from the menu near the top of the page.
 
-    ![Select the **Repositories** tab from the menu near the top of the page.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/repositories.png)
+  ![Select the **Repositories** tab from the menu near the top of the page.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/repositories.png)
 
   5. From here, you can select the green **New** button on the right to get started.
 
-    ![Select the green **New** button on the right to get started.]("https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/new-repo.png)
+  ![Select the green **New** button on the right to get started.]("https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/new-repo.png)
 
   6. Customize the settings. You can name your repository anything short and descriptive. We recommend `<yourusername>.github.io` because it results in the simplest url for your website. You can also:
     * Give your repository a **description**
     * Make your repository **Public**
-    * You can skip adding the **README** and **gitignore** files for now
-    * Choose a **License** for your repository, if you plan to keep any code in the repository. Check out <a href="https://choosealicense.com" target="_blank">choosealicense.com</> for more information about popular options.
+    * You can skip adding the **gitignore** file for now
+    * Add a README if you like
+    * Choose a **License** for your repository, if you plan to keep any code in the repository. Check out <a href="https://choosealicense.com" target="_blank">choosealicense.com</a> for more information about popular options.
     * Once you're done, select the green **Create Repository** button at the bottom of the page
 
 
-:::{admonition}
-:class: info margin
+:::{admonition} Speak Code
+:class: data-tip margin
 
 When reading code snippets, the `<` and `>` symbols are used to surround text you should replace with something applicable to you and your project. **Do not leave the `<` and `>` symbols in place!**. For example, in this case your repository name might look something like `jdoe.github.io`, if `jdoe` was your GitHub username.
 ::: 
@@ -98,12 +99,12 @@ You will create a new file called `index.md` that will serve as the content for 
   1. Select the **Add file** button from the menu on the right
   2. Select **Create new file**. 
 
-      ![Select **Create new file**.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/create-new-file.png)
+  ![Select **Create new file**.](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/create-new-file.png)
 
   3. Name your new **Markdown** file `index.md`. This will make it the home page of your website. Then, add a **Markdown header** text to your index file, e.g. 
-    ```markdown
-    # A fabulous Earth Data Science Portfolio
-    ```
+  ```{code-block}
+  # A fabulous Earth Data Science Portfolio
+  ```
 
 :::{note}
 
@@ -115,7 +116,7 @@ You can change this text to your name or something else. This is _**your**_ webs
 ## Step 3: Commit changes
 Now that you've created your `index.md` file and added some text, you'll want to **commit changes** to your repository. Add an optional extended description of your changes and then select the green **Commit changes** button at the bottom of the page.
 
-<img src="https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/commit-changes.png">
+![Commit changes](https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/commit-changes.png)
 
 ***
 
@@ -135,12 +136,12 @@ Now you'll want to select the **main** option under the **Branch** heading and t
 ***
 
 ## Step 5: Check on your webpage
-Check in on your webpage to see how it is doing by opening the link **`https://username.github.io/repository-name/`** in a **new tab** in your web browser. Here, you'll need to replace `username` with your GitHub username and `repository-name` with the name of the repository that you created above. Once you see your name (or whatever text you added to your `index.md` file in **Step 2**) appear as a Markdown header, then you know your webpage is working!
+Check in on your webpage to see how it is doing by opening the link **`https://username.github.io/`** in a **new tab** in your web browser. Here, you'll need to replace `username` with your GitHub username. Once you see your name (or whatever text you added to your `index.md` file in **Step 2**) appear as a Markdown header, then you know your webpage is working!
 
 
 :::{note} 
 
-Sometimes your webpage can take a minute or so to build so _be patient_ and refresh every 30 seconds or so until the page is done building.
+Sometimes your webpage can take a minute or so to build so _be patient_ and refresh every 30 seconds or so until the page is done building. You can track the progress in the `Actions` tab.
 :::
 
 ***
@@ -150,7 +151,7 @@ Now you're ready to start adding some more information to your webpage. Navigate
 
 <img src="https://raw.githubusercontent.com/cu-esiil-edu/esiil-stars-student-webpages/main/images/edit-file.png">
 
-#### Here you should think about adding the following information to your webpage:
+### Here you should think about adding the following information to your webpage:
 * A **photo** of yourself
 * Your name (as a _**header**_) if you haven't already
 * A **bulleted list** of links to your public **contact information** (email, GitHub account, LinkedIn account, social media accounts, etc.)
@@ -177,3 +178,30 @@ You will want to review the <a href="https://www.markdownguide.org/basic-syntax/
 Always remember to **commit changes** so that your updated content gets added to your webpage.
 :::
 
+***
+
+## Step 7: Add website metadata and theme
+
+<a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme" target="_blank">GitHub pages has some build in themes</a> that you can use to make your website more attractive.
+
+To preview themes:
+  1. Go to the <a href="https://pages.github.com/themes/" target="_blank">GitHub theme page</a>
+  2. Click on the link to a theme you are interested in. This will take you to the theme **repository**.
+  3. Scroll down in the repository until you see a link like "preview what this theme will look like" at the top of the README file (below the code).
+
+The `_config.yml` file that you created to add a theme can also be used to **change the title of your website from the default (the name of your repository)**. Check out the README for your theme to see what parameters are available For example, and example `_config.yml` file for the `minimal` theme looks like:
+
+:::{code-block}
+title: J. Doe's Awesome Portfolio Website
+description: Check out my projects!
+logo: img/headshot.png
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+:::
+
+:::{admonition} So what **is** YAML?
+:class: data-tip margin
+
+The `_config.yml` file is written in **YAML**, a human-readable format for structured information (lists and key/value pairs). <a href="https://yaml.org/" target="_blank">Learn more about YAML on their website</a>
+:::
