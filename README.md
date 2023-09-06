@@ -13,3 +13,4 @@ Contributors:
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
 | Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
+| Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
