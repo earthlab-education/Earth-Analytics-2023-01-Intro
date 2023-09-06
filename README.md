@@ -6,6 +6,7 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Kathryne Walker | kdwalker24 | https://kdwalker24.github.io/ |
 | Johanna Kinsler | JKinsler | https://github.com/JKinsler |
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
