@@ -6,6 +6,7 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Johanna Kinsler | JKinsler | https://github.com/JKinsler |
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Alexie Millikin | alexiemillikin | |
@@ -16,3 +17,5 @@ Contributors:
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Adrianna Luger | Adriannaluger | https://Adriannaluger.github.io/ |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
+
