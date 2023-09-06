@@ -16,3 +16,5 @@ Contributors:
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Adrianna Luger | Adriannaluger | https://github.com/Adriannaluger |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
+
