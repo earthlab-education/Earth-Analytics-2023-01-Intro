@@ -22,7 +22,7 @@ parts:
               - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-05-manage-files-jupyter-notebook
               - file: intro-eds-textbook/01-reproducible-science-tools/03-jupyter-notebook/jupyter-notebook-06-shortcuts
 
-      - file: intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page
+      # - file: intro-eds-textbook/02-file-formats-eds/00-file-formats-eds-landing-page
       #   sections:
       #     - file: intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/text-file-formats-01-intro-text-file-formats
       #       sections:
@@ -34,10 +34,10 @@ parts:
       #         - file: intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/spatial-data-formats-03-vector-data
       #         - file: intro-eds-textbook/02-02-file-formats/05-spatial-data-formats-eds/spatial-data-formats-04-exercise
 
-      # - file: intro-eds-textbook/03-git-github/00-git-github-landing-page
-      #   sections:
-      #     - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control
-      #       sections:
+      - file: intro-eds-textbook/03-git-github/00-git-github-landing-page
+        sections:
+          - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-01-intro-version-control
+          - file: create-portfolio-website/00-create-portfolio-website
       #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-02-fork-clone-repos
       #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-03-setup-git-locally
       #         - file: intro-eds-textbook/03-git-github/01-intro-version-control/git-04-git-commands
@@ -104,7 +104,7 @@ parts:
 
       - file: python-open-source-tool-setup/setup-01-landing-earth-analytics-python-setup.md
         sections:
-          - file: python-open-source-tool-setup/setup-02-setup-git-bash-and-anacoda.md
+          - file: python-open-source-tool-setup/setup-02-setup-git-bash-and-anaconda.md
           - file: python-open-source-tool-setup/setup-03-how-to-access-and-use-shell-to-setup-a-working-directory.md
           - file: python-open-source-tool-setup/setup-04-setup-conda-earth-analytics-environment.md
           - file: python-open-source-tool-setup/setup-05-text-editors-for-science-workflows.md
