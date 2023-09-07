@@ -20,5 +20,5 @@ Contributors:
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Adrianna Luger | Adriannaluger | https://Adriannaluger.github.io/ |
+| Test Student | [earthlab-test-student](https://github.com/earthlab-test-student) | [Test Student's Portfolio](https://earthlab-test-student.github.io/) |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
-
