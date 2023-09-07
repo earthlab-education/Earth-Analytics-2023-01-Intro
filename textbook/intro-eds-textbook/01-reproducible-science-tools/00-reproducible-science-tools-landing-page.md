@@ -26,3 +26,7 @@ myst:
 
 :::{include} ../../textbook-header.md
 :::
+
+:::{contents}
+:local:
+:::
