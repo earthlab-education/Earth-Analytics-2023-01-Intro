@@ -10,7 +10,6 @@ Contributors:
 | Kathryne Walker | kdwalker24 | https://kdwalker24.github.io/ |
 | Johanna Kinsler | JKinsler | https://github.com/JKinsler |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
-| Alexie Millikin | alexiemillikin | |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/ |
 | Alexie Millikin | alexiemillikin | https://alexiemillikin.github.io/ |
 | Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
