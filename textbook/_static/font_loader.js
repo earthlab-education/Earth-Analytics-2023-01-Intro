@@ -1,0 +1,1 @@
+$("head").append('<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Poppins:400,700,800&amp;display=swap">');

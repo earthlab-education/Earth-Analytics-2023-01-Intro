@@ -1,0 +1,57 @@
+# Book settings --------------------
+## Learn more at https://jupyterbook.org/customize/config.html
+
+title: Introduction to Earth and Environmental Data Science
+author: CU Boulder Earthlab Education
+copyright: "2023"
+logo: https://earthlab.colorado.edu/themes/elcu/images/logo-elcu.svg
+  
+# Auto-exclude files not in the toc
+only_build_toc_files: true
+
+# Define the name of the latex output file for PDF builds
+#latex:
+# latex_documents:
+#   targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+#bibtex_bibfiles:
+# - references.bib
+
+# Launch buttons  --------------------
+## Information about where the book exists on the web
+repository:
+ url: https://github.com/earthlab-education/Earth-Analytics-2023-01-Intro
+ path_to_book: textbook/
+ branch: main
+
+## Thebe (in line)
+launch_buttons:
+  thebe: true
+
+# GitHub tie-ins: buttons and comments
+html:
+  use_issues_button: true
+  use_repository_button: true
+  favicon: https://earthlab.colorado.edu/sites/default/files/CECB4BC4.png
+  announcement: 'Click on the <i class="fa fa-rocket"></i> icon to <b style="color: #d98619;">run and edit code</b> on this page'
+  comments:
+    utterances:
+      repo: "earthlab-education/Earth-Analytics-2023-01-Intro"
+
+
+# Extensions -------------------------
+## Sphinx
+sphinx:
+    extra_extensions:
+        - sphinx_exercise
+        - sphinx_design
+
+## MyST
+parse:
+  myst_enable_extensions:
+    - deflist
+    - colon_fence
+    - linkify
+    - substitution
+    - dollarmath

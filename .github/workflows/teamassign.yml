@@ -1,0 +1,48 @@
+name: Assign Issues to all Students
+
+on: issue_comment
+
+jobs:
+  get-members:
+    if: startsWith(github.event.comment.body, '/teamassign')
+    name: Get a list of group members tagged in an issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read team slug
+        run: >-
+          echo "${{ github.event.comment.body }}" |
+          sed 's/\/teamassign @${{ github.repository_owner }}\/\(.*\)$/\1/' |
+          awk '{print "TEAM_SLUG="$1}' 
+          >> $GITHUB_ENV
+          
+      - name: Request team info
+        id: request-members
+        uses: actions/github-script@v6.4.1
+        with:
+          github-token: ${{ secrets.EA_BOT_F23_PAT }}
+          script: |
+            return github.rest.teams.listMembersInOrg({
+              org: context.repo.owner,
+              team_slug: "${{env.TEAM_SLUG}}",
+              role: "member"
+            })
+
+    outputs:
+      members: ${{steps.request-members.outputs.result}}
+            
+  assign_issues:
+    needs: get-members
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        assignee: ${{fromJson(needs.get-members.outputs.members).data.*.login}}
+
+    steps:
+      - name: Create duplicate issue for each member
+        uses: imjohnbo/issue-bot@v3.4.3
+        with:
+          title: ${{ matrix.assignee }} ${{ github.event.issue.title }}
+          body: ${{ github.event.issue.body }} 
+          labels: ${{ join(github.event.issue.labels.*.name) }}
+          assignees: ${{ matrix.assignee }}
+          milestone: ${{ github.event.issue.milestone.title }}
