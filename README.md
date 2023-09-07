@@ -6,11 +6,11 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Kathryne Walker | kdwalker24 | https://kdwalker24.github.io/ |
 | Johanna Kinsler | JKinsler | https://github.com/JKinsler |
-| Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
-| Alexie Millikin | alexiemillikin | |
+| Alexie Millikin | alexiemillikin | https://alexiemillikin.github.io/ |
 | Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
@@ -21,3 +21,4 @@ Contributors:
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Adrianna Luger | Adriannaluger | https://Adriannaluger.github.io/ |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
+
