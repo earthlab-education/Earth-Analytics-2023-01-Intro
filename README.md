@@ -6,3 +6,4 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
+| Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/ |
