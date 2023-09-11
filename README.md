@@ -22,6 +22,7 @@ Contributors:
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Adrianna Luger | Adriannaluger | https://Adriannaluger.github.io/ |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
+| Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io/ |
 | Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io |
 | Paige Hammond | pth6570 | https://pth6570.github.io |
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/ |
