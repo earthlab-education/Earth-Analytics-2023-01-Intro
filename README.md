@@ -26,3 +26,4 @@ Contributors:
 | Paige Hammond | pth6570 | https://pth6570.github.io |
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/ |
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/ | 
+| Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/ |
