@@ -12,7 +12,7 @@ Contributors:
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/ |
 | Alexie Millikin | alexiemillikin | https://alexiemillikin.github.io/ |
-| Aziz Mujahid | [haq753] (https://github.com/haq753) | https://haq753.github.io/ |
+| Aziz Mujahid | [haq753](https://github.com/haq753) | https://haq753.github.io/ |
 | Skye Corbett | misterskye | https://misterskye.github.io/ |
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/ |
@@ -21,8 +21,8 @@ Contributors:
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |
 | Adrianna Luger | Adriannaluger | https://Adriannaluger.github.io/ |
-| Test Student | [earthlab-test-student](https://github.com/earthlab-test-student) | [Test Student's Portfolio](https://earthlab-test-student.github.io/) |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/-jsmi374-.github.io/ |
+| Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io |
 | Paige Hammond | pth6570 | https://pth6570.github.io |
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/ |
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/ | 
