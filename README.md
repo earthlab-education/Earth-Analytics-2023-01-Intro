@@ -28,3 +28,4 @@ Contributors:
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/ |
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/ | 
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/ |
+| Theo Kuhn | thku8507 | https://thku8507.github.io/ |
