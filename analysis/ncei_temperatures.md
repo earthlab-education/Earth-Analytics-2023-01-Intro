@@ -24,3 +24,4 @@
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
+| Test Student | earthlab-test-student | https://earthlab-test-student.github.io/notebooks/ncei_temp_cosprings.html |
