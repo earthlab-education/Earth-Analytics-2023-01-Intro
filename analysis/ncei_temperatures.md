@@ -14,7 +14,7 @@
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
-| Aziz Mujahid | [haq753](https://github.com/haq753) |  |
+| Aziz Mujahid | haq753 |  |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
