@@ -5,5 +5,4 @@ Welcome to the Earth Analytics Program! You will use this repository to ask ques
 Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
-| Elsa Culler | eculler | https://eculler.github.io/ |
 | Chris Quinn | cmq879 | https://cmq879.github.io/ |
