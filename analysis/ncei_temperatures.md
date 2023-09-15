@@ -11,7 +11,7 @@
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
-| Adrianna Luger | Adriannaluger |  |
+| Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/ny-temp.html |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | haq753 |  |
