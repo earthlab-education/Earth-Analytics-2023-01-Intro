@@ -5,7 +5,7 @@
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 |  |
-| Andrew Holcomb | aholcomb23 |  |
+| Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/notebooks/ncei_temp_abq.html |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
 | Theo Kuhn | thku8507 |  |
