@@ -45,4 +45,4 @@ jobs:
           body: ${{ github.event.issue.body }} 
           labels: ${{ join(github.event.issue.labels.*.name) }}
           assignees: ${{ matrix.assignee }}
-          milestone: ${{ github.event.issue.milestone.title }}
+          milestone: ${{ github.event.issue.milestone.number }}
