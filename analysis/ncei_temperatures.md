@@ -6,7 +6,7 @@
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
-| Johanna Kinsler | JKinsler |  |
+| Johanna Kinsler | JKinsler | https://jkinsler.github.io/notebooks/max_temp_san_francisco.html |
 | Peter Kobylarz | peterkobylarz |  |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
