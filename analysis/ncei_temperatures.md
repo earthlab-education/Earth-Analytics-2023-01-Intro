@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
-| Skye Corbett | misterskye |  |
+| Skye Corbett | misterskye | https://misterskye.github.io/notebooks/ncei_temp_anchorage.html |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
