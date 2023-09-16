@@ -1,0 +1,10 @@
+on:
+  pull_requests:
+    branches:
+      - main
+
+jobs:
+  - name: Auto Requests Reviews
+    uses: necojackarc/auto-request-review@v0.12.0
+    with:
+      token: ${{ secrets.GITHUB_TOKEN }}
