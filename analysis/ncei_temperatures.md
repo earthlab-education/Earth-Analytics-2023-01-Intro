@@ -1,6 +1,6 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
-| Nathan Bol | nbol48 |  |
+| Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/mean-temp-over-time-billings-mt.html |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
