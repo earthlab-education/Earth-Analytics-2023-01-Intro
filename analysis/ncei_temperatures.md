@@ -4,7 +4,7 @@
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 |  |
+| Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
