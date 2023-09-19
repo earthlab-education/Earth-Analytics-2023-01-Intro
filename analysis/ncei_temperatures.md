@@ -18,7 +18,7 @@
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/wilmingtontemps.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
-| Advyth Ramachandran | advythr |  |
+| Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/ncei_seattle.html |
 | Juliana Ruef | JulesMRuef |  |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/nola-analysis-temp.html |
 | Megan Smith | megan8617 |  |
