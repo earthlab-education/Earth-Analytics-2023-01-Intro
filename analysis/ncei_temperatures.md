@@ -4,18 +4,18 @@
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 |  |
+| Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/notebooks/ncei_temp_abq.html |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/temp_analysis.html |
 | Theo Kuhn | thku8507 |  |
-| Ellen Lamont | ellenalamont17|  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
-| Aziz Mujahid | haq753 |  |
-| Taylor O'Brien | taylor-obrien |  |
+| Alexie Millikin | alexiemillikin | [Burlington, VT](https://alexiemillikin.github.io/02-avg-temp-Burlington-VT.html) |
+| Aziz Mujahid | [haq753](https://github.com/haq753) |  |
+| Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/wilmingtontemps.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
