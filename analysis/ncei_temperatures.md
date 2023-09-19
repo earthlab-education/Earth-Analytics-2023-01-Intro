@@ -7,7 +7,7 @@
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/temp_analysis.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
 | Agnes Link-Harrington | agneslh |  |
