@@ -5,7 +5,7 @@
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
-| Andrew Holcomb | aholcomb23 |  |
+| Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/notebooks/ncei_temp_abq.html |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/temp_analysis.html |
 | Theo Kuhn | thku8507 |  |
