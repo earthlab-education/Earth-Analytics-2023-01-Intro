@@ -19,7 +19,7 @@
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
-| Juliana Ruef | JulesMRuef |  |
+| Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/ncei_temp_barrow.html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/nola-analysis-temp.html |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
