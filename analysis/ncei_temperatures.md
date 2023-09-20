@@ -22,5 +22,5 @@
 | Juliana Ruef | JulesMRuef |  |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/nola-analysis-temp.html |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | https://github.com/earthlab-education/reproducible-science-millie-spencer/blob/main/avg-temp-va-ncei.html | 
 | Kathryne Walker | kdwalker24 |  |
