@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://eggvoice.github.io/#san-francisco-average-temperatures |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
