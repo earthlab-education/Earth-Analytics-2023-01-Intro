@@ -16,7 +16,7 @@
 | Alexie Millikin | alexiemillikin | [Burlington, VT](https://alexiemillikin.github.io/02-avg-temp-Burlington-VT.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/wilmingtontemps.html |
-| Luca Anna Palasti | lucap1211 |  |
+| Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/mean-temperature-over-time-ncei.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/ncei_temp_barrow.html |
