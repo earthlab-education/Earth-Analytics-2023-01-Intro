@@ -11,7 +11,7 @@
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
 | Agnes Link-Harrington | agneslh |  |
-| Adrianna Luger | Adriannaluger |  |
+| Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/ny-temp.html |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin | [Burlington, VT](https://alexiemillikin.github.io/02-avg-temp-Burlington-VT.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
