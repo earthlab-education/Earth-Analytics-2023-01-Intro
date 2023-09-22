@@ -12,7 +12,7 @@
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/timeseries-ny.html |
-| Annie Meeder | annieM4549 |  |
+| Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io |
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
