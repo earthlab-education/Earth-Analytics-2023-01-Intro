@@ -6,5 +6,4 @@ Contributors:
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Elsa Culler | eculler | https://eculler.github.io/ |
-
 | Megan Smith | megan8617 | https://megan8617.github.io |
