@@ -6,7 +6,7 @@
 | Chris Griego | NobodyLivesHere | https://nobodyliveshere.github.io/Projects/max-temp-over-time-fairbanks-AK.html  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/notebooks/ncei_temp_abq.html |
-| Johanna Kinsler | JKinsler |  |
+| Johanna Kinsler | JKinsler | https://jkinsler.github.io/notebooks/max_temp_san_francisco.html |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/temp_analysis.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
