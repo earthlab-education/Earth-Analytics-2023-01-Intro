@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  auto_request_reviews:
+    name: Auto Request Reviews
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Request Reviews
+        uses: necojackarc/auto-request-review@v0.12.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
