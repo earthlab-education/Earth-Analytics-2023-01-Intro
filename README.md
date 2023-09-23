@@ -30,3 +30,4 @@ Contributors:
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/ | 
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/ |
 | Theo Kuhn | thku8507 | https://thku8507.github.io/ |
+| Megan Smith | megan8617 | https://megan8617.github.io |
