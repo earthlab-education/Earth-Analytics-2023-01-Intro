@@ -10,7 +10,7 @@
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/temp_analysis.html |
 | Theo Kuhn | thku8507 | [Theo Kuhn](https://thku8507.github.io/Notebooks/summit_county_temps.html) |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
-| Agnes Link-Harrington | agneslh |  |
+| Agnes Link-Harrington | agneslh | https://agneslh.github.io/Notebooks/albanytemperature.html |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/ny-temp.html |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin | [Burlington, VT](https://alexiemillikin.github.io/02-avg-temp-Burlington-VT.html) |
