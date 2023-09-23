@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/mean-temp-over-time-billings-mt.html |
 | Ed Chan | eggvoice | https://eggvoice.github.io/#san-francisco-average-temperatures |
-| Skye Corbett | misterskye |  |
+| Skye Corbett | misterskye | https://misterskye.github.io/notebooks/ncei_temp_anchorage.html |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/temperatureAnalysis_ME.html |
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/notebooks/ncei_temp_abq.html |
