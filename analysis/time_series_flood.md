@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://eggvoice.github.io/notebooks/usgs-nwis-time-series-flood-analysis.html |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | |
