@@ -57,24 +57,17 @@ For a full list of keyboard shortcuts, click the help button, then the keyboard 
 
 +++
 
-<div class="notice--info" markdown="1">
-
-## Additional Resources
+:::{note} Additional Resources
 
 * <a href="https://unidata.github.io/python-training/python/intro-to-python/" target="_blank">Why Jupyter Notebook and Python</a>
-
 * <a href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html" target="_blank">Jupyter Notebook Basics</a>
-
 * <a href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" target = "_blank">Dataquest tips and tricks for Jupyter Notebook</a>. 
+:::
 
-</div>
 
-+++
 
-<div class="notice--warning" markdown="1">
-
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Practice Your Jupyter Notebook Skills
-
+:::{exercise-start}
+:::
 Test your `Jupyter Notebook` skills to:
 
 1. Launch `Jupyter Notebook` from your `earth-analytics` directory.
@@ -126,5 +119,5 @@ Without writing your own code, you were able to easily replicate this analysis b
 10. Create a new folder called `chap-3` in your `earth-analytics` directory. 
 
 11. Move your renamed `Jupyter Notebook` file (e.g. `jpalomino-jupyter-notebook-interface.ipynb`) into the new `chap-3` directory. 
-
-</div>
+:::{exercise-end}
+:::

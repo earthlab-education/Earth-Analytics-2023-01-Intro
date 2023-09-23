@@ -9,54 +9,26 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
+myst:
+  substitutions:
+    title: 'Setup Git, Bash, and Conda on Your Computer'
+    excerpt: |
+      Learn how to install Git, GitBash (a version of command line Bash) and the Miniconda Python distribution on your computer.
+    authors: 'Leah Wasser, Jenny Palomino, Martha Morrissey'
+    objective: |
+      * Install `Bash` and `Git`.
+      * Install the Miniconda `Python` distribution.
+      * Open a terminal and test that `Bash`, `Git`, and Conda are ready for use on your computer.
 ---
 
-```{raw-cell}
-
----
-layout: single
-category: courses
-title: 'Setup Git, Bash, and Conda on Your Computer'
-excerpt: "Learn how to install Git, GitBash (a version of command line Bash) and the Miniconda Python distribution on your computer."
-authors: ['Leah Wasser', 'Jenny Palomino', 'Martha Morrissey']
-modified: '{:%Y-%m-%d}'.format(datetime.now())
-nav-title: 'Setup Git Bash & Conda'
-sidebar:
-  nav:
-module: "setup-earth-analytics-environment"
-permalink: /workshops/setup-earth-analytics-python/setup-git-bash-conda/
-author_profile: false
-comments: true
-order: 2
-topics:
-  reproducible-science-and-programming: ['python']
-redirect_from:
-  - "/workshops/setup-earth-analytics-python/setup-git-bash-anaconda/"
----
-```
-
-{% include toc title="In This Lesson" icon="file-text" %}
-
-In this lesson, you will learn how to install `Git`, `Git Bash` (a version of command line `Bash`) and the Miniconda `Python` distribution on your computer. 
-
-<div class='notice--success' markdown="1">
-
-## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives
-
-At the end of this activity, you will be able to:
-
-* Install `Bash` and `Git`.
-* Install the Miniconda `Python` distribution.
-* Open a terminal and test that `Bash`, `Git`, and Conda are ready for use on your computer.
+:::{include} ../textbook-header.md
+:::
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What You Need
 
 Before you start this lesson, be sure that you have a computer with internet access. 
 
 Information below is adapted from materials developed by <a href="https://github.com/swcarpentry/workshop-template" target = "_blank">Data Carpentry</a> and the <a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html" target = "_blank">Conda documentation</a>.
-
-</div>
-
 
 ## Why Install Miniconda vs Anaconda
 
@@ -233,7 +205,3 @@ If you see a list of commands that you can execute, then `Git` has been installe
 Again, if you see a list of commands that you can execute, then Miniconda `Python` has been installed correctly.
 
 4. Close the `Terminal` by typing `exit`.
-
-```{code-cell} ipython3
-
-```
