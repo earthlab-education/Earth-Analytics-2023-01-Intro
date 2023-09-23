@@ -8,7 +8,7 @@
 | Andrew Holcomb | aholcomb23 | https://aholcomb23.github.io/notebooks/ncei_temp_abq.html |
 | Johanna Kinsler | JKinsler | https://jkinsler.github.io/notebooks/max_temp_san_francisco.html |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/temp_analysis.html |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | [Theo Kuhn](https://thku8507.github.io/Notebooks/summit_county_temps.html) |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/ny-temp.html |
