@@ -16,7 +16,7 @@
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
-| Luca Anna Palasti | lucap1211 |  |
+| Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/time-series-flooding.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef |  |
