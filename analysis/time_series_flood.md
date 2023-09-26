@@ -22,5 +22,5 @@
 | Juliana Ruef | JulesMRuef |  |
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/wind-river-usgs-time-series.html | 
 | Kathryne Walker | kdwalker24 |  |
