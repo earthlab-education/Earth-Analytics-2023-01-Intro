@@ -7,12 +7,12 @@
 | Paige Hammond | pth6570 | |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/yellowstone_flood.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
-| Adrianna Luger | Adriannaluger |  |
-| Annie Meeder | annieM4549 |  |
+| Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/timeseries-ny.html |
+| Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io |
 | Alexie Millikin | alexiemillikin | [Colorado Springs 2013 Flood Analysis](https://alexiemillikin.github.io/01-time-series-CoSprgs-Flood.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
