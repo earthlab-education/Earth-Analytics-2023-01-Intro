@@ -1,6 +1,6 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
-| Nathan Bol | nbol48 |  |
+| Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/flood-return-selway-river.html |
 | Ed Chan | eggvoice | https://eggvoice.github.io/notebooks/usgs-nwis-time-series-flood-analysis.html |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
