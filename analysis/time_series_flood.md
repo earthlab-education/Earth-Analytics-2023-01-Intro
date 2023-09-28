@@ -9,7 +9,7 @@
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/yellowstone_flood.html |
 | Theo Kuhn | thku8507 |  |
-| Ellen Lamont | ellenalamont17|  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nwis_flood_eugene.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/timeseries-ny.html |
 | Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io |
