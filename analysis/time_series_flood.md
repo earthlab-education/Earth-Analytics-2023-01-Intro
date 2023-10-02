@@ -12,8 +12,8 @@
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/timeseries-ny.html |
-| Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io |
+| Alexie Millikin | alexiemillikin | [Colorado Springs 2013 Flood Analysis](https://alexiemillikin.github.io/01-time-series-CoSprgs-Flood.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
