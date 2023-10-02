@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
-| Ed Chan | eggvoice | https://eggvoice.github.io/#two-years-after-the-caldor-fire |
+| Ed Chan | eggvoice | https://eggvoice.github.io/#vegetation-recovery-after-the-caldor-fire |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | |
