@@ -18,7 +18,7 @@
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
-| Advyth Ramachandran | advythr |  |
+| Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_urbanforest.html |
 | Juliana Ruef | JulesMRuef |  |
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
