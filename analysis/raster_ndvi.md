@@ -12,7 +12,7 @@
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
-| Annie Meeder | annieM4549 |  |
+| Annie Meeder | annieM459 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/fire_veg.html |
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
