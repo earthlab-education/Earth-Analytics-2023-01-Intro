@@ -13,7 +13,7 @@
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [Waldo Canyon Fire](https://alexiemillikin.github.io/03-modis-ndvi.html]) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
