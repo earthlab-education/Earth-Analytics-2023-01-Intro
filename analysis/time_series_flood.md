@@ -20,7 +20,7 @@
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef |  |
-| James Smith IV | jsmi374 |  |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/Rio_grande_Embudo.html |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
