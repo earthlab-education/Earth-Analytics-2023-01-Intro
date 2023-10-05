@@ -10,7 +10,7 @@
 | Peter Kobylarz | peterkobylarz |  |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
-| Agnes Link-Harrington | agneslh |  |
+| Agnes Link-Harrington | agneslh | [Martin fire analysis](https://agneslh.github.io/Notebooks/NDVI_alh.html) |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
