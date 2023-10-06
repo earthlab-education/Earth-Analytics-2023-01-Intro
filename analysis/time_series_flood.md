@@ -16,7 +16,7 @@
 | Alexie Millikin | alexiemillikin | [Colorado Springs 2013 Flood Analysis](https://alexiemillikin.github.io/01-time-series-CoSprgs-Flood.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/bouldercreek-timeseries.html |
-| Luca Anna Palasti | lucap1211 |  |
+| Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/time-series-flooding.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_flood.html |
 | Juliana Ruef | JulesMRuef |  |
