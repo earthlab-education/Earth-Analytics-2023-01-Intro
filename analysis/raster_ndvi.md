@@ -9,7 +9,7 @@
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
 | Theo Kuhn | thku8507 |  |
-| Ellen Lamont | ellenalamont17|  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ndvi_fire_CRG.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
