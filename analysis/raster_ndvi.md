@@ -11,7 +11,7 @@
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
-| Adrianna Luger | Adriannaluger |  |
+| Adrianna Luger | Adriannaluger | http://adriannaluger.github.io/notebooks/ndvi_maple_fire.html |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
