@@ -22,5 +22,5 @@
 | Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/ncei_temp_barrow.html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/nola-analysis-temp.html |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/avg-temp-va-ncei.html | 
 | Kathryne Walker | kdwalker24 |  |
