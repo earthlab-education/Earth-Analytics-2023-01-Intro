@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice | https://eggvoice.github.io/notebooks/usgs-nwis-time-series-flood-analysis.html |
-| Skye Corbett | misterskye |  |
+| Skye Corbett | misterskye | https://misterskye.github.io/notebooks/SanGregorioCreek_time-series.html |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/streamflow_time_series.html |
 | Andrew Holcomb | aholcomb23 |  |
