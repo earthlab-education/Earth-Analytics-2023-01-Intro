@@ -18,7 +18,7 @@
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/bouldercreek-timeseries.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
-| Advyth Ramachandran | advythr |  |
+| Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_flood.html |
 | Juliana Ruef | JulesMRuef |  |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/Rio_grande_Embudo.html |
 | Megan Smith | megan8617 |  |
