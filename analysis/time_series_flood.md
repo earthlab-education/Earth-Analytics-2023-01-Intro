@@ -6,7 +6,7 @@
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/streamflow_time_series.html |
 | Andrew Holcomb | aholcomb23 |  |
-| Johanna Kinsler | JKinsler |  |
+| Johanna Kinsler | JKinsler | https://jkinsler.github.io/notebooks/time-series-data-kern-river-onyx.html |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/yellowstone_flood.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
