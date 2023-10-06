@@ -4,7 +4,7 @@
 | Ed Chan | eggvoice | https://eggvoice.github.io/notebooks/usgs-nwis-time-series-flood-analysis.html |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 | |
+| Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/streamflow_time_series.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/yellowstone_flood.html |
