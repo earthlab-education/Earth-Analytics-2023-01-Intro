@@ -15,7 +15,7 @@
 | Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io |
 | Alexie Millikin | alexiemillikin | [Colorado Springs 2013 Flood Analysis](https://alexiemillikin.github.io/01-time-series-CoSprgs-Flood.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
-| Taylor O'Brien | taylor-obrien |  |
+| Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/bouldercreek-timeseries.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
