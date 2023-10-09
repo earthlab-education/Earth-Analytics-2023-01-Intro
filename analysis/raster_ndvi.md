@@ -7,7 +7,7 @@
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/dixie_fire.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
