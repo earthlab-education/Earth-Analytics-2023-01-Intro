@@ -3,7 +3,7 @@
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
-| Chris Griego | NobodyLivesHere |  |
+| Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io/Projects/Las-Conchas-NDVI.html |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
