@@ -8,7 +8,7 @@ Contributors:
 | Elsa Culler | eculler | https://eculler.github.io/ |
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Kathryne Walker | kdwalker24 | https://kdwalker24.github.io/ |
-| Johanna Kinsler | JKinsler | https://github.com/JKinsler |
+| Johanna Kinsler | JKinsler | https://jkinsler.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/ |
 | Alexie Millikin | alexiemillikin | https://alexiemillikin.github.io/ |
@@ -30,3 +30,5 @@ Contributors:
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/ | 
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/ |
 | Theo Kuhn | thku8507 | https://thku8507.github.io/ |
+| Megan Smith | megan8617 | https://megan8617.github.io |
+| Chris Quinn | cmq879 | https://cmq879.github.io/ |
