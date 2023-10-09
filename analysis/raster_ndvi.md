@@ -1,6 +1,6 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
-| Nathan Bol | nbol48 |  |
+| Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/crescent-mtn-fire-raster-data.html |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io/Projects/Las-Conchas-NDVI.html |
