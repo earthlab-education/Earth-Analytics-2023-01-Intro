@@ -12,7 +12,7 @@
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
-| Annie Meeder | annieM4549 |  |
+| Annie Meeder | annieM4549 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/wildfire.html |
 | Alexie Millikin | alexiemillikin |  |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
