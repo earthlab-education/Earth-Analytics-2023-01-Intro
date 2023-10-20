@@ -10,7 +10,7 @@
 | Peter Kobylarz | peterkobylarz |  |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
-| Agnes Link-Harrington | agneslh | (Vector Fire Analysis)[https://agneslh.github.io/Notebooks/wildfire_huc.html]|
+| Agnes Link-Harrington | agneslh | [Vector Fire Analysis](https://agneslh.github.io/Notebooks/wildfire_huc.html)|
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
