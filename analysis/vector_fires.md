@@ -19,7 +19,7 @@
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef |  |
-| James Smith IV | jsmi374 |  |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/US_Wildfire_huc_4_29Years.html |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
