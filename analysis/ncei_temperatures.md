@@ -12,7 +12,7 @@
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ncei_temp_pittsburgh.html |
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/Notebooks/albanytemperature.html |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/ny-temp.html |
-| Annie Meeder | annieM4549 |  |
+| Annie Meeder | annieM4549 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/temp_max.html |
 | Alexie Millikin | alexiemillikin | [Burlington, VT](https://alexiemillikin.github.io/02-avg-temp-Burlington-VT.html) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/wilmingtontemps.html |
@@ -22,5 +22,5 @@
 | Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/ncei_temp_barrow.html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/nola-analysis-temp.html |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/avg-temp-va-ncei.html | 
 | Kathryne Walker | kdwalker24 |  |
