@@ -1,10 +1,10 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
-| Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/crescent-mtn-fire-raster-data.html |
+| Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |
+| Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
@@ -14,13 +14,12 @@
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
-| Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
-| Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_urbanforest.html |
+| Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef |  |
-| James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/waldo_2012.html |
+| James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/coldsprings-fire-modis-ndvi.html | 
+| Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
