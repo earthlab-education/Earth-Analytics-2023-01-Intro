@@ -21,5 +21,5 @@
 | Juliana Ruef | JulesMRuef |  |
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | 	https://millie-spencer.github.io/notebooks/wildfire-state-analysis.html | 
 | Kathryne Walker | kdwalker24 |  |
