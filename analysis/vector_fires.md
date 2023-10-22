@@ -13,7 +13,7 @@
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [https://alexiemillikin.github.io/4-wildfire.html](https://alexiemillikin.github.io/4-wildfire.html) |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
