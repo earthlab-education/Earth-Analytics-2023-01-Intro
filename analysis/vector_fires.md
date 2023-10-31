@@ -3,7 +3,7 @@
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
-| Chris Griego | NobodyLivesHere |  |
+| Chris Griego | NobodyLivesHere | https://github.com/NobodyLivesHere/NobodyLivesHere.github.io/blob/main/Projects/Climatezone-wildfire-vector-analysis.html |
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
