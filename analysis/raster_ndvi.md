@@ -19,7 +19,7 @@
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_urbanforest.html |
-| Juliana Ruef | JulesMRuef |  |
+| Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/modis-ndvi-woolsey-fire%20(1).html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/waldo_2012.html |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
