@@ -19,7 +19,7 @@
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/time-series-flooding.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_flood.html |
-| Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/modis-ndvi-woolsey-fire%20(1).html) |
+| Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/modis-ndvi-woolsey-fire%20(1).html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/Rio_grande_Embudo.html |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/wind-river-usgs-time-series.html | 
