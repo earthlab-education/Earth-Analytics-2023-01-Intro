@@ -23,4 +23,4 @@
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
-| Annette Balmes | annettebalmes |. |
+| Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/12/01/multispectral_analysis/ |
