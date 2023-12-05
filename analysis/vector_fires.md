@@ -23,3 +23,4 @@
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
+| Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/17/wildfire-analysis/ |
