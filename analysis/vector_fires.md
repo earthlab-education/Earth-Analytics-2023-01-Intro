@@ -18,7 +18,7 @@
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
-| Juliana Ruef | JulesMRuef |  |
+| Juliana Ruef | JulesMRuef |https://julesmruef.github.io/notebooks/wildfire_wrt_states2.html.zip|
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
