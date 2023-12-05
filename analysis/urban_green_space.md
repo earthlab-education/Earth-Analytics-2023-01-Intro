@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://eggvoice.github.io/#2022-ndvi-for-popular-neighborhoods-in-san-francisco |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 |  |
