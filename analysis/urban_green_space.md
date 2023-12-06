@@ -4,7 +4,7 @@
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/wildfires_by_huc4.html |
+| Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
@@ -23,4 +23,4 @@
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
-| Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/17/wildfire-analysis/ |
+| Annette Balmes | annettebalmes |. |
