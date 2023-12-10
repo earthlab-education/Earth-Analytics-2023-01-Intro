@@ -7,7 +7,7 @@
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/dixie_fire.html |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/ca_fires.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
