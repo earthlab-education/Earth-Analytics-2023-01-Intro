@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/crescent-mtn-fire-raster-data.html |
 | Ed Chan | eggvoice |  |
-| Skye Corbett | misterskye |  |
+| Skye Corbett | misterskye | https://misterskye.github.io/notebooks/NDVI_Analysis.html |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |
 | Andrew Holcomb | aholcomb23 |  |
