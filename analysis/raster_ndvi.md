@@ -8,7 +8,7 @@
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | https://thku8507.github.io/Notebooks/02-modis-ndvi-portfolio.html |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
