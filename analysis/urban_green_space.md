@@ -13,7 +13,7 @@
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin | [https://alexiemillikin.github.io/4-wildfire.html](https://alexiemillikin.github.io/4-wildfire.html) |
+| Alexie Millikin | alexiemillikin |  |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
@@ -23,4 +23,4 @@
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
 | Kathryne Walker | kdwalker24 |  |
-| Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/17/wildfire-analysis/ |
+| Annette Balmes | annettebalmes |. |
