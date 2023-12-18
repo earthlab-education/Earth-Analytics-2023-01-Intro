@@ -8,7 +8,7 @@
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://github.com/peterkobylarz/Final_GrasslandHabitatModel |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
