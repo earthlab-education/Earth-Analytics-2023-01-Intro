@@ -19,7 +19,7 @@
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
-| Juliana Ruef | JulesMRuef |  |
+| Juliana Ruef | JulesMRuef | https://github.com/JulesMRuef/Earth-Analytics-Final/tree/main |
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
