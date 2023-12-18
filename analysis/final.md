@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Annette Balmes | annettebalmes |  |
 | Nathan Bol | nbol48 |  |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://github.com/eggvoice/sorghastrum-nutans-habitat-suitability-model |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
 | Paige Hammond | pth6570 |  |
