@@ -12,7 +12,7 @@
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
-| Adrianna Luger | Adriannaluger |  |
+| Adrianna Luger | Adriannaluger | http://Adriannaluger.github.io/Final(2).ipynb |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
 | Taylor O'Brien | taylor-obrien |  |
