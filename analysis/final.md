@@ -14,7 +14,7 @@
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [Grassland Repository](https://github.com/alexiemillikin/grassland-management) |
 | Taylor O'Brien | taylor-obrien |  |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
