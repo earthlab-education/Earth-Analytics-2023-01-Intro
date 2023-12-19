@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Annette Balmes | annettebalmes |  |
-| Nathan Bol | nbol48 |  |
+| Nathan Bol | nbol48 | https://github.com/nbol48/earthlab-education-grassland-management-final |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
