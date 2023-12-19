@@ -9,7 +9,7 @@
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | [https://github.com/thku8507/bootcamp-final-project-thku8507](https://github.com/thku8507/bootcamp-final-project-thku8507) |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
