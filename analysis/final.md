@@ -5,7 +5,7 @@
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 |  |
+| Paige Hammond | pth6570 | https://github.com/pth6570/earth-analytics-intro-final |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
