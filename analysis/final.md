@@ -14,7 +14,7 @@
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | http://Adriannaluger.github.io/Final(2).ipynb |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [Grassland Repository](https://github.com/alexiemillikin/grassland-management) |
 | Taylor O'Brien | taylor-obrien | https://github.com/taylor-obrien/Grassland-Final-Project- |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |

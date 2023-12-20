@@ -13,7 +13,7 @@
 | Agnes Link-Harrington | agneslh | [Martin fire analysis](https://agneslh.github.io/Notebooks/NDVI_alh.html) |
 | Adrianna Luger | Adriannaluger | http://adriannaluger.github.io/notebooks/ndvi_maple_fire.html |
 | Annie Meeder | annieM459 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/fire_veg.html |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [Waldo Canyon Fire](https://alexiemillikin.github.io/03-modis-ndvi.html]) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/reynoldslake-ndvi.html |
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/modis-ndvi.html |

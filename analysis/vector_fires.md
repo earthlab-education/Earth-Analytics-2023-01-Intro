@@ -13,7 +13,7 @@
 | Agnes Link-Harrington | agneslh | [Vector Fire Analysis](https://agneslh.github.io/Notebooks/wildfire_huc.html)|
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/wildfire.html |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [https://alexiemillikin.github.io/4-wildfire.html](https://alexiemillikin.github.io/4-wildfire.html) |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/fireboundaries-vector.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |

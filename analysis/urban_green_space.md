@@ -13,7 +13,7 @@
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Alexie Millikin | alexiemillikin | [Chicago urban greenspace](https://alexiemillikin.github.io/00-multispectral-functions.html) |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/denver-ndvi.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
