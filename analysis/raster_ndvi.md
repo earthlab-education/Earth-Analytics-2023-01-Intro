@@ -16,7 +16,7 @@
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
 | Taylor O'Brien | taylor-obrien |  |
-| Luca Anna Palasti | lucap1211 |  |
+| Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/modis-ndvi.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_urbanforest.html |
 | Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/modis-ndvi-woolsey-fire%20(1).html |
