@@ -3,11 +3,11 @@
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye | https://misterskye.github.io/notebooks/vector_fire_analysis.html  |
-| Chris Griego | NobodyLivesHere |  |
-| Paige Hammond | pth6570 |  |
+| Chris Griego | NobodyLivesHere | https://nobodyliveshere.github.io/Projects/Climatezone-wildfire-vector-analysis.html |
+| Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/wildfires_by_huc4.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/ca_fires.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
@@ -18,7 +18,7 @@
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
-| Juliana Ruef | JulesMRuef |  |
+| Juliana Ruef | JulesMRuef |https://julesmruef.github.io/notebooks/wildfire_wrt_states2.html.zip|
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer |  | 
