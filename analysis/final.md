@@ -4,7 +4,7 @@
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
-| Chris Griego | NobodyLivesHere |  |
+| Chris Griego | NobodyLivesHere | https://github.com/NobodyLivesHere/golden-feather-grass-habitats/ |
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
