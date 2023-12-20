@@ -11,7 +11,7 @@
 | Theo Kuhn | thku8507 | https://thku8507.github.io/Notebooks/02-modis-ndvi-portfolio.html |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ndvi_fire_CRG.html |
 | Agnes Link-Harrington | agneslh |  |
-| Adrianna Luger | Adriannaluger |  |
+| Adrianna Luger | Adriannaluger | http://adriannaluger.github.io/notebooks/ndvi_maple_fire.html |
 | Annie Meeder | annieM4549 |  |
 | Alexie Millikin | alexiemillikin |  |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
