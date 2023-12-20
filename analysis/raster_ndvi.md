@@ -9,7 +9,7 @@
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/dixie_fire.html |
 | Theo Kuhn | thku8507 | https://thku8507.github.io/Notebooks/02-modis-ndvi-portfolio.html |
-| Ellen Lamont | ellenalamont17|  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ndvi_fire_CRG.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
