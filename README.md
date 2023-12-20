@@ -17,7 +17,7 @@ Contributors:
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
 | Nathan Bol | @nbol48 | https://nbol48.github.io/Earthlabnb.github.io/ |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/ |
-| Advyth Ramachandran | advythr | https://advythr.github.io/advyth/ |
+| Advyth Ramachandran | advythr | https://advythr.github.io/ |
 | Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |

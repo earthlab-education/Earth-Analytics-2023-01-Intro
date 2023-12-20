@@ -17,6 +17,7 @@
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/denver-ndvi.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
+| Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_greenspace.html |
 | Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/00-multispectral-functions-denver.html |
 | James Smith IV | jsmi374 |  |
