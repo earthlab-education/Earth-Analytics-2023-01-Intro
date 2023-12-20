@@ -9,7 +9,7 @@
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/ca_fires.html |
 | Theo Kuhn | thku8507 |  |
-| Ellen Lamont | ellenalamont17|  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nbd_fire_naa.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 |  |
