@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
 | Ed Chan | eggvoice |  |
-| Skye Corbett | misterskye |  |
+| Skye Corbett | misterskye | https://misterskye.github.io/notebooks/vector_fire_analysis.html  |
 | Chris Griego | NobodyLivesHere | https://nobodyliveshere.github.io/Projects/Climatezone-wildfire-vector-analysis.html |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/wildfires_by_huc4.html |
 | Andrew Holcomb | aholcomb23 |  |
