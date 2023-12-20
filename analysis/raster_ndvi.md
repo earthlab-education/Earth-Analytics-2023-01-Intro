@@ -3,12 +3,12 @@
 | Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/crescent-mtn-fire-raster-data.html |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
-| Chris Griego | NobodyLivesHere |  |
+| Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io/Projects/Las-Conchas-NDVI.html |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/dixie_fire.html |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | https://thku8507.github.io/Notebooks/02-modis-ndvi-portfolio.html |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
