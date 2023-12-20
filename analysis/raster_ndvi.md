@@ -22,6 +22,6 @@
 | Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/modis-ndvi-woolsey-fire%20(1).html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/waldo_2012.html |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/coldsprings-fire-modis-ndvi.html | 
 | Kathryne Walker | kdwalker24 |  |
 | Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/06/NDVI-analysis/ |

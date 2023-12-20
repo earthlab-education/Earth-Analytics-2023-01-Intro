@@ -21,6 +21,6 @@
 | Juliana Ruef | JulesMRuef |https://julesmruef.github.io/notebooks/wildfire_wrt_states2.html.zip|
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | 	https://millie-spencer.github.io/notebooks/wildfire-state-analysis.html | 
 | Kathryne Walker | kdwalker24 |  |
 | Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/17/wildfire-analysis/ |
