@@ -4,12 +4,12 @@
 | Nathan Bol | nbol48 | https://github.com/nbol48/earthlab-education-grassland-management-final |
 | Ed Chan | eggvoice |  |
 | Skye Corbett | misterskye |  |
-| Chris Griego | NobodyLivesHere |  |
+| Chris Griego | NobodyLivesHere | https://github.com/NobodyLivesHere/golden-feather-grass-habitats/ |
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz |  |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | [https://github.com/thku8507/bootcamp-final-project-thku8507](https://github.com/thku8507/bootcamp-final-project-thku8507) |
 | Ellen Lamont | ellenalamont17|  |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger |  |
