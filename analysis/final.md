@@ -2,7 +2,7 @@
 | ---- | --------------- | ------------- |
 | Annette Balmes | annettebalmes |  |
 | Nathan Bol | nbol48 | https://github.com/nbol48/earthlab-education-grassland-management-final |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://github.com/eggvoice/sorghastrum-nutans-habitat-suitability-model |
 | Skye Corbett | misterskye |  |
 | Chris Griego | NobodyLivesHere | https://github.com/NobodyLivesHere/golden-feather-grass-habitats/ |
 | Paige Hammond | pth6570 | https://github.com/pth6570/earth-analytics-intro-final |

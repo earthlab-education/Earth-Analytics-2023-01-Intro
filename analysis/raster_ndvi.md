@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/crescent-mtn-fire-raster-data.html |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://eggvoice.github.io/#vegetation-recovery-after-the-caldor-fire |
 | Skye Corbett | misterskye | https://misterskye.github.io/notebooks/NDVI_Analysis.html |
 | Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io/Projects/Las-Conchas-NDVI.html |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |

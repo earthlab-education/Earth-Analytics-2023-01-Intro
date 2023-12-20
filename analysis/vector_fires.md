@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 |  |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://eggvoice.github.io/#fire-density-in-california-watersheds |
 | Skye Corbett | misterskye | https://misterskye.github.io/notebooks/vector_fire_analysis.html  |
 | Chris Griego | NobodyLivesHere | https://nobodyliveshere.github.io/Projects/Climatezone-wildfire-vector-analysis.html |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/wildfires_by_huc4.html |
