@@ -8,7 +8,7 @@ Contributors:
 | Elsa Culler | eculler | https://eculler.github.io/ |
 | Nate Quarderer| nquarder | https://nquarder.github.io/ |
 | Kathryne Walker | kdwalker24 | https://kdwalker24.github.io/ |
-| Johanna Kinsler | JKinsler | https://github.com/JKinsler |
+| Johanna Kinsler | JKinsler | https://jkinsler.github.io/ |
 | Ed Chan | eggvoice | https://eggvoice.github.io/ |
 | Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/ |
 | Alexie Millikin | alexiemillikin | https://alexiemillikin.github.io/ |
@@ -17,7 +17,7 @@ Contributors:
 | Juliana Ruef | JulesMRuef | [https://github.com/JulesMRuef] |
 | Nathan Bol | @nbol48 | https://nbol48.github.io/Earthlabnb.github.io/ |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/ |
-| Advyth Ramachandran | advythr | https://advythr.github.io/advyth/ |
+| Advyth Ramachandran | advythr | https://advythr.github.io/ |
 | Nathan Bol | @nbol48 | https://Earthlabnb.github.io/ |
 | Agnes Link-Harrington | agneslh | https://agneslh.github.io/ |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/ |

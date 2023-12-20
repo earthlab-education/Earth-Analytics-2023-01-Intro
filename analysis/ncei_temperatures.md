@@ -24,3 +24,4 @@
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/avg-temp-va-ncei.html | 
 | Kathryne Walker | kdwalker24 |  |
+| Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/09/29/temperature-over-time/ |
