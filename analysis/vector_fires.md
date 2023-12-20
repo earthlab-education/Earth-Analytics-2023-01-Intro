@@ -10,7 +10,7 @@
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/ca_fires.html |
 | Theo Kuhn | thku8507 |  |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nbd_fire_naa.html |
-| Agnes Link-Harrington | agneslh |  |
+| Agnes Link-Harrington | agneslh | [Vector Fire Analysis](https://agneslh.github.io/Notebooks/wildfire_huc.html)|
 | Adrianna Luger | Adriannaluger |  |
 | Annie Meeder | annieM4549 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/wildfire.html |
 | Alexie Millikin | alexiemillikin |  |
