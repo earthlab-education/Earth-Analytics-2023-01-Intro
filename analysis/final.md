@@ -8,7 +8,7 @@
 | Paige Hammond | pth6570 |  |
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
-| Peter Kobylarz | peterkobylarz |  |
+| Peter Kobylarz | peterkobylarz | https://github.com/peterkobylarz/Final_GrasslandHabitatModel |
 | Theo Kuhn | thku8507 | [https://github.com/thku8507/bootcamp-final-project-thku8507](https://github.com/thku8507/bootcamp-final-project-thku8507) |
 | Ellen Lamont | ellenalamont17| https://github.com/ellenalamont17/bootcamp_final_2023-ellenalamont17 |
 | Agnes Link-Harrington | agneslh |  |
