@@ -9,18 +9,18 @@
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/ca_fires.html |
 | Theo Kuhn | thku8507 |  |
-| Ellen Lamont | ellenalamont17|  |
-| Agnes Link-Harrington | agneslh |  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nbd_fire_naa.html |
+| Agnes Link-Harrington | agneslh | [Vector Fire Analysis](https://agneslh.github.io/Notebooks/wildfire_huc.html)|
 | Adrianna Luger | Adriannaluger |  |
-| Annie Meeder | annieM4549 |  |
+| Annie Meeder | annieM4549 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/wildfire.html |
 | Alexie Millikin | alexiemillikin |  |
-| Taylor O'Brien | taylor-obrien |  |
+| Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/fireboundaries-vector.html |
 | Luca Anna Palasti | lucap1211 |  |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr |  |
 | Juliana Ruef | JulesMRuef |https://julesmruef.github.io/notebooks/wildfire_wrt_states2.html.zip|
-| James Smith IV | jsmi374 |  |
+| James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/US_Wildfire_huc_4_29Years.html |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | 	https://millie-spencer.github.io/notebooks/wildfire-state-analysis.html | 
 | Kathryne Walker | kdwalker24 |  |
 | Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/17/wildfire-analysis/ |
