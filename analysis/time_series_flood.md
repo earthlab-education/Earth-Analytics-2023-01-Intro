@@ -9,7 +9,7 @@
 | Johanna Kinsler | JKinsler | https://jkinsler.github.io/notebooks/time-series-data-kern-river-onyx.html |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/yellowstone_flood.html |
 | Theo Kuhn | thku8507 |  |
-| Ellen Lamont | ellenalamont17|  |
+| Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nwis_flood_eugene.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/timeseries-ny.html |
 | Annie Meeder | annieM4549 | https://annieM459.github.io/anniemeeder.github.io |
@@ -19,8 +19,9 @@
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/time-series-flooding.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_flood.html |
-| Juliana Ruef | JulesMRuef |  |
+| Juliana Ruef | JulesMRuef | https://julesmruef.github.io/notebooks/modis-ndvi-woolsey-fire%20(1).html |
 | James Smith IV | jsmi374 | https://jsmi374.github.io/notebooks/Rio_grande_Embudo.html |
 | Megan Smith | megan8617 |  |
 | Millie Spencer | millie-spencer | https://millie-spencer.github.io/notebooks/wind-river-usgs-time-series.html | 
 | Kathryne Walker | kdwalker24 |  |
+| Annette Balmes | annettebalmes | https://annettebalmes.github.io/general/2023/10/05/flood-analysis/ |
