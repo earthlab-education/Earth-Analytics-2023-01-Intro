@@ -22,5 +22,5 @@
 | Juliana Ruef | JulesMRuef | https://github.com/JulesMRuef/Earth-Analytics-Final/tree/main |
 | James Smith IV | jsmi374 |  |
 | Megan Smith | megan8617 |  |
-| Millie Spencer | millie-spencer |  | 
+| Millie Spencer | millie-spencer | https://github.com/millie-spencer/finalproject | 
 | Kathryne Walker | kdwalker24 |  |
