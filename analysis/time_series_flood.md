@@ -8,7 +8,7 @@
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler | https://jkinsler.github.io/notebooks/time-series-data-kern-river-onyx.html |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/yellowstone_flood.html |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | https://thku8507.github.io/Notebooks/North_Fork_Flathead.html |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nwis_flood_eugene.html |
 | Agnes Link-Harrington | agneslh |  |
 | Adrianna Luger | Adriannaluger | https://adriannaluger.github.io/notebooks/timeseries-ny.html |
