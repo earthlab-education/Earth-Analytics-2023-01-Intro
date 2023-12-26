@@ -8,7 +8,7 @@
 | Andrew Holcomb | aholcomb23 |  |
 | Johanna Kinsler | JKinsler |  |
 | Peter Kobylarz | peterkobylarz | https://peterkobylarz.github.io/projects/ca_fires.html |
-| Theo Kuhn | thku8507 |  |
+| Theo Kuhn | thku8507 | https://thku8507.github.io/Notebooks/jan_fires.html |
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/nbd_fire_naa.html |
 | Agnes Link-Harrington | agneslh | [Vector Fire Analysis](https://agneslh.github.io/Notebooks/wildfire_huc.html)|
 | Adrianna Luger | Adriannaluger |  |
