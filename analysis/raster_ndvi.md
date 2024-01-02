@@ -1,7 +1,7 @@
 | Name | GitHub Username | Portfolio URL |
 | ---- | --------------- | ------------- |
 | Nathan Bol | nbol48 | https://nbol48.github.io/Earthlabnb.github.io/notebooks/crescent-mtn-fire-raster-data.html |
-| Ed Chan | eggvoice |  |
+| Ed Chan | eggvoice | https://eggvoice.github.io/#vegetation-recovery-after-the-caldor-fire |
 | Skye Corbett | misterskye | https://misterskye.github.io/notebooks/NDVI_Analysis.html |
 | Chris Griego | NobodyLivesHere | https://NobodyLivesHere.github.io/Projects/Las-Conchas-NDVI.html |
 | Paige Hammond | pth6570 | https://pth6570.github.io/notebooks/fire_analysis_04.html |
@@ -12,10 +12,10 @@
 | Ellen Lamont | ellenalamont17| https://ellenalamont17.github.io/notebook/ndvi_fire_CRG.html |
 | Agnes Link-Harrington | agneslh | [Martin fire analysis](https://agneslh.github.io/Notebooks/NDVI_alh.html) |
 | Adrianna Luger | Adriannaluger | http://adriannaluger.github.io/notebooks/ndvi_maple_fire.html |
-| Annie Meeder | annieM4549 |  |
-| Alexie Millikin | alexiemillikin |  |
+| Annie Meeder | annieM459 | https://anniem459.github.io/anniemeeder.github.io/Notebooks/fire_veg.html |
+| Alexie Millikin | alexiemillikin | [Waldo Canyon Fire](https://alexiemillikin.github.io/03-modis-ndvi.html]) |
 | Aziz Mujahid | [haq753](https://github.com/haq753) |  |
-| Taylor O'Brien | taylor-obrien |  |
+| Taylor O'Brien | taylor-obrien | https://taylor-obrien.github.io/notebooks/reynoldslake-ndvi.html |
 | Luca Anna Palasti | lucap1211 | https://lucap1211.github.io/class_projects/modis-ndvi.html |
 | Christopher Quinn | cmq879 |  |
 | Advyth Ramachandran | advythr | https://advythr.github.io/notebooks/sanjose_urbanforest.html |
